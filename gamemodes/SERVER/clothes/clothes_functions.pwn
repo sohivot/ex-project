@@ -156,12 +156,12 @@ ShowPlayerClothes(playerid)
 
             format(list, sizeof(list), "%s%s\n", list, frmtname);
         }
-        ShowPlayerDialog(playerid, DIALOG_CLOTHES, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Lemari Pakaian", list, "Pilih", "Batal");
+        ShowPlayerDialog(playerid, DIALOG_CLOTHES, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Lemari Pakaian", list, "Pilih", "Batal");
     }
     else 
     {
         PlayerPlaySound(playerid, 5206, 0.0, 0.0, 0.0);
-        ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Lemari Pakaian", 
+        ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Lemari Pakaian", 
         "Anda tidak memiliki pakaian tersimpan!", "Tutup", "");
     }
     return 1;
@@ -181,7 +181,7 @@ DropClothesPlayer(playerid)
             
             format(list, sizeof(list), "%s%s\n", list, frmtname);
         }
-        ShowPlayerDialog(playerid, DIALOG_CLOTHES_DELETE, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Buang Pakaian", list, "Buang", "Batal");
+        ShowPlayerDialog(playerid, DIALOG_CLOTHES_DELETE, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Buang Pakaian", list, "Buang", "Batal");
     }
     else 
     {

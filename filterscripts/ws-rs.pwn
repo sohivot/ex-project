@@ -306,7 +306,7 @@ public OnFilterScriptInit()
     tmpobjid = CreateDynamicObject(19482, 942.113708, -1733.989868, 20.496860, 0.000000, 0.000000, -176.999786, -1, -1, -1, 300.00, 300.00); 
     SetDynamicObjectMaterialText(tmpobjid, 0, "{000000} EMERGENCY MEDICAL ", 110, "Ariel", 50, 1, 0x00000000, 0x00000000, 1);
     tmpobjid = CreateDynamicObject(19482, 942.163696, -1733.939819, 18.496891, 0.000000, 0.000000, -176.999786, -1, -1, -1, 300.00, 300.00); 
-    SetDynamicObjectMaterialText(tmpobjid, 0, "{000000} MAYORITAS ROLEPLAY", 110, "Ariel", 48, 1, 0x00000000, 0x00000000, 1);
+    SetDynamicObjectMaterialText(tmpobjid, 0, "{000000} Imajinasi ROLEPLAY", 110, "Ariel", 48, 1, 0x00000000, 0x00000000, 1);
     tmpobjid = CreateDynamicObject(19448, 942.141784, -1745.816284, 14.109636, -0.100130, -0.399997, 1.803145, -1, -1, -1, 300.00, 300.00); 
     SetDynamicObjectMaterial(tmpobjid, 0, 4586, "skyscrap3_lan2", "sl_dthotelwin1", 0x00000000);
     tmpobjid = CreateDynamicObject(19448, 942.091796, -1736.265747, 14.109636, -0.100137, -0.399995, -1.194757, -1, -1, -1, 300.00, 300.00); 

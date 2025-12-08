@@ -59,7 +59,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
             {
                 if(PlayerKargoVars[playerid][KargoStarted]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda dalam pengantaran kargo, mohon segera diantarkan!");
 
-                Dialog_Show(playerid, DialogKargoRute, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kargo", ""WHITE"Pertamina\n"VERONA_ARWIN"Barang", "Pilih", "Batal");
+                Dialog_Show(playerid, DialogKargoRute, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kargo", ""WHITE"Pertamina\n"VERONA_ARWIN"Barang", "Pilih", "Batal");
             }
         }
     }

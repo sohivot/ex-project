@@ -99,7 +99,7 @@ stock ShowPlayerWarning(playerid, targetid)
             cache_get_value_name(i, "WarnReason", reason);
             format(shstr, sizeof(shstr), "%s%s\t%s\t%s\t%s\n", shstr, warntype[type], sender, ReturnDateNoTime(date), reason);
         }
-        ShowPlayerDialog(targetid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Riwayat Peringatan", shstr, "Tutup", "");
+        ShowPlayerDialog(targetid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Riwayat Peringatan", shstr, "Tutup", "");
     }
     else
     {
@@ -214,7 +214,7 @@ CMD:ajail(playerid, params[])
     if(count == 0)
 		Error(playerid, "Tidak ada pemain yang sedang di jail!");
 	else 
-		ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Player Jail", list, "Close", "");
+		ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Player Jail", list, "Close", "");
 	return 1;
 }
 

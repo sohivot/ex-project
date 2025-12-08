@@ -231,7 +231,7 @@ hook OnPlayerStateChange(playerid, newstate, oldstate)
         if(!AccountData[playerid][pMowerTime])
         {
             SetCameraBehindPlayer(playerid);
-            ShowPlayerDialog(playerid, DIALOG_MOWER_START, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Mower Sidejob",
+            ShowPlayerDialog(playerid, DIALOG_MOWER_START, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Mower Sidejob",
             "Apakah anda ingin memulai tugas mowing?\nAnda akan menerima bayaran berdasarkan rumput yang anda potong", "Iya", "Tidak");   
         }
         else

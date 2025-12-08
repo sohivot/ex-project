@@ -107,7 +107,7 @@ stock EventDialogShow(playerid)
     format(list, sizeof(list), "%sArmour Event\t%.2f\n", list, EventData[eventArmour]);
     format(list, sizeof(list), "%sParticipation Prize\t"GREEN"%s\n", list, FormatMoney(EventData[eventPrizeParticipation]));
     format(list, sizeof(list), "%sWinner Prize\t"GREEN"%s\n", list, FormatMoney(EventData[eventPrize]));
-    ShowPlayerDialog(playerid, DIALOG_EVENT_SETTING, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- TDM Event Creator", list, "Setup", "Batal");
+    ShowPlayerDialog(playerid, DIALOG_EVENT_SETTING, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- TDM Event Creator", list, "Setup", "Batal");
     return 1;
 }
 

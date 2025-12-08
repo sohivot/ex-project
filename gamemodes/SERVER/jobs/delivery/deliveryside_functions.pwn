@@ -115,7 +115,7 @@ hook OnPlayerStateChange(playerid, newstate, oldstate)
             if(AccountData[playerid][pDeliveryTime] == 0)
             {
                 SetCameraBehindPlayer(playerid);
-                ShowPlayerDialog(playerid, DIALOG_DELIVERY_START, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Delivery Sidejob",
+                ShowPlayerDialog(playerid, DIALOG_DELIVERY_START, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Delivery Sidejob",
                 ""WHITE"Pekerjaan ini bertujuan untuk mengantarkan paket ke setiap rumah.\nAnda bisa temukan rumah rumah yang ada di setiap kota "WHITE"ini. Ikuti petunjuk "RED"radar "WHITE"yang di sediakan.\n Itu merupahan lokasi yang harus anda tuju.\n\
                     \n\n"RED"WARNING: "WHITE"Turun dari kendaraan untuk mengambil box packet dan menaruhnya ke depan rumah.", "Iya", "Tidak");
             }

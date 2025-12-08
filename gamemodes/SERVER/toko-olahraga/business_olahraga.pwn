@@ -13,7 +13,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
         {
             if(!Dialog_Opened(playerid))
             {
-                ShowPlayerDialog(playerid, DIALOG_SPORTSTORE, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Toko Olahraga", 
+                ShowPlayerDialog(playerid, DIALOG_SPORTSTORE, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Toko Olahraga", 
                 "Nama Item\tHarga\
                 \nStick Golf\t$2500\
                 \n"GRAY"Baseball\t"GRAY"$3000\

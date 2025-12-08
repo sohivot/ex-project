@@ -126,22 +126,22 @@ CMD:csinfo(playerid, params[])
         if(GetPVarInt(playerid, "CsInfo") == 1) // Sultan
         {
             format(frmxt, sizeof(frmxt), ""WHITE"Carilah kendaraan ini:\n\nModel: "YELLOW"Sultan\n"WHITE"Lokasi: "YELLOW"%s\n\n"WHITE"Segera temukan dan berikan kepada Gangster sebelum waktu selesai "ORANGE"(%02d Menit %02d Detik)", GetLocation(x, y, z), minutes, seconds);
-            ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Cari Kendaraan", frmxt, "Tutup", "");
+            ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Cari Kendaraan", frmxt, "Tutup", "");
         }
         else if(GetPVarInt(playerid, "CsInfo") == 2) // Bulet
         {
             format(frmxt, sizeof(frmxt), ""WHITE"Carilah kendaraan ini:\n\nModel: "YELLOW"Bullet\n"WHITE"Lokasi: "YELLOW"%s\n\n"WHITE"Segera temukan dan berikan kepada Gangster sebelum waktu selesai "ORANGE"(%02d Menit %02d Detik)", GetLocation(x, y, z), minutes, seconds);
-            ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Cari Kendaraan", frmxt, "Tutup", "");
+            ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Cari Kendaraan", frmxt, "Tutup", "");
         }
         else if(GetPVarInt(playerid, "CsInfo") == 3) // Jester
         {
             format(frmxt, sizeof(frmxt), ""WHITE"Carilah kendaraan ini:\n\nModel: "YELLOW"Jester\n"WHITE"Lokasi: "YELLOW"%s\n\n"WHITE"Segera temukan dan berikan kepada Gangster sebelum waktu selesai "ORANGE"(%02d Menit %02d Detik)", GetLocation(x, y, z), minutes, seconds);
-            ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Cari Kendaraan", frmxt, "Tutup", "");
+            ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Cari Kendaraan", frmxt, "Tutup", "");
         }
         else if(GetPVarInt(playerid, "CsInfo") == 4) // Cheetah
         {
             format(frmxt, sizeof(frmxt), ""WHITE"Carilah kendaraan ini:\n\nModel: "YELLOW"Cheetah\n"WHITE"Lokasi: "YELLOW"%s\n\n"WHITE"Segera temukan dan berikan kepada Gangster sebelum waktu selesai "ORANGE"(%02d Menit %02d Detik)", GetLocation(x, y, z), minutes, seconds);
-            ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Cari Kendaraan", frmxt, "Tutup", "");
+            ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Cari Kendaraan", frmxt, "Tutup", "");
         }
     }
     else
@@ -180,7 +180,7 @@ CMD:carsteal(playerid, params[])
         {
             UpdateDynamic3DTextLabelText(CarStealLabel[playerid], -1, ""GREEN"Gangster:"WHITE" Kamu tidak memiliki linggis!\nIngin membelinya dariku?");
             ApplyDynamicActorAnimation(Steal_Stuffs[carstealActor], "GANGS", "prtial_gngtlkA", 4.1, 0, 0, 0, 0, 5000);
-            ShowPlayerDialog(playerid, DIALOG_CARSTEAL_SHOP, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Steal Shop",
+            ShowPlayerDialog(playerid, DIALOG_CARSTEAL_SHOP, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Steal Shop",
             "Nama Item\tHarga\
             \nLinggis\t$1000\
             \n"GRAY"Letter T\t"GRAY"$1000", "Pilih", "Batal");
@@ -195,7 +195,7 @@ CMD:carsteal(playerid, params[])
         {
             UpdateDynamic3DTextLabelText(CarStealLabel[playerid], -1, ""GREEN"Gangster:"WHITE" Kamu tidak memiliki Kunci T!\nIngin membelinya dariku?");
             ApplyDynamicActorAnimation(Steal_Stuffs[carstealActor], "GANGS", "prtial_gngtlkA", 4.1, 0, 0, 0, 0, 5000);
-            ShowPlayerDialog(playerid, DIALOG_CARSTEAL_SHOP, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Steal Shop",
+            ShowPlayerDialog(playerid, DIALOG_CARSTEAL_SHOP, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Steal Shop",
             "Nama Item\tHarga\
             \nLinggis\t$1000\
             \n"GRAY"Letter T\t"GRAY"$1000", "Pilih", "Batal");
@@ -454,7 +454,7 @@ hook OnPlayerStateChange(playerid, newstate, oldstate)
                 }
             }
             SetPlayerRaceCheckpoint(playerid, 1, 933.1342, 2079.3425, 10.5437, 933.1342, 2079.3425, 10.5437, 5.0);
-            TextDrawSetString(RobberyGlobalTD[3], "Mayoritas Roleplay~n~Car Stealing");
+            TextDrawSetString(RobberyGlobalTD[3], "Imajinasi Roleplay~n~Car Stealing");
             RobberyShowTD(playerid, "Bawa kendaraan ini kepada Gangster!");
             CarStealStoreVeh[playerid] = CreateDynamicSphere(933.1342, 2079.3425, 10.5437, 2.5, 0, 0, -1, 0);
         }

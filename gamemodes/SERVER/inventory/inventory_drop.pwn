@@ -561,7 +561,7 @@ DropPlayerItem(playerid, itemid, quantity = 1)
         KickEx(playerid, 2000);
         foreach(new i : Player) if(AccountData[i][pSpawned])
 		{
-			SendClientMessageEx(i, X11_ARWIN, "[Ban]: "RED_E"BOT "Mayoritas"memblokir "RED_E"Permanent "Mayoritas"ucp player "YELLOW_E"%s(%d).", AccountData[playerid][pUCP], playerid);
+			SendClientMessageEx(i, X11_ARWIN, "[Ban]: "RED_E"BOT "Imajinasi"memblokir "RED_E"Permanent "Imajinasi"ucp player "YELLOW_E"%s(%d).", AccountData[playerid][pUCP], playerid);
 			SendClientMessageEx(i, X11_ARWIN, "~> Alasan: Exploiting bug");
 		}
     }
@@ -586,11 +586,11 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			{
 				if(isnull(inputtext))
 				return format(str, sizeof str, "Item: %s - Jumlah : %dx\n\nMohon masukan jumlah yang ingin anda drop:", string, InventoryData[playerid][itemid][invQuantity]);
-				ShowPlayerDialog(playerid, DialogDropItem, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Drop Barang", str, "Drop", "Cancel");
+				ShowPlayerDialog(playerid, DialogDropItem, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Drop Barang", str, "Drop", "Cancel");
 
 				if(strval(inputtext) < 1 || strval(inputtext) > InventoryData[playerid][itemid][invQuantity])
 				return format(str, sizeof str, "ERROR: Kamu tidak memiliki barang sebanyak itu\n\nItem: %s - Jumlah : %dx\n\nMohon masukan jumlah yang ingin anda drop:", string, InventoryData[playerid][itemid][invQuantity]);
-				ShowPlayerDialog(playerid, DialogDropItem, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Drop Barang", str, "Drop", "Cancel");
+				ShowPlayerDialog(playerid, DialogDropItem, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Drop Barang", str, "Drop", "Cancel");
 
 				DropPlayerItem(playerid, itemid, strval(inputtext));
 			}
@@ -646,7 +646,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
                 }
                 else ShowTDN(playerid, NOTIFICATION_ERROR, "Inventory anda telah penuh!");
             }
-            else ShowPlayerDialog(playerid, DIALOG_ITEM_PICKUP, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Pickup Item", shstr, "Ambil", "Batal");
+            else ShowPlayerDialog(playerid, DIALOG_ITEM_PICKUP, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Pickup Item", shstr, "Ambil", "Batal");
         }
     }
 	return 1;

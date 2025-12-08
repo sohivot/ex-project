@@ -36,7 +36,7 @@ ShowMenuOrderan(playerid, targetid)
     JumlahKeranjang[targetid][7],
     notes,
     targetid);
-    ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App", frmtmenu, "Tutup", "");
+    ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App", frmtmenu, "Tutup", "");
     return 1;
 }
 
@@ -65,7 +65,7 @@ ShowGofoodMenu(playerid)
     JumlahKeranjang[playerid][7],
     FormatMoney(TotalHarga[playerid]),
     TotalKeranjang[playerid]);
-    ShowPlayerDialog(playerid, DIALOG_GOFOOD_PESAN, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App", frmtmenu, "Pilih", "Batal");
+    ShowPlayerDialog(playerid, DIALOG_GOFOOD_PESAN, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App", frmtmenu, "Pilih", "Batal");
     return 1;
 }
 
@@ -239,27 +239,27 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             
             if(isnull(inputtext))
             {
-                ShowPlayerDialog(playerid, DIALOG_PESANGORIDE, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay"WHITE"- Gojek App", 
+                ShowPlayerDialog(playerid, DIALOG_PESANGORIDE, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay"WHITE"- Gojek App", 
                 "ERROR: Tidak dapat diisi kosong!\nHai, kamu akan memesan GoRide. Mau kemana hari ini?", "Input", "Batal");
                 return 1;
             }
 
             if(IsNumeric(inputtext))
             {
-                ShowPlayerDialog(playerid, DIALOG_PESANGORIDE, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay"WHITE"- Gojek App", 
+                ShowPlayerDialog(playerid, DIALOG_PESANGORIDE, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay"WHITE"- Gojek App", 
                 "ERROR: Tidak dapat diisi angka!\nHai, kamu akan memesan GoRide. Mau kemana hari ini?", "Input", "Batal");
                 return 1;
             }
 
             if(strlen(inputtext) < 1 || strlen(inputtext) > 128)
             {
-                ShowPlayerDialog(playerid, DIALOG_PESANGORIDE, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay"WHITE"- Gojek App", 
+                ShowPlayerDialog(playerid, DIALOG_PESANGORIDE, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay"WHITE"- Gojek App", 
                 "ERROR: Huruf tidak dapat kurang dari 1 atau lebih dari 128 characters!\nHai, kamu akan memesan GoRide. Mau kemana hari ini?", "Input", "Batal");
                 return 1;
             }
 
             strpack(AccountData[playerid][pEditingItem], inputtext, 64);
-            ShowPlayerDialog(playerid, DIALOG_PESANGORIDECONF, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App",
+            ShowPlayerDialog(playerid, DIALOG_PESANGORIDECONF, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App",
             sprintf("Baik kamu ingin ke %s\nMohon masukkan berapa tawaran ongkos yang ingin kamu berikan:", inputtext), "Submit", "Batal");
         }
         case DIALOG_PESANGORIDECONF:
@@ -273,7 +273,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             if(isnull(inputtext))
             {
                 format(shstr, sizeof(shstr), "Error: Tidak dapat diisi kosong!\nBaik kamu ingin ke %s\nMohon masukkan berapa tawaran ongkos yang ingin kamu berikan:", frmtloc);
-                ShowPlayerDialog(playerid, DIALOG_PESANGORIDECONF, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App",
+                ShowPlayerDialog(playerid, DIALOG_PESANGORIDECONF, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App",
                 shstr, "Submit", "Batal");
                 return 1;
             }
@@ -281,7 +281,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             if(!IsNumeric(inputtext))
             {
                 format(shstr, sizeof(shstr), "Error: Hanya dapat diisi angka!\nBaik kamu ingin ke %s\nMohon masukkan berapa tawaran ongkos yang ingin kamu berikan:", frmtloc);
-                ShowPlayerDialog(playerid, DIALOG_PESANGORIDECONF, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App",
+                ShowPlayerDialog(playerid, DIALOG_PESANGORIDECONF, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App",
                 shstr, "Submit", "Batal");
                 return 1;
             }
@@ -289,7 +289,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             if(strval(inputtext) < 1 || strval(inputtext) > AccountData[playerid][pSaldoGopay])
             {
                 format(shstr, sizeof(shstr), "Error: Jumlah tidak valid atau saldo gopay tidak cukup!\nBaik kamu ingin ke %s\nMohon masukkan berapa tawaran ongkos yang ingin kamu berikan:", frmtloc);
-                ShowPlayerDialog(playerid, DIALOG_PESANGORIDECONF, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App",
+                ShowPlayerDialog(playerid, DIALOG_PESANGORIDECONF, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App",
                 shstr, "Submit", "Batal");
                 return 1;
             }
@@ -325,20 +325,20 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
             if(isnull(inputtext))
             {
-                ShowPlayerDialog(playerid, DIALOG_PESANGOCAR, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App", 
+                ShowPlayerDialog(playerid, DIALOG_PESANGOCAR, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App", 
                 "ERROR: Tidak dapat diisi kosong!\n\nHai, kamu akan memesan GoCar. Mau kemana hari ini?", "Input", "Batal");
                 return 1;
             }
 
             if(IsNumeric(inputtext))
             {
-                ShowPlayerDialog(playerid, DIALOG_PESANGOCAR, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App", 
+                ShowPlayerDialog(playerid, DIALOG_PESANGOCAR, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App", 
                 "ERROR: Tidak dapat angka!\n\nHai, kamu akan memesan GoCar. Mau kemana hari ini?", "Input", "Batal");
                 return 1;
             }
 
             strpack(AccountData[playerid][pEditingItem], inputtext, 64);
-            ShowPlayerDialog(playerid, DIALOG_PESANGOCARPENUMPANG, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App",
+            ShowPlayerDialog(playerid, DIALOG_PESANGOCARPENUMPANG, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App",
             "Masukkan jumlah orang yang ingin naik gocar (Maksimal 3 orang):", "Submit", "Batal");
         }
         case DIALOG_PESANGOCARPENUMPANG:
@@ -349,21 +349,21 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
             if(isnull(inputtext))
             {
-                ShowPlayerDialog(playerid, DIALOG_PESANGOCARPENUMPANG, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App",
+                ShowPlayerDialog(playerid, DIALOG_PESANGOCARPENUMPANG, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App",
                 "Error: Tidak dapat diisi kosong!\nMasukkan jumlah orang yang ingin naik gocar (Maksimal 3 orang):", "Submit", "Batal");
                 return 1;
             }
 
             if(!IsNumeric(inputtext)) 
             {
-                ShowPlayerDialog(playerid, DIALOG_PESANGOCARPENUMPANG, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App",
+                ShowPlayerDialog(playerid, DIALOG_PESANGOCARPENUMPANG, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App",
                 "Error: Hanya dapat diisi angka!\nMasukkan jumlah orang yang ingin naik gocar (Maksimal 3 orang):", "Submit", "Batal");
                 return 1;
             }
 
             if(strval(inputtext) < 1 || strval(inputtext) > 3)
             {
-                ShowPlayerDialog(playerid, DIALOG_PESANGOCARPENUMPANG, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App",
+                ShowPlayerDialog(playerid, DIALOG_PESANGOCARPENUMPANG, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App",
                 "Error: Minimal 1 orang dan maksimal 3 orang!\nMasukkan jumlah orang yang ingin naik gocar (Maksimal 3 orang):", "Submit", "Batal");
                 return 1;
             }
@@ -372,7 +372,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             strpack(AccountData[playerid][pEditingPenumpang], inputtext, 32);
 
             format(twsmk, sizeof(twsmk), "Baik kamu ingin ke %s dan berjumlah %s orang\nMohon masukkan ongkos yang ingin kamu tawarkan kepada driver:", frmtloc, inputtext);
-            ShowPlayerDialog(playerid, DIALOG_PESANGOCARCONF, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App",
+            ShowPlayerDialog(playerid, DIALOG_PESANGOCARCONF, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App",
             twsmk, "Submit", "Batal");
         }
         case DIALOG_PESANGOCARCONF:
@@ -387,7 +387,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             if(isnull(inputtext))
             {
                 format(shstr, sizeof(shstr), "Error: Tidak dapat diisi kosong!\nBaik kamu ingin ke %s dan berjumlah %s orang\nMohon masukkan ongkos yang ingin kamu tawarkan kepada driver:", frmtloc, inputtext);
-                ShowPlayerDialog(playerid, DIALOG_PESANGOCARCONF, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App",
+                ShowPlayerDialog(playerid, DIALOG_PESANGOCARCONF, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App",
                 shstr, "Submit", "Batal");
                 return 1;
             }
@@ -395,7 +395,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             if(!IsNumeric(inputtext))
             {
                 format(shstr, sizeof(shstr), "Error: Hanya dapat diisi angka!\nBaik kamu ingin ke %s dan berjumlah %s orang\nMohon masukkan ongkos yang ingin kamu tawarkan kepada driver:", frmtloc, inputtext);
-                ShowPlayerDialog(playerid, DIALOG_PESANGOCARCONF, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App",
+                ShowPlayerDialog(playerid, DIALOG_PESANGOCARCONF, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App",
                 shstr, "Submit", "Batal");
                 return 1;
             }
@@ -403,7 +403,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             if(strval(inputtext) < 1 || strval(inputtext) > AccountData[playerid][pSaldoGopay])
             {
                 format(shstr, sizeof(shstr), "Error: Jumlah tidak valid atau saldo gopay tidak cukup!\nBaik kamu ingin ke %s dan berjumlah %s orang\nMohon masukkan ongkos yang ingin kamu tawarkan kepada driver:", frmtloc, inputtext);
-                ShowPlayerDialog(playerid, DIALOG_PESANGOCARCONF, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App",
+                ShowPlayerDialog(playerid, DIALOG_PESANGOCARCONF, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App",
                 shstr, "Submit", "Batal");
                 return 1;
             }
@@ -449,35 +449,35 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             {
                 case 0: //Nasi Goreng
                 {
-                    ShowPlayerDialog(playerid, DIALOG_PESAN_NASIGORENG, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App", "Mohon masukkan berapa jumlah yang ingin dibeli:", "Input", "Batal");
+                    ShowPlayerDialog(playerid, DIALOG_PESAN_NASIGORENG, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App", "Mohon masukkan berapa jumlah yang ingin dibeli:", "Input", "Batal");
                 }
                 case 1: //Bakso
                 {
-                    ShowPlayerDialog(playerid, DIALOG_PESAN_BAKSO, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App", "Mohon masukkan berapa jumlah yang ingin dibeli:", "Input", "Batal");
+                    ShowPlayerDialog(playerid, DIALOG_PESAN_BAKSO, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App", "Mohon masukkan berapa jumlah yang ingin dibeli:", "Input", "Batal");
                 }
                 case 2: //Pecel
                 {
-                    ShowPlayerDialog(playerid, DIALOG_PESAN_NASIPECEL, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App", "Mohon masukkan berapa jumlah yang ingin dibeli:", "Input", "Batal");
+                    ShowPlayerDialog(playerid, DIALOG_PESAN_NASIPECEL, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App", "Mohon masukkan berapa jumlah yang ingin dibeli:", "Input", "Batal");
                 }
                 case 3: //Bubur
                 {
-                    ShowPlayerDialog(playerid, DIALOG_PESAN_BUBUR, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App", "Mohon masukkan berapa jumlah yang ingin dibeli:", "Input", "Batal");
+                    ShowPlayerDialog(playerid, DIALOG_PESAN_BUBUR, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App", "Mohon masukkan berapa jumlah yang ingin dibeli:", "Input", "Batal");
                 }
                 case 4: //susu
                 {
-                    ShowPlayerDialog(playerid, DIALOG_PESAN_SUSU, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App", "Mohon masukkan berapa jumlah yang ingin dibeli:", "Input", "Batal");
+                    ShowPlayerDialog(playerid, DIALOG_PESAN_SUSU, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App", "Mohon masukkan berapa jumlah yang ingin dibeli:", "Input", "Batal");
                 }
                 case 5: //ESTEH
                 {
-                    ShowPlayerDialog(playerid, DIALOG_PESAN_ESTEH, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App", "Mohon masukkan berapa jumlah yang ingin dibeli:", "Input", "Batal");
+                    ShowPlayerDialog(playerid, DIALOG_PESAN_ESTEH, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App", "Mohon masukkan berapa jumlah yang ingin dibeli:", "Input", "Batal");
                 }
                 case 6: //Kopi
                 {
-                    ShowPlayerDialog(playerid, DIALOG_PESAN_KOPI, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App", "Mohon masukkan berapa jumlah yang ingin dibeli:", "Input", "Batal");
+                    ShowPlayerDialog(playerid, DIALOG_PESAN_KOPI, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App", "Mohon masukkan berapa jumlah yang ingin dibeli:", "Input", "Batal");
                 }
                 case 7: //Choco
                 {
-                    ShowPlayerDialog(playerid, DIALOG_PESAN_CHOCOMATCH, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App", "Mohon masukkan berapa jumlah yang ingin dibeli:", "Input", "Batal");
+                    ShowPlayerDialog(playerid, DIALOG_PESAN_CHOCOMATCH, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App", "Mohon masukkan berapa jumlah yang ingin dibeli:", "Input", "Batal");
                 }
                 case 8: // 
                 {
@@ -502,7 +502,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                         return ShowTDN(playerid, NOTIFICATION_ERROR, "Saldo Gopay anda tidak cukup!");
                     }
                     
-                    ShowPlayerDialog(playerid, DIALOG_PESAN_NOTES, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App", "Kemana pesanan ini diantarkan? (Tuliskan catatan kamu kepada driver)", "Input", "Batal");
+                    ShowPlayerDialog(playerid, DIALOG_PESAN_NOTES, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App", "Kemana pesanan ini diantarkan? (Tuliskan catatan kamu kepada driver)", "Input", "Batal");
                 }
             }
         }
@@ -512,21 +512,21 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
             if(isnull(inputtext))
             {
-                ShowPlayerDialog(playerid, DIALOG_PESAN_NASIGORENG, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App", 
+                ShowPlayerDialog(playerid, DIALOG_PESAN_NASIGORENG, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App", 
                 "Error: Tidak dapat diisi kosong!\nMohon masukkan berapa jumlah yang ingin dibeli:", "Input", "Batal");
                 return 1;
             }
 
             if(!IsNumeric(inputtext))
             {
-                ShowPlayerDialog(playerid, DIALOG_PESAN_NASIGORENG, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App", 
+                ShowPlayerDialog(playerid, DIALOG_PESAN_NASIGORENG, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App", 
                 "Error: Hanya dapat diisi angka!\nMohon masukkan berapa jumlah yang ingin dibeli:", "Input", "Batal");
                 return 1;
             }
 
             if(strval(inputtext) < 1)
             {
-                ShowPlayerDialog(playerid, DIALOG_PESAN_NASIGORENG, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App", 
+                ShowPlayerDialog(playerid, DIALOG_PESAN_NASIGORENG, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App", 
                 "Error: Jumlah tidak valid!\nMohon masukkan berapa jumlah yang ingin dibeli:", "Input", "Batal");
                 return 1;
             }
@@ -550,21 +550,21 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
             if(isnull(inputtext))
             {
-                ShowPlayerDialog(playerid, DIALOG_PESAN_BAKSO, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App", 
+                ShowPlayerDialog(playerid, DIALOG_PESAN_BAKSO, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App", 
                 "Error: Tidak dapat diisi kosong!\nMohon masukkan berapa jumlah yang ingin dibeli:", "Input", "Batal");
                 return 1;
             }
 
             if(!IsNumeric(inputtext))
             {
-                ShowPlayerDialog(playerid, DIALOG_PESAN_BAKSO, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App", 
+                ShowPlayerDialog(playerid, DIALOG_PESAN_BAKSO, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App", 
                 "Error: Hanya dapat diisi angka!\nMohon masukkan berapa jumlah yang ingin dibeli:", "Input", "Batal");
                 return 1;
             }
 
             if(strval(inputtext) < 1)
             {
-                ShowPlayerDialog(playerid, DIALOG_PESAN_BAKSO, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App", 
+                ShowPlayerDialog(playerid, DIALOG_PESAN_BAKSO, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App", 
                 "Error: Jumlah tidak valid!\nMohon masukkan berapa jumlah yang ingin dibeli:", "Input", "Batal");
                 return 1;
             }
@@ -588,21 +588,21 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
             if(isnull(inputtext))
             {
-                ShowPlayerDialog(playerid, DIALOG_PESAN_NASIPECEL, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App", 
+                ShowPlayerDialog(playerid, DIALOG_PESAN_NASIPECEL, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App", 
                 "Error: Tidak dapat diisi kosong!\nMohon masukkan berapa jumlah yang ingin dibeli:", "Input", "Batal");
                 return 1;
             }
 
             if(!IsNumeric(inputtext))
             {
-                ShowPlayerDialog(playerid, DIALOG_PESAN_NASIPECEL, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App", 
+                ShowPlayerDialog(playerid, DIALOG_PESAN_NASIPECEL, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App", 
                 "Error: Hanya dapat diisi angka!\nMohon masukkan berapa jumlah yang ingin dibeli:", "Input", "Batal");
                 return 1;
             }
 
             if(strval(inputtext) < 1)
             {
-                ShowPlayerDialog(playerid, DIALOG_PESAN_NASIPECEL, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App", 
+                ShowPlayerDialog(playerid, DIALOG_PESAN_NASIPECEL, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App", 
                 "Error: Jumlah tidak valid!\nMohon masukkan berapa jumlah yang ingin dibeli:", "Input", "Batal");
                 return 1;
             }
@@ -626,21 +626,21 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
             if(isnull(inputtext))
             {
-                ShowPlayerDialog(playerid, DIALOG_PESAN_BUBUR, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App", 
+                ShowPlayerDialog(playerid, DIALOG_PESAN_BUBUR, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App", 
                 "Error: Tidak dapat diisi kosong!\nMohon masukkan berapa jumlah yang ingin dibeli:", "Input", "Batal");
                 return 1;
             }
 
             if(!IsNumeric(inputtext))
             {
-                ShowPlayerDialog(playerid, DIALOG_PESAN_BUBUR, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App", 
+                ShowPlayerDialog(playerid, DIALOG_PESAN_BUBUR, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App", 
                 "Error: Hanya dapat diisi angka!\nMohon masukkan berapa jumlah yang ingin dibeli:", "Input", "Batal");
                 return 1;
             }
 
             if(strval(inputtext) < 1)
             {
-                ShowPlayerDialog(playerid, DIALOG_PESAN_BUBUR, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App", 
+                ShowPlayerDialog(playerid, DIALOG_PESAN_BUBUR, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App", 
                 "Error: Jumlah tidak valid!\nMohon masukkan berapa jumlah yang ingin dibeli:", "Input", "Batal");
                 return 1;
             }
@@ -664,21 +664,21 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
             if(isnull(inputtext))
             {
-                ShowPlayerDialog(playerid, DIALOG_PESAN_SUSU, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App", 
+                ShowPlayerDialog(playerid, DIALOG_PESAN_SUSU, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App", 
                 "Error: Tidak dapat diisi kosong!\nMohon masukkan berapa jumlah yang ingin dibeli:", "Input", "Batal");
                 return 1;
             }
 
             if(!IsNumeric(inputtext))
             {
-                ShowPlayerDialog(playerid, DIALOG_PESAN_SUSU, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App", 
+                ShowPlayerDialog(playerid, DIALOG_PESAN_SUSU, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App", 
                 "Error: Hanya dapat diisi angka!\nMohon masukkan berapa jumlah yang ingin dibeli:", "Input", "Batal");
                 return 1;
             }
 
             if(strval(inputtext) < 1)
             {
-                ShowPlayerDialog(playerid, DIALOG_PESAN_SUSU, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App", 
+                ShowPlayerDialog(playerid, DIALOG_PESAN_SUSU, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App", 
                 "Error: Jumlah tidak valid!\nMohon masukkan berapa jumlah yang ingin dibeli:", "Input", "Batal");
                 return 1;
             }
@@ -702,21 +702,21 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
             if(isnull(inputtext))
             {
-                ShowPlayerDialog(playerid, DIALOG_PESAN_ESTEH, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App", 
+                ShowPlayerDialog(playerid, DIALOG_PESAN_ESTEH, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App", 
                 "Error: Tidak dapat diisi kosong!\nMohon masukkan berapa jumlah yang ingin dibeli:", "Input", "Batal");
                 return 1;
             }
 
             if(!IsNumeric(inputtext))
             {
-                ShowPlayerDialog(playerid, DIALOG_PESAN_ESTEH, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App", 
+                ShowPlayerDialog(playerid, DIALOG_PESAN_ESTEH, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App", 
                 "Error: Hanya dapat diisi angka!\nMohon masukkan berapa jumlah yang ingin dibeli:", "Input", "Batal");
                 return 1;
             }
 
             if(strval(inputtext) < 1)
             {
-                ShowPlayerDialog(playerid, DIALOG_PESAN_ESTEH, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App", 
+                ShowPlayerDialog(playerid, DIALOG_PESAN_ESTEH, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App", 
                 "Error: Jumlah tidak valid!\nMohon masukkan berapa jumlah yang ingin dibeli:", "Input", "Batal");
                 return 1;
             }
@@ -740,21 +740,21 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
             if(isnull(inputtext))
             {
-                ShowPlayerDialog(playerid, DIALOG_PESAN_KOPI, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App", 
+                ShowPlayerDialog(playerid, DIALOG_PESAN_KOPI, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App", 
                 "Error: Tidak dapat diisi kosong!\nMohon masukkan berapa jumlah yang ingin dibeli:", "Input", "Batal");
                 return 1;
             }
 
             if(!IsNumeric(inputtext))
             {
-                ShowPlayerDialog(playerid, DIALOG_PESAN_KOPI, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App", 
+                ShowPlayerDialog(playerid, DIALOG_PESAN_KOPI, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App", 
                 "Error: Hanya dapat diisi angka!\nMohon masukkan berapa jumlah yang ingin dibeli:", "Input", "Batal");
                 return 1;
             }
 
             if(strval(inputtext) < 1)
             {
-                ShowPlayerDialog(playerid, DIALOG_PESAN_KOPI, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App", 
+                ShowPlayerDialog(playerid, DIALOG_PESAN_KOPI, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App", 
                 "Error: Jumlah tidak valid!\nMohon masukkan berapa jumlah yang ingin dibeli:", "Input", "Batal");
                 return 1;
             }
@@ -778,21 +778,21 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
             if(isnull(inputtext))
             {
-                ShowPlayerDialog(playerid, DIALOG_PESAN_CHOCOMATCH, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App", 
+                ShowPlayerDialog(playerid, DIALOG_PESAN_CHOCOMATCH, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App", 
                 "Error: Tidak dapat diisi kosong!\nMohon masukkan berapa jumlah yang ingin dibeli:", "Input", "Batal");
                 return 1;
             }
 
             if(!IsNumeric(inputtext))
             {
-                ShowPlayerDialog(playerid, DIALOG_PESAN_CHOCOMATCH, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App", 
+                ShowPlayerDialog(playerid, DIALOG_PESAN_CHOCOMATCH, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App", 
                 "Error: Hanya dapat diisi angka!\nMohon masukkan berapa jumlah yang ingin dibeli:", "Input", "Batal");
                 return 1;
             }
 
             if(strval(inputtext) < 1)
             {
-                ShowPlayerDialog(playerid, DIALOG_PESAN_CHOCOMATCH, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App", 
+                ShowPlayerDialog(playerid, DIALOG_PESAN_CHOCOMATCH, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App", 
                 "Error: Jumlah tidak valid!\nMohon masukkan berapa jumlah yang ingin dibeli:", "Input", "Batal");
                 return 1;
             }
@@ -819,21 +819,21 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
             if(isnull(inputtext))
             {
-                ShowPlayerDialog(playerid, DIALOG_PESAN_NOTES, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App", 
+                ShowPlayerDialog(playerid, DIALOG_PESAN_NOTES, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App", 
                 "Error: Tidak dapat diisi kosong!\nKemana pesanan ini diantarkan? (Tuliskan catatan kamu kepada driver)", "Input", "Batal");
                 return 1;
             }
 
             if(IsNumeric(inputtext))
             {
-                ShowPlayerDialog(playerid, DIALOG_PESAN_NOTES, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App", 
+                ShowPlayerDialog(playerid, DIALOG_PESAN_NOTES, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App", 
                 "Error: Tidak dapat diisi angka!\nKemana pesanan ini diantarkan? (Tuliskan catatan kamu kepada driver)", "Input", "Batal");
                 return 1;
             }
 
             if(strlen(inputtext) < 1 || strlen(inputtext) > 128)
             {
-                ShowPlayerDialog(playerid, DIALOG_PESAN_NOTES, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek App", 
+                ShowPlayerDialog(playerid, DIALOG_PESAN_NOTES, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek App", 
                 "Error: Huruf tidak dapat kurang dari 1 atau lebih dari 128 characters!\nKemana pesanan ini diantarkan? (Tuliskan catatan kamu kepada driver)", "Input", "Batal");
                 return 1;
             }

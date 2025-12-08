@@ -194,7 +194,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
         {
             if(IsPlayerInDynamicArea(playerid, PlayerChickenVars[playerid][ButcherStartArea]))
             {
-                ShowPlayerDialog(playerid, DIALOG_AYAM_START, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Tukang Ayam",
+                ShowPlayerDialog(playerid, DIALOG_AYAM_START, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Tukang Ayam",
                 "Mulai Pekerjaan\n"GRAY"Selesaikan Pekerjaan", "Pilih", "Batal");
             }
 

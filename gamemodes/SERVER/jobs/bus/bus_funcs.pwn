@@ -44,15 +44,15 @@ LoadPickupBus()
     CountBusKanpol = 0;
     CountBusHospital = 0;
 
-    format(frmthalte, sizeof(frmthalte), ""GRAY"[Mayoritas Halte]\n\n"WHITE"Halte Bus Airport\n%s -> %s\nJumlah Unit Bus Beroperasi: "YELLOW"%d", GetLocation(118.9531, -1459.3467, 24.3454), GetLocation(415.6029, -1778.9414, 5.5469), CountBusAirport);
+    format(frmthalte, sizeof(frmthalte), ""GRAY"[Imajinasi Halte]\n\n"WHITE"Halte Bus Airport\n%s -> %s\nJumlah Unit Bus Beroperasi: "YELLOW"%d", GetLocation(118.9531, -1459.3467, 24.3454), GetLocation(415.6029, -1778.9414, 5.5469), CountBusAirport);
     HalteAirportLabel[0] = CreateDynamic3DTextLabel(frmthalte, COLOR_WHITE, 118.9531, -1459.3467, 24.3454 + 1.1, 10.0, INVALID_PLAYER_ID, INVALID_VEHICLE_ID, 1, 0, 0, -1, 10.0, -1, 0);
-    format(frmthalte, sizeof(frmthalte), ""GRAY"[Mayoritas Halte]\n\n"WHITE"Halte Bus Airport\n%s -> %s\nJumlah Unit Bus Beroperasi: "YELLOW"%d", GetLocation(415.6029, -1778.9414, 5.5469), GetLocation(1695.0912, -2247.4392, 13.5469), CountBusAirport);
+    format(frmthalte, sizeof(frmthalte), ""GRAY"[Imajinasi Halte]\n\n"WHITE"Halte Bus Airport\n%s -> %s\nJumlah Unit Bus Beroperasi: "YELLOW"%d", GetLocation(415.6029, -1778.9414, 5.5469), GetLocation(1695.0912, -2247.4392, 13.5469), CountBusAirport);
     HalteAirportLabel[1] = CreateDynamic3DTextLabel(frmthalte, COLOR_WHITE, 415.6029, -1778.9414, 5.5469 + 1.1, 10.0, INVALID_PLAYER_ID, INVALID_VEHICLE_ID, 1, 0, 0, -1, 10.0, -1, 0);
-    format(frmthalte, sizeof(frmthalte), ""GRAY"[Mayoritas Halte]\n\n"WHITE"Halte Bus Airport\n%s -> %s\nJumlah Unit Bus Beroperasi: "YELLOW"%d", GetLocation(1695.0912, -2247.4392, 13.5469), GetLocation(1326.6183, -917.9512, 37.0724), CountBusAirport);
+    format(frmthalte, sizeof(frmthalte), ""GRAY"[Imajinasi Halte]\n\n"WHITE"Halte Bus Airport\n%s -> %s\nJumlah Unit Bus Beroperasi: "YELLOW"%d", GetLocation(1695.0912, -2247.4392, 13.5469), GetLocation(1326.6183, -917.9512, 37.0724), CountBusAirport);
     HalteAirportLabel[2] = CreateDynamic3DTextLabel(frmthalte, COLOR_WHITE, 1695.0912, -2247.4392, 13.5469 + 1.1, 10.0, INVALID_PLAYER_ID, INVALID_VEHICLE_ID, 1, 0, 0, -1, 10.0, -1, 0);
-    format(frmthalte, sizeof(frmthalte), ""GRAY"[Mayoritas Halte]\n\n"WHITE"Halte Bus Airport\n%s -> %s\nJumlah Unit Bus Beroperasi: "YELLOW"%d", GetLocation(1326.6183, -917.9512, 37.0724), GetLocation(275.6585, -179.4285, 1.5781), CountBusAirport);
+    format(frmthalte, sizeof(frmthalte), ""GRAY"[Imajinasi Halte]\n\n"WHITE"Halte Bus Airport\n%s -> %s\nJumlah Unit Bus Beroperasi: "YELLOW"%d", GetLocation(1326.6183, -917.9512, 37.0724), GetLocation(275.6585, -179.4285, 1.5781), CountBusAirport);
     HalteAirportLabel[3] = CreateDynamic3DTextLabel(frmthalte, COLOR_WHITE, 1326.6183, -917.9512, 37.0724 + 1.1, 10.0, INVALID_PLAYER_ID, INVALID_VEHICLE_ID, 1, 0, 0, -1, 10.0, -1, 0);
-    format(frmthalte, sizeof(frmthalte), ""GRAY"[Mayoritas Halte]\n\n"WHITE"Halte Bus Airport\n%s -> Terminal Kota\nJumlah Unit Bus Beroperasi: "YELLOW"%d", GetLocation(275.6585, -179.4285, 1.5781), CountBusAirport);
+    format(frmthalte, sizeof(frmthalte), ""GRAY"[Imajinasi Halte]\n\n"WHITE"Halte Bus Airport\n%s -> Terminal Kota\nJumlah Unit Bus Beroperasi: "YELLOW"%d", GetLocation(275.6585, -179.4285, 1.5781), CountBusAirport);
     HalteAirportLabel[4] = CreateDynamic3DTextLabel(frmthalte, COLOR_WHITE, 275.6585, -179.4285, 1.5781 + 1.1, 10.0, INVALID_PLAYER_ID, INVALID_VEHICLE_ID, 1, 0, 0, -1, 10.0, -1, 0);
     
     HaltePickup[0] = CreateDynamicPickup(1239, 23, 118.9531, -1459.3467, 24.3454, 0, 0, -1, 15.0, -1, 0);
@@ -61,17 +61,17 @@ LoadPickupBus()
     HaltePickup[3] = CreateDynamicPickup(1239, 23, 1326.6183, -917.9512, 37.0724, 0, 0, -1, 15.0, -1, 0);
     HaltePickup[4] = CreateDynamicPickup(1239, 23, 275.6585, -179.4285, 1.5781, 0, 0, -1, 15.0, -1, 0);
 
-    format(frmthalte, sizeof(frmthalte), ""GRAY"[Mayoritas Halte]\n\n"WHITE"Halte Bus Kantor Polisi\n%s -> %s\nJumlah Unit Beroperasi: "YELLOW"%d", GetLocation(634.8659, -552.8594, 16.3359), GetLocation(934.6875, -1579.2477, 13.5469), CountBusKanpol);
+    format(frmthalte, sizeof(frmthalte), ""GRAY"[Imajinasi Halte]\n\n"WHITE"Halte Bus Kantor Polisi\n%s -> %s\nJumlah Unit Beroperasi: "YELLOW"%d", GetLocation(634.8659, -552.8594, 16.3359), GetLocation(934.6875, -1579.2477, 13.5469), CountBusKanpol);
     HalteKanpolLabel[0] = CreateDynamic3DTextLabel(frmthalte, COLOR_WHITE, 634.8659, -552.8594, 16.3359 + 1.1, 10.0, INVALID_PLAYER_ID, INVALID_VEHICLE_ID, 1, 0, 0, -1, 10.0, -1, 0);
-    format(frmthalte, sizeof(frmthalte), ""GRAY"[Mayoritas Halte]\n\n"WHITE"Halte Bus Kantor Polisi\n%s -> %s\nJumlah Unit Beroperasi: "YELLOW"%d", GetLocation(934.6875, -1579.2477, 13.5469), GetLocation(1071.4409, -1718.4834, 13.5469), CountBusKanpol);
+    format(frmthalte, sizeof(frmthalte), ""GRAY"[Imajinasi Halte]\n\n"WHITE"Halte Bus Kantor Polisi\n%s -> %s\nJumlah Unit Beroperasi: "YELLOW"%d", GetLocation(934.6875, -1579.2477, 13.5469), GetLocation(1071.4409, -1718.4834, 13.5469), CountBusKanpol);
     HalteKanpolLabel[1] = CreateDynamic3DTextLabel(frmthalte, COLOR_WHITE, 934.6875, -1579.2477, 13.5469 + 1.1, 10.0, INVALID_PLAYER_ID, INVALID_VEHICLE_ID, 1, 0, 0, -1, 10.0, -1, 0);
-    format(frmthalte, sizeof(frmthalte), ""GRAY"[Mayoritas Halte]\n\n"WHITE"Halte Bus Kantor Polisi\n%s -> %s\nJumlah Unit Beroperasi: "YELLOW"%d", GetLocation(1071.4409, -1718.4834, 13.5469), GetLocation(1265.9503, -2005.9641, 59.4531), CountBusKanpol);
+    format(frmthalte, sizeof(frmthalte), ""GRAY"[Imajinasi Halte]\n\n"WHITE"Halte Bus Kantor Polisi\n%s -> %s\nJumlah Unit Beroperasi: "YELLOW"%d", GetLocation(1071.4409, -1718.4834, 13.5469), GetLocation(1265.9503, -2005.9641, 59.4531), CountBusKanpol);
     HalteKanpolLabel[2] = CreateDynamic3DTextLabel(frmthalte, COLOR_WHITE, 1071.4409, -1718.4834, 13.5469 + 1.1, 10.0, INVALID_PLAYER_ID, INVALID_VEHICLE_ID, 1, 0, 0, -1, 10.0, -1, 0);
-    format(frmthalte, sizeof(frmthalte), ""GRAY"[Mayoritas Halte]\n\n"WHITE"Halte Bus Kantor Polisi\n%s -> %s\nJumlah Unit Beroperasi: "YELLOW"%d", GetLocation(1265.9503, -2005.9641, 59.4531), GetLocation(1201.3481, -1274.0947, 13.5469), CountBusKanpol);
+    format(frmthalte, sizeof(frmthalte), ""GRAY"[Imajinasi Halte]\n\n"WHITE"Halte Bus Kantor Polisi\n%s -> %s\nJumlah Unit Beroperasi: "YELLOW"%d", GetLocation(1265.9503, -2005.9641, 59.4531), GetLocation(1201.3481, -1274.0947, 13.5469), CountBusKanpol);
     HalteKanpolLabel[3] = CreateDynamic3DTextLabel(frmthalte, COLOR_WHITE, 1265.9503, -2005.9641, 59.4531 + 1.1, 10.0, INVALID_PLAYER_ID, INVALID_VEHICLE_ID, 1, 0, 0, -1, 10.0, -1, 0);
-    format(frmthalte, sizeof(frmthalte), ""GRAY"[Mayoritas Halte]\n\n"WHITE"Halte Bus Kantor Polisi\n%s -> %s\nJumlah Unit Beroperasi: "YELLOW"%d", GetLocation(1201.3481, -1274.0947, 13.5469), GetLocation(1024.7743, -1133.9796, 23.8203), CountBusKanpol);
+    format(frmthalte, sizeof(frmthalte), ""GRAY"[Imajinasi Halte]\n\n"WHITE"Halte Bus Kantor Polisi\n%s -> %s\nJumlah Unit Beroperasi: "YELLOW"%d", GetLocation(1201.3481, -1274.0947, 13.5469), GetLocation(1024.7743, -1133.9796, 23.8203), CountBusKanpol);
     HalteKanpolLabel[4] = CreateDynamic3DTextLabel(frmthalte, COLOR_WHITE, 1201.3481, -1274.0947, 13.5469 + 1.1, 10.0, INVALID_PLAYER_ID, INVALID_VEHICLE_ID, 1, 0, 0, -1, 10.0, -1, 0);
-    format(frmthalte, sizeof(frmthalte), ""GRAY"[Mayoritas Halte]\n\n"WHITE"Halte Bus Kantor Polisi\n%s -> Terminal Kota\nJumlah Unit Beroperasi: "YELLOW"%d", GetLocation(1024.7743, -1133.9796, 23.8203), CountBusKanpol);
+    format(frmthalte, sizeof(frmthalte), ""GRAY"[Imajinasi Halte]\n\n"WHITE"Halte Bus Kantor Polisi\n%s -> Terminal Kota\nJumlah Unit Beroperasi: "YELLOW"%d", GetLocation(1024.7743, -1133.9796, 23.8203), CountBusKanpol);
     HalteKanpolLabel[5] = CreateDynamic3DTextLabel(frmthalte, COLOR_WHITE, 1024.7743, -1133.9796, 23.8203 + 1.1, 10.0, INVALID_PLAYER_ID, INVALID_VEHICLE_ID, 1, 0, 0, -1, 10.0, -1, 0);
     
     HaltePickup[5] = CreateDynamicPickup(1239, 23, 634.8659, -552.8594, 16.3359, 0, 0, -1, 15.0, -1, 0);
@@ -81,13 +81,13 @@ LoadPickupBus()
     HaltePickup[9] = CreateDynamicPickup(1239, 23, 1201.3481, -1274.0947, 13.5469, 0, 0, -1, 15.0, -1, 0);
     HaltePickup[10] = CreateDynamicPickup(1239, 23, 1024.7743, -1133.9796, 23.8203, 0, 0, -1, 15.0, -1, 0);
 
-    format(frmthalte, sizeof(frmthalte), ""GRAY"[Mayoritas Halte]\n\n"WHITE"Halte Bus Rumah Sakit\n%s -> %s\nJumlah Unit Bus Beroperasi: "YELLOW"%d", GetLocation(-118.5932, -1155.1671, 2.2529), GetLocation(313.6201, -1482.1116, 33.6070), CountBusHospital);
+    format(frmthalte, sizeof(frmthalte), ""GRAY"[Imajinasi Halte]\n\n"WHITE"Halte Bus Rumah Sakit\n%s -> %s\nJumlah Unit Bus Beroperasi: "YELLOW"%d", GetLocation(-118.5932, -1155.1671, 2.2529), GetLocation(313.6201, -1482.1116, 33.6070), CountBusHospital);
     HalteHospitalLabel[0] = CreateDynamic3DTextLabel(frmthalte, COLOR_WHITE, -118.5932, -1155.1671, 2.2529 + 1.1, 10.0, INVALID_PLAYER_ID, INVALID_VEHICLE_ID, 1, 0, 0, -1, 10.0, -1, 0);
-    format(frmthalte, sizeof(frmthalte), ""GRAY"[Mayoritas Halte]\n\n"WHITE"Halte Bus Rumah Sakit\n%s -> %s\nJumlah Unit Bus Beroperasi: "YELLOW"%d", GetLocation(313.6201, -1482.1116, 33.6070), GetLocation(1371.3846, -1084.7994, 24.8435), CountBusHospital);
+    format(frmthalte, sizeof(frmthalte), ""GRAY"[Imajinasi Halte]\n\n"WHITE"Halte Bus Rumah Sakit\n%s -> %s\nJumlah Unit Bus Beroperasi: "YELLOW"%d", GetLocation(313.6201, -1482.1116, 33.6070), GetLocation(1371.3846, -1084.7994, 24.8435), CountBusHospital);
     HalteHospitalLabel[1] = CreateDynamic3DTextLabel(frmthalte, COLOR_WHITE, 313.6201, -1482.1116, 33.6070 + 1.1, 10.0, INVALID_PLAYER_ID, INVALID_VEHICLE_ID, 1, 0, 0, -1, 10.0, -1, 0);
-    format(frmthalte, sizeof(frmthalte), ""GRAY"[Mayoritas Halte]\n\n"WHITE"Halte Bus Rumah Sakit\n%s -> %s\nJumlah Unit Bus Beroperasi: "YELLOW"%d", GetLocation(1371.3846, -1084.7994, 24.8435), GetLocation(688.6235, -616.1765, 16.3359), CountBusHospital);
+    format(frmthalte, sizeof(frmthalte), ""GRAY"[Imajinasi Halte]\n\n"WHITE"Halte Bus Rumah Sakit\n%s -> %s\nJumlah Unit Bus Beroperasi: "YELLOW"%d", GetLocation(1371.3846, -1084.7994, 24.8435), GetLocation(688.6235, -616.1765, 16.3359), CountBusHospital);
     HalteHospitalLabel[2] = CreateDynamic3DTextLabel(frmthalte, COLOR_WHITE, 1371.3846, -1084.7994, 24.8435 + 1.1, 10.0, INVALID_PLAYER_ID, INVALID_VEHICLE_ID, 1, 0, 0, -1, 10.0, -1, 0);
-    format(frmthalte, sizeof(frmthalte), ""GRAY"[Mayoritas Halte]\n\n"WHITE"Halte Bus Rumah Sakit\n%s -> Terminal Kota\nJumlah Unit Bus Beroperasi: "YELLOW"%d", GetLocation(688.6235, -616.1765, 16.3359), CountBusHospital);
+    format(frmthalte, sizeof(frmthalte), ""GRAY"[Imajinasi Halte]\n\n"WHITE"Halte Bus Rumah Sakit\n%s -> Terminal Kota\nJumlah Unit Bus Beroperasi: "YELLOW"%d", GetLocation(688.6235, -616.1765, 16.3359), CountBusHospital);
     HalteHospitalLabel[3] = CreateDynamic3DTextLabel(frmthalte, COLOR_WHITE, 688.6235, -616.1765, 16.3359 + 1.1, 10.0, INVALID_PLAYER_ID, INVALID_VEHICLE_ID, 1, 0, 0, -1, 10.0, -1, 0);
 
     HaltePickup[9] = CreateDynamicPickup(1239, 23, -118.5932, -1155.1671, 2.2529, 0, 0, -1, 15.0, -1, 0);
@@ -288,13 +288,13 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
                 SetDynamicObjectMaterialText(BusObject, 0, "{000000}u", 130, "Webdings", 170, 0, 0, 0, 1);
                 AttachDynamicObjectToVehicle(BusObject, JobVehicle[AccountData[playerid][pJobVehicle]][Vehicle], -1.340, -3.809, 0.659, 0.000, 0.000, -90.000);
                 BusObject = CreateDynamicObject(2662,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
-                SetDynamicObjectMaterialText(BusObject, 0, "{000000}Mayoritas", 130, "Arial", 80, 1, 0, 0, 1);
+                SetDynamicObjectMaterialText(BusObject, 0, "{000000}Imajinasi", 130, "Arial", 80, 1, 0, 0, 1);
                 AttachDynamicObjectToVehicle(BusObject, JobVehicle[AccountData[playerid][pJobVehicle]][Vehicle], -1.340, -3.039, 0.719, 0.000, 0.000, -90.000);
                 BusObject = CreateDynamicObject(2662,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
                 SetDynamicObjectMaterialText(BusObject, 0, "{000000}Transit", 130, "Arial", 80, 1, 0, 0, 1);
                 AttachDynamicObjectToVehicle(BusObject, JobVehicle[AccountData[playerid][pJobVehicle]][Vehicle], -1.340, -3.059, 0.450, 0.000, 0.000, -90.000);
                 BusObject = CreateDynamicObject(2662,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
-                SetDynamicObjectMaterialText(BusObject, 0, "{000000}Mayoritas", 130, "Arial", 80, 1, 0, 0, 1);
+                SetDynamicObjectMaterialText(BusObject, 0, "{000000}Imajinasi", 130, "Arial", 80, 1, 0, 0, 1);
                 AttachDynamicObjectToVehicle(BusObject, JobVehicle[AccountData[playerid][pJobVehicle]][Vehicle], 1.360, -2.919, 0.679, 0.000, 0.000, 90.000);
                 BusObject = CreateDynamicObject(2662,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
                 SetDynamicObjectMaterialText(BusObject, 0, "{000000}Transit", 130, "Arial", 80, 1, 0, 0, 1);
@@ -355,13 +355,13 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 				SetDynamicObjectMaterialText(BusObject, 0, "{000000}u", 130, "Webdings", 170, 0, 0, 0, 1);
 				AttachDynamicObjectToVehicle(BusObject, JobVehicle[AccountData[playerid][pJobVehicle]][Vehicle], -1.340, -3.809, 0.659, 0.000, 0.000, -90.000);
 				BusObject = CreateDynamicObject(2662,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
-				SetDynamicObjectMaterialText(BusObject, 0, "{000000}Mayoritas", 130, "Arial", 80, 1, 0, 0, 1);
+				SetDynamicObjectMaterialText(BusObject, 0, "{000000}Imajinasi", 130, "Arial", 80, 1, 0, 0, 1);
 				AttachDynamicObjectToVehicle(BusObject, JobVehicle[AccountData[playerid][pJobVehicle]][Vehicle], -1.340, -3.039, 0.719, 0.000, 0.000, -90.000);
 				BusObject = CreateDynamicObject(2662,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
 				SetDynamicObjectMaterialText(BusObject, 0, "{000000}Transit", 130, "Arial", 80, 1, 0, 0, 1);
 				AttachDynamicObjectToVehicle(BusObject, JobVehicle[AccountData[playerid][pJobVehicle]][Vehicle], -1.340, -3.059, 0.450, 0.000, 0.000, -90.000);
 				BusObject = CreateDynamicObject(2662,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
-				SetDynamicObjectMaterialText(BusObject, 0, "{000000}Mayoritas", 130, "Arial", 80, 1, 0, 0, 1);
+				SetDynamicObjectMaterialText(BusObject, 0, "{000000}Imajinasi", 130, "Arial", 80, 1, 0, 0, 1);
 				AttachDynamicObjectToVehicle(BusObject, JobVehicle[AccountData[playerid][pJobVehicle]][Vehicle], 1.360, -2.919, 0.679, 0.000, 0.000, 90.000);
 				BusObject = CreateDynamicObject(2662,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
 				SetDynamicObjectMaterialText(BusObject, 0, "{000000}Transit", 130, "Arial", 80, 1, 0, 0, 1);
@@ -422,13 +422,13 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 				SetDynamicObjectMaterialText(BusObject, 0, "{000000}u", 130, "Webdings", 170, 0, 0, 0, 1);
 				AttachDynamicObjectToVehicle(BusObject, JobVehicle[AccountData[playerid][pJobVehicle]][Vehicle], -1.340, -3.809, 0.659, 0.000, 0.000, -90.000);
 				BusObject = CreateDynamicObject(2662,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
-				SetDynamicObjectMaterialText(BusObject, 0, "{000000}Mayoritas", 130, "Arial", 80, 1, 0, 0, 1);
+				SetDynamicObjectMaterialText(BusObject, 0, "{000000}Imajinasi", 130, "Arial", 80, 1, 0, 0, 1);
 				AttachDynamicObjectToVehicle(BusObject, JobVehicle[AccountData[playerid][pJobVehicle]][Vehicle], -1.340, -3.039, 0.719, 0.000, 0.000, -90.000);
 				BusObject = CreateDynamicObject(2662,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
 				SetDynamicObjectMaterialText(BusObject, 0, "{000000}Transit", 130, "Arial", 80, 1, 0, 0, 1);
 				AttachDynamicObjectToVehicle(BusObject, JobVehicle[AccountData[playerid][pJobVehicle]][Vehicle], -1.340, -3.059, 0.450, 0.000, 0.000, -90.000);
 				BusObject = CreateDynamicObject(2662,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
-				SetDynamicObjectMaterialText(BusObject, 0, "{000000}Mayoritas", 130, "Arial", 80, 1, 0, 0, 1);
+				SetDynamicObjectMaterialText(BusObject, 0, "{000000}Imajinasi", 130, "Arial", 80, 1, 0, 0, 1);
 				AttachDynamicObjectToVehicle(BusObject, JobVehicle[AccountData[playerid][pJobVehicle]][Vehicle], 1.360, -2.919, 0.679, 0.000, 0.000, 90.000);
 				BusObject = CreateDynamicObject(2662,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
 				SetDynamicObjectMaterialText(BusObject, 0, "{000000}Transit", 130, "Arial", 80, 1, 0, 0, 1);
@@ -486,13 +486,13 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 				SetDynamicObjectMaterialText(BusObject, 0, "{000000}u", 130, "Webdings", 170, 0, 0, 0, 1);
 				AttachDynamicObjectToVehicle(BusObject, JobVehicle[AccountData[playerid][pJobVehicle]][Vehicle], -1.340, -3.809, 0.659, 0.000, 0.000, -90.000);
 				BusObject = CreateDynamicObject(2662,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
-				SetDynamicObjectMaterialText(BusObject, 0, "{000000}Mayoritas", 130, "Arial", 80, 1, 0, 0, 1);
+				SetDynamicObjectMaterialText(BusObject, 0, "{000000}Imajinasi", 130, "Arial", 80, 1, 0, 0, 1);
 				AttachDynamicObjectToVehicle(BusObject, JobVehicle[AccountData[playerid][pJobVehicle]][Vehicle], -1.340, -3.039, 0.719, 0.000, 0.000, -90.000);
 				BusObject = CreateDynamicObject(2662,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
 				SetDynamicObjectMaterialText(BusObject, 0, "{000000}Transit", 130, "Arial", 80, 1, 0, 0, 1);
 				AttachDynamicObjectToVehicle(BusObject, JobVehicle[AccountData[playerid][pJobVehicle]][Vehicle], -1.340, -3.059, 0.450, 0.000, 0.000, -90.000);
 				BusObject = CreateDynamicObject(2662,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
-				SetDynamicObjectMaterialText(BusObject, 0, "{000000}Mayoritas", 130, "Arial", 80, 1, 0, 0, 1);
+				SetDynamicObjectMaterialText(BusObject, 0, "{000000}Imajinasi", 130, "Arial", 80, 1, 0, 0, 1);
 				AttachDynamicObjectToVehicle(BusObject, JobVehicle[AccountData[playerid][pJobVehicle]][Vehicle], 1.360, -2.919, 0.679, 0.000, 0.000, 90.000);
 				BusObject = CreateDynamicObject(2662,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
 				SetDynamicObjectMaterialText(BusObject, 0, "{000000}Transit", 130, "Arial", 80, 1, 0, 0, 1);
@@ -1542,46 +1542,46 @@ hook OnPlayerLeaveRaceCP(playerid)
 task LabelHalte_Update[1000]()
 {
     static shstr[666];
-    format(shstr, sizeof(shstr), ""GRAY"[Mayoritas Halte]\n\n"WHITE"Halte Bus Airport\n%s -> %s\nJumlah Unit Bus Beroperasi: "YELLOW"%d", GetLocation(118.9531, -1459.3467, 24.3454), GetLocation(415.6029, -1778.9414, 5.5469), CountBusAirport);
+    format(shstr, sizeof(shstr), ""GRAY"[Imajinasi Halte]\n\n"WHITE"Halte Bus Airport\n%s -> %s\nJumlah Unit Bus Beroperasi: "YELLOW"%d", GetLocation(118.9531, -1459.3467, 24.3454), GetLocation(415.6029, -1778.9414, 5.5469), CountBusAirport);
     UpdateDynamic3DTextLabelText(HalteAirportLabel[0], COLOR_WHITE, shstr);
 
-    format(shstr, sizeof(shstr), ""GRAY"[Mayoritas Halte]\n\n"WHITE"Halte Bus Airport\n%s -> %s\nJumlah Unit Bus Beroperasi: "YELLOW"%d", GetLocation(415.6029, -1778.9414, 5.5469), GetLocation(1695.0912, -2247.4392, 13.5469), CountBusAirport);
+    format(shstr, sizeof(shstr), ""GRAY"[Imajinasi Halte]\n\n"WHITE"Halte Bus Airport\n%s -> %s\nJumlah Unit Bus Beroperasi: "YELLOW"%d", GetLocation(415.6029, -1778.9414, 5.5469), GetLocation(1695.0912, -2247.4392, 13.5469), CountBusAirport);
     UpdateDynamic3DTextLabelText(HalteAirportLabel[1], COLOR_WHITE, shstr);
 
-    format(shstr, sizeof(shstr), ""GRAY"[Mayoritas Halte]\n\n"WHITE"Halte Bus Airport\n%s -> %s\nJumlah Unit Bus Beroperasi: "YELLOW"%d", GetLocation(1695.0912, -2247.4392, 13.5469), GetLocation(1326.6183, -917.9512, 37.0724), CountBusAirport);
+    format(shstr, sizeof(shstr), ""GRAY"[Imajinasi Halte]\n\n"WHITE"Halte Bus Airport\n%s -> %s\nJumlah Unit Bus Beroperasi: "YELLOW"%d", GetLocation(1695.0912, -2247.4392, 13.5469), GetLocation(1326.6183, -917.9512, 37.0724), CountBusAirport);
     UpdateDynamic3DTextLabelText(HalteAirportLabel[2], COLOR_WHITE, shstr);
 
-    format(shstr, sizeof(shstr), ""GRAY"[Mayoritas Halte]\n\n"WHITE"Halte Bus Airport\n%s -> %s\nJumlah Unit Bus Beroperasi: "YELLOW"%d", GetLocation(1326.6183, -917.9512, 37.0724), GetLocation(275.6585, -179.4285, 1.5781), CountBusAirport);
+    format(shstr, sizeof(shstr), ""GRAY"[Imajinasi Halte]\n\n"WHITE"Halte Bus Airport\n%s -> %s\nJumlah Unit Bus Beroperasi: "YELLOW"%d", GetLocation(1326.6183, -917.9512, 37.0724), GetLocation(275.6585, -179.4285, 1.5781), CountBusAirport);
     UpdateDynamic3DTextLabelText(HalteAirportLabel[3], COLOR_WHITE, shstr);
 
-    format(shstr, sizeof(shstr), ""GRAY"[Mayoritas Halte]\n\n"WHITE"Halte Bus Airport\n%s -> Terminal Kota\nJumlah Unit Bus Beroperasi: "YELLOW"%d", GetLocation(275.6585, -179.4285, 1.5781), CountBusAirport);
+    format(shstr, sizeof(shstr), ""GRAY"[Imajinasi Halte]\n\n"WHITE"Halte Bus Airport\n%s -> Terminal Kota\nJumlah Unit Bus Beroperasi: "YELLOW"%d", GetLocation(275.6585, -179.4285, 1.5781), CountBusAirport);
     UpdateDynamic3DTextLabelText(HalteAirportLabel[4], COLOR_WHITE, shstr);
 
-    format(shstr, sizeof(shstr), ""GRAY"[Mayoritas Halte]\n\n"WHITE"Halte Bus Kantor Polisi\n%s -> %s\nJumlah Unit Beroperasi: "YELLOW"%d", GetLocation(634.8659, -552.8594, 16.3359), GetLocation(934.6875, -1579.2477, 13.5469), CountBusKanpol);
+    format(shstr, sizeof(shstr), ""GRAY"[Imajinasi Halte]\n\n"WHITE"Halte Bus Kantor Polisi\n%s -> %s\nJumlah Unit Beroperasi: "YELLOW"%d", GetLocation(634.8659, -552.8594, 16.3359), GetLocation(934.6875, -1579.2477, 13.5469), CountBusKanpol);
     UpdateDynamic3DTextLabelText(HalteKanpolLabel[0], COLOR_WHITE, shstr);
 
-    format(shstr, sizeof(shstr), ""GRAY"[Mayoritas Halte]\n\n"WHITE"Halte Bus Kantor Polisi\n%s -> %s\nJumlah Unit Beroperasi: "YELLOW"%d", GetLocation(934.6875, -1579.2477, 13.5469), GetLocation(1071.4409, -1718.4834, 13.5469), CountBusKanpol);
+    format(shstr, sizeof(shstr), ""GRAY"[Imajinasi Halte]\n\n"WHITE"Halte Bus Kantor Polisi\n%s -> %s\nJumlah Unit Beroperasi: "YELLOW"%d", GetLocation(934.6875, -1579.2477, 13.5469), GetLocation(1071.4409, -1718.4834, 13.5469), CountBusKanpol);
     UpdateDynamic3DTextLabelText(HalteKanpolLabel[1], COLOR_WHITE, shstr);
 
-    format(shstr, sizeof(shstr), ""GRAY"[Mayoritas Halte]\n\n"WHITE"Halte Bus Kantor Polisi\n%s -> %s\nJumlah Unit Beroperasi: "YELLOW"%d", GetLocation(1071.4409, -1718.4834, 13.5469), GetLocation(1265.9503, -2005.9641, 59.4531), CountBusKanpol);
+    format(shstr, sizeof(shstr), ""GRAY"[Imajinasi Halte]\n\n"WHITE"Halte Bus Kantor Polisi\n%s -> %s\nJumlah Unit Beroperasi: "YELLOW"%d", GetLocation(1071.4409, -1718.4834, 13.5469), GetLocation(1265.9503, -2005.9641, 59.4531), CountBusKanpol);
     UpdateDynamic3DTextLabelText(HalteKanpolLabel[2], COLOR_WHITE, shstr);
 
-    format(shstr, sizeof(shstr), ""GRAY"[Mayoritas Halte]\n\n"WHITE"Halte Bus Kantor Polisi\n%s -> %s\nJumlah Unit Beroperasi: "YELLOW"%d", GetLocation(1265.9503, -2005.9641, 59.4531), GetLocation(1201.3481, -1274.0947, 13.5469), CountBusKanpol);
+    format(shstr, sizeof(shstr), ""GRAY"[Imajinasi Halte]\n\n"WHITE"Halte Bus Kantor Polisi\n%s -> %s\nJumlah Unit Beroperasi: "YELLOW"%d", GetLocation(1265.9503, -2005.9641, 59.4531), GetLocation(1201.3481, -1274.0947, 13.5469), CountBusKanpol);
     UpdateDynamic3DTextLabelText(HalteKanpolLabel[3], COLOR_WHITE, shstr);
 
-    format(shstr, sizeof(shstr), ""GRAY"[Mayoritas Halte]\n\n"WHITE"Halte Bus Kantor Polisi\n%s -> %s\nJumlah Unit Beroperasi: "YELLOW"%d", GetLocation(1201.3481, -1274.0947, 13.5469), GetLocation(1024.7743, -1133.9796, 23.8203), CountBusKanpol);
+    format(shstr, sizeof(shstr), ""GRAY"[Imajinasi Halte]\n\n"WHITE"Halte Bus Kantor Polisi\n%s -> %s\nJumlah Unit Beroperasi: "YELLOW"%d", GetLocation(1201.3481, -1274.0947, 13.5469), GetLocation(1024.7743, -1133.9796, 23.8203), CountBusKanpol);
     UpdateDynamic3DTextLabelText(HalteKanpolLabel[4], COLOR_WHITE, shstr);
 
-    format(shstr, sizeof(shstr), ""GRAY"[Mayoritas Halte]\n\n"WHITE"Halte Bus Kantor Polisi\n%s -> Terminal Kota\nJumlah Unit Beroperasi: "YELLOW"%d", GetLocation(1024.7743, -1133.9796, 23.8203), CountBusKanpol);
+    format(shstr, sizeof(shstr), ""GRAY"[Imajinasi Halte]\n\n"WHITE"Halte Bus Kantor Polisi\n%s -> Terminal Kota\nJumlah Unit Beroperasi: "YELLOW"%d", GetLocation(1024.7743, -1133.9796, 23.8203), CountBusKanpol);
     UpdateDynamic3DTextLabelText(HalteKanpolLabel[5], COLOR_WHITE, shstr);
 
-    format(shstr, sizeof(shstr), ""GRAY"[Mayoritas Halte]\n\n"WHITE"Halte Bus Rumah Sakit\n%s -> %s\nJumlah Unit Bus Beroperasi: "YELLOW"%d", GetLocation(-118.5932, -1155.1671, 2.2529), GetLocation(313.6201, -1482.1116, 33.6070), CountBusHospital);
+    format(shstr, sizeof(shstr), ""GRAY"[Imajinasi Halte]\n\n"WHITE"Halte Bus Rumah Sakit\n%s -> %s\nJumlah Unit Bus Beroperasi: "YELLOW"%d", GetLocation(-118.5932, -1155.1671, 2.2529), GetLocation(313.6201, -1482.1116, 33.6070), CountBusHospital);
     UpdateDynamic3DTextLabelText(HalteHospitalLabel[0], COLOR_WHITE, shstr);
-    format(shstr, sizeof(shstr), ""GRAY"[Mayoritas Halte]\n\n"WHITE"Halte Bus Rumah Sakit\n%s -> %s\nJumlah Unit Bus Beroperasi: "YELLOW"%d", GetLocation(313.6201, -1482.1116, 33.6070), GetLocation(1371.3846, -1084.7994, 24.8435), CountBusHospital);
+    format(shstr, sizeof(shstr), ""GRAY"[Imajinasi Halte]\n\n"WHITE"Halte Bus Rumah Sakit\n%s -> %s\nJumlah Unit Bus Beroperasi: "YELLOW"%d", GetLocation(313.6201, -1482.1116, 33.6070), GetLocation(1371.3846, -1084.7994, 24.8435), CountBusHospital);
     UpdateDynamic3DTextLabelText(HalteHospitalLabel[1], COLOR_WHITE, shstr);
-    format(shstr, sizeof(shstr), ""GRAY"[Mayoritas Halte]\n\n"WHITE"Halte Bus Rumah Sakit\n%s -> %s\nJumlah Unit Bus Beroperasi: "YELLOW"%d", GetLocation(1371.3846, -1084.7994, 24.8435), GetLocation(688.6235, -616.1765, 16.3359), CountBusHospital);
+    format(shstr, sizeof(shstr), ""GRAY"[Imajinasi Halte]\n\n"WHITE"Halte Bus Rumah Sakit\n%s -> %s\nJumlah Unit Bus Beroperasi: "YELLOW"%d", GetLocation(1371.3846, -1084.7994, 24.8435), GetLocation(688.6235, -616.1765, 16.3359), CountBusHospital);
     UpdateDynamic3DTextLabelText(HalteHospitalLabel[2], COLOR_WHITE, shstr);
-    format(shstr, sizeof(shstr), ""GRAY"[Mayoritas Halte]\n\n"WHITE"Halte Bus Rumah Sakit\n%s -> Terminal Kota\nJumlah Unit Bus Beroperasi: "YELLOW"%d", GetLocation(688.6235, -616.1765, 16.3359), CountBusHospital);
+    format(shstr, sizeof(shstr), ""GRAY"[Imajinasi Halte]\n\n"WHITE"Halte Bus Rumah Sakit\n%s -> Terminal Kota\nJumlah Unit Bus Beroperasi: "YELLOW"%d", GetLocation(688.6235, -616.1765, 16.3359), CountBusHospital);
     UpdateDynamic3DTextLabelText(HalteHospitalLabel[3], COLOR_WHITE, shstr);
     return 1;
 }

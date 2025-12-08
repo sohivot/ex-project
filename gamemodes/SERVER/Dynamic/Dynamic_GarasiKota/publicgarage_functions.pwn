@@ -241,7 +241,7 @@ CMD:editgarkot(playerid, params[])
     {
         format(shstr, sizeof(shstr), "%s#%d\t%s\n", shstr, i, PublicGarage[i][pgName]);
     }
-    Dialog_Show(playerid, DIALOG_GOTO_GARKOT, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Dynamic Garkot", shstr, "Select", "Batal");
+    Dialog_Show(playerid, DIALOG_GOTO_GARKOT, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Dynamic Garkot", shstr, "Select", "Batal");
     return 1;
 }
 

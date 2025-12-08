@@ -274,13 +274,13 @@ stock ShowPlayerVehicleImpound(playerid, otherid)
 	}
 	if(count == 0)
 	{
-		return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Impound", "Pemain tersebut tidak memiliki kendaraan di impound!", "Tutup", ""), PlayerPlaySound(playerid, 1085, 0.0, 0.0, 0.0);
+		return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Impound", "Pemain tersebut tidak memiliki kendaraan di impound!", "Tutup", ""), PlayerPlaySound(playerid, 1085, 0.0, 0.0, 0.0);
 	}
 	
 	if(AccountData[playerid][pFaction] == FACTION_POLISI)
 	{
-		ShowPlayerDialog(playerid, DIALOG_POLICE_TAKE_IMPOUND, DIALOG_STYLE_TABLIST_HEADERS, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- %s", ReturnName(otherid)), shstr, "Pilih", "Batal");
-	} else ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- %s", ReturnName(otherid)), shstr, "Pilih", "Batal");
+		ShowPlayerDialog(playerid, DIALOG_POLICE_TAKE_IMPOUND, DIALOG_STYLE_TABLIST_HEADERS, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- %s", ReturnName(otherid)), shstr, "Pilih", "Batal");
+	} else ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- %s", ReturnName(otherid)), shstr, "Pilih", "Batal");
 	return 1;
 }
 
@@ -786,7 +786,7 @@ new const VehFacName[10][] =
 	"Federal",
 	"Pemerintah",
 	"EMS",
-	"Trans Mayoritas",
+	"Trans Imajinasi",
 	"Bengkel",
 	"Pedagang",
 	"Gojek",
@@ -1477,11 +1477,11 @@ public OnLoadVehicleMod(vehid)
 				AttachDynamicObjectToVehicle(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][1], PlayerVehicle[vehid][pVehPhysic], -1.060, 0.000, 0.000, 0.000, 0.000, 180.000);
 				FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][2] = CreateDynamicObject(19483,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
 				SetDynamicObjectMaterial(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][2], 0, 10101, "2notherbuildsfe", "Bow_Abpave_Gen", 0);
-				SetDynamicObjectMaterialText(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][2], 0, "{ffe14d} KOTA Mayoritas", 130, "Arial Black", 40, 0, 0, 0, 1);
+				SetDynamicObjectMaterialText(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][2], 0, "{ffe14d} KOTA Imajinasi", 130, "Arial Black", 40, 0, 0, 0, 1);
 				AttachDynamicObjectToVehicle(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][2], PlayerVehicle[vehid][pVehPhysic], 1.060, 0.000, -0.200, 0.000, 0.000, 0.000);
 				FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][3] = CreateDynamicObject(19483,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
 				SetDynamicObjectMaterial(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][3], 0, 10101, "2notherbuildsfe", "Bow_Abpave_Gen", 0);
-				SetDynamicObjectMaterialText(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][3], 0, "{ffe14d} KOTA Mayoritas", 130, "Arial Black", 40, 0, 0, 0, 1);
+				SetDynamicObjectMaterialText(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][3], 0, "{ffe14d} KOTA Imajinasi", 130, "Arial Black", 40, 0, 0, 0, 1);
 				AttachDynamicObjectToVehicle(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][3], PlayerVehicle[vehid][pVehPhysic], -1.060, 0.000, -0.200, 0.000, 0.000, 180.000);
 				FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][4] = CreateDynamicObject(19483,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
 				SetDynamicObjectMaterial(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][4], 0, 10101, "2notherbuildsfe", "Bow_Abpave_Gen", 0);
@@ -1559,11 +1559,11 @@ public OnLoadVehicleMod(vehid)
 				AttachDynamicObjectToVehicle(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][1], PlayerVehicle[vehid][pVehPhysic], -1.014, -0.840, 0.029, 367.000, 710.000, 1259.000);
 				FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][2] = CreateDynamicObject(19483,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
 				SetDynamicObjectMaterial(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][2], 0, 10101, "2notherbuildsfe", "Bow_Abpave_Gen", 0);
-				SetDynamicObjectMaterialText(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][2], 0, "{0000ff} KOTA Mayoritas", 130, "Arial Black", 24, 0, 0, 0, 1);
+				SetDynamicObjectMaterialText(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][2], 0, "{0000ff} KOTA Imajinasi", 130, "Arial Black", 24, 0, 0, 0, 1);
 				AttachDynamicObjectToVehicle(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][2], PlayerVehicle[vehid][pVehPhysic], 1.032, -0.860, -0.109, -5.000, -8.000, 0.000);
 				FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][3] = CreateDynamicObject(19483,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
 				SetDynamicObjectMaterial(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][3], 0, 10101, "2notherbuildsfe", "Bow_Abpave_Gen", 0);
-				SetDynamicObjectMaterialText(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][3], 0, "{0000ff} KOTA Mayoritas", 130, "Arial Black", 24, 0, 0, 0, 1);
+				SetDynamicObjectMaterialText(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][3], 0, "{0000ff} KOTA Imajinasi", 130, "Arial Black", 24, 0, 0, 0, 1);
 				AttachDynamicObjectToVehicle(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][3], PlayerVehicle[vehid][pVehPhysic], -1.033, -0.814, -0.110, 367.000, 349.000, 180.000);
 				FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][4] = CreateDynamicObject(19483,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
 				SetDynamicObjectMaterial(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][4], 0, 10101, "2notherbuildsfe", "Bow_Abpave_Gen", 0);
@@ -1636,11 +1636,11 @@ public OnLoadVehicleMod(vehid)
 				AttachDynamicObjectToVehicle(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][2], PlayerVehicle[vehid][pVehPhysic], -0.989, -0.049, -0.000, 0.000, 0.000, 180.000);
 				FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][3] = CreateDynamicObject(19483,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
 				SetDynamicObjectMaterial(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][3], 0, 10101, "2notherbuildsfe", "Bow_Abpave_Gen", 0);
-				SetDynamicObjectMaterialText(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][3], 0, "{ffff00} KOTA Mayoritas", 130, "Arial Black", 25, 0, 0, 0, 1);
+				SetDynamicObjectMaterialText(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][3], 0, "{ffff00} KOTA Imajinasi", 130, "Arial Black", 25, 0, 0, 0, 1);
 				AttachDynamicObjectToVehicle(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][3], PlayerVehicle[vehid][pVehPhysic], 0.986, -0.150, -0.129, 0.000, 0.000, 0.000);
 				FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][4] = CreateDynamicObject(19483,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
 				SetDynamicObjectMaterial(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][4], 0, 10101, "2notherbuildsfe", "Bow_Abpave_Gen", 0);
-				SetDynamicObjectMaterialText(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][4], 0, "{ffff00} KOTA Mayoritas", 130, "Arial Black", 25, 0, 0, 0, 1);
+				SetDynamicObjectMaterialText(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][4], 0, "{ffff00} KOTA Imajinasi", 130, "Arial Black", 25, 0, 0, 0, 1);
 				AttachDynamicObjectToVehicle(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][4], PlayerVehicle[vehid][pVehPhysic], -0.986, -0.150, -0.129, 0.000, 0.000, 180.000);
 				FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][5] = CreateDynamicObject(19483,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
 				SetDynamicObjectMaterial(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][5], 0, 10101, "2notherbuildsfe", "Bow_Abpave_Gen", 0);
@@ -1694,7 +1694,7 @@ public OnLoadVehicleMod(vehid)
 				SetDynamicObjectMaterialText(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][2], 0, "{FFFF00}<", 120, "Arial", 60, 0, 0, 0, 1);
 				AttachDynamicObjectToVehicle(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][2], PlayerVehicle[vehid][pVehPhysic], -1.110, 0.889, -0.089, 0.000, 0.000, 180.000);
 				FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][3] = CreateDynamicObject(19482,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
-				SetDynamicObjectMaterialText(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][3], 0, "{FFFF00}POLDA Mayoritas", 130, "Arial", 18, 1, 0, 0, 1);
+				SetDynamicObjectMaterialText(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][3], 0, "{FFFF00}POLDA Imajinasi", 130, "Arial", 18, 1, 0, 0, 1);
 				AttachDynamicObjectToVehicle(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][3], PlayerVehicle[vehid][pVehPhysic], -1.110, -0.019, -0.289, 0.000, 0.000, 180.000);
 				FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][4] = CreateDynamicObject(19620,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
 				AttachDynamicObjectToVehicle(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][4], PlayerVehicle[vehid][pVehPhysic], 0.000, -0.360, 0.850, 0.000, 0.000, 0.000);
@@ -1714,7 +1714,7 @@ public OnLoadVehicleMod(vehid)
 				SetDynamicObjectMaterialText(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][9], 0, "{FFFF00}<", 120, "Arial", 60, 0, 0, 0, 1);
 				AttachDynamicObjectToVehicle(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][9], PlayerVehicle[vehid][pVehPhysic], 1.119, 0.889, -0.089, 0.000, 0.000, 180.000);
 				FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][10] = CreateDynamicObject(19482,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
-				SetDynamicObjectMaterialText(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][10], 0, "{FFFF00}POLDA Mayoritas", 130, "Arial", 18, 1, 0, 0, 1);
+				SetDynamicObjectMaterialText(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][10], 0, "{FFFF00}POLDA Imajinasi", 130, "Arial", 18, 1, 0, 0, 1);
 				AttachDynamicObjectToVehicle(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][10], PlayerVehicle[vehid][pVehPhysic], 1.109, -0.019, -0.289, 0.000, 0.000, 0.000);
 				FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][11] = CreateDynamicObject(19482,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
 				SetDynamicObjectMaterialText(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][11], 0, "{FFFF00}911", 130, "Arial", 50, 1, 0, 0, 1);
@@ -1752,11 +1752,11 @@ public OnLoadVehicleMod(vehid)
 				AttachDynamicObjectToVehicle(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][2], PlayerVehicle[vehid][pVehPhysic], 0.544, -3.089, 0.259, 0.000, 0.000, 0.000);
 				FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][3] = CreateDynamicObject(19483,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
 				SetDynamicObjectMaterial(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][3], 0, 10101, "2notherbuildsfe", "Bow_Abpave_Gen", 0);
-				SetDynamicObjectMaterialText(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][3], 0, "{ffffff} Mayoritas", 130, "Arial Black", 40, 0, 0, 0, 1);
+				SetDynamicObjectMaterialText(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][3], 0, "{ffffff} Imajinasi", 130, "Arial Black", 40, 0, 0, 0, 1);
 				AttachDynamicObjectToVehicle(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][3], PlayerVehicle[vehid][pVehPhysic], 1.240, -1.200, 0.930, 0.000, -24.000, 0.000);
 				FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][4] = CreateDynamicObject(19483,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
 				SetDynamicObjectMaterial(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][4], 0, 10101, "2notherbuildsfe", "Bow_Abpave_Gen", 0);
-				SetDynamicObjectMaterialText(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][4], 0, "{ffffff} Mayoritas", 130, "Arial Black", 40, 0, 0, 0, 1);
+				SetDynamicObjectMaterialText(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][4], 0, "{ffffff} Imajinasi", 130, "Arial Black", 40, 0, 0, 0, 1);
 				AttachDynamicObjectToVehicle(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][4], PlayerVehicle[vehid][pVehPhysic], -1.240, -1.200, 0.930, 0.000, -29.000, 180.000);
 				FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][5] = CreateDynamicObject(19797,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
 				AttachDynamicObjectToVehicle(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][5], PlayerVehicle[vehid][pVehPhysic], -0.005, 3.218, 0.259, 0.000, 0.000, 180.000);
@@ -1778,11 +1778,11 @@ public OnLoadVehicleMod(vehid)
 				AttachDynamicObjectToVehicle(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][1], PlayerVehicle[vehid][pVehPhysic], -1.070, -0.089, 0.009, -0.100, -7.000, 179.860);
 				FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][2] = CreateDynamicObject(19483,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
 				SetDynamicObjectMaterial(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][2], 0, 10101, "2notherbuildsfe", "Bow_Abpave_Gen", 0);
-				SetDynamicObjectMaterialText(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][2], 0, "{ff5b77}KOTA Mayoritas", 130, "Arial Black", 30, 0, 0, 0, 1);
+				SetDynamicObjectMaterialText(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][2], 0, "{ff5b77}KOTA Imajinasi", 130, "Arial Black", 30, 0, 0, 0, 1);
 				AttachDynamicObjectToVehicle(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][2], PlayerVehicle[vehid][pVehPhysic], 1.084, -0.099, -0.170, 0.100, 0.000, 0.000);
 				FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][3] = CreateDynamicObject(19483,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
 				SetDynamicObjectMaterial(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][3], 0, 10101, "2notherbuildsfe", "Bow_Abpave_Gen", 0);
-				SetDynamicObjectMaterialText(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][3], 0, "{ff5b77}KOTA Mayoritas", 130, "Arial Black", 30, 0, 0, 0, 1);
+				SetDynamicObjectMaterialText(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][3], 0, "{ff5b77}KOTA Imajinasi", 130, "Arial Black", 30, 0, 0, 0, 1);
 				AttachDynamicObjectToVehicle(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][3], PlayerVehicle[vehid][pVehPhysic], -1.084, -0.099, -0.170, 0.100, 0.000, 180.000);
 			}
 		}
@@ -1801,7 +1801,7 @@ public OnLoadVehicleMod(vehid)
 			{
 				FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][0] = CreateDynamicObject(19483,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
 				SetDynamicObjectMaterial(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][0], 0, 10101, "2notherbuildsfe", "Bow_Abpave_Gen", 0);
-				SetDynamicObjectMaterialText(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][0], 0, "{ebebeb} KOTA Mayoritas", 130, "Arial Black", 65, 0, 0, 0, 1);
+				SetDynamicObjectMaterialText(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][0], 0, "{ebebeb} KOTA Imajinasi", 130, "Arial Black", 65, 0, 0, 0, 1);
 				AttachDynamicObjectToVehicle(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][0], PlayerVehicle[vehid][pVehPhysic], 1.291, -1.600, 1.400, 0.000, 0.000, 0.000);
 				FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][1] = CreateDynamicObject(19940,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
 				SetDynamicObjectMaterial(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][1], 0, 16093, "a51_ext", "cabin5", -6750208);
@@ -1817,7 +1817,7 @@ public OnLoadVehicleMod(vehid)
 				AttachDynamicObjectToVehicle(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][4], PlayerVehicle[vehid][pVehPhysic], -1.269, -1.450, 1.400, 0.000, -90.000, -180.000);
 				FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][5] = CreateDynamicObject(19483,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
 				SetDynamicObjectMaterial(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][5], 0, 10101, "2notherbuildsfe", "Bow_Abpave_Gen", 0);
-				SetDynamicObjectMaterialText(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][5], 0, "{ebebeb} KOTA Mayoritas", 130, "Arial Black", 65, 0, 0, 0, 1);
+				SetDynamicObjectMaterialText(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][5], 0, "{ebebeb} KOTA Imajinasi", 130, "Arial Black", 65, 0, 0, 0, 1);
 				AttachDynamicObjectToVehicle(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][5], PlayerVehicle[vehid][pVehPhysic], -1.291, -1.510, 1.400, 0.000, 0.000, 180.000);
 				FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][6] = CreateDynamicObject(1115,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
 				AttachDynamicObjectToVehicle(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][6], PlayerVehicle[vehid][pVehPhysic], 0.000, 3.008, -0.496, 0.000, 0.000, 0.000);
@@ -1853,11 +1853,11 @@ public OnLoadVehicleMod(vehid)
 				AttachDynamicObjectToVehicle(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][1], PlayerVehicle[vehid][pVehPhysic], -1.190, 0.509, 0.339, 0.000, 0.000, 180.000);
 				FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][2] = CreateDynamicObject(19483,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
 				SetDynamicObjectMaterial(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][2], 0, 10101, "2notherbuildsfe", "Bow_Abpave_Gen", 0);
-				SetDynamicObjectMaterialText(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][2], 0, "{ffffff} BENNYS Mayoritas", 130, "Arial Black", 40, 0, 0, 0, 1);
+				SetDynamicObjectMaterialText(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][2], 0, "{ffffff} BENNYS Imajinasi", 130, "Arial Black", 40, 0, 0, 0, 1);
 				AttachDynamicObjectToVehicle(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][2], PlayerVehicle[vehid][pVehPhysic], 1.190, 0.500, 0.200, 0.000, 0.000, 0.000);
 				FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][3] = CreateDynamicObject(19483,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
 				SetDynamicObjectMaterial(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][3], 0, 10101, "2notherbuildsfe", "Bow_Abpave_Gen", 0);
-				SetDynamicObjectMaterialText(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][3], 0, "{ffffff} BENNYS Mayoritas", 130, "Arial Black", 40, 0, 0, 0, 1);
+				SetDynamicObjectMaterialText(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][3], 0, "{ffffff} BENNYS Imajinasi", 130, "Arial Black", 40, 0, 0, 0, 1);
 				AttachDynamicObjectToVehicle(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][3], PlayerVehicle[vehid][pVehPhysic], -1.190, 0.500, 0.200, 0.000, 0.000, 180.000);
 				FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][4] = CreateDynamicObject(19483,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
 				SetDynamicObjectMaterial(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][4], 0, 10101, "2notherbuildsfe", "Bow_Abpave_Gen", 0);
@@ -1953,11 +1953,11 @@ public OnLoadVehicleMod(vehid)
 				AttachDynamicObjectToVehicle(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][3], PlayerVehicle[vehid][pVehPhysic], -0.915, -1.580, -0.039, 0.000, 0.000, 180.000);
 				FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][4] = CreateDynamicObject(19483,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
 				SetDynamicObjectMaterial(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][4], 0, 10101, "2notherbuildsfe", "Bow_Abpave_Gen", 0);
-				SetDynamicObjectMaterialText(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][4], 0, "{ffffff} Mayoritas", 130, "Arial Black", 40, 0, 0, 0, 1);
+				SetDynamicObjectMaterialText(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][4], 0, "{ffffff} Imajinasi", 130, "Arial Black", 40, 0, 0, 0, 1);
 				AttachDynamicObjectToVehicle(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][4], PlayerVehicle[vehid][pVehPhysic], 0.920, -1.580, -0.200, 0.000, 0.000, 0.000);
 				FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][5] = CreateDynamicObject(19483,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
 				SetDynamicObjectMaterial(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][5], 0, 10101, "2notherbuildsfe", "Bow_Abpave_Gen", 0);
-				SetDynamicObjectMaterialText(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][5], 0, "{ffffff} Mayoritas", 130, "Arial Black", 40, 0, 0, 0, 1);
+				SetDynamicObjectMaterialText(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][5], 0, "{ffffff} Imajinasi", 130, "Arial Black", 40, 0, 0, 0, 1);
 				AttachDynamicObjectToVehicle(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][5], PlayerVehicle[vehid][pVehPhysic], -0.920, -1.580, -0.200, 0.000, 0.000, 180.000);
 				FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][6] = CreateDynamicObject(2453,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
 				SetDynamicObjectMaterial(FactionVehObject[PlayerVehicle[vehid][pVehPhysic]][6], 1, 16093, "a51_ext", "des_backdoor1", 0);

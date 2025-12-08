@@ -44,27 +44,27 @@ GetFactNameGarage(id)
     {
         if(FactionGarage[id][fgType] == 1) //polisi
         {
-            format(frmtname, sizeof(frmtname), ""ROYALBLUE1"[Kepolisian Kota Mayoritas]");
+            format(frmtname, sizeof(frmtname), ""ROYALBLUE1"[Kepolisian Kota Imajinasi]");
         }
         else if(FactionGarage[id][fgType] == 2) // pemerintah
         {
-            format(frmtname, sizeof(frmtname), ""LIGHTSKYBLUE1"[Pemerintah Daerah Mayoritas]");
+            format(frmtname, sizeof(frmtname), ""LIGHTSKYBLUE1"[Pemerintah Daerah Imajinasi]");
         }
         else if(FactionGarage[id][fgType] == 3) // EMS
         {
-            format(frmtname, sizeof(frmtname), ""VIOLETRED1"[EMS Kota Mayoritas]");
+            format(frmtname, sizeof(frmtname), ""VIOLETRED1"[EMS Kota Imajinasi]");
         }
         else if(FactionGarage[id][fgType] == 4) // Trans
         {
-            format(frmtname, sizeof(frmtname), ""YELLOW"[TRANS Kota Mayoritas]");
+            format(frmtname, sizeof(frmtname), ""YELLOW"[TRANS Kota Imajinasi]");
         }
         else if(FactionGarage[id][fgType] == 5) // Bengkel
         {
-            format(frmtname, sizeof(frmtname), ""LIGHTGREEN"[Bengkel Kota Mayoritas]");
+            format(frmtname, sizeof(frmtname), ""LIGHTGREEN"[Bengkel Kota Imajinasi]");
         }
         else if(FactionGarage[id][fgType] == 6) // EMS
         {
-            format(frmtname, sizeof(frmtname), ""TOMATO1"[Pedagang Kota Mayoritas]");
+            format(frmtname, sizeof(frmtname), ""TOMATO1"[Pedagang Kota Imajinasi]");
         }
     }
     return frmtname;
@@ -290,7 +290,7 @@ CMD:fgarage(playerid, params[])
     {
         if(AccountData[playerid][pFaction] != FactionGarage[fgid][fgType]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Garasi ini untuk salah satu anggota faction!");
         if(AccountData[playerid][pInjured]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda sedang pingsan!");
-        ShowPlayerDialog(playerid, DIALOG_FACTION_GARAGE_MENU, DIALOG_STYLE_LIST, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- %s Garage", GetFactGarageType(fgid)), "Keluarkan Kendaraan\n"GRAY"Simpan Kendaraan", "Pilih", "Batal");
+        ShowPlayerDialog(playerid, DIALOG_FACTION_GARAGE_MENU, DIALOG_STYLE_LIST, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- %s Garage", GetFactGarageType(fgid)), "Keluarkan Kendaraan\n"GRAY"Simpan Kendaraan", "Pilih", "Batal");
     }
     else ShowTDN(playerid, NOTIFICATION_ERROR, "Anda tidak didekat garasi faction!");
     return 1;
@@ -359,7 +359,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                     {
                         case 1: //polisi
                         {
-                            ShowPlayerDialog(playerid, DIALOG_FACTION_GARAGE1, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Keluarkan Kendaraan",
+                            ShowPlayerDialog(playerid, DIALOG_FACTION_GARAGE1, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Keluarkan Kendaraan",
                             "Sultan Sabhara\
                             \n"GRAY"Sanchez Sabhara\
                             \nFBI Rancher\
@@ -371,14 +371,14 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                         }
                         case 2: //pemerintah
                         {
-                            ShowPlayerDialog(playerid, DIALOG_FACTION_GARAGE2, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Keluarkan Kendaraan",
+                            ShowPlayerDialog(playerid, DIALOG_FACTION_GARAGE2, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Keluarkan Kendaraan",
                             "Mobil Gubernur\
                             \n"GRAY"Stratum\
                             \nRomero", "Pilih", "Batal");
                         }
                         case 3: //EMS
                         {
-                            ShowPlayerDialog(playerid, DIALOG_FACTION_GARAGE3, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Keluarkan Kendaraan",
+                            ShowPlayerDialog(playerid, DIALOG_FACTION_GARAGE3, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Keluarkan Kendaraan",
                             "Ambulance\
                             \n"GRAY"FBI Rancher\
                             \nSanchez EMS\
@@ -386,20 +386,20 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                         }
                         case 4: //Trans
                         {
-                            ShowPlayerDialog(playerid, DIALOG_FACTION_GARAGE4, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Keluarkan Kendaraan",
+                            ShowPlayerDialog(playerid, DIALOG_FACTION_GARAGE4, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Keluarkan Kendaraan",
                             "Taxi\
                             \n"GRAY"Cabbie\
                             \nPremier Trans", "Pilih", "Batal");
                         }
                         case 5: // Bengkel
                         {
-                            ShowPlayerDialog(playerid, DIALOG_FACTION_GARAGE5, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Keluarkan Kendaraan",
+                            ShowPlayerDialog(playerid, DIALOG_FACTION_GARAGE5, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Keluarkan Kendaraan",
                             "Mobil Derek\
                             \n"GRAY"Sanchez", "Pilih", "Batal");
                         }
                         case 6: //pedagang
                         {
-                            ShowPlayerDialog(playerid, DIALOG_FACTION_GARAGE6, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Keluarkan Kendaraan",
+                            ShowPlayerDialog(playerid, DIALOG_FACTION_GARAGE6, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Keluarkan Kendaraan",
                             "Rancher\
                             \n"GRAY"Sanchez", "Pilih", "Batal");
                         }

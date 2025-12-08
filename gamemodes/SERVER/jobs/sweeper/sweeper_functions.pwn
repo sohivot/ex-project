@@ -85,7 +85,7 @@ hook OnPlayerStateChange(playerid, newstate, oldstate)
                 if(AccountData[playerid][pSweeperTime] > 0)
                     return ShowTDN(playerid, NOTIFICATION_WARNING, sprintf("Anda harus menunggu %d menit sebelum bekerja kembali!", AccountData[playerid][pSweeperTime]/60)), RemovePlayerFromVehicle(playerid);
                 
-                ShowPlayerDialog(playerid, DIALOG_SWEEPER_START, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Sweeper Sidejob", "Apakah anda ingin memulai tugas sweeper?\
+                ShowPlayerDialog(playerid, DIALOG_SWEEPER_START, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Sweeper Sidejob", "Apakah anda ingin memulai tugas sweeper?\
                 \nAnda harus membersihkan jalanan sesuai dengan checkpoint yang ada", "Iya", "Tidak");
             }
         }

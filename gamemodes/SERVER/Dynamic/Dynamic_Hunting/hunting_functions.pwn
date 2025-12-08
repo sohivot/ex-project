@@ -308,7 +308,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
             \nKulit\t%dx\t$20",
             Inventory_Count(playerid, "Daging"), Inventory_Count(playerid, "Tanduk"), Inventory_Count(playerid, "Kulit"));
 
-            ShowPlayerDialog(playerid, DIALOG_HUNTING_SELL, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Jual Hasil Buru",
+            ShowPlayerDialog(playerid, DIALOG_HUNTING_SELL, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Jual Hasil Buru",
             shstr, "Jual", "Batal");
         }
     }

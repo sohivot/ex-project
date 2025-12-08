@@ -55,10 +55,10 @@ ShowContactList(playerid)
 	{
 		if(count == 15)  strcat(sha, ""LIGHTGREEN">> Halaman Selanjutnya\t\n");
 		if(page != 0) strcat(sha, ""RED"<< Halaman Sebelumnya\t\n");
-		ShowPlayerDialog(playerid, DialogContact, DIALOG_STYLE_TABLIST_HEADERS, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- Daftar Kontak (%d/100)", CountPlayerContact(playerid)), sha, "Pilih", "Batal");
+		ShowPlayerDialog(playerid, DialogContact, DIALOG_STYLE_TABLIST_HEADERS, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- Daftar Kontak (%d/100)", CountPlayerContact(playerid)), sha, "Pilih", "Batal");
 		return 1;
 	}
-	else ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- Daftar Kontak (%d/100)", CountPlayerContact(playerid)), "Anda tidak memiliki kontak tersimpan!", "Tutup", ""), PlayerContactPage[playerid] = 0;
+	else ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- Daftar Kontak (%d/100)", CountPlayerContact(playerid)), "Anda tidak memiliki kontak tersimpan!", "Tutup", ""), PlayerContactPage[playerid] = 0;
 	return 1;
 }
 
@@ -124,10 +124,10 @@ ShowContactList(playerid)
 		cache_delete(result);
 		if(rowcount == 15) strcat(sha, ""LIGHTGREEN">> Halaman Selanjutnya\t\n");
 		if(page != 0) strcat(sha, ""RED"<< Halaman Sebelumnya\t\n");
-		ShowPlayerDialog(playerid, DialogContact, DIALOG_STYLE_TABLIST_HEADERS, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- Daftar Kontak | Halaman (%d)", PlayerContactPage[playerid] + 1), sha, "Pilih", "Batal");
+		ShowPlayerDialog(playerid, DialogContact, DIALOG_STYLE_TABLIST_HEADERS, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- Daftar Kontak | Halaman (%d)", PlayerContactPage[playerid] + 1), sha, "Pilih", "Batal");
 		return 1;
 	}
-	else ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- Daftar Kontak | Halaman (%d)", PlayerContactPage[playerid] + 1), "Anda tidak memiliki kontak tersimpan!", "Tutup", ""), PlayerContactPage[playerid] = 0;
+	else ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- Daftar Kontak | Halaman (%d)", PlayerContactPage[playerid] + 1), "Anda tidak memiliki kontak tersimpan!", "Tutup", ""), PlayerContactPage[playerid] = 0;
 	return 1;
 }
 
@@ -166,9 +166,9 @@ ShowContactList(playerid)
 		ListedContacts[playerid][count ++] = i;
 	}
 	if(count != 0)
-		ShowPlayerDialogPages(playerid, "ContactListDialog", DIALOG_STYLE_TABLIST_HEADERS, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- Daftar Kontak (%d/100)", CountPlayerContact(playerid)), "Pilih", "Batal", 15, ""LIGHTGREEN">> Next Page", ""RED"<< Previous Page");
+		ShowPlayerDialogPages(playerid, "ContactListDialog", DIALOG_STYLE_TABLIST_HEADERS, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- Daftar Kontak (%d/100)", CountPlayerContact(playerid)), "Pilih", "Batal", 15, ""LIGHTGREEN">> Next Page", ""RED"<< Previous Page");
 	else
-		ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Daftar Kontak (0/100)", "Anda tidak memiliki kontak tersimpan!", "Tutup", "");
+		ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Daftar Kontak (0/100)", "Anda tidak memiliki kontak tersimpan!", "Tutup", "");
 	return 1;
 }*/
 
@@ -199,9 +199,9 @@ ShowContactList(playerid)
 		ListedContacts[playerid][count ++] = i;
 	}
 	if(count > 0)
-		ShowPlayerDialog(playerid, DialogContact, DIALOG_STYLE_TABLIST_HEADERS, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- Daftar Kontak (%d/100)", CountPlayerContact(playerid)), shstr, "Pilih", "Batal");
+		ShowPlayerDialog(playerid, DialogContact, DIALOG_STYLE_TABLIST_HEADERS, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- Daftar Kontak (%d/100)", CountPlayerContact(playerid)), shstr, "Pilih", "Batal");
 	else 
-		ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Daftar Kontak (0/100)", "Anda tidak memiliki kontak tersimpan!", "Tutup", "");
+		ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Daftar Kontak (0/100)", "Anda tidak memiliki kontak tersimpan!", "Tutup", "");
 	return 1;
 }*/
 
@@ -471,13 +471,13 @@ public OnPlayerAdvert(playerid)
 
 			format(list, sizeof(list), "%s"YELLOW"%s - %s\t"LIGHTGREY"%s\t"WHITE"%s\n", list, tempYellowFrom, tempYellowPhone, tempYellowDate, tempYellowText);
 		}
-		ShowPlayerDialog(playerid, DIALOG_YELLOW_PAGE, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Yellow Pages", list, "Iklan", "Kembali");
+		ShowPlayerDialog(playerid, DIALOG_YELLOW_PAGE, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Yellow Pages", list, "Iklan", "Kembali");
 	}
 	else
 	{
 		format(list, sizeof(list), "Nama\tTanggal\tIklan\n");
 		format(list, sizeof(list), "%sJadilah orang pertama yang membuat iklan!", list);
-		ShowPlayerDialog(playerid, DIALOG_YELLOW_PAGE_EMPTY, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Yellow Pages", list, "Iklan", "Kembali");
+		ShowPlayerDialog(playerid, DIALOG_YELLOW_PAGE_EMPTY, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Yellow Pages", list, "Iklan", "Kembali");
 	}
 	return 1;
 }
@@ -503,13 +503,13 @@ public OnPlayerTweet(playerid)
 
 			format(list, sizeof(list), "%s"VTWITTER"@%s\t"GRAY"%s\t"WHITE"%s\n", list, tempTweetFrom, tempTweetDate, tempTweetText);
 		}
-		ShowPlayerDialog(playerid, DIALOG_TWITTER_POST, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Tweets", list, "Tweet", "Kembali");
+		ShowPlayerDialog(playerid, DIALOG_TWITTER_POST, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Tweets", list, "Tweet", "Kembali");
 	}
 	else 
 	{
 		format(list, sizeof(list), "Username\tTanggal\tPostingan\n");
 		format(list, sizeof(list), "%sJadilah orang pertama yang membagikan Tweet", list);
-		ShowPlayerDialog(playerid, DIALOG_TWITTER_POST_EMPTY, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Tweets", list, "Tweet", "Kembali");
+		ShowPlayerDialog(playerid, DIALOG_TWITTER_POST_EMPTY, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Tweets", list, "Tweet", "Kembali");
 	}
 	return 1;
 }

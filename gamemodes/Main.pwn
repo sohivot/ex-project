@@ -1470,12 +1470,12 @@ stock DatabaseConnection()
 	//mdb_query = mysql_connect_file(); // pake ini kalo mau di hosting
 	if (mdb_query == MYSQL_INVALID_HANDLE || mysql_errno(mdb_query) != 0)
 	{
-		print("Mayoritas Roleplay: Connection To MYSQL Failed! Server Shutting Down!");
+		print("Imajinasi Roleplay: Connection To MYSQL Failed! Server Shutting Down!");
 		SendRconCommand("exit");
 	}
 	else
 	{
-		print("Mayoritas Roleplay: Database successfully connected to MySQL.");
+		print("Imajinasi Roleplay: Database successfully connected to MySQL.");
 	}
 	return 1;
 }
@@ -1507,7 +1507,7 @@ public OnGameModeInit()
 	SetGameModeText(sprintf("%s", TEXT_GAMEMODE));
 	SendRconCommand(sprintf("weburl %s", TEXT_WEBURL));
 	SendRconCommand(sprintf("language %s", TEXT_LANGUAGE));
-	// SendRconCommand("hostname Mayoritas Roleplay | SA-MP Indonesia");
+	// SendRconCommand("hostname Imajinasi Roleplay | SA-MP Indonesia");
 	SendRconCommand("mapname San Andreas");
 	BlockGarages(.text="Tutup");
 	// //autobackup
@@ -1694,9 +1694,9 @@ public OnPlayerClickPlayer(playerid, clickedplayerid, source)
 		if(clickedplayerid == playerid) return 0;
 
 		new title[127];
-		format(title, sizeof(title), ""Mayoritas"Mayoritas Roleplay "WHITE"- %s(%d)", ReturnName(clickedplayerid), clickedplayerid);
+		format(title, sizeof(title), ""Imajinasi"Imajinasi Roleplay "WHITE"- %s(%d)", ReturnName(clickedplayerid), clickedplayerid);
 		ShowPlayerDialog(playerid, DIALOG_CLICKPLAYER, DIALOG_STYLE_LIST, title, 
-		""Mayoritas"Menu Admin\n\
+		""Imajinasi"Menu Admin\n\
 		\nSpectator Pemain\
 		\n"GRAY"Tarik Pemain\
 		\nTeleport Ke Pemain\
@@ -2025,7 +2025,7 @@ public OnPlayerSpawn(playerid)
 		SetPlayerCameraLookAt(playerid, 582.755, -2178.958, 129.546);
 		InterpolateCameraPos(playerid, 584.769, -2183.039, 131.617, 584.769, -2183.039, 131.617, 20000, CAMERA_MOVE);
 		SetPlayerVirtualWorld(playerid, 3);
-		ShowPlayerDialog(playerid, DIALOG_AGE, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Tanggal Lahir", "Mohon masukkan tanggal lahir sesuai format hh/bb/tttt cth: (25/09/2001)", "Input", "");
+		ShowPlayerDialog(playerid, DIALOG_AGE, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Tanggal Lahir", "Mohon masukkan tanggal lahir sesuai format hh/bb/tttt cth: (25/09/2001)", "Input", "");
 	}
 	else
 	{
@@ -2069,8 +2069,8 @@ public OnPlayerSpawn(playerid)
 			SendClientMessageEx(playerid, -1, ""BLUEJEGE"SERVER: "WHITE"Today is "YELLOW"%s", ReturnTime());
 			SendClientMessageEx(playerid, -1, ""BLUEJEGE"SERVER: "WHITE"Server memerlukan waktu "YELLOW"%d milisecond"WHITE" untuk memuat char anda.", GetPlayerPing(playerid));
 			SendClientMessage(playerid, -1, ""LIGHTSKYBLUE"NOTE:"WHITE" Jika anda punya pertanyaan gunakan "RED"/ask"WHITE", untuk keperluan lainnya anda dapat menggunakan "RED"/help");
-			SendClientMessage(playerid, -1, ""LIGHTSKYBLUE"NOTE:"WHITE" Discord kita yaitu: "YELLOW"discord.gg/Mayoritasrp");
-			SendClientMessage(playerid, -1, ""LIGHTSKYBLUE"MOTD: "WHITE"Selamat bermain dan memulai cerita di "Mayoritas"Mayoritas Roleplay");
+			SendClientMessage(playerid, -1, ""LIGHTSKYBLUE"NOTE:"WHITE" Discord kita yaitu: "YELLOW"discord.gg/Imajinasirp");
+			SendClientMessage(playerid, -1, ""LIGHTSKYBLUE"MOTD: "WHITE"Selamat bermain dan memulai cerita di "Imajinasi"Imajinasi Roleplay");
 
 			new vQuery[300];
 			mysql_format(mdb_query, vQuery, sizeof(vQuery), "SELECT * FROM `player_vehicles` WHERE `PVeh_OwnerID` = '%d' ORDER BY `id` ASC", AccountData[playerid][pID]);
@@ -2560,7 +2560,7 @@ public OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 	}
 	if(newkeys & KEY_YES && AccountData[playerid][pInjured])
 	{
-		Dialog_Show(playerid, DeathRespawnConf, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Konfirmasi Koma",
+		Dialog_Show(playerid, DeathRespawnConf, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Konfirmasi Koma",
 		"Apakah anda benar benar yakin ingin melakukan tindakan ini?\n"RED"NOTE: Tindakan ini dapat menghilangkan semua barang di tas termasuk uang cash", "Iya", "Tidak");
 	}
 	if(newkeys & KEY_SECONDARY_ATTACK && GetPlayerState(playerid) == PLAYER_STATE_ONFOOT)
@@ -3711,7 +3711,7 @@ public OnPlayerClickTextDraw(playerid, Text:clickedid)
 		\n"GRAY"Holster\
 		\nMasuk ke dalam bagasi");
 		
-		ShowPlayerDialog(playerid, DIALOG_VEHICLE_MENU, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Vehicle Menu",
+		ShowPlayerDialog(playerid, DIALOG_VEHICLE_MENU, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Vehicle Menu",
 		string, "Pilih", "Batal");
 	}
 
@@ -3719,7 +3719,7 @@ public OnPlayerClickTextDraw(playerid, Text:clickedid)
 	{
 		PlayerPlaySound(playerid, 21000, 0.0, 0.0, 0.0);
 		ShowPlayerRadial1(playerid, false);
-		Dialog_Show(playerid, DOKUMENT_MENU, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Dokument",
+		Dialog_Show(playerid, DOKUMENT_MENU, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Dokument",
 		""YELLOW"Identitas:\
 		\n\n> Lihat KTP\
 		\n"GRAY"> Tunjukan KTP\
@@ -3748,19 +3748,19 @@ public OnPlayerClickTextDraw(playerid, Text:clickedid)
 			
 		if (AccountData[playerid][pFaction] == FACTION_NONE && AccountData[playerid][pFamily] == -1)
 		{
-			Dialog_Show(playerid, PANEL_NONE, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Menu Warga", "Drag/Undrag Person", "Pilih", "Batal");
+			Dialog_Show(playerid, PANEL_NONE, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Menu Warga", "Drag/Undrag Person", "Pilih", "Batal");
 			ShowPlayerRadial1(playerid, false);
 		}
 		else if (AccountData[playerid][pFaction] == FACTION_TRANS && AccountData[playerid][pFamily] == -1)
 		{
-			Dialog_Show(playerid, PANEL_NONE, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Menu Warga", "Drag/Undrag Person", "Pilih", "Batal");
+			Dialog_Show(playerid, PANEL_NONE, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Menu Warga", "Drag/Undrag Person", "Pilih", "Batal");
 			ShowPlayerRadial1(playerid, false);
 		}
 		else
 		{
 			if (count > 0)
 			{
-				Dialog_Show(playerid, DialogKantongPanel, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay"WHITE" - Faction Panel", frmtx, "Pilih", "Batal");
+				Dialog_Show(playerid, DialogKantongPanel, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay"WHITE" - Faction Panel", frmtx, "Pilih", "Batal");
 			}
 			else ShowTDN(playerid, NOTIFICATION_WARNING, "Tidak ada orang disekitar anda!");
 			
@@ -3771,7 +3771,7 @@ public OnPlayerClickTextDraw(playerid, Text:clickedid)
 		{
 			if (count > 0)
 			{
-				Dialog_Show(playerid, FamiliesKantongList, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay"WHITE" - Faction Panel (Gang)", frmtx, "Pilih", "Batal");
+				Dialog_Show(playerid, FamiliesKantongList, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay"WHITE" - Faction Panel (Gang)", frmtx, "Pilih", "Batal");
 			}
 			else ShowTDN(playerid, NOTIFICATION_WARNING, "Tidak ada orang disekitar anda!");
 			return ShowPlayerRadial1(playerid, false);
@@ -3955,7 +3955,7 @@ public ClickDynamicPlayerTextdraw(playerid, PlayerText: playertextid)
 	{
 		PlayerPlaySound(playerid, 21000, 0.0, 0.0, 0.0);
 		ShowPanel(playerid, false);
-		ShowPlayerDialog(playerid, DIALOG_PLAYER_MENU, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Identitas",
+		ShowPlayerDialog(playerid, DIALOG_PLAYER_MENU, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Identitas",
 		"Lihat KTP\
 		\n"GRAY"Tunjukan KTP\
 		\nLihat SIM\
@@ -3980,7 +3980,7 @@ public ClickDynamicPlayerTextdraw(playerid, PlayerText: playertextid)
 		\n"GRAY"Holster\
 		\nMasuk ke dalam bagasi");
 		
-		ShowPlayerDialog(playerid, DIALOG_VEHICLE_MENU, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Vehicle Menu",
+		ShowPlayerDialog(playerid, DIALOG_VEHICLE_MENU, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Vehicle Menu",
 		string, "Pilih", "Batal");
 		CancelSelectTextDraw(playerid);
 	}
@@ -3995,7 +3995,7 @@ public ClickDynamicPlayerTextdraw(playerid, PlayerText: playertextid)
 	{
 		PlayerPlaySound(playerid, 21000, 0.0, 0.0, 0.0);
 		ShowPanel(playerid, false);
-		ShowPlayerDialog(playerid, DIALOG_PLAYER_DOKUMENT, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Dokumen Pribadi",
+		ShowPlayerDialog(playerid, DIALOG_PLAYER_DOKUMENT, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Dokumen Pribadi",
 		"Lihat BPJS\
 		\n"GRAY"Perlihatkan BPJS\
 		\nLihat SKCK\
@@ -4586,7 +4586,7 @@ public ClickDynamicPlayerTextdraw(playerid, PlayerText: playertextid)
 			pToys[playerid][AccountData[playerid][toySelected]][toy_sy] = 1.0;
 			pToys[playerid][AccountData[playerid][toySelected]][toy_sz] = 1.0;
 			
-			ShowPlayerDialog(playerid, DIALOG_TOYPOSISIBUY, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay"WHITE"- Ubah Tulang(Bone)", 
+			ShowPlayerDialog(playerid, DIALOG_TOYPOSISIBUY, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay"WHITE"- Ubah Tulang(Bone)", 
 			"Spine\
 			\n"GRAY"Head\
 			\nLeft Upper Arm\
@@ -4639,7 +4639,7 @@ public ClickDynamicPlayerTextdraw(playerid, PlayerText: playertextid)
 			pToys[playerid][AccountData[playerid][toySelected]][toy_sy] = 1.0;
 			pToys[playerid][AccountData[playerid][toySelected]][toy_sz] = 1.0;
 			
-			ShowPlayerDialog(playerid, DIALOG_TOYPOSISIBUY, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay"WHITE"- Ubah Tulang(Bone)", 
+			ShowPlayerDialog(playerid, DIALOG_TOYPOSISIBUY, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay"WHITE"- Ubah Tulang(Bone)", 
 			"Spine\
 			\n"GRAY"Head\
 			\nLeft Upper Arm\
@@ -4692,7 +4692,7 @@ public ClickDynamicPlayerTextdraw(playerid, PlayerText: playertextid)
 			pToys[playerid][AccountData[playerid][toySelected]][toy_sy] = 1.0;
 			pToys[playerid][AccountData[playerid][toySelected]][toy_sz] = 1.0;
 			
-			ShowPlayerDialog(playerid, DIALOG_TOYPOSISIBUY, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay"WHITE"- Ubah Tulang(Bone)", 
+			ShowPlayerDialog(playerid, DIALOG_TOYPOSISIBUY, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay"WHITE"- Ubah Tulang(Bone)", 
 			"Spine\
 			\n"GRAY"Head\
 			\nLeft Upper Arm\
@@ -4745,7 +4745,7 @@ public ClickDynamicPlayerTextdraw(playerid, PlayerText: playertextid)
 			pToys[playerid][AccountData[playerid][toySelected]][toy_sy] = 1.0;
 			pToys[playerid][AccountData[playerid][toySelected]][toy_sz] = 1.0;
 			
-			ShowPlayerDialog(playerid, DIALOG_TOYPOSISIBUY, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay"WHITE"- Ubah Tulang(Bone)", 
+			ShowPlayerDialog(playerid, DIALOG_TOYPOSISIBUY, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay"WHITE"- Ubah Tulang(Bone)", 
 			"Spine\
 			\n"GRAY"Head\
 			\nLeft Upper Arm\
@@ -4815,7 +4815,7 @@ public ClickDynamicPlayerTextdraw(playerid, PlayerText: playertextid)
 	if(playertextid == InventoryTD[playerid][11])
 	{
 		if(AccountData[playerid][pSelectItem] == -1) return ShowTDN(playerid, NOTIFICATION_WARNING, "Anda belum memilih item!");
-		ShowPlayerDialog(playerid, DIALOG_SETAMOUNT, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Set Amount",
+		ShowPlayerDialog(playerid, DIALOG_SETAMOUNT, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Set Amount",
 		"Mohon masukkan berapa jumlah item yang akan diberikan:", "Set", "Batal");
 	}
 	if(playertextid == InventoryTD[playerid][12])
@@ -4856,11 +4856,11 @@ public ClickDynamicPlayerTextdraw(playerid, PlayerText: playertextid)
 		{
 			PlayerPlaySound(playerid, 5206, 0.0, 0.0, 0.0);
 			Inventory_Close(playerid);
-			return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Give Item",
+			return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Give Item",
 			"Tidak ada player yang dekat dengan anda!", "Tutup", "");
 		}
 
-		ShowPlayerDialog(playerid, DIALOG_MEMBERI, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Give Item", frmxt, "Pilih", "Close");
+		ShowPlayerDialog(playerid, DIALOG_MEMBERI, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Give Item", frmxt, "Pilih", "Close");
 	}
 	if(playertextid == InventoryTD[playerid][14])
 	{

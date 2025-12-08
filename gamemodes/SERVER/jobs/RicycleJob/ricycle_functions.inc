@@ -122,7 +122,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
                 if(AccountData[playerid][pInjured]) return 0;
                 if(GetPlayerJob(playerid) == JOB_RECYCLER)
                 {
-                    Dialog_Show(playerid, DialogStartRecycler, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Recycler Job", ""VERONA_ARWIN"Mulai Pekerjaan\n"WHITE"Selesaikan Pekerjaan\n", "Pilih", "Batal");
+                    Dialog_Show(playerid, DialogStartRecycler, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Recycler Job", ""VERONA_ARWIN"Mulai Pekerjaan\n"WHITE"Selesaikan Pekerjaan\n", "Pilih", "Batal");
                 }
             }
 

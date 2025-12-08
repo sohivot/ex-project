@@ -267,7 +267,7 @@ DisplayDialogRace(playerid)
     format(str, sizeof(str), "%s{FFFFFF}Tombol "YELLOW"'Klakson' {ffffff}Saat anda berada di dalam kendaraan untuk membuat checkpoint!\n", str);
     format(str, sizeof(str), "%s{FFFFFF}Gunakan "YELLOW"'/race clear' {ffffff}Untuk mereset semua checkpoint yang telah dibuat\n", str);
     format(str, sizeof(str), "%s{FFFFFF}Gunakan "YELLOW"'/race start' {ffffff}Untuk menyelesaikan pembuatan checkpoint dan membuka race untuk dapat dimasuki oleh player lain!", str);
-    ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, "Mayoritas Roleplay {FF0000}/{FFFFFF}/ Racing Systems", str, "Okay", "");
+    ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, "Imajinasi Roleplay {FF0000}/{FFFFFF}/ Racing Systems", str, "Okay", "");
 
     GetPlayerPos(playerid, AccountData[playerid][LokasiAwal][0], AccountData[playerid][LokasiAwal][1], AccountData[playerid][LokasiAwal][2]);
     return 1;
@@ -303,7 +303,7 @@ Dialog:TrackRace(playerid, response, listitem, inputtext[])
 		if(Race_IsExists(index) && RaceData[index][racePlayerID] == AccountData[playerid][pID])
 		{
             AccountData[playerid][IndexRace] = index;
-			Dialog_Show(playerid, RaceMenu, DIALOG_STYLE_TABLIST_HEADERS, "Mayoritas Roleplay {FF0000}/{FFFFFF}/ Race Menu", "Menu\nMulai Balapan\nLacak Lokasi Awal\nHapus Balapan", "Pilih", "Tutup");
+			Dialog_Show(playerid, RaceMenu, DIALOG_STYLE_TABLIST_HEADERS, "Imajinasi Roleplay {FF0000}/{FFFFFF}/ Race Menu", "Menu\nMulai Balapan\nLacak Lokasi Awal\nHapus Balapan", "Pilih", "Tutup");
 		}
 	}
 	return 1;

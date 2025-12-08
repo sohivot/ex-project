@@ -213,7 +213,7 @@ Dialog:TagsMenu(playerid, response, listitem, inputtext[])
 				}
 				case 1: // Editing Text
 				{
-                    Dialog_Show(playerid, TagsText, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Text", 
+                    Dialog_Show(playerid, TagsText, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Text", 
                     "Mohon memasukkan tulisan text/graffiti yang ingin anda buat:\
                     \n(n) = untuk membuat baris baru/text dibawah\
                     \n(r) = membuat warna text merah\
@@ -227,15 +227,15 @@ Dialog:TagsMenu(playerid, response, listitem, inputtext[])
                 }
 				case 2: // Font Name
 				{
-					Dialog_Show(playerid, TagsFont, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Font Name", object_font, "Change", "Back");
+					Dialog_Show(playerid, TagsFont, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Font Name", object_font, "Change", "Back");
 				}
 				case 3: // Font Name
 				{
-					Dialog_Show(playerid, TagsFontSize, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Font Size", WHITE"Ukuran sekarang: "YELLOW"%d\n\n"WHITE"Masukkan ukuran font mulai dari angka 1 sampai "#TAGS_DEFAULT_MAX_SIZE":", "Update", "Back", GetPVarInt(playerid, "TagsSize"));
+					Dialog_Show(playerid, TagsFontSize, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Font Size", WHITE"Ukuran sekarang: "YELLOW"%d\n\n"WHITE"Masukkan ukuran font mulai dari angka 1 sampai "#TAGS_DEFAULT_MAX_SIZE":", "Update", "Back", GetPVarInt(playerid, "TagsSize"));
 				}
 				case 4: // Font Color
 				{
-					Dialog_Show(playerid, TagsColor, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Font Color", color_string, "Change", "Back");
+					Dialog_Show(playerid, TagsColor, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Font Color", color_string, "Change", "Back");
 				}
 				case 5: // Toggle bold
 				{
@@ -263,10 +263,10 @@ Dialog:TagsText(playerid, response, listitem, inputtext[])
 	if(response)
 	{
 		if(isnull(inputtext))
-			return Dialog_Show(playerid, TagsText, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Text", WHITE"error: text tidak boleh kosong!!\n\nMasukkan text untuk ditampilkan pada spray tag:\n\nFormat code:\n- (n): untuk membuat baris baru | (b): memberi warna biru | (bl): memberi warna hitam | (g): memberi warna hijau\n- (r): memberi warna merah | (y): memberi warna kuning | (w): memberi warna putih", "Change", "Back");
+			return Dialog_Show(playerid, TagsText, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Text", WHITE"error: text tidak boleh kosong!!\n\nMasukkan text untuk ditampilkan pada spray tag:\n\nFormat code:\n- (n): untuk membuat baris baru | (b): memberi warna biru | (bl): memberi warna hitam | (g): memberi warna hijau\n- (r): memberi warna merah | (y): memberi warna kuning | (w): memberi warna putih", "Change", "Back");
 
 		if(strlen(inputtext) > TAGS_TEXT_LENGTH)
-			return Dialog_Show(playerid, TagsText, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Text", WHITE"error: text hanya dibatasi 1 - "#TAGS_TEXT_LENGTH" karakter!\n\nMasukkan text untuk ditampilkan pada spray tag:\n\nFormat code:\n- (n): untuk membuat baris baru | (b): memberi warna biru | (bl): memberi warna hitam | (g): memberi warna hijau\n- (r): memberi warna merah | (y): memberi warna kuning | (w): memberi warna putih", "Change", "Back");
+			return Dialog_Show(playerid, TagsText, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Text", WHITE"error: text hanya dibatasi 1 - "#TAGS_TEXT_LENGTH" karakter!\n\nMasukkan text untuk ditampilkan pada spray tag:\n\nFormat code:\n- (n): untuk membuat baris baru | (b): memberi warna biru | (bl): memberi warna hitam | (g): memberi warna hijau\n- (r): memberi warna merah | (y): memberi warna kuning | (w): memberi warna putih", "Change", "Back");
 
 		SetPVarString(playerid, "TagsText", ReplaceString(inputtext));
 		Tags_ObjectSync(playerid);
@@ -281,7 +281,7 @@ Dialog:TagsFont(playerid, response, listitem, inputtext[])
 	if(response)
 	{
 		if(listitem == sizeof(FontNames) - 1)
-			return Dialog_Show(playerid, TagsFontCustom, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Custom Font", "Masukkan nama font yang akan kamu ubah:", "Input", "Back");
+			return Dialog_Show(playerid, TagsFontCustom, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Custom Font", "Masukkan nama font yang akan kamu ubah:", "Input", "Back");
 
 		SetPVarString(playerid, "TagsFont", inputtext);
 		Tags_ObjectSync(playerid);
@@ -296,7 +296,7 @@ Dialog:TagsFontCustom(playerid, response, listitem, inputtext[])
 	if(response)
 	{
 		if(!strlen(inputtext))
-			return Dialog_Show(playerid, TagsFontCustom, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Custom Font", "error: tidak boleh kosong, silahkan masukkan nama font yang benar!\n\nMasukkan nama font yang akan kamu ubah:", "Input", "Back");
+			return Dialog_Show(playerid, TagsFontCustom, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Custom Font", "error: tidak boleh kosong, silahkan masukkan nama font yang benar!\n\nMasukkan nama font yang akan kamu ubah:", "Input", "Back");
 
 		SetPVarString(playerid, "TagsFont", inputtext);
 		Tags_ObjectSync(playerid);
@@ -311,7 +311,7 @@ Dialog:TagsFontSize(playerid, response, listitem, inputtext[])
 	if(response)
 	{
 		if(!(0 < strval(inputtext) <= TAGS_DEFAULT_MAX_SIZE))
-			return Dialog_Show(playerid, TagsFontSize, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Font Size", WHITE"error: ukuran dibatasi mulai dari 1 sampai "#TAGS_DEFAULT_MAX_SIZE"!\n\nUkuran sekarang: "YELLOW"%d\n\n"WHITE"Masukkan ukuran font mulai dari angka 1 sampai "#TAGS_DEFAULT_MAX_SIZE":", "Update", "Back", GetPVarInt(playerid, "TagsSize"));
+			return Dialog_Show(playerid, TagsFontSize, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Font Size", WHITE"error: ukuran dibatasi mulai dari 1 sampai "#TAGS_DEFAULT_MAX_SIZE"!\n\nUkuran sekarang: "YELLOW"%d\n\n"WHITE"Masukkan ukuran font mulai dari angka 1 sampai "#TAGS_DEFAULT_MAX_SIZE":", "Update", "Back", GetPVarInt(playerid, "TagsSize"));
 
 		SetPVarInt(playerid, "TagsSize", strval(inputtext));
 		Tags_ObjectSync(playerid);
@@ -326,7 +326,7 @@ Dialog:TagsColor(playerid, response, listitem, inputtext[])
 	if(response)
 	{
         if(!(0 <= strval(inputtext) <= sizeof(ColorList)-1))
-			return Dialog_Show(playerid, TagsColor, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Font Color", color_string, "Change", "Back");
+			return Dialog_Show(playerid, TagsColor, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Font Color", color_string, "Change", "Back");
 
 		SetPVarInt(playerid, "TagsColor", strval(inputtext));
 		Tags_ObjectSync(playerid);

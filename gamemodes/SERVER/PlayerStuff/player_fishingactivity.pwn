@@ -80,7 +80,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
             }
             if(count <= 3 && count2 <= 1) return ShowTDN(playerid, NOTIFICATION_ERROR, "Minimal 3 Polisi Duty & 1 EMS Duty");
             
-            ShowPlayerDialog(playerid, DIALOG_SELLFISH_ILEGAL, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Sell Ilegal Fish",
+            ShowPlayerDialog(playerid, DIALOG_SELLFISH_ILEGAL, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Sell Ilegal Fish",
             "Ikan Hiu\nPenyu", "Pilih", "Batal");
         }
 

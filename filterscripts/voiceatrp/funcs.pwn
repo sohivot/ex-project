@@ -3,12 +3,12 @@
 #define WHITE       "{FFFFFF}"
 #define RED         "{FF0000}"
 #define YELLOW      "{FFFF00}"
-#define Mayoritas      "{057BFA}"
+#define Imajinasi      "{057BFA}"
 
 #define Y_WHITE     0xFFFFFFFF
 #define Y_RED       0xFF0000D9
 #define Y_YELLOW    0xF5DEB3FF
-#define Y_Mayoritas    0xFFF000FF
+#define Y_Imajinasi    0xFFF000FF
 
 #define KEY_B   0x42
 #define KEY_R   0x52

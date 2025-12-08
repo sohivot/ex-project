@@ -34,7 +34,7 @@ ShowCharacterList(playerid)
 	}
 	if (count < MAX_CHARS)	
 		strcat(frmtname, ""GREEN"+ Karakter Baru");
-	ShowPlayerDialog(playerid, DIALOG_CHARLIST, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Character List", frmtname, "Pilih", "Keluar");
+	ShowPlayerDialog(playerid, DIALOG_CHARLIST, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Character List", frmtname, "Pilih", "Keluar");
 	return 1;
 }
 
@@ -93,14 +93,14 @@ public CheckPlayerUCP(playerid, rcc)
 			//serverUiLogin(playerid, true);
 			if(AccountData[playerid][pPassword] < 1)
 			{
-				format(frmxtdialog, sizeof(frmxtdialog), ""WHITE"Selamat datang di "Mayoritas"Mayoritas Roleplay\n"WHITE"UCP Ini telah terdaftar!\nNama UCP: "LIGHTGREEN"%s\
-				\n"WHITE"Version: "Mayoritas"LastestByExeren\n"YELLOW"(Silahkan masukkan PIN yang dikirimkan oleh Bot Mayoritas ke Discord anda dibawah ini):", AccountData[playerid][pUCP]);
+				format(frmxtdialog, sizeof(frmxtdialog), ""WHITE"Selamat datang di "Imajinasi"Imajinasi Roleplay\n"WHITE"UCP Ini telah terdaftar!\nNama UCP: "LIGHTGREEN"%s\
+				\n"WHITE"Version: "Imajinasi"LastestByExeren\n"YELLOW"(Silahkan masukkan PIN yang dikirimkan oleh Bot Imajinasi ke Discord anda dibawah ini):", AccountData[playerid][pUCP]);
 				ShowPlayerDialog(playerid, DIALOG_VERIFYCODE, DIALOG_STYLE_INPUT, "UCP - Verifikasi", frmxtdialog, "Input", "Keluar");
 			}
 			else if(AccountData[playerid][pPassword] > 10)
 			{
-				format(frmxtdialog, sizeof(frmxtdialog), ""WHITE"Selamat datang di "Mayoritas"Mayoritas Roleplay\n"WHITE"UCP Ini telah terdaftar!\nNama UCP: "LIGHTGREEN"%s\
-				\n"WHITE"Version: "Mayoritas"LastestByExeren\n"YELLOW"(Silahkan masukkan kata sandi anda dengan benar untuk login):", AccountData[playerid][pUCP]);
+				format(frmxtdialog, sizeof(frmxtdialog), ""WHITE"Selamat datang di "Imajinasi"Imajinasi Roleplay\n"WHITE"UCP Ini telah terdaftar!\nNama UCP: "LIGHTGREEN"%s\
+				\n"WHITE"Version: "Imajinasi"LastestByExeren\n"YELLOW"(Silahkan masukkan kata sandi anda dengan benar untuk login):", AccountData[playerid][pUCP]);
 				ShowPlayerDialog(playerid, DIALOG_LOGIN, DIALOG_STYLE_PASSWORD, "UCP - Login", frmxtdialog, "Input", "Keluar");
 			}
 		}
@@ -108,10 +108,10 @@ public CheckPlayerUCP(playerid, rcc)
 	else
 	{
 		new shstr[596];
-		format(shstr, sizeof(shstr), ""WHITE"Dari: Mayoritas Roleplay Bot\nKepada: Calon Aktor (pemain peran) di Mayoritas Roleplay kami, "RED"%s\
-		\n\n"WHITE"Silahkan terlebih dahulu mengambil tiket Mayoritas Roleplay di discord sebelum dapat memasuki Mayoritas Roleplay.\
-		\nLink Discord: "YELLOW"discord.gg/Mayoritasrp", AccountData[playerid][pUCP]);
-		ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Checking Tiket", shstr, "Keluar", "");
+		format(shstr, sizeof(shstr), ""WHITE"Dari: Imajinasi Roleplay Bot\nKepada: Calon Aktor (pemain peran) di Imajinasi Roleplay kami, "RED"%s\
+		\n\n"WHITE"Silahkan terlebih dahulu mengambil tiket Imajinasi Roleplay di discord sebelum dapat memasuki Imajinasi Roleplay.\
+		\nLink Discord: "YELLOW"discord.gg/Imajinasirp", AccountData[playerid][pUCP]);
+		ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Checking Tiket", shstr, "Keluar", "");
 		KickEx(playerid);
 	}
 	return 1;
@@ -161,15 +161,15 @@ public CheckBanUCP(playerid)
 			
 			if(banTime_Int == 0)
 			{
-				format(strgbg, sizeof(strgbg), ""WHITE"UCP Anda diblokir dari Mayoritas Roleplay!\n\nBerdasarkan informasi:\n"YELLOW"Nama UCP:"WHITE" %s\n"YELLOW"IP Address:"WHITE" %s\n"YELLOW"Admin On Duty:"WHITE" %s\n"YELLOW"Tanggal Blokir: "WHITE"%s\n"YELLOW"Reason:"WHITE" %s\n"YELLOW"Durasi Blokir: "WHITE"Permanent\
-				\n\n"VERONA_G"INGAT:"WHITE" Jika anda ingin bermain lagi dan tidak mengulangi lagi, masuk ke Discord: "YELLOW"discord.gg/Mayoritasrp"WHITE" kemudian pilih channel #req-unbanned", BannedName, PlayerIP, PlayerName, ReturnDate(banDate), Reason);
-				ShowPlayerDialog(playerid, DIALOG_DISPLAYBANNED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- UCP Blocked", strgbg, "Keluar", "");
+				format(strgbg, sizeof(strgbg), ""WHITE"UCP Anda diblokir dari Imajinasi Roleplay!\n\nBerdasarkan informasi:\n"YELLOW"Nama UCP:"WHITE" %s\n"YELLOW"IP Address:"WHITE" %s\n"YELLOW"Admin On Duty:"WHITE" %s\n"YELLOW"Tanggal Blokir: "WHITE"%s\n"YELLOW"Reason:"WHITE" %s\n"YELLOW"Durasi Blokir: "WHITE"Permanent\
+				\n\n"VERONA_G"INGAT:"WHITE" Jika anda ingin bermain lagi dan tidak mengulangi lagi, masuk ke Discord: "YELLOW"discord.gg/Imajinasirp"WHITE" kemudian pilih channel #req-unbanned", BannedName, PlayerIP, PlayerName, ReturnDate(banDate), Reason);
+				ShowPlayerDialog(playerid, DIALOG_DISPLAYBANNED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- UCP Blocked", strgbg, "Keluar", "");
 			}
 			else
 			{
-				format(strgbg, sizeof(strgbg), ""WHITE"UCP Anda diblokir dari Mayoritas Roleplay!\n\nBerdasarkan informasi:\n"YELLOW"Nama UCP:"WHITE" %s\n"YELLOW"IP Address:"WHITE" %s\n"YELLOW"Admin On Duty:"WHITE" %s\n"YELLOW"Tanggal Blokir: "WHITE"%s\n"YELLOW"Reason:"WHITE" %s\n"YELLOW"Durasi Blokir: "WHITE"%s\
-				\n\n"VERONA_G"INGAT:"WHITE" Jika anda ingin bermain lagi dan tidak mengulangi lagi, masuk ke Discord: "YELLOW"discord.gg/Mayoritasrp"WHITE" kemudian pilih channel #req-unbanned", BannedName, PlayerIP, PlayerName, ReturnDate(banDate), Reason, RemainingTimelapse(banTime_Int));
-				ShowPlayerDialog(playerid, DIALOG_DISPLAYBANNED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- UCP Blocked", strgbg, "Keluar", "");
+				format(strgbg, sizeof(strgbg), ""WHITE"UCP Anda diblokir dari Imajinasi Roleplay!\n\nBerdasarkan informasi:\n"YELLOW"Nama UCP:"WHITE" %s\n"YELLOW"IP Address:"WHITE" %s\n"YELLOW"Admin On Duty:"WHITE" %s\n"YELLOW"Tanggal Blokir: "WHITE"%s\n"YELLOW"Reason:"WHITE" %s\n"YELLOW"Durasi Blokir: "WHITE"%s\
+				\n\n"VERONA_G"INGAT:"WHITE" Jika anda ingin bermain lagi dan tidak mengulangi lagi, masuk ke Discord: "YELLOW"discord.gg/Imajinasirp"WHITE" kemudian pilih channel #req-unbanned", BannedName, PlayerIP, PlayerName, ReturnDate(banDate), Reason, RemainingTimelapse(banTime_Int));
+				ShowPlayerDialog(playerid, DIALOG_DISPLAYBANNED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- UCP Blocked", strgbg, "Keluar", "");
 			}
   		}
 	}
@@ -421,7 +421,7 @@ Function: LoadPlayerData(playerid)
 			AccountData[playerid][pInjuredTime] = 0;
 			Inventory_Clear(playerid);
 			
-			ShowPlayerDialog(playerid, DIALOG_SELECT_SPAWNEXPIRED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Pilih Lokasi Spawn",
+			ShowPlayerDialog(playerid, DIALOG_SELECT_SPAWNEXPIRED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Pilih Lokasi Spawn",
 			"Titik Spawn\tDetail\tLokasi\
 			\nBandara International\tAnda akan spawn Lokasi di bandara\tLos Santos\
 			\nPelabuhan Merak\tAnda akan spawn di pelabuhan\tOcean Docs\
@@ -455,7 +455,7 @@ Function: LoadPlayerData(playerid)
 			Info(playerid, "Waktu last exit anda sudah expired 1 jam. Silahkan memilih Spawn Kembali.");
 
 			ResetVariableSpawn(playerid);
-			ShowPlayerDialog(playerid, DIALOG_SELECT_SPAWNEXPIRED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Pilih Lokasi Spawn",
+			ShowPlayerDialog(playerid, DIALOG_SELECT_SPAWNEXPIRED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Pilih Lokasi Spawn",
 			"Titik Spawn\tDetail\tLokasi\
 			\nBandara International\tAnda akan spawn Lokasi di bandara\tLos Santos\
 			\nPelabuhan Merak\tAnda akan spawn di pelabuhan\tOcean Docs\
@@ -573,14 +573,14 @@ public InsertPlayerName(playerid, const name[])
 	new rows = cache_num_rows();
 	if(rows > 0)
 	{
-		ShowPlayerDialog(playerid, DIALOG_MAKE_CHAR, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Rolepla "WHITE"- Pembuatan Karakter",
-		""RED"Error:"WHITE" Nama tersebut telah digunakan orang lain!\n"WHITE"Selamat Datang di "Mayoritas"Mayoritas Roleplay\n"WHITE"Sebelum bermain anda harus membuat karakter anda terlebih dahulu\nMasukkan nama karakter hanya dengan nama orang Indonesia!\nContoh: Rey_Simanjuntak, Sujiwo_Atmaja, etc", "Input", "Batal");
+		ShowPlayerDialog(playerid, DIALOG_MAKE_CHAR, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Rolepla "WHITE"- Pembuatan Karakter",
+		""RED"Error:"WHITE" Nama tersebut telah digunakan orang lain!\n"WHITE"Selamat Datang di "Imajinasi"Imajinasi Roleplay\n"WHITE"Sebelum bermain anda harus membuat karakter anda terlebih dahulu\nMasukkan nama karakter hanya dengan nama orang Indonesia!\nContoh: Rey_Simanjuntak, Sujiwo_Atmaja, etc", "Input", "Batal");
 	}
 	else
 	{
 		SetPVarInt(playerid, "CreateName", 1);
 		format(AccountData[playerid][pTempName], MAX_PLAYER_NAME, name);
-		ShowPlayerDialog(playerid, DIALOG_AGE, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Tanggal Lahir", "Mohon masukkan tanggal lahir sesuai format hh/bb/tttt cth: (25/09/2001)", "Input", "");
+		ShowPlayerDialog(playerid, DIALOG_AGE, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Tanggal Lahir", "Mohon masukkan tanggal lahir sesuai format hh/bb/tttt cth: (25/09/2001)", "Input", "");
 	}
 	return 1;
 }
@@ -707,7 +707,7 @@ public OnPlayerRegister(playerid)
 	Player_ToggleAntiHealthHack(playerid, true);
 
 	Info(playerid, "Pembuatan karakter berhasil dilakukan. Silahkan pilih lokasi dimana anda akan mendarat untuk pertama kalinya.");
-	ShowPlayerDialog(playerid, DIALOG_SELECT_SPAWN, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Pilih Lokasi Spawn",
+	ShowPlayerDialog(playerid, DIALOG_SELECT_SPAWN, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Pilih Lokasi Spawn",
 	"Titik Spawn\tDetail\tLokasi\
 	\nBandara International\tAnda akan spawn di bandara\tLos Santos\
 	\nPelabuhan Merak\tAnda akan spawn di pelabuhan\tOcean Docs", "Pilih", "");
@@ -1041,7 +1041,7 @@ public CheckUCP(playerid, nameucp[])
 				strcat(line, "\n");
 		}
 
-		tstr = ""Mayoritas"Mayoritas Roleplay"WHITE"- UCP: {FFFF00}", strcat(tstr, nameucp);
+		tstr = ""Imajinasi"Imajinasi Roleplay"WHITE"- UCP: {FFFF00}", strcat(tstr, nameucp);
 		ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, tstr, line, "Tutup", "");
 	}
 	else
@@ -1149,7 +1149,7 @@ public UsingDokterLokal(playerid)
 stock LoadServerPickup()
 {
 	static strings[598];
-	format(strings, sizeof(strings), "Selamat datang di "Mayoritas"Mayoritas Roleplay\n"YELLOW"'/help'"WHITE" -> Petunjuk & bantuan.\n"YELLOW"'/ask'"WHITE" -> Hanya untuk bertanya seputar server & fitur.\n"YELLOW"'/report"WHITE" -> Melaporkan bug atau player yang melanggar aturan.");
+	format(strings, sizeof(strings), "Selamat datang di "Imajinasi"Imajinasi Roleplay\n"YELLOW"'/help'"WHITE" -> Petunjuk & bantuan.\n"YELLOW"'/ask'"WHITE" -> Hanya untuk bertanya seputar server & fitur.\n"YELLOW"'/report"WHITE" -> Melaporkan bug atau player yang melanggar aturan.");
 	CreateDynamicPickup(1239, 23, 2756.3777, -2447.4297, 13.7050, -1, -1, -1, 10.0);
 	CreateDynamicPickup(1239, 23, 1692.4619, -2325.5718, 13.5469, -1, -1, -1, 10.0);
 	CreateDynamicPickup(1239, 23, 1682.6135, 1444.3638, 10.7720, -1, -1, -1, 10.0);
@@ -1157,7 +1157,7 @@ stock LoadServerPickup()
 	CreateDynamic3DTextLabel(strings, -1, 1692.4619, -2325.5718, 13.5469 + 1.2, 8.0, INVALID_PLAYER_ID, INVALID_VEHICLE_ID, 1);
 	CreateDynamic3DTextLabel(strings, -1, 1682.6135, 1444.3638, 10.7720 + 1.2, 8.0, INVALID_PLAYER_ID, INVALID_VEHICLE_ID, 1);
 
-	format(strings, sizeof(strings), ""Mayoritas"[Mount Chilliad Skydiving Point]\n\n"YELLOW"`/skydive`"WHITE"-> Mulai terjun payung.\n"WHITE"[Harga]:"GREEN"$50");
+	format(strings, sizeof(strings), ""Imajinasi"[Mount Chilliad Skydiving Point]\n\n"YELLOW"`/skydive`"WHITE"-> Mulai terjun payung.\n"WHITE"[Harga]:"GREEN"$50");
 	CreateDynamic3DTextLabel(strings, COLOR_WHITE, -2237.6846, -1743.9290, 480.8447 + 0.25, 10.0, INVALID_PLAYER_ID, INVALID_VEHICLE_ID, 1);
 	CreateDynamicPickup(1310, 23, -2237.6846, -1743.9290, 480.8447, -1, -1, -1, 15.0); // Skydive
 	
@@ -1375,15 +1375,15 @@ Blacklist_Check(playerid, const type[], target[])
 
 			if(!time)
 			{
-				format(strgbg, sizeof(strgbg), ""WHITE"UCP Anda diblokir dari Mayoritas Roleplay!\n\nBerdasarkan informasi:\n"YELLOW"Nama UCP:"WHITE" %s\n"YELLOW"IP Address:"WHITE" %s\n"YELLOW"Admin On Duty:"WHITE" %s\n"YELLOW"Tanggal Blokir: "WHITE"%s\n"YELLOW"Reason:"WHITE" %s\n"YELLOW"Durasi Blokir: "WHITE"Permanent\
-				\n\n"VERONA_G"INGAT:"WHITE" Jika anda ingin bermain lagi dan tidak mengulangi lagi, masuk ke Discord: "YELLOW"discord.gg/Mayoritasrp"WHITE" kemudian pilih channel #req-unbanned", username, PlayerIP, banby, ReturnDate(date), reason);
-				ShowPlayerDialog(playerid, DIALOG_DISPLAYBANNED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- UCP Blocked", strgbg, "Keluar", "");
+				format(strgbg, sizeof(strgbg), ""WHITE"UCP Anda diblokir dari Imajinasi Roleplay!\n\nBerdasarkan informasi:\n"YELLOW"Nama UCP:"WHITE" %s\n"YELLOW"IP Address:"WHITE" %s\n"YELLOW"Admin On Duty:"WHITE" %s\n"YELLOW"Tanggal Blokir: "WHITE"%s\n"YELLOW"Reason:"WHITE" %s\n"YELLOW"Durasi Blokir: "WHITE"Permanent\
+				\n\n"VERONA_G"INGAT:"WHITE" Jika anda ingin bermain lagi dan tidak mengulangi lagi, masuk ke Discord: "YELLOW"discord.gg/Imajinasirp"WHITE" kemudian pilih channel #req-unbanned", username, PlayerIP, banby, ReturnDate(date), reason);
+				ShowPlayerDialog(playerid, DIALOG_DISPLAYBANNED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- UCP Blocked", strgbg, "Keluar", "");
 			}
 			else
 			{
-				format(strgbg, sizeof(strgbg), ""WHITE"UCP Anda diblokir dari Mayoritas Roleplay!\n\nBerdasarkan informasi:\n"YELLOW"Nama UCP:"WHITE" %s\n"YELLOW"IP Address:"WHITE" %s\n"YELLOW"Admin On Duty:"WHITE" %s\n"YELLOW"Tanggal Blokir: "WHITE"%s\n"YELLOW"Reason:"WHITE" %s\n"YELLOW"Durasi Blokir: "WHITE"%s\
-				\n\n"VERONA_G"INGAT:"WHITE" Jika anda ingin bermain lagi dan tidak mengulangi lagi, masuk ke Discord: "YELLOW"discord.gg/Mayoritasrp"WHITE" kemudian pilih channel #req-unbanned", username, PlayerIP, banby, ReturnDate(date), reason, RemainingTimelapse(time));
-				ShowPlayerDialog(playerid, DIALOG_DISPLAYBANNED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- UCP Blocked", strgbg, "Keluar", "");
+				format(strgbg, sizeof(strgbg), ""WHITE"UCP Anda diblokir dari Imajinasi Roleplay!\n\nBerdasarkan informasi:\n"YELLOW"Nama UCP:"WHITE" %s\n"YELLOW"IP Address:"WHITE" %s\n"YELLOW"Admin On Duty:"WHITE" %s\n"YELLOW"Tanggal Blokir: "WHITE"%s\n"YELLOW"Reason:"WHITE" %s\n"YELLOW"Durasi Blokir: "WHITE"%s\
+				\n\n"VERONA_G"INGAT:"WHITE" Jika anda ingin bermain lagi dan tidak mengulangi lagi, masuk ke Discord: "YELLOW"discord.gg/Imajinasirp"WHITE" kemudian pilih channel #req-unbanned", username, PlayerIP, banby, ReturnDate(date), reason, RemainingTimelapse(time));
+				ShowPlayerDialog(playerid, DIALOG_DISPLAYBANNED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- UCP Blocked", strgbg, "Keluar", "");
 			}
 		}
 		// KickEx(playerid);

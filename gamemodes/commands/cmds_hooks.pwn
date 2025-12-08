@@ -797,13 +797,13 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
     else if(dialogid == DIALOG_CHANGE_PASSWORD)
     {
         if(!response) return ShowTDN(playerid, NOTIFICATION_INFO, "Anda membatalkan pergantian password untuk akun anda!");
-        if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_CHANGE_PASSWORD, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Ubah Password", 
+        if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_CHANGE_PASSWORD, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Ubah Password", 
         "Error: Tidak dapat diisi kosong!\nMohon masukkan kata sandi baru yang ingin anda terapkan:", "Change", "Cancel");
 
-        if(IsNumeric(inputtext)) return ShowPlayerDialog(playerid, DIALOG_CHANGE_PASSWORD, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Ubah Password", 
+        if(IsNumeric(inputtext)) return ShowPlayerDialog(playerid, DIALOG_CHANGE_PASSWORD, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Ubah Password", 
         "Error: Tidak dapat diisi angka saja!\nMohon masukkan kata sandi baru yang ingin anda terapkan:", "Change", "Cancel");
 
-        if(strlen(inputtext) < 7 || strlen(inputtext) > 24) return ShowPlayerDialog(playerid, DIALOG_CHANGE_PASSWORD, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Ubah Password", 
+        if(strlen(inputtext) < 7 || strlen(inputtext) > 24) return ShowPlayerDialog(playerid, DIALOG_CHANGE_PASSWORD, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Ubah Password", 
         "Error: Tidak dapat kurang dari 7 characters atau lebih dari 24 characters!\nMohon masukkan kata sandi baru yang ingin anda terapkan:", "Change", "Cancel");
 
         for (new i = 0; i < 16; i++) AccountData[playerid][pSalt][i] = random(94) + 33;

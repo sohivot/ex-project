@@ -6082,7 +6082,7 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(18762, -2333.171875, 1009.610717, 54.032894, 89.999992, 154.471252, -64.471206, 0, 0, -1, 400.00, 400.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10765, "airportgnd_sfse", "white", 0x00000000);
 	tmpobjid = CreateDynamicObject(19482, -2342.736083, 998.279235, 53.602905, 0.000000, 0.000000, 270.000000, 0, 0, -1, 400.00, 400.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{000000}Mayoritas", 130, "Ariel", 50, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{000000}Imajinasi", 130, "Ariel", 50, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(18762, -2342.782958, 998.781372, 54.212882, 89.999992, 166.631515, -76.631484, 0, 0, -1, 400.00, 400.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 6985, "vgnfremnt2", "striplightspinky_256", 0x00000000);
 	tmpobjid = CreateDynamicObject(19482, -2342.736083, 998.279235, 54.042896, 0.000000, 0.000000, 270.000000, 0, 0, -1, 400.00, 400.00); 
@@ -8963,7 +8963,7 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(19482, 964.027893, 2277.048095, -82.469879, 0.000000, 0.000000, 180.000000, 6, 6, -1, 300.00, 300.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "POLDA", 50, "Impact", 45, 0, 0xFFFFFFFF, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 964.027893, 2271.378173, -82.449882, 0.000000, 0.000000, 180.000000, 6, 6, -1, 300.00, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "Mayoritas", 50, "Impact", 45, 0, 0xFFFFFFFF, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "Imajinasi", 50, "Impact", 45, 0, 0xFFFFFFFF, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(18766, 952.435241, 2248.155029, -85.769851, 0.000014, 0.000000, 89.999954, 6, 6, -1, 300.00, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 18646, "matcolours", "grey-20-percent", 0x00000000);
 	tmpobjid = CreateDynamicObject(18766, 952.435241, 2248.155029, -82.369834, 0.000029, 0.000000, 89.999908, 6, 6, -1, 300.00, 300.00); 
@@ -9327,7 +9327,7 @@ LoadMap()
 	SetDynamicObjectMaterialText(tmpobjid, 0, "POLDA", 90, "Engravers MT", 35, 0, 0xFF000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(2662, 987.591064, 2273.892822, -86.733871, 0.000000, 0.000000, -90.000000, 6, 6, -1, 300.00, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10765, "airportgnd_sfse", "black64", 0x00000000);
-	SetDynamicObjectMaterialText(tmpobjid, 0, "Mayoritas", 90, "Engravers MT", 35, 0, 0xFF000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "Imajinasi", 90, "Engravers MT", 35, 0, 0xFF000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(2662, 991.642456, 2277.504882, -84.604866, 0.000000, 0.000000, -90.000000, 6, 6, -1, 300.00, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 18996, "mattextures", "policeshield", 0x00000000);
 	tmpobjid = CreateDynamicObject(2662, 988.935119, 2266.216796, -85.543884, 0.000000, 0.000000, 0.000000, 6, 6, -1, 300.00, 300.00); 
@@ -9357,7 +9357,7 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(19482, 971.299194, 2272.026123, -84.023895, 0.000000, 0.000007, 0.000000, 6, 6, -1, 300.00, 300.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "POLDA", 90, "Franklin Gothic Medium", 40, 0, 0xFF000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 971.299194, 2274.876708, -84.023895, 0.000000, 0.000007, 0.000000, 6, 6, -1, 300.00, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "Mayoritas", 90, "Franklin Gothic Medium", 40, 0, 0xFF000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "Imajinasi", 90, "Franklin Gothic Medium", 40, 0, 0xFF000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 971.299194, 2273.696044, -84.663902, 0.000000, 0.000007, 0.000000, 6, 6, -1, 300.00, 300.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "ACADEMY", 90, "Franklin Gothic Medium", 40, 0, 0xFF000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(18980, 971.723083, 2262.748291, -87.593872, 0.000000, 0.000000, 0.000000, 6, 6, -1, 300.00, 300.00); 
@@ -10338,7 +10338,7 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(19482, 1077.902709, -1699.497924, 17.622829, -0.000007, -0.000000, -89.999977, 0, 0, -1, 300.00, 300.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{FFFFFF}KEPOLISIAN", 130, "Arial", 85, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 1082.683227, -1699.497924, 17.622829, -0.000007, -0.000000, -89.999977, 0, 0, -1, 300.00, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{FFFFFF}Mayoritas", 130, "Arial", 85, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{FFFFFF}Imajinasi", 130, "Arial", 85, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(970, 1126.311767, -1670.808959, 23.046878, 0.000000, 0.000000, 90.000000, 0, 0, -1, 300.00, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10806, "airfence_sfse", "ws_griddyfence", 0x00000000);
 	SetDynamicObjectMaterial(tmpobjid, 1, 10765, "airportgnd_sfse", "white", 0x00000000);
@@ -13630,7 +13630,7 @@ LoadMap()
 	SetDynamicObjectMaterial(tmpobjid, 1, 10765, "airportgnd_sfse", "black64", 0x00000000);
 	tmpobjid = CreateDynamicObject(19482, 1689.867431, -1471.247924, 3003.062255, 1.699998, 0.000000, -22.100027, -1, 35, -1, 300.00, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10101, "2notherbuildsfe", "ferry_build14", 0x00000000);
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{FF9999}Mayoritas", 140, "Arial", 20, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{FF9999}Imajinasi", 140, "Arial", 20, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 1690.404785, -1470.441040, 3003.097412, -0.500001, 0.000000, -44.000019, -1, 35, -1, 300.00, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10101, "2notherbuildsfe", "ferry_build14", 0x00000000);
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{FF9999}City", 140, "Arial", 20, 1, 0x00000000, 0x00000000, 1);
@@ -15091,7 +15091,7 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(638, 1467.689086, 1580.430053, 714.778625, 0.000000, 0.000000, 0.000000, -1, 10, -1, 250.00, 250.00); 
 	tmpobjid = CreateDynamicObject(638, 1467.689086, 1583.740112, 714.778625, 0.000000, 0.000000, 0.000000, -1, 10, -1, 250.00, 250.00);
 
-	/* Mayoritas Recycler Interior */
+	/* Imajinasi Recycler Interior */
 	tmpobjid = CreateDynamicObject(3037, -1465.418823, 2647.488037, 30.069506, 0.000000, 0.000000, 90.000000, -1, -1, -1, 250.00, 250.00);
     SetDynamicObjectMaterial(tmpobjid, 0, 4829, "airport_las", "Bow_Loadingbay_Door", 0);
     tmpobjid = CreateDynamicObject(3633, -1470.060669, 2641.701172, 28.703857, 0.000000, 0.000007, 0.000000, -1, -1, -1, 250.00, 250.00);
@@ -16033,7 +16033,7 @@ LoadMap()
     SetDynamicObjectMaterial(tmpobjid, 3, 16271, "des_factory", "sm_quarry_conv_belt_empty", 0);
     SetDynamicObjectMaterial(tmpobjid, 0, 14534, "ab_wooziea", "walp72S", 0);
 
-	/* Mayoritas Trans */
+	/* Imajinasi Trans */
 	tmpobjid = CreateDynamicObject(2960, 1526.675659, -2182.015625, 14.593496, 0.000029, 270.000000, 179.999755, -1, -1, -1, 250.00, 250.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 18646, "matcolours", "grey-80-percent", 0x00000000);
 	tmpobjid = CreateDynamicObject(1499, 1526.317016, -2181.986816, 12.707967, 0.000021, -0.000007, 179.999786, -1, -1, -1, 250.00, 250.00); 
@@ -16076,7 +16076,7 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(19383, 1532.349243, -2179.899414, 18.553529, 0.000014, -0.000007, 179.999786, -1, -1, -1, 250.00, 250.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 12944, "ce_bankalley2", "sw_brick04", 0x00000000);
 	tmpobjid = CreateDynamicObject(19482, 1533.323364, -2182.608154, 20.344995, 0.000000, 0.000000, 270.000000, -1, -1, -1, 250.00, 250.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{000000}Mayoritas", 130, "Ariel", 100, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{000000}Imajinasi", 130, "Ariel", 100, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(2960, 1520.465454, -2179.565917, 16.563493, 0.000007, 180.000000, 89.999870, -1, -1, -1, 250.00, 250.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 18646, "matcolours", "grey-80-percent", 0x00000000);
 	tmpobjid = CreateDynamicObject(19376, 1518.481323, -2181.945312, 17.973161, 0.000007, 0.000021, 89.999870, -1, -1, -1, 250.00, 250.00); 
@@ -16967,7 +16967,7 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(18661, 2110.125488, -1923.939208, 17.629625, -0.000022, 0.000000, -90.000030, 0, 0, -1, 250.00, 250.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{FFFF00}Style", 130, "Ariel", 65, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(18661, 2125.641113, -1911.348876, 17.707382, -0.000022, 0.000000, -90.000030, 0, 0, -1, 250.00, 250.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{000000}Mayoritas", 140, "Ariel", 100, 1, 0x00000000, 0x00000000, 0);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{000000}Imajinasi", 140, "Ariel", 100, 1, 0x00000000, 0x00000000, 0);
 	tmpobjid = CreateDynamicObject(19445, 2123.502197, -1924.161865, 17.756860, -0.000007, -0.000014, -90.000198, 0, 0, -1, 250.00, 250.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 18646, "matcolours", "grey-30-percent", 0x00000000);
 	SetDynamicObjectMaterialText(tmpobjid, 0, "None", 20, "Ariel", 20, 0, 0x00000000, 0x00000000, 0);
@@ -17114,7 +17114,7 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(2708, 2109.225585, -1921.425781, 12.559601, 0.000022, 0.000000, 89.999732, 0, 0, -1, 250.00, 250.00); 
 	SetDynamicObjectMaterial(tmpobjid, 1, 1675, "wshxrefhse", "greygreensubuild_128", 0x00000000);
 	tmpobjid = CreateDynamicObject(18661, 2110.826171, -1923.939208, 17.969629, -0.000022, 0.000000, -90.000030, 0, 0, -1, 250.00, 250.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{FFFFFF}Mayoritas", 130, "Ariel", 65, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{FFFFFF}Imajinasi", 130, "Ariel", 65, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(2736, 2110.527343, -1924.022705, 17.619623, 0.000000, -0.000022, 179.999755, 0, 0, -1, 250.00, 250.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 18646, "matcolours", "grey-90-percent", 0x00000000);
 	tmpobjid = CreateDynamicObject(19445, 2108.781250, -1919.250000, 17.756860, 0.000007, -0.000022, 179.999740, 0, 0, -1, 250.00, 250.00); 
@@ -17312,7 +17312,7 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(19445, 1046.180541, 236.178680, 19.769245, 0.000000, 0.000014, 539.999755, -1, -1, -1, 250.00, 250.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 18646, "matcolours", "grey-30-percent", 0x00000000);
 	tmpobjid = CreateDynamicObject(18667, 1046.048950, 234.493087, 16.699249, 0.000000, 0.000000, 0.000000, -1, -1, -1, 250.00, 250.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Mayoritas", 140, "Ariel", 100, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Imajinasi", 140, "Ariel", 100, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19445, 1041.263671, 253.628692, 19.769245, 0.000000, 0.000014, 269.999725, -1, -1, -1, 250.00, 250.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 18646, "matcolours", "grey-30-percent", 0x00000000);
 	tmpobjid = CreateDynamicObject(2267, 1022.233459, 237.557617, 16.639236, 0.000000, 0.000000, 90.000000, -1, -1, -1, 250.00, 250.00); 
@@ -17366,7 +17366,7 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(18667, 1046.045898, 233.643096, 16.369247, 0.000000, 0.000000, 0.000000, -1, -1, -1, 250.00, 250.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{000000}Showroom", 140, "Ariel", 100, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(18667, 1046.052001, 234.493087, 16.699249, 0.000000, 0.000000, 0.000000, -1, -1, -1, 250.00, 250.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Mayoritas", 140, "Ariel", 100, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Imajinasi", 140, "Ariel", 100, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19445, 1022.134338, 237.673889, 18.059139, 360.000000, 90.000007, -0.000167, -1, -1, -1, 250.00, 250.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 18646, "matcolours", "grey-20-percent", 0x00000000);
 	tmpobjid = CreateDynamicObject(19939, 1037.728637, 243.598510, 15.646820, 46.400039, 360.000000, -94.100051, -1, -1, -1, 250.00, 250.00); 
@@ -17422,7 +17422,7 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(19445, 1046.230590, 230.553787, 16.279205, 0.000007, 0.000007, -90.000167, -1, -1, -1, 250.00, 250.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 14581, "ab_mafiasuitea", "walp45S", 0x00000000);
 	tmpobjid = CreateDynamicObject(18667, 1046.045898, 234.493087, 16.699249, 0.000000, 0.000000, 0.000000, -1, -1, -1, 250.00, 250.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Mayoritas", 140, "Ariel", 100, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Imajinasi", 140, "Ariel", 100, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19929, 1043.514038, 232.054138, 14.539244, 0.000000, 0.000007, 0.000000, -1, -1, -1, 250.00, 250.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 18646, "matcolours", "grey-20-percent", 0x00000000);
 	SetDynamicObjectMaterial(tmpobjid, 1, 18646, "matcolours", "grey-50-percent", 0x00000000);
@@ -17453,15 +17453,15 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(18667, 1046.042846, 233.643096, 16.369247, 0.000000, 0.000000, 0.000000, -1, -1, -1, 250.00, 250.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{000000}Showroom", 140, "Ariel", 100, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(18667, 1046.042846, 234.493087, 16.699249, 0.000000, 0.000000, 0.000000, -1, -1, -1, 250.00, 250.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Mayoritas", 140, "Ariel", 100, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Imajinasi", 140, "Ariel", 100, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(18667, 1046.039794, 233.643096, 16.369247, 0.000000, 0.000000, 0.000000, -1, -1, -1, 250.00, 250.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{000000}Showroom", 140, "Ariel", 100, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(18667, 1046.039794, 234.493087, 16.699249, 0.000000, 0.000000, 0.000000, -1, -1, -1, 250.00, 250.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Mayoritas", 140, "Ariel", 100, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Imajinasi", 140, "Ariel", 100, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(18667, 1046.036743, 233.643096, 16.369247, 0.000000, 0.000000, 0.000000, -1, -1, -1, 250.00, 250.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{000000}Showroom", 140, "Ariel", 100, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(18667, 1046.036743, 234.493087, 16.699249, 0.000000, 0.000000, 0.000000, -1, -1, -1, 250.00, 250.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Mayoritas", 140, "Ariel", 100, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Imajinasi", 140, "Ariel", 100, 1, 0x00000000, 0x00000000, 1);
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -22826,7 +22826,7 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(19433, 1123.260498, -2011.199707, 71.970588, 0.000000, 0.000000, 0.000000, 0, 0, -1, 250.00, 250.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 14534, "ab_wooziea", "mcstraps_window", 0x00000000);
 	tmpobjid = CreateDynamicObject(19482, 1122.373046, -2036.918090, 74.069107, 0.000000, 0.000000, 0.000000, 0, 0, -1, 250.00, 250.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{FFFFFF}PEMERINTAH KOTA Mayoritas", 130, "Arial", 40, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{FFFFFF}PEMERINTAH KOTA Imajinasi", 130, "Arial", 40, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(16101, 1117.735229, -2036.924316, 74.252029, 0.000000, 0.000000, 0.000000, 0, 0, -1, 250.00, 250.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10765, "airportgnd_sfse", "white", 0xFF323232);
 	tmpobjid = CreateDynamicObject(19939, 1117.766967, -2036.401611, 84.876190, 0.000000, 90.000000, 0.000000, 0, 0, -1, 250.00, 250.00); 
@@ -23024,7 +23024,7 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(18765, 1261.815917, -1997.828002, 56.282447, 0.000000, 0.000015, 0.000000, 0, 0, -1, 250.00, 250.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 1736, "cj_ammo", "CJ_Black_metal", 0x00000000);
 	tmpobjid = CreateDynamicObject(19482, 1249.773681, -2000.905029, 60.951354, 13.700001, 0.000000, 180.000000, 0, 0, -1, 250.00, 250.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Mayoritas CITY", 130, "Comic Sans MS", 35, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Imajinasi CITY", 130, "Comic Sans MS", 35, 1, 0x00000000, 0x00000000, 1);
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -23754,7 +23754,7 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(19445, 597.770446, -1509.213012, 15.665299, 0.000000, 0.000007, 0.000000, 0, 0, -1, 200.00, 200.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10765, "airportgnd_sfse", "white", 0x00000000);
 	tmpobjid = CreateDynamicObject(19482, 597.906555, -1509.109130, 16.508441, 0.000000, 0.000000, 0.000000, 0, 0, -1, 200.00, 200.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{000000}Mayoritas", 130, "Arial", 60, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{000000}Imajinasi", 130, "Arial", 60, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 597.906555, -1509.109130, 15.958434, 0.000000, 0.000000, 0.000000, 0, 0, -1, 200.00, 200.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{000000}SWEEPER", 130, "Arial", 60, 1, 0x00000000, 0x00000000, 1);
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -23813,7 +23813,7 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(19482, 1007.870910, -1430.570434, 14.066869, 0.000000, 0.000000, 630.000000, 0, 0, -1, 200.00, 200.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{FFFFFF}- Keluar garis antri ulang!", 130, "Arial", 15, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 987.089172, -1455.678344, 14.139081, 0.000000, 0.000000, 90.000000, 0, 0, -1, 200.00, 200.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Mayoritas", 90, "Segoe Script", 85, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Imajinasi", 90, "Segoe Script", 85, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19445, 982.922058, -1431.895751, 12.466873, 0.000000, 90.000000, 90.000000, 0, 0, -1, 200.00, 200.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10763, "airport1_sfse", "ws_yelloscaff", 0x00000000);
 	tmpobjid = CreateDynamicObject(19445, 982.922058, -1434.945800, 12.466873, 0.000000, 90.000000, 90.000000, 0, 0, -1, 200.00, 200.00); 
@@ -24567,33 +24567,33 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(18762, 2355.317626, -86.726905, 24.108140, 0.000000, 0.000045, 0.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 16640, "a51", "vgs_shopwall01_128", 0x00000000);
 	tmpobjid = CreateDynamicObject(19482, 2354.818847, -78.488784, 30.435941, 0.000000, 0.000000, 180.000000, 0, 0, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{FFFFFF}Mayoritas", 130, "Arial", 50, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{FFFFFF}Imajinasi", 130, "Arial", 50, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 2354.818847, -79.278785, 30.035936, 0.000000, 0.000000, 180.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{FFFF00}TAILOR", 130, "Arial", 50, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 2354.808837, -78.488784, 30.435941, 0.000000, 0.000000, 180.000000, 0, 0, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{FFFFFF}Mayoritas", 130, "Arial", 50, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{FFFFFF}Imajinasi", 130, "Arial", 50, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 2354.808837, -79.278785, 30.035936, 0.000000, 0.000000, 180.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{FFFF00}TAILOR", 130, "Arial", 50, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(18766, 2359.743652, -84.201698, 25.334991, 90.000000, 0.000000, 0.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 14479, "skuzzy_motelmain", "mp_CJ_Laminate1", 0x00000000);
 	tmpobjid = CreateDynamicObject(19482, 2354.798828, -78.488784, 30.435941, 0.000000, 0.000000, 180.000000, 0, 0, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{FFFFFF}Mayoritas", 130, "Arial", 50, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{FFFFFF}Imajinasi", 130, "Arial", 50, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 2354.798828, -79.278785, 30.035936, 0.000000, 0.000000, 180.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{FFFF00}TAILOR", 130, "Arial", 50, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 2354.788818, -78.488784, 30.435941, 0.000000, 0.000000, 180.000000, 0, 0, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{FFFFFF}Mayoritas", 130, "Arial", 50, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{FFFFFF}Imajinasi", 130, "Arial", 50, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 2354.788818, -79.278785, 30.035936, 0.000000, 0.000000, 180.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{FFFF00}TAILOR", 130, "Arial", 50, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 2354.778808, -78.488784, 30.435941, 0.000000, 0.000000, 180.000000, 0, 0, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{FFFFFF}Mayoritas", 130, "Arial", 50, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{FFFFFF}Imajinasi", 130, "Arial", 50, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 2354.778808, -79.278785, 30.035936, 0.000000, 0.000000, 180.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{FFFF00}TAILOR", 130, "Arial", 50, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 2354.768798, -78.488784, 30.435941, 0.000000, 0.000000, 180.000000, 0, 0, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{FFFFFF}Mayoritas", 130, "Arial", 50, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{FFFFFF}Imajinasi", 130, "Arial", 50, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 2354.768798, -79.278785, 30.035936, 0.000000, 0.000000, 180.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{FFFF00}TAILOR", 130, "Arial", 50, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 2354.758789, -78.488784, 30.435941, 0.000000, 0.000000, 180.000000, 0, 0, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{FFFFFF}Mayoritas", 130, "Arial", 50, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{FFFFFF}Imajinasi", 130, "Arial", 50, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 2354.758789, -79.278785, 30.035936, 0.000000, 0.000000, 180.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{FFFF00}TAILOR", 130, "Arial", 50, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(18766, 2359.743652, -85.611770, 25.333992, 90.000000, 0.000000, 0.000000, 0, 0, -1, 300.0, 300.00); 
@@ -25677,7 +25677,7 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(631, -2170.848632, 173.625549, -79.341690, 0.000000, 0.000000, -30.999998, -1, -1, -1, 300.0, 300.00); 
 	tmpobjid = CreateDynamicObject(19999, -2167.062744, 186.537963, -80.251693, 0.000000, 0.000000, 0.000000, -1, -1, -1, 300.0, 300.00);
 
-	// Kantor Polda Mayoritas
+	// Kantor Polda Imajinasi
 	/*tmpobjid = CreateDynamicObject(19445, 1145.276611, -1744.612060, 17.287372, -0.000006, -90.000091, -179.999725, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 6102, "gazlaw1", "law_gazwhitefloor", 0xFF333333);
 	tmpobjid = CreateDynamicObject(19445, 1145.276611, -1737.520996, 17.287273, -0.000006, -90.000106, -179.999725, 0, 0, -1, 300.0, 300.00); 
@@ -26325,7 +26325,7 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(19482, 1151.300781, -1740.805541, 13.888436, 0.000000, 0.000007, 0.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "KEPOLISIAN", 130, "Verdana", 45, 1, 0xFF000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 1151.300781, -1740.865600, 13.448432, 0.000000, 0.000007, 0.000000, 0, 0, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "KOTA Mayoritas", 130, "Verdana", 35, 1, 0xFF000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "KOTA Imajinasi", 130, "Verdana", 35, 1, 0xFF000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(18762, 1151.218750, -1742.979003, 12.328427, 0.000000, 0.000000, 0.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 8401, "vgshpground", "vegaspawnwall02_128", 0x00000000);
 	tmpobjid = CreateDynamicObject(18762, 1151.218750, -1738.608886, 12.328427, 0.000000, 0.000000, 0.000000, 0, 0, -1, 300.0, 300.00); 
@@ -28350,7 +28350,7 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(19482, 1173.018920, -2041.318847, 28.018363, 0.000000, 0.000014, 0.000000, 4, 4, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "PEMERINTAH", 130, "Arial", 60, 1, 0xFFFFFFFF, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 1173.018920, -2041.298828, 27.398376, 0.000000, 0.000014, 0.000000, 4, 4, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "KOTA Mayoritas", 130, "Arial", 60, 1, 0xFFFFFFFF, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "KOTA Imajinasi", 130, "Arial", 60, 1, 0xFFFFFFFF, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19426, 1183.186157, -2044.311889, 23.819656, -0.000007, 270.000000, -89.999946, 4, 4, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 18646, "matcolours", "red-4", 0x00000000);
 	tmpobjid = CreateDynamicObject(19426, 1181.785156, -2047.812377, 23.819656, -0.000007, 270.000000, -89.999900, 4, 4, -1, 300.0, 300.00); 
@@ -28635,7 +28635,7 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(2773, 1180.734741, -2038.902343, 24.425582, 0.000000, 0.000000, 90.000000, 4, 4, -1, 300.0, 300.00); 
 	tmpobjid = CreateDynamicObject(2773, 1180.734741, -2041.522583, 24.425582, 0.000000, 0.000000, 90.000000, 4, 4, -1, 300.0, 300.00);
 
-	// Mayoritas Bengkel New
+	// Imajinasi Bengkel New
 	tmpobjid = CreateDynamicObject(18981, -98.462265, 1052.019042, 18.701089, 0.000000, 90.000038, 0.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10765, "airportgnd_sfse", "ws_airpt_concrete", 0xFF333333);
 	tmpobjid = CreateDynamicObject(18981, -98.462265, 1027.019409, 18.701089, 0.000000, 90.000038, 0.000000, 0, 0, -1, 300.0, 300.00); 
@@ -29165,7 +29165,7 @@ LoadMap()
 	SetDynamicObjectMaterial(tmpobjid, 0, 3980, "cityhall_lan", "man_cellarfloor128", 0x00000000);
 	tmpobjid = CreateDynamicObject(19481, -85.834838, 1045.669921, 28.227031, 0.000000, 0.000037, 0.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10765, "airportgnd_sfse", "white", 0x00000000);
-	SetDynamicObjectMaterialText(tmpobjid, 0, "BENGKEL KOTA Mayoritas", 120, "Arial Black", 45, 1, 0xFFFFFFFF, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "BENGKEL KOTA Imajinasi", 120, "Arial Black", 45, 1, 0xFFFFFFFF, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(18766, -101.859550, 999.768005, 27.951438, 89.999992, 180.000076, -89.999961, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 9515, "bigboxtemp1", "sf_concrete1", 0xFF666666);
 	tmpobjid = CreateDynamicObject(18766, -96.859565, 1009.768371, 27.951438, 89.999992, 180.000106, -89.999961, 0, 0, -1, 300.0, 300.00); 
@@ -29222,43 +29222,43 @@ LoadMap()
 	SetDynamicObjectMaterial(tmpobjid, 0, 9515, "bigboxtemp1", "sf_concrete1", 0xFF666666);
 	tmpobjid = CreateDynamicObject(19481, -85.844841, 1045.669921, 28.227031, 0.000000, 0.000037, 0.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10765, "airportgnd_sfse", "white", 0x00000000);
-	SetDynamicObjectMaterialText(tmpobjid, 0, "BENGKEL KOTA Mayoritas", 120, "Arial Black", 45, 1, 0xFFFFFFFF, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "BENGKEL KOTA Imajinasi", 120, "Arial Black", 45, 1, 0xFFFFFFFF, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19481, -85.854843, 1045.669921, 28.227031, 0.000000, 0.000037, 0.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10765, "airportgnd_sfse", "white", 0x00000000);
-	SetDynamicObjectMaterialText(tmpobjid, 0, "BENGKEL KOTA Mayoritas", 120, "Arial Black", 45, 1, 0xFFFFFFFF, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "BENGKEL KOTA Imajinasi", 120, "Arial Black", 45, 1, 0xFFFFFFFF, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19481, -85.864845, 1045.669921, 28.227031, 0.000000, 0.000037, 0.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10765, "airportgnd_sfse", "white", 0x00000000);
-	SetDynamicObjectMaterialText(tmpobjid, 0, "BENGKEL KOTA Mayoritas", 120, "Arial Black", 45, 1, 0xFFFFFFFF, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "BENGKEL KOTA Imajinasi", 120, "Arial Black", 45, 1, 0xFFFFFFFF, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19481, -85.874847, 1045.669921, 28.227031, 0.000000, 0.000037, 0.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10765, "airportgnd_sfse", "white", 0x00000000);
-	SetDynamicObjectMaterialText(tmpobjid, 0, "BENGKEL KOTA Mayoritas", 120, "Arial Black", 45, 1, 0xFFFFFFFF, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "BENGKEL KOTA Imajinasi", 120, "Arial Black", 45, 1, 0xFFFFFFFF, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19481, -85.884849, 1045.669921, 28.227031, 0.000000, 0.000037, 0.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10765, "airportgnd_sfse", "white", 0x00000000);
-	SetDynamicObjectMaterialText(tmpobjid, 0, "BENGKEL KOTA Mayoritas", 120, "Arial Black", 45, 1, 0xFFFFFFFF, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "BENGKEL KOTA Imajinasi", 120, "Arial Black", 45, 1, 0xFFFFFFFF, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19481, -85.894851, 1045.669921, 28.227031, 0.000000, 0.000037, 0.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10765, "airportgnd_sfse", "white", 0x00000000);
-	SetDynamicObjectMaterialText(tmpobjid, 0, "BENGKEL KOTA Mayoritas", 120, "Arial Black", 45, 1, 0xFFFFFFFF, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "BENGKEL KOTA Imajinasi", 120, "Arial Black", 45, 1, 0xFFFFFFFF, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19481, -85.904853, 1045.669921, 28.227031, 0.000000, 0.000037, 0.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10765, "airportgnd_sfse", "white", 0x00000000);
-	SetDynamicObjectMaterialText(tmpobjid, 0, "BENGKEL KOTA Mayoritas", 120, "Arial Black", 45, 1, 0xFFFFFFFF, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "BENGKEL KOTA Imajinasi", 120, "Arial Black", 45, 1, 0xFFFFFFFF, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19481, -85.914855, 1045.669921, 28.227031, 0.000000, 0.000037, 0.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10765, "airportgnd_sfse", "white", 0x00000000);
-	SetDynamicObjectMaterialText(tmpobjid, 0, "BENGKEL KOTA Mayoritas", 120, "Arial Black", 45, 1, 0xFFFFFFFF, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "BENGKEL KOTA Imajinasi", 120, "Arial Black", 45, 1, 0xFFFFFFFF, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19481, -85.924858, 1045.669921, 28.227031, 0.000000, 0.000037, 0.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10765, "airportgnd_sfse", "white", 0x00000000);
-	SetDynamicObjectMaterialText(tmpobjid, 0, "BENGKEL KOTA Mayoritas", 120, "Arial Black", 45, 1, 0xFFFFFFFF, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "BENGKEL KOTA Imajinasi", 120, "Arial Black", 45, 1, 0xFFFFFFFF, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19481, -85.934860, 1045.669921, 28.227031, 0.000000, 0.000037, 0.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10765, "airportgnd_sfse", "white", 0x00000000);
-	SetDynamicObjectMaterialText(tmpobjid, 0, "BENGKEL KOTA Mayoritas", 120, "Arial Black", 45, 1, 0xFFFFFFFF, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "BENGKEL KOTA Imajinasi", 120, "Arial Black", 45, 1, 0xFFFFFFFF, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19481, -85.944862, 1045.669921, 28.227031, 0.000000, 0.000037, 0.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10765, "airportgnd_sfse", "white", 0x00000000);
-	SetDynamicObjectMaterialText(tmpobjid, 0, "BENGKEL KOTA Mayoritas", 120, "Arial Black", 45, 1, 0xFFFFFFFF, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "BENGKEL KOTA Imajinasi", 120, "Arial Black", 45, 1, 0xFFFFFFFF, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19481, -85.954864, 1045.669921, 28.227031, 0.000000, 0.000037, 0.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10765, "airportgnd_sfse", "white", 0x00000000);
-	SetDynamicObjectMaterialText(tmpobjid, 0, "BENGKEL KOTA Mayoritas", 120, "Arial Black", 45, 1, 0xFFFFFFFF, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "BENGKEL KOTA Imajinasi", 120, "Arial Black", 45, 1, 0xFFFFFFFF, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19481, -85.954864, 1045.669921, 28.227031, 0.000000, 0.000037, 0.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10765, "airportgnd_sfse", "white", 0x00000000);
-	SetDynamicObjectMaterialText(tmpobjid, 0, "BENGKEL KOTA Mayoritas", 120, "Arial Black", 45, 1, 0xFFFFFFFF, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "BENGKEL KOTA Imajinasi", 120, "Arial Black", 45, 1, 0xFFFFFFFF, 0x00000000, 1);
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -29717,7 +29717,7 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(1800, 308.871917, 1825.572875, 6.477392, 0.000000, 0.000000, 0.000000, -1, -1, -1, 300.0, 300.00); 
 	tmpobjid = CreateDynamicObject(1800, 305.551910, 1825.572875, 6.477392, 0.000000, 0.000000, 0.000000, -1, -1, -1, 300.0, 300.00);
 		
-	// Mayoritas Gojek
+	// Imajinasi Gojek
 	/*tmpobjid = CreateDynamicObject(18981, 1501.308227, -2172.233398, 12.066872, 0.000000, 90.000000, 0.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 9515, "bigboxtemp1", "tarmacplain_bank", 0x00000000);
 	tmpobjid = CreateDynamicObject(18981, 1526.308227, -2172.233398, 12.066872, 0.000000, 90.000000, 0.000000, 0, 0, -1, 300.0, 300.00); 
@@ -30135,13 +30135,13 @@ LoadMap()
 	SetDynamicObjectMaterialText(tmpobjid, 0, "Gojek", 130, "Arial", 90, 1, 0xFF00FF00, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 1513.525512, -2160.766601, 14.886877, -0.000007, 0.000000, -89.999977, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10101, "2notherbuildsfe", "ferry_build14", 0x00000000);
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}Mayoritas", 130, "Arial", 90, 1, 0xFF00FF00, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}Imajinasi", 130, "Arial", 90, 1, 0xFF00FF00, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 1511.865234, -2160.756591, 15.606882, -0.000007, 0.000000, -89.999977, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10101, "2notherbuildsfe", "ferry_build14", 0x00000000);
 	SetDynamicObjectMaterialText(tmpobjid, 0, "Gojek", 130, "Arial", 90, 1, 0xFF00FF00, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 1513.525512, -2160.756591, 14.886877, -0.000007, 0.000000, -89.999977, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10101, "2notherbuildsfe", "ferry_build14", 0x00000000);
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}Mayoritas", 130, "Arial", 90, 1, 0xFF00FF00, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}Imajinasi", 130, "Arial", 90, 1, 0xFF00FF00, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 1502.744750, -2165.716552, 15.046875, 0.000000, 0.000000, -90.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10101, "2notherbuildsfe", "ferry_build14", 0x00000000);
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{FFFFFF}Mau Kemana?", 130, "Arial", 80, 1, 0xFF00FF00, 0x00000000, 0);
@@ -30202,13 +30202,13 @@ LoadMap()
 	SetDynamicObjectMaterialText(tmpobjid, 0, "/", 130, "Webdings", 180, 1, 0xFF000000, 0x00000000, 0);
 	tmpobjid = CreateDynamicObject(19482, 1537.607910, -2171.017822, 20.806880, 0.000000, 0.000000, 180.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10101, "2notherbuildsfe", "ferry_build14", 0x00000000);
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}Mayoritas", 130, "Arial", 120, 1, 0xFF000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}Imajinasi", 130, "Arial", 120, 1, 0xFF000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 1537.607910, -2174.438720, 21.226882, 0.000000, 0.000000, 180.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10101, "2notherbuildsfe", "ferry_build14", 0x00000000);
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}u", 130, "Webdings", 150, 0, 0xFF000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 1537.597900, -2171.017822, 20.806880, 0.000000, 0.000000, 180.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10101, "2notherbuildsfe", "ferry_build14", 0x00000000);
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}Mayoritas", 130, "Arial", 120, 1, 0xFF000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}Imajinasi", 130, "Arial", 120, 1, 0xFF000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 1537.597900, -2174.438720, 21.226882, 0.000000, 0.000000, 180.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10101, "2notherbuildsfe", "ferry_build14", 0x00000000);
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}u", 130, "Webdings", 150, 0, 0xFF000000, 0x00000000, 1);
@@ -30217,7 +30217,7 @@ LoadMap()
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}GOJEK", 130, "Arial", 120, 1, 0xFF000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 1537.587890, -2171.017822, 20.806880, 0.000000, 0.000000, 180.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10101, "2notherbuildsfe", "ferry_build14", 0x00000000);
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}Mayoritas", 130, "Arial", 120, 1, 0xFF000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}Imajinasi", 130, "Arial", 120, 1, 0xFF000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 1537.587890, -2174.438720, 21.226882, 0.000000, 0.000000, 180.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10101, "2notherbuildsfe", "ferry_build14", 0x00000000);
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}u", 130, "Webdings", 150, 0, 0xFF000000, 0x00000000, 1);
@@ -30226,7 +30226,7 @@ LoadMap()
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}GOJEK", 130, "Arial", 120, 1, 0xFF000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 1537.577880, -2171.017822, 20.806880, 0.000000, 0.000000, 180.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10101, "2notherbuildsfe", "ferry_build14", 0x00000000);
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}Mayoritas", 130, "Arial", 120, 1, 0xFF000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}Imajinasi", 130, "Arial", 120, 1, 0xFF000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 1537.607910, -2170.517822, 21.796890, 0.000000, 0.000000, 180.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10101, "2notherbuildsfe", "ferry_build14", 0x00000000);
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}GOJEK", 130, "Arial", 120, 1, 0xFF000000, 0x00000000, 1);
@@ -30238,7 +30238,7 @@ LoadMap()
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}GOJEK", 130, "Arial", 120, 1, 0xFF000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 1537.567871, -2171.017822, 20.806880, 0.000000, 0.000000, 180.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10101, "2notherbuildsfe", "ferry_build14", 0x00000000);
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}Mayoritas", 130, "Arial", 120, 1, 0xFF000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}Imajinasi", 130, "Arial", 120, 1, 0xFF000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 1537.567871, -2174.438720, 21.226882, 0.000000, 0.000000, 180.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10101, "2notherbuildsfe", "ferry_build14", 0x00000000);
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}u", 130, "Webdings", 150, 0, 0xFF000000, 0x00000000, 1);
@@ -30247,7 +30247,7 @@ LoadMap()
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}GOJEK", 130, "Arial", 120, 1, 0xFF000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 1537.557861, -2171.017822, 20.806880, 0.000000, 0.000000, 180.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10101, "2notherbuildsfe", "ferry_build14", 0x00000000);
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}Mayoritas", 130, "Arial", 120, 1, 0xFF000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}Imajinasi", 130, "Arial", 120, 1, 0xFF000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 1537.748046, -2163.598388, 20.966875, 0.000000, 0.000000, 0.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10101, "2notherbuildsfe", "ferry_build14", 0x00000000);
 	SetDynamicObjectMaterialText(tmpobjid, 0, "/", 130, "Webdings", 180, 1, 0xFF00FF00, 0x00000000, 0);
@@ -30666,7 +30666,7 @@ LoadMap()
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}GOJEK", 130, "Arial", 120, 1, 0xFF000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 1537.547851, -2171.017822, 20.806880, 0.000000, 0.000000, 180.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10101, "2notherbuildsfe", "ferry_build14", 0x00000000);
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}Mayoritas", 130, "Arial", 120, 1, 0xFF000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}Imajinasi", 130, "Arial", 120, 1, 0xFF000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 1537.547851, -2174.438720, 21.226882, 0.000000, 0.000000, 180.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10101, "2notherbuildsfe", "ferry_build14", 0x00000000);
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}u", 130, "Webdings", 150, 0, 0xFF000000, 0x00000000, 1);
@@ -30675,7 +30675,7 @@ LoadMap()
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}GOJEK", 130, "Arial", 120, 1, 0xFF000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 1537.537841, -2171.017822, 20.806880, 0.000000, 0.000000, 180.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10101, "2notherbuildsfe", "ferry_build14", 0x00000000);
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}Mayoritas", 130, "Arial", 120, 1, 0xFF000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}Imajinasi", 130, "Arial", 120, 1, 0xFF000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 1537.537841, -2174.438720, 21.226882, 0.000000, 0.000000, 180.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10101, "2notherbuildsfe", "ferry_build14", 0x00000000);
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}u", 130, "Webdings", 150, 0, 0xFF000000, 0x00000000, 1);
@@ -30684,7 +30684,7 @@ LoadMap()
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}GOJEK", 130, "Arial", 120, 1, 0xFF000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 1537.527832, -2171.017822, 20.806880, 0.000000, 0.000000, 180.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10101, "2notherbuildsfe", "ferry_build14", 0x00000000);
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}Mayoritas", 130, "Arial", 120, 1, 0xFF000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}Imajinasi", 130, "Arial", 120, 1, 0xFF000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 1537.527832, -2174.438720, 21.226882, 0.000000, 0.000000, 180.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10101, "2notherbuildsfe", "ferry_build14", 0x00000000);
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}u", 130, "Webdings", 150, 0, 0xFF000000, 0x00000000, 1);
@@ -30899,7 +30899,7 @@ LoadMap()
 	SetDynamicObjectMaterialText(tmpobjid, 0, "Gojek", 130, "Arial", 90, 1, 0xFF00FF00, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 1513.525512, -2160.776611, 14.886877, -0.000007, 0.000000, -89.999977, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10101, "2notherbuildsfe", "ferry_build14", 0x00000000);
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}Mayoritas", 130, "Arial", 90, 1, 0xFF00FF00, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}Imajinasi", 130, "Arial", 90, 1, 0xFF00FF00, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 1513.925781, -2160.776611, 15.626877, -0.000007, 0.000000, -89.999977, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10101, "2notherbuildsfe", "ferry_build14", 0x00000000);
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}u", 130, "Webdings", 90, 0, 0xFF00FF00, 0x00000000, 1);
@@ -30908,7 +30908,7 @@ LoadMap()
 	SetDynamicObjectMaterialText(tmpobjid, 0, "Gojek", 130, "Arial", 90, 1, 0xFF00FF00, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 1513.525512, -2160.786621, 14.886877, -0.000007, 0.000000, -89.999977, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10101, "2notherbuildsfe", "ferry_build14", 0x00000000);
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}Mayoritas", 130, "Arial", 90, 1, 0xFF00FF00, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}Imajinasi", 130, "Arial", 90, 1, 0xFF00FF00, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 1513.925781, -2160.786621, 15.626877, -0.000007, 0.000000, -89.999977, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10101, "2notherbuildsfe", "ferry_build14", 0x00000000);
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{00FF00}u", 130, "Webdings", 90, 0, 0xFF00FF00, 0x00000000, 1);
@@ -31076,7 +31076,7 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(1671, 1494.571899, -2181.281005, 18.696876, 0.000000, 0.000000, 162.699996, 0, 0, -1, 300.0, 300.00); 
 	tmpobjid = CreateDynamicObject(19893, 1494.383789, -2180.068603, 19.126878, 0.000000, 0.000000, 0.000000, 0, 0, -1, 300.0, 300.00);*/
 
-	// Mayoritas Pasar
+	// Imajinasi Pasar
 	tmpobjid = CreateDynamicObject(3491, 842.952392, -1195.818115, 24.154945, 0.000000, 0.000000, 90.000038, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 18646, "matcolours", "grey-93-percent", 0x00000000);
 	SetDynamicObjectMaterial(tmpobjid, 1, 10765, "airportgnd_sfse", "white", 0x00000000);
@@ -31384,7 +31384,7 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(19569, 849.472045, -1188.609497, 16.793544, 0.000000, 0.000007, 0.000000, 0, 0, -1, 300.0, 300.00); 
 	tmpobjid = CreateDynamicObject(19569, 849.472045, -1188.239135, 16.793544, 0.000000, 0.000007, 0.000000, 0, 0, -1, 300.0, 300.00);
 
-	// Mayoritas Recycler Olah
+	// Imajinasi Recycler Olah
 	tmpobjid = CreateDynamicObject(8210, -10.248465, 1403.003784, 11.368342, 0.000000, 0.000000, 180.000000, -1, -1, -1, 250.00, 250.00);
     tmpobjid = CreateDynamicObject(8210, -33.980865, 1358.813110, 11.068338, 0.000000, 0.000000, -81.299995, -1, -1, -1, 250.00, 250.00);
     tmpobjid = CreateDynamicObject(18446, 2.597780, 1377.411011, 9.004638, 6.600001, 0.000000, -67.199921, -1, -1, -1, 250.00, 250.00);
@@ -31448,7 +31448,7 @@ LoadMap()
     tmpobjid = CreateDynamicObject(19907, 146.854004, 1846.008057, 16.533581, 0.000000, 0.000000, 0.000000, -1, -1, -1, 250.00, 250.00);
     tmpobjid = CreateDynamicObject(19905, 188.208908, 1835.033569, 16.450596, 0.000000, 0.000000, 0.000000, -1, -1, -1, 250.00, 250.00);
 
-	// Mayoritas Bandara
+	// Imajinasi Bandara
 	tmpobjid = CreateDynamicObject(975, 1772.395141, -2517.308105, 19.106908, -0.000022, 270.000000, -89.999938, -1, -1, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10101, "2notherbuildsfe", "ferry_build14", 0x00000000);
 	SetDynamicObjectMaterial(tmpobjid, 1, 16640, "a51", "a51_glass", 0xECBDE88D);
@@ -31725,7 +31725,7 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(2256, 1751.139160, -2515.979003, 17.526908, 0.000000, 0.000000, -90.000000, -1, -1, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 14706, "labig2int2", "HS3_wall2", 0xEECEDD8E);
 	tmpobjid = CreateDynamicObject(19861, 1751.128173, -2516.344482, 17.286928, 0.000022, 0.000000, 269.999938, -1, -1, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{ffffff}Mayoritas GATE", 130, "Ariel", 60, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{ffffff}Imajinasi GATE", 130, "Ariel", 60, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(1297, 1755.763183, -2525.215087, 31.286954, 0.000000, 171.999984, -179.999893, -1, -1, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 19480, "signsurf", "sign", 0x00000000);
 	tmpobjid = CreateDynamicObject(2585, 1750.740356, -2516.647460, 20.931909, -0.000007, -0.000007, -89.999961, -1, -1, -1, 300.0, 300.00); 
@@ -32046,7 +32046,7 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(19861, 1737.078857, -2514.944335, 18.796915, 0.000022, 0.000000, 89.999931, -1, -1, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{FFFFFF}International Airport", 130, "Ariel", 45, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19861, 1737.078857, -2514.944335, 18.126909, 0.000022, 0.000000, 89.999931, -1, -1, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{FFFFFF}Mayoritas", 130, "Ariel", 100, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{FFFFFF}Imajinasi", 130, "Ariel", 100, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(18980, 1747.556884, -2492.316406, 20.646919, 23.299905, 0.000024, -89.999885, -1, -1, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 8675, "wddngchpl02", "vgschapelwall02_128", 0x00000000);
 	tmpobjid = CreateDynamicObject(19940, 1737.021118, -2518.646728, 17.446905, -0.000014, -89.999977, -0.000075, -1, -1, -1, 300.0, 300.00); 
@@ -33621,7 +33621,7 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(19482, 1183.838989, -1309.877807, 17.351119, 0.000004, 0.000006, 37.400009, object_world, object_int, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{000000}PILLBOX", 130, "Arial", 35, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 1183.431518, -1309.346191, 16.751117, 0.000004, 0.000006, 37.400009, object_world, object_int, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{000000}Mayoritas", 130, "Arial", 50, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{000000}Imajinasi", 130, "Arial", 50, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(1943, 1184.485473, -1310.782836, 16.865665, -0.000006, 0.000004, -54.699989, object_world, object_int, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 18646, "matcolours", "grey-93-percent", 0x00000000);
 	tmpobjid = CreateDynamicObject(19482, 1184.411499, -1310.610473, 16.741121, 0.000004, 0.000006, 37.400009, object_world, object_int, -1, 300.0, 300.00); 
@@ -33763,7 +33763,7 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(19482, 1187.277099, -1336.876464, 17.219028, 0.000000, 0.000000, 0.000000, object_world, object_int, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{000000}PILLBOX", 130, "Arial", 40, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 1187.277099, -1336.236083, 16.639019, 0.000000, 0.000000, 0.000000, object_world, object_int, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{000000}Mayoritas", 130, "Arial", 50, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{000000}Imajinasi", 130, "Arial", 50, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(1943, 1187.249145, -1337.997802, 16.695663, -0.000006, 0.000004, -89.700019, object_world, object_int, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 18646, "matcolours", "grey-93-percent", 0x00000000);
 	tmpobjid = CreateDynamicObject(19482, 1187.347167, -1337.826538, 16.609018, 0.000000, 0.000000, 0.000000, object_world, object_int, -1, 300.0, 300.00); 
@@ -33858,23 +33858,23 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(870, 1177.746704, -1338.434448, 13.325626, 0.000000, 0.000015, 0.000000, object_world, object_int, -1, 300.0, 300.00); 
 	tmpobjid = CreateDynamicObject(17969, 1176.223999, -1367.441040, 15.703659, 0.000000, 0.000000, 270.000000, object_world, object_int, -1, 300.0, 300.00);*/
 		
-	// Mayoritas
+	// Imajinasi
 	tmpobjid = CreateDynamicObject(19481, 1426.390258, -815.060852, 74.299827, 0.000000, 0.000000, -92.500061, 0, 0, -1, 250.00, 250.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{FF9999}Mayoritas", 120, "Arial", 120, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{FF9999}Imajinasi", 120, "Arial", 120, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19481, 1426.390258, -814.960876, 74.299827, 0.000000, 0.000000, -92.500061, 0, 0, -1, 250.00, 250.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{FF9999}Mayoritas", 120, "Arial", 120, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{FF9999}Imajinasi", 120, "Arial", 120, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19481, 1426.390258, -814.860900, 74.299827, 0.000000, 0.000000, -92.500061, 0, 0, -1, 250.00, 250.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{FF9999}Mayoritas", 120, "Arial", 120, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{FF9999}Imajinasi", 120, "Arial", 120, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19481, 1426.390258, -814.760925, 74.299827, 0.000000, 0.000000, -92.500061, 0, 0, -1, 250.00, 250.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{FF9999}Mayoritas", 120, "Arial", 120, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{FF9999}Imajinasi", 120, "Arial", 120, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19481, 1426.390258, -814.660949, 74.299827, 0.000000, 0.000000, -92.500061, 0, 0, -1, 250.00, 250.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{FF9999}Mayoritas", 120, "Arial", 120, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{FF9999}Imajinasi", 120, "Arial", 120, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19481, 1426.390258, -814.560974, 74.299827, 0.000000, 0.000000, -92.500061, 0, 0, -1, 250.00, 250.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{FF9999}Mayoritas", 120, "Arial", 120, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{FF9999}Imajinasi", 120, "Arial", 120, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19481, 1426.390258, -814.460998, 74.299827, 0.000000, 0.000000, -92.500061, 0, 0, -1, 250.00, 250.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{FF9999}Mayoritas", 120, "Arial", 120, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{FF9999}Imajinasi", 120, "Arial", 120, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19481, 1426.390258, -814.361022, 74.299827, 0.000000, 0.000000, -92.500061, 0, 0, -1, 250.00, 250.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{FF9999}Mayoritas", 120, "Arial", 120, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{FF9999}Imajinasi", 120, "Arial", 120, 1, 0x00000000, 0x00000000, 1);
 
 	// Kargo
 	tmpobjid = CreateDynamicObject(19445, -1678.450073, 17.926742, 3.246938, 0.000000, 0.000000, -21.800004, 0, 0, -1, 300.0, 300.00); 
@@ -34647,7 +34647,7 @@ LoadMap()
 	SetDynamicObjectMaterial(tmpobjid, 5, 6404, "beafron1_law2", "Gen_Scaffold_Wood_Under", 0x00000000);
 	tmpobjid = CreateDynamicObject(19482, 1550.125366, 41.545860, 26.887327, 0.000000, 0.000000, 111.899986, object_world, object_int, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 10765, "airportgnd_sfse", "white", 0x00000000);
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{000000}Mayoritas", 130, "Arial", 55, 1, 0x00000000, 0x00000000, 0);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{000000}Imajinasi", 130, "Arial", 55, 1, 0x00000000, 0x00000000, 0);
 	tmpobjid = CreateDynamicObject(3241, 1564.909423, 18.448764, 23.530620, -0.000007, 0.000000, -75.899986, object_world, object_int, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 2, 1495, "ext_doors2", "CJ_WOODDOOR4", 0x00000000);
 	SetDynamicObjectMaterial(tmpobjid, 4, 3193, "cxref_desert", "sw_woodslat01", 0x00000000);
@@ -35335,7 +35335,7 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(19445, 2411.571777, -1377.373046, 24.208425, 88.642456, 522.836120, 107.159553, -1, -1, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 2821, "gb_foodwrap01", "midgrey64", 0x00000000);
 	tmpobjid = CreateDynamicObject(19482, 2402.678466, -1382.692016, 27.062227, -0.400273, 1.296922, -179.999328, -1, -1, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Mayoritas", 130, "Ariel", 49, 1, 0x00000000, 0x00000000, 0);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Imajinasi", 130, "Ariel", 49, 1, 0x00000000, 0x00000000, 0);
 	tmpobjid = CreateDynamicObject(19482, 2402.687744, -1383.940307, 26.643590, -0.400273, 1.296922, -179.999328, -1, -1, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{000000}Gadget", 130, "Ariel", 35, 1, 0x00000000, 0x00000000, 0);
 	tmpobjid = CreateDynamicObject(19445, 2402.753417, -1387.252075, 28.340620, 0.400280, -1.296944, 0.000537, -1, -1, -1, 300.0, 300.00); 
@@ -35343,13 +35343,13 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(19445, 2407.515625, -1377.672363, 28.365497, 1.296918, 0.400377, -90.008338, -1, -1, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 2821, "gb_foodwrap01", "midgrey64", 0x00000000);
 	tmpobjid = CreateDynamicObject(19482, 2402.668457, -1382.692016, 27.062227, -0.400273, 1.296922, -179.999328, -1, -1, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Mayoritas", 130, "Ariel", 49, 1, 0x00000000, 0x00000000, 0);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Imajinasi", 130, "Ariel", 49, 1, 0x00000000, 0x00000000, 0);
 	tmpobjid = CreateDynamicObject(19482, 2402.677734, -1383.940307, 26.643590, -0.400273, 1.296922, -179.999328, -1, -1, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{000000}Gadget", 130, "Ariel", 35, 1, 0x00000000, 0x00000000, 0);
 	tmpobjid = CreateDynamicObject(19445, 2408.349853, -1377.671386, 28.224388, 1.296918, 0.400377, -90.008338, -1, -1, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 2821, "gb_foodwrap01", "midgrey64", 0x00000000);
 	tmpobjid = CreateDynamicObject(19482, 2402.658447, -1382.692016, 27.062227, -0.400273, 1.296922, -179.999328, -1, -1, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Mayoritas", 130, "Ariel", 49, 1, 0x00000000, 0x00000000, 0);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Imajinasi", 130, "Ariel", 49, 1, 0x00000000, 0x00000000, 0);
 	tmpobjid = CreateDynamicObject(18980, 2409.718750, -1391.491088, 17.624061, -0.400276, 1.296943, -179.999572, -1, -1, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 9903, "pier69", "pier69_brown3", 0x00000000);
 	tmpobjid = CreateDynamicObject(19353, 2411.789794, -1392.129516, 25.110633, 1.296911, 0.400377, -90.008323, -1, -1, -1, 300.0, 300.00); 
@@ -35372,7 +35372,7 @@ LoadMap()
 	SetDynamicObjectMaterial(tmpobjid, 1, 1649, "wglass", "carshowwin2", 0x00000000);
 	SetDynamicObjectMaterial(tmpobjid, 2, 14534, "ab_wooziea", "walp72S", 0x00000000);
 	tmpobjid = CreateDynamicObject(19482, 2402.648437, -1382.692016, 27.062227, -0.400273, 1.296922, -179.999328, -1, -1, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Mayoritas", 130, "Ariel", 49, 1, 0x00000000, 0x00000000, 0);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Imajinasi", 130, "Ariel", 49, 1, 0x00000000, 0x00000000, 0);
 	tmpobjid = CreateDynamicObject(19445, 2410.770996, -1392.172119, 25.417348, 88.642456, 342.836029, 107.159637, -1, -1, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 2755, "ab_dojowall", "ab_trellis", 0x00000000);
 	tmpobjid = CreateDynamicObject(19426, 2408.951660, -1391.914184, 25.093675, 0.400272, 178.703079, 0.000567, -1, -1, -1, 300.0, 300.00); 
@@ -35463,7 +35463,7 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(19445, 2407.557128, -1377.380004, 25.207622, 1.296918, 0.400377, -90.008338, -1, -1, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 2821, "gb_foodwrap01", "midgrey64", 0x00000000);
 	tmpobjid = CreateDynamicObject(19482, 2413.007812, -1386.308837, 27.267812, -0.400273, 1.296930, -179.999374, -1, -1, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Mayoritas", 130, "Ariel", 40, 1, 0x00000000, 0x00000000, 0);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Imajinasi", 130, "Ariel", 40, 1, 0x00000000, 0x00000000, 0);
 	tmpobjid = CreateDynamicObject(19325, 2352.939208, -1538.630859, 22.625740, 1.296904, 0.400376, -90.008293, -1, -1, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, -1, "none", "none", 0x16777215);
 	tmpobjid = CreateDynamicObject(1499, 2402.859863, -1380.486816, 23.388845, 1.296918, 0.400377, -90.008338, -1, -1, -1, 300.0, 300.00); 
@@ -35490,7 +35490,7 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(18763, 2414.894042, -1383.541992, 23.590562, -0.400276, 1.296943, -179.999572, -1, -1, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 12944, "ce_bankalley2", "sw_brick04", 0x00000000);
 	tmpobjid = CreateDynamicObject(19482, 2412.997802, -1386.308837, 27.267812, -0.400273, 1.296930, -179.999374, -1, -1, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Mayoritas", 130, "Ariel", 40, 1, 0x00000000, 0x00000000, 0);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Imajinasi", 130, "Ariel", 40, 1, 0x00000000, 0x00000000, 0);
 	tmpobjid = CreateDynamicObject(2736, 2413.125488, -1384.400512, 27.983781, 1.296911, 0.400377, -90.008323, -1, -1, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 18646, "matcolours", "grey-80-percent", 0x00000000);
 	tmpobjid = CreateDynamicObject(19445, 2405.888427, -1378.037353, 23.364652, 1.296904, -89.599601, -90.008354, -1, -1, -1, 300.0, 300.00); 
@@ -35517,11 +35517,11 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(19426, 2402.863281, -1385.584838, 26.670232, 1.296911, 90.400382, -90.008323, -1, -1, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 18646, "matcolours", "grey-80-percent", 0x00000000);
 	tmpobjid = CreateDynamicObject(19482, 2412.987792, -1386.308837, 27.267812, -0.400273, 1.296930, -179.999374, -1, -1, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Mayoritas", 130, "Ariel", 40, 1, 0x00000000, 0x00000000, 0);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Imajinasi", 130, "Ariel", 40, 1, 0x00000000, 0x00000000, 0);
 	tmpobjid = CreateDynamicObject(19482, 2413.036376, -1386.956420, 26.893602, -0.400273, 1.296930, -179.999374, -1, -1, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{ffffff}Gadget", 130, "Ariel", 40, 1, 0x00000000, 0x00000000, 0);
 	tmpobjid = CreateDynamicObject(19482, 2413.017822, -1386.308837, 27.267812, -0.400273, 1.296930, -179.999374, -1, -1, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Mayoritas", 130, "Ariel", 40, 1, 0x00000000, 0x00000000, 0);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Imajinasi", 130, "Ariel", 40, 1, 0x00000000, 0x00000000, 0);
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -35821,7 +35821,7 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(19445, 1303.842529, -1877.578613, 13.265919, 89.999992, 494.999969, 44.999889, -1, -1, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 2821, "gb_foodwrap01", "midgrey64", 0x00000000);
 	tmpobjid = CreateDynamicObject(19482, 1298.673706, -1868.753662, 16.356874, 0.000000, 0.000000, 90.000000, -1, -1, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Mayoritas", 130, "Ariel", 49, 1, 0x00000000, 0x00000000, 0);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Imajinasi", 130, "Ariel", 49, 1, 0x00000000, 0x00000000, 0);
 	tmpobjid = CreateDynamicObject(19482, 1297.772949, -1868.753662, 15.946870, 0.000000, 0.000000, 90.000000, -1, -1, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{000000}Clothes Store", 130, "Ariel", 35, 1, 0x00000000, 0x00000000, 0);
 	tmpobjid = CreateDynamicObject(19445, 1293.992675, -1868.858398, 17.665933, 0.000007, -0.000014, -90.000137, -1, -1, -1, 300.0, 300.00); 
@@ -35829,13 +35829,13 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(19445, 1303.572265, -1873.618408, 17.515909, 0.000021, 0.000000, 179.999832, -1, -1, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 2821, "gb_foodwrap01", "midgrey64", 0x00000000);
 	tmpobjid = CreateDynamicObject(19482, 1298.673706, -1868.743652, 16.356874, 0.000000, 0.000000, 90.000000, -1, -1, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Mayoritas", 130, "Ariel", 49, 1, 0x00000000, 0x00000000, 0);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Imajinasi", 130, "Ariel", 49, 1, 0x00000000, 0x00000000, 0);
 	tmpobjid = CreateDynamicObject(19482, 1297.772949, -1868.743652, 15.946870, 0.000000, 0.000000, 90.000000, -1, -1, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{000000}Clothes Store", 130, "Ariel", 35, 1, 0x00000000, 0x00000000, 0);
 	tmpobjid = CreateDynamicObject(19445, 1303.572265, -1874.448486, 17.355936, 0.000021, 0.000000, 179.999832, -1, -1, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 2821, "gb_foodwrap01", "midgrey64", 0x00000000);
 	tmpobjid = CreateDynamicObject(19482, 1298.673706, -1868.733642, 16.356874, 0.000000, 0.000000, 90.000000, -1, -1, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Mayoritas", 130, "Ariel", 49, 1, 0x00000000, 0x00000000, 0);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Imajinasi", 130, "Ariel", 49, 1, 0x00000000, 0x00000000, 0);
 	tmpobjid = CreateDynamicObject(18980, 1289.678955, -1875.578125, 6.824006, 0.000000, 0.000014, 89.999900, -1, -1, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 9903, "pier69", "pier69_brown3", 0x00000000);
 	tmpobjid = CreateDynamicObject(19353, 1289.092773, -1877.818847, 14.265934, 0.000014, 0.000000, 179.999847, -1, -1, -1, 300.0, 300.00); 
@@ -35879,7 +35879,7 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(19378, 1293.886718, -1874.146240, 19.298120, -0.000000, 270.000000, -89.999725, -1, -1, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 14407, "carter_block", "mp_carter_windows", 0x00000000);
 	tmpobjid = CreateDynamicObject(19482, 1294.928100, -1879.145019, 16.354007, 0.000000, 0.000000, 90.000000, -1, -1, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Mayoritas", 130, "Ariel", 40, 1, 0x00000000, 0x00000000, 0);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Imajinasi", 130, "Ariel", 40, 1, 0x00000000, 0x00000000, 0);
 	tmpobjid = CreateDynamicObject(19353, 1289.044189, -1873.558837, 17.675951, 0.000014, 0.000000, 179.999847, -1, -1, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 2755, "ab_dojowall", "ab_trellis", 0x00000000);
 	tmpobjid = CreateDynamicObject(19426, 1289.307861, -1873.329589, 15.981896, 0.000000, 89.999984, -90.000106, -1, -1, -1, 300.0, 300.00); 
@@ -35929,7 +35929,7 @@ LoadMap()
 	SetDynamicObjectMaterial(tmpobjid, 5, 1426, "break_scaffold", "CJ_BLUE_WOOD", 0x00000000);
 	SetDynamicObjectMaterial(tmpobjid, 6, 1426, "break_scaffold", "CJ_BLUE_WOOD", 0x00000000);
 	tmpobjid = CreateDynamicObject(19482, 1298.673706, -1868.723632, 16.356874, 0.000000, 0.000000, 90.000000, -1, -1, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Mayoritas", 130, "Ariel", 49, 1, 0x00000000, 0x00000000, 0);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Imajinasi", 130, "Ariel", 49, 1, 0x00000000, 0x00000000, 0);
 	tmpobjid = CreateDynamicObject(19445, 1293.992065, -1879.329101, 14.355931, 0.000015, -0.000021, -90.000228, -1, -1, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 2821, "gb_foodwrap01", "midgrey64", 0x00000000);
 	tmpobjid = CreateDynamicObject(19445, 1293.992065, -1879.329101, 17.685976, 0.000015, -0.000021, -90.000228, -1, -1, -1, 300.0, 300.00); 
@@ -35978,7 +35978,7 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(19426, 1299.108398, -1868.929931, 15.981896, 0.000014, 90.000000, 179.999847, -1, -1, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 18646, "matcolours", "grey-80-percent", 0x00000000);
 	tmpobjid = CreateDynamicObject(19482, 1298.673706, -1868.713623, 16.356874, 0.000000, 0.000000, 90.000000, -1, -1, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Mayoritas", 130, "Ariel", 49, 1, 0x00000000, 0x00000000, 0);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Imajinasi", 130, "Ariel", 49, 1, 0x00000000, 0x00000000, 0);
 	tmpobjid = CreateDynamicObject(2708, 1302.278808, -1878.972167, 12.684002, 0.000014, 0.000000, 179.999847, -1, -1, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 1, 18646, "matcolours", "grey-50-percent", 0x00000000);
 	tmpobjid = CreateDynamicObject(19378, 1293.516479, -1873.496093, 19.398126, -0.000000, 270.000000, -89.999862, -1, -1, -1, 300.0, 300.00); 
@@ -36017,27 +36017,27 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(19426, 1295.648193, -1868.929931, 15.981896, 0.000014, 90.000000, 179.999847, -1, -1, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 18646, "matcolours", "grey-80-percent", 0x00000000);
 	tmpobjid = CreateDynamicObject(19482, 1298.673706, -1868.703613, 16.356874, 0.000000, 0.000000, 90.000000, -1, -1, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Mayoritas", 130, "Ariel", 49, 1, 0x00000000, 0x00000000, 0);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Imajinasi", 130, "Ariel", 49, 1, 0x00000000, 0x00000000, 0);
 	tmpobjid = CreateDynamicObject(19482, 1297.772949, -1868.703613, 15.946870, 0.000000, 0.000000, 90.000000, -1, -1, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{000000}Clothes Store", 130, "Ariel", 35, 1, 0x00000000, 0x00000000, 0);
 	tmpobjid = CreateDynamicObject(19482, 1294.928100, -1879.135009, 16.354007, 0.000000, 0.000000, 90.000000, -1, -1, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Mayoritas", 130, "Ariel", 40, 1, 0x00000000, 0x00000000, 0);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Imajinasi", 130, "Ariel", 40, 1, 0x00000000, 0x00000000, 0);
 	tmpobjid = CreateDynamicObject(19482, 1294.278076, -1879.135009, 15.984001, 0.000000, 0.000000, 90.000000, -1, -1, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{2596be}Style", 130, "Ariel", 40, 1, 0x00000000, 0x00000000, 0);
 	tmpobjid = CreateDynamicObject(19482, 1294.928100, -1879.125000, 16.354007, 0.000000, 0.000000, 90.000000, -1, -1, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Mayoritas", 130, "Ariel", 40, 1, 0x00000000, 0x00000000, 0);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Imajinasi", 130, "Ariel", 40, 1, 0x00000000, 0x00000000, 0);
 	tmpobjid = CreateDynamicObject(19482, 1294.278076, -1879.125000, 15.984001, 0.000000, 0.000000, 90.000000, -1, -1, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{2596be}Style", 130, "Ariel", 40, 1, 0x00000000, 0x00000000, 0);
 	tmpobjid = CreateDynamicObject(19482, 1294.928100, -1879.114990, 16.354007, 0.000000, 0.000000, 90.000000, -1, -1, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Mayoritas", 130, "Ariel", 40, 1, 0x00000000, 0x00000000, 0);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Imajinasi", 130, "Ariel", 40, 1, 0x00000000, 0x00000000, 0);
 	tmpobjid = CreateDynamicObject(19482, 1294.278076, -1879.114990, 15.984001, 0.000000, 0.000000, 90.000000, -1, -1, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{2596be}Style", 130, "Ariel", 40, 1, 0x00000000, 0x00000000, 0);
 	tmpobjid = CreateDynamicObject(19482, 1294.928100, -1879.104980, 16.354007, 0.000000, 0.000000, 90.000000, -1, -1, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Mayoritas", 130, "Ariel", 40, 1, 0x00000000, 0x00000000, 0);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Imajinasi", 130, "Ariel", 40, 1, 0x00000000, 0x00000000, 0);
 	tmpobjid = CreateDynamicObject(19482, 1294.278076, -1879.104980, 15.984001, 0.000000, 0.000000, 90.000000, -1, -1, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{2596be}Style", 130, "Ariel", 40, 1, 0x00000000, 0x00000000, 0);
 	tmpobjid = CreateDynamicObject(19482, 1294.928100, -1879.094970, 16.354007, 0.000000, 0.000000, 90.000000, -1, -1, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Mayoritas", 130, "Ariel", 40, 1, 0x00000000, 0x00000000, 0);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{F0635E}Imajinasi", 130, "Ariel", 40, 1, 0x00000000, 0x00000000, 0);
 	tmpobjid = CreateDynamicObject(19482, 1294.278076, -1879.094970, 15.984001, 0.000000, 0.000000, 90.000000, -1, -1, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{2596be}Style", 130, "Ariel", 40, 1, 0x00000000, 0x00000000, 0);
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -36079,7 +36079,7 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(19940, 1295.471069, -1868.741943, 16.925943, 89.999992, 494.999969, 44.999904, -1, -1, -1, 300.0, 300.00); 
 	tmpobjid = CreateDynamicObject(2626, 1293.696533, -1876.094482, 13.204009, 0.000000, 0.000000, 180.000000, -1, -1, -1, 300.0, 300.00);
 
-	// House Standart Mayoritas
+	// House Standart Imajinasi
 	tmpobjid = CreateDynamicObject(18765, 1028.260498, -1853.894287, -37.585937, 0.000000, 0.000000, 0.000000, -1, 2, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterial(tmpobjid, 0, 16640, "a51", "ws_metalpanel1", 0xFFCCCCCC);
 	tmpobjid = CreateDynamicObject(18765, 1028.260498, -1863.894531, -37.585937, 0.000000, 0.000000, 0.000000, -1, 2, -1, 300.0, 300.00); 
@@ -37396,7 +37396,7 @@ LoadMap()
     wagyua5 = CreateDynamicObject(19426, 1933.479126, -1795.531006, 14.716880, 0.000004, 0.000004, 121.399940, -1, -1, -1, 250.00, 250.00);
     SetDynamicObjectMaterial(wagyua5, 0, 18646, "matcolours", "grey-80-percent", 0);
     wagyua5 = CreateDynamicObject(19805, 1933.479736, -1795.452515, 14.775252, 0.000004, 0.000009, -148.500061, -1, -1, -1, 250.00, 250.00);
-    SetDynamicObjectMaterialText(wagyua5, 0, "Garasi Umum Mayoritas", 130, "Ariel", 50, 1, -1, 0, 1);
+    SetDynamicObjectMaterialText(wagyua5, 0, "Garasi Umum Imajinasi", 130, "Ariel", 50, 1, -1, 0, 1);
     wagyua5 = CreateDynamicObject(19805, 1933.750488, -1795.204468, 15.495249, 0.000004, 0.000009, -148.500061, -1, -1, -1, 250.00, 250.00);
     SetDynamicObjectMaterialText(wagyua5, 0, "P", 90, "Ariel", 40, 1, -1, 0, 1);
     wagyua5 = CreateDynamicObject(1956, 1933.753418, -1795.178711, 15.505248, -0.000009, 90.000008, 121.499924, -1, -1, -1, 250.00, 250.00);
@@ -37475,7 +37475,7 @@ LoadMap()
     wagyua5 = CreateDynamicObject(19426, 1950.241577, -1818.633545, 14.716880, 0.000000, 0.000000, 47.800007, -1, -1, -1, 250.00, 250.00);
     SetDynamicObjectMaterial(wagyua5, 0, 18646, "matcolours", "grey-80-percent", 0);
     wagyua5 = CreateDynamicObject(19805, 1950.317017, -1818.611938, 14.625250, 0.000000, 0.000014, 137.899979, -1, -1, -1, 250.00, 250.00);
-    SetDynamicObjectMaterialText(wagyua5, 0, "Garasi Umum Mayoritas", 130, "Ariel", 50, 1, -1, 0, 1);
+    SetDynamicObjectMaterialText(wagyua5, 0, "Garasi Umum Imajinasi", 130, "Ariel", 50, 1, -1, 0, 1);
     wagyua5 = CreateDynamicObject(19426, 1950.411377, -1819.056885, 13.776874, 0.000000, 0.000000, 47.800007, -1, -1, -1, 250.00, 250.00);
     SetDynamicObjectMaterial(wagyua5, 0, 18646, "matcolours", "grey-40-percent", 0);
     wagyua5 = CreateDynamicObject(1215, 1941.647095, -1769.335571, 13.157400, 0.000000, 0.000000, 0.000000, -1, -1, -1, 250.00, 250.00);
@@ -37746,27 +37746,27 @@ LoadMap()
 	tmpobjid = CreateDynamicObject(19482, 537.550109, -1818.192138, 11.455507, 0.000000, 0.000000, 0.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{ffff00}Resto", 100, "Ariel", 65, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 537.550109, -1816.152099, 10.795508, 0.000000, 0.000000, 0.000000, 0, 0, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{ffff00}Mayoritas", 100, "Ariel", 55, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{ffff00}Imajinasi", 100, "Ariel", 55, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 537.570129, -1818.192138, 11.455507, 0.000000, 0.000000, 0.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{ffff00}Resto", 100, "Ariel", 65, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 537.570129, -1816.152099, 10.795508, 0.000000, 0.000000, 0.000000, 0, 0, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{ffff00}Mayoritas", 100, "Ariel", 55, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{ffff00}Imajinasi", 100, "Ariel", 55, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 537.590148, -1818.192138, 11.455507, 0.000000, 0.000000, 0.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{ffff00}Resto", 100, "Ariel", 65, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 537.590148, -1816.152099, 10.795508, 0.000000, 0.000000, 0.000000, 0, 0, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{ffff00}Mayoritas", 100, "Ariel", 55, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{ffff00}Imajinasi", 100, "Ariel", 55, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 537.610168, -1818.192138, 11.455507, 0.000000, 0.000000, 0.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{ffff00}Resto", 100, "Ariel", 65, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 537.610168, -1816.152099, 10.795508, 0.000000, 0.000000, 0.000000, 0, 0, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{ffff00}Mayoritas", 100, "Ariel", 55, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{ffff00}Imajinasi", 100, "Ariel", 55, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 537.630187, -1818.192138, 11.455507, 0.000000, 0.000000, 0.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{ffff00}Resto", 100, "Ariel", 65, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 537.630187, -1816.152099, 10.795508, 0.000000, 0.000000, 0.000000, 0, 0, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{ffff00}Mayoritas", 100, "Ariel", 55, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{ffff00}Imajinasi", 100, "Ariel", 55, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 537.650207, -1818.192138, 11.455507, 0.000000, 0.000000, 0.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{ffff00}Resto", 100, "Ariel", 65, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 537.650207, -1816.152099, 10.795508, 0.000000, 0.000000, 0.000000, 0, 0, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{ffff00}Mayoritas", 100, "Ariel", 55, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{ffff00}Imajinasi", 100, "Ariel", 55, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 537.670227, -1818.192138, 11.455507, 0.000000, 0.000000, 0.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{ffff00}Resto", 100, "Ariel", 65, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19365, 519.593017, -1807.228637, 7.192503, 0.000000, 0.000000, 90.000000, 0, 0, -1, 300.0, 300.00); 
@@ -38159,15 +38159,15 @@ LoadMap()
 	SetDynamicObjectMaterial(tmpobjid, 1, 10765, "airportgnd_sfse", "white", 0x00000000);
 	SetDynamicObjectMaterial(tmpobjid, 2, 18646, "matcolours", "grey-93-percent", 0x00000000);
 	tmpobjid = CreateDynamicObject(19482, 537.670227, -1816.152099, 10.795508, 0.000000, 0.000000, 0.000000, 0, 0, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{ffff00}Mayoritas", 100, "Ariel", 55, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{ffff00}Imajinasi", 100, "Ariel", 55, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 537.690246, -1818.192138, 11.455507, 0.000000, 0.000000, 0.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{ffff00}Resto", 100, "Ariel", 65, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 537.690246, -1816.152099, 10.795508, 0.000000, 0.000000, 0.000000, 0, 0, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{ffff00}Mayoritas", 100, "Ariel", 55, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{ffff00}Imajinasi", 100, "Ariel", 55, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 537.710266, -1818.192138, 11.455507, 0.000000, 0.000000, 0.000000, 0, 0, -1, 300.0, 300.00); 
 	SetDynamicObjectMaterialText(tmpobjid, 0, "{ffff00}Resto", 100, "Ariel", 65, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19482, 537.710266, -1816.152099, 10.795508, 0.000000, 0.000000, 0.000000, 0, 0, -1, 300.0, 300.00); 
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{ffff00}Mayoritas", 100, "Ariel", 55, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{ffff00}Imajinasi", 100, "Ariel", 55, 1, 0x00000000, 0x00000000, 1);
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////

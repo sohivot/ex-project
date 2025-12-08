@@ -15,15 +15,15 @@ Dialog:EditingVehObject(playerid, response, listitem, inputtext[])
             ;
             if(VehicleObjects[vehicleid][slot][vehObjectType] == OBJECT_TYPE_BODY)
             {
-                Dialog_Show(playerid, VACCSE, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Edit Component", "Position\nPosition (Manual)\nChange Color\nRemove Modification\nSave", "Select", "Back");
+                Dialog_Show(playerid, VACCSE, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Edit Component", "Position\nPosition (Manual)\nChange Color\nRemove Modification\nSave", "Select", "Back");
             }
             else if(VehicleObjects[vehicleid][slot][vehObjectType] == OBJECT_TYPE_TEXT)
             {
-                Dialog_Show(playerid, VACCSE1, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Edit Component", "Position\nPosition (Manual)\nText Name\nText Size\nText Font\nText Color\nRemove Modification\nSave", "Select", "Back");
+                Dialog_Show(playerid, VACCSE1, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Edit Component", "Position\nPosition (Manual)\nText Name\nText Size\nText Font\nText Color\nRemove Modification\nSave", "Select", "Back");
             }
             else if(VehicleObjects[vehicleid][slot][vehObjectType] == OBJECT_TYPE_LIGHT)
             {
-               Dialog_Show(playerid, VACCSE2, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Edit Component", "Position\nPosition (Manual)\nRemove Modification\nSave", "Select", "Back");
+               Dialog_Show(playerid, VACCSE2, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Edit Component", "Position\nPosition (Manual)\nRemove Modification\nSave", "Select", "Back");
             }
         }
     }
@@ -37,10 +37,10 @@ Dialog:MODSHOP_CUSTOM(playerid, response, listitem, inputtext[])
         if(AccountData[playerid][pMoney] < 30000)
             return ShowTDN(playerid, NOTIFICATION_ERROR, "Uang anda tidak mencukupi! ($30,000)");
         
-        if(isnull(inputtext)) return Dialog_Show(playerid, MODSHOP_CUSTOM, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Modshop",
+        if(isnull(inputtext)) return Dialog_Show(playerid, MODSHOP_CUSTOM, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Modshop",
         "Error: Tidak dapat diisi kosong!\nMohon masukkan ID Object/Aksesoris yang ingin anda Pasang\nNOTE: Anda dapat melihat ID Object di: https://dev.prineside.com/en/gtasa_samp_model_id/", "Input", "Batal");
 
-        if(!IsNumeric(inputtext)) return Dialog_Show(playerid, MODSHOP_CUSTOM, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Modshop",
+        if(!IsNumeric(inputtext)) return Dialog_Show(playerid, MODSHOP_CUSTOM, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Modshop",
         "Error: Hanya dapat diisi angka!\nMohon masukkan ID Object/Aksesoris yang ingin anda Pasang\nNOTE: Anda dapat melihat ID Object di: https://dev.prineside.com/en/gtasa_samp_model_id/", "Input", "Batal");    
     
         new modelid = strval(inputtext),
@@ -244,7 +244,7 @@ Dialog:VEH_OBJECT_COLOR(playerid, response, listitem, inputtext[])
 
 		VehicleObjects[vehicleid][slot][vehObjectColor] = strval(inputtext);
 		Vehicle_ObjectColorSync(vehicleid, slot);
-        Dialog_Show(playerid, VACCSE, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Edit Component", "Position\nPosition (Manual)\nChange Color\nRemove Modification\nSave", "Select", "Back");
+        Dialog_Show(playerid, VACCSE, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Edit Component", "Position\nPosition (Manual)\nChange Color\nRemove Modification\nSave", "Select", "Back");
     }
 	return 1;
 }
@@ -633,7 +633,7 @@ Dialog:VEH_OBJECT_TEXTNAME(playerid, response, listitem, inputtext[])
 
 		format(VehicleObjects[vehicleid][slot][vehObjectText], 32, "%s", inputtext);
 		Vehicle_ObjectTextSync(vehicleid, slot);
-        Dialog_Show(playerid, VACCSE1, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Edit Component", "Position\nPosition (Manual)\nText Name\nText Size\nText Font\nText Color\nRemove Modification\nSave", "Select", "Back");
+        Dialog_Show(playerid, VACCSE1, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Edit Component", "Position\nPosition (Manual)\nText Name\nText Size\nText Font\nText Color\nRemove Modification\nSave", "Select", "Back");
 		
 	}
 	return 1;
@@ -652,7 +652,7 @@ Dialog:VEH_OBJECT_TEXTCOLOR(playerid, response, listitem, inputtext[])
 		
 		VehicleObjects[vehicleid][slot][vehObjectFontColor] = strval(inputtext);
 		Vehicle_ObjectTextSync(vehicleid, slot);
-        Dialog_Show(playerid, VACCSE1, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Edit Component", "Position\nPosition (Manual)\nText Name\nText Size\nText Font\nText Color\nRemove Modification\nSave", "Select", "Back");
+        Dialog_Show(playerid, VACCSE1, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Edit Component", "Position\nPosition (Manual)\nText Name\nText Size\nText Font\nText Color\nRemove Modification\nSave", "Select", "Back");
     }
     return 1;
 }
@@ -670,7 +670,7 @@ Dialog:VEH_OBJECT_TEXTSIZE(playerid, response, listitem, inputtext[])
 
 		VehicleObjects[vehicleid][slot][vehObjectFontSize] = strval(inputtext);
 		Vehicle_ObjectTextSync(vehicleid, slot);
-        Dialog_Show(playerid, VACCSE1, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Edit Component", "Position\nPosition (Manual)\nText Name\nText Size\nText Font\nText Color\nRemove Modification\nSave", "Select", "Back");
+        Dialog_Show(playerid, VACCSE1, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Edit Component", "Position\nPosition (Manual)\nText Name\nText Size\nText Font\nText Color\nRemove Modification\nSave", "Select", "Back");
 	}
 	return 1;
 }
@@ -689,7 +689,7 @@ Dialog:VEH_OBJECT_TEXTFONT(playerid, response, listitem, inputtext[])
 
 		format(VehicleObjects[vehicleid][slot][vehObjectFont], 32, "%s", inputtext);
 		Vehicle_ObjectTextSync(vehicleid, slot);
-        Dialog_Show(playerid, VACCSE1, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Edit Component", "Position\nPosition (Manual)\nText Name\nText Size\nText Font\nText Color\nRemove Modification\nSave", "Select", "Back");
+        Dialog_Show(playerid, VACCSE1, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Edit Component", "Position\nPosition (Manual)\nText Name\nText Size\nText Font\nText Color\nRemove Modification\nSave", "Select", "Back");
 	}
 	return 1;
 }
@@ -706,7 +706,7 @@ Dialog:VEH_OBJECT_FONTCUSTOM(playerid, response, listitem, inputtext[])
 
 		format(VehicleObjects[vehicleid][slot][vehObjectFont], 32, "%s", inputtext);
 		Vehicle_ObjectTextSync(vehicleid, slot);
-        Dialog_Show(playerid, VACCSE1, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Edit Component", "Position\nPosition (Manual)\nText Name\nText Size\nText Font\nText Color\nRemove Modification\nSave", "Select", "Back");
+        Dialog_Show(playerid, VACCSE1, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Edit Component", "Position\nPosition (Manual)\nText Name\nText Size\nText Font\nText Color\nRemove Modification\nSave", "Select", "Back");
 	}
 	return 1;
 }		

@@ -1009,8 +1009,8 @@ public NextRoundPrepare(playerid)
     if(!AccountData[playerid][pSpawned]) return 1;
     if(!PlayerBlackJack[playerid][Seated]) return 1;
 
-    Dialog_Show(playerid, "BlackjackEnd", DIALOG_STYLE_MSGBOX, "{00BFFF}Mayoritas_Roleplay {FFFFFF}- Blackjack", "We have finished the game round.", "OK", "");
-    //Dialog_Show(playerid, "BlackjackEnd", DIALOG_STYLE_MSGBOX, "{COLOR_BLUE}Mayoritas Roleplay "WHITE"- Blackjack", "We have finished our round, would you like to continue?", "Continue", "Stand Out");
+    Dialog_Show(playerid, "BlackjackEnd", DIALOG_STYLE_MSGBOX, "{00BFFF}Imajinasi_Roleplay {FFFFFF}- Blackjack", "We have finished the game round.", "OK", "");
+    //Dialog_Show(playerid, "BlackjackEnd", DIALOG_STYLE_MSGBOX, "{COLOR_BLUE}Imajinasi Roleplay "WHITE"- Blackjack", "We have finished our round, would you like to continue?", "Continue", "Stand Out");
     return 1;
 }
 
@@ -3040,34 +3040,34 @@ hook OnPlayerClickTextDraw(playerid, Text:clickedid)
 {
     if(clickedid == BlackJackTD[3]) //hit
     {
-        Dialog_Show(playerid, "HitB", DIALOG_STYLE_MSGBOX, "{00BFFF}Mayoritas_Roleplay {FFFFFF}- Hit", "Apakah anda yakin ingin mengambil kartu?", "Hit", "Batal");
-    //   Dialog_Show(playerid, "HittBJ", DIALOG_STYLE_MSGBOX, "{COLOR_BLUE}Mayoritas Roleplay "WHITE"- Hit", "Apakah anda yakin ingin hit?", "Hit", "Batal");
+        Dialog_Show(playerid, "HitB", DIALOG_STYLE_MSGBOX, "{00BFFF}Imajinasi_Roleplay {FFFFFF}- Hit", "Apakah anda yakin ingin mengambil kartu?", "Hit", "Batal");
+    //   Dialog_Show(playerid, "HittBJ", DIALOG_STYLE_MSGBOX, "{COLOR_BLUE}Imajinasi Roleplay "WHITE"- Hit", "Apakah anda yakin ingin hit?", "Hit", "Batal");
     }
     else if(clickedid == BlackJackTD[4]) //stand
     {
         if(PlayerBlackJack[playerid][Forbiddenv22]) return 1;
         HidePlayerBlackJackTD(playerid);
 
-        Dialog_Show(playerid, "StandBJ", DIALOG_STYLE_MSGBOX, "{COLOR_BLUE}Mayoritas Roleplay {WHITE}- Stand", "Apakah anda yakin ingin stand?", "Stand", "Batal");
-        //Dialog_Show(playerid, "StandBJ", DIALOG_STYLE_MSGBOX, "{COLOR_BLUE}Mayoritas Roleplay "WHITE"- Stand", "Apakah anda yakin ingin stand?", "Stand", "Batal");
+        Dialog_Show(playerid, "StandBJ", DIALOG_STYLE_MSGBOX, "{COLOR_BLUE}Imajinasi Roleplay {WHITE}- Stand", "Apakah anda yakin ingin stand?", "Stand", "Batal");
+        //Dialog_Show(playerid, "StandBJ", DIALOG_STYLE_MSGBOX, "{COLOR_BLUE}Imajinasi Roleplay "WHITE"- Stand", "Apakah anda yakin ingin stand?", "Stand", "Batal");
     }
     else if(clickedid == BlackJackTD[5]) //double
     {  
-        Dialog_Show(playerid, "DoubleBJ", DIALOG_STYLE_MSGBOX, "{COLOR_BLUE}Mayoritas Roleplay {WHITE}- Double", "Apakah anda yakin ingin double?", "Double", "Batal"); 
-       // Dialog_Show(playerid, "DoubleBJ", DIALOG_STYLE_MSGBOX, "{COLOR_BLUE}Mayoritas Roleplay "WHITE"- Double", "Apakah anda yakin ingin double?", "Double", "Batal");
+        Dialog_Show(playerid, "DoubleBJ", DIALOG_STYLE_MSGBOX, "{COLOR_BLUE}Imajinasi Roleplay {WHITE}- Double", "Apakah anda yakin ingin double?", "Double", "Batal"); 
+       // Dialog_Show(playerid, "DoubleBJ", DIALOG_STYLE_MSGBOX, "{COLOR_BLUE}Imajinasi Roleplay "WHITE"- Double", "Apakah anda yakin ingin double?", "Double", "Batal");
     }
     else if(clickedid == BlackJackTD[6]) //insurance
     {
         if(PlayerBlackJack[playerid][InsuranceTaken]) return 1;
 
-        Dialog_Show(playerid, "InsuranceBJ", DIALOG_STYLE_MSGBOX, "{COLOR_BLUE}Mayoritas Roleplay {WHITE}- Insurance", "Apakah anda yakin ingin membeli insurance?", "Insurance", "Batal");
-    //    Dialog_Show(playerid, "InsuranceBJ", DIALOG_STYLE_MSGBOX, "{COLOR_BLUE}Mayoritas Roleplay "WHITE"- Insurance", "Apakah anda yakin ingin membeli insurance?", "Insurance", "Batal");
+        Dialog_Show(playerid, "InsuranceBJ", DIALOG_STYLE_MSGBOX, "{COLOR_BLUE}Imajinasi Roleplay {WHITE}- Insurance", "Apakah anda yakin ingin membeli insurance?", "Insurance", "Batal");
+    //    Dialog_Show(playerid, "InsuranceBJ", DIALOG_STYLE_MSGBOX, "{COLOR_BLUE}Imajinasi Roleplay "WHITE"- Insurance", "Apakah anda yakin ingin membeli insurance?", "Insurance", "Batal");
     }
     else if(clickedid == BlackJackTD[7]) //split
     {
         if(PlayerBlackJack[playerid][Splited]) return 1;
-        Dialog_Show(playerid, "SplitBJ", DIALOG_STYLE_MSGBOX, "{COLOR_BLUE}Mayoritas Roleplay {WHITE}- Split", "Apakah anda yakin ingin split?", "Split", "Batal");  
-        //(playerid, "SplitBJ", DIALOG_STYLE_MSGBOX, "{COLOR_BLUE}Mayoritas Roleplay "WHITE"- Split", "Apakah anda yakin ingin split?", "Split", "Batal");
+        Dialog_Show(playerid, "SplitBJ", DIALOG_STYLE_MSGBOX, "{COLOR_BLUE}Imajinasi Roleplay {WHITE}- Split", "Apakah anda yakin ingin split?", "Split", "Batal");  
+        //(playerid, "SplitBJ", DIALOG_STYLE_MSGBOX, "{COLOR_BLUE}Imajinasi Roleplay "WHITE"- Split", "Apakah anda yakin ingin split?", "Split", "Batal");
     }
     return 1;
 }
@@ -3704,33 +3704,33 @@ Dialog:BlackjackBet(playerid, response, listitem, inputtext[])
 
     if(isnull(inputtext))
     {
-        return Dialog_Show(playerid, "BlackjackBet", DIALOG_STYLE_INPUT, "{COLOR_BLUE}Mayoritas Roleplay {WHITE}- Your Bets", "ERROR: You can't let this section empty!\nPlease place your bets:", "Place", "Batal");
+        return Dialog_Show(playerid, "BlackjackBet", DIALOG_STYLE_INPUT, "{COLOR_BLUE}Imajinasi Roleplay {WHITE}- Your Bets", "ERROR: You can't let this section empty!\nPlease place your bets:", "Place", "Batal");
 
     }
 
     if(!IsNumericEx(inputtext))
     {
         PlayerPlayNearbySound(playerid, 5809);
-        Dialog_Show(playerid, "BlackjackBet", DIALOG_STYLE_INPUT, "{COLOR_BLUE}Mayoritas Roleplay {WHITE}- Your Bets", "ERROR: You can only input numbers!\nPlease place your bets:", "Place", "Batal");
+        Dialog_Show(playerid, "BlackjackBet", DIALOG_STYLE_INPUT, "{COLOR_BLUE}Imajinasi Roleplay {WHITE}- Your Bets", "ERROR: You can only input numbers!\nPlease place your bets:", "Place", "Batal");
         return 1;
     }
 
     if(strval(inputtext) < 1)
     {
         PlayerPlayNearbySound(playerid, 5809);
-        return Dialog_Show(playerid, "BlackjackBet", DIALOG_STYLE_INPUT, "{COLOR_BLUE}Mayoritas Roleplay {WHITE}- Your Bets", "ERROR: Invalid ammount of bets!\nPlease place your bets:", "Place", "Batal");
+        return Dialog_Show(playerid, "BlackjackBet", DIALOG_STYLE_INPUT, "{COLOR_BLUE}Imajinasi Roleplay {WHITE}- Your Bets", "ERROR: Invalid ammount of bets!\nPlease place your bets:", "Place", "Batal");
     }
 
     if(RoundNegativeToPositive(strval(inputtext)) > AccountData[playerid][pMoney]) 
     {
         PlayerPlayNearbySound(playerid, 5823);
-        return Dialog_Show(playerid, "BlackjackBet", DIALOG_STYLE_INPUT, "{COLOR_BLUE}Mayoritas Roleplay {WHITE}- Your Bets", "ERROR: Anda tidak memiliki cukup funds!\nPlease place your bets:", "Place", "Batal");
+        return Dialog_Show(playerid, "BlackjackBet", DIALOG_STYLE_INPUT, "{COLOR_BLUE}Imajinasi Roleplay {WHITE}- Your Bets", "ERROR: Anda tidak memiliki cukup funds!\nPlease place your bets:", "Place", "Batal");
     }
 
     if(RoundNegativeToPositive(strval(inputtext)) > BlackJackTable[id][MaxBet] || RoundNegativeToPositive(strval(inputtext)) < BlackJackTable[id][MinBet]) 
     {
         PlayerPlayNearbySound(playerid, 5809);
-        return Dialog_Show(playerid, "BlackjackBet", DIALOG_STYLE_INPUT, "{COLOR_BLUE}Mayoritas Roleplay {WHITE}- Your Bets", "ERROR: Your bet has more/less than the limit!\nPlease place your bets:", "Place", "Batal");
+        return Dialog_Show(playerid, "BlackjackBet", DIALOG_STYLE_INPUT, "{COLOR_BLUE}Imajinasi Roleplay {WHITE}- Your Bets", "ERROR: Your bet has more/less than the limit!\nPlease place your bets:", "Place", "Batal");
     }
 
     PlayerBlackJack[playerid][abet][0] = strval(inputtext);
@@ -3819,7 +3819,7 @@ Dialog:BlackjackEnd(playerid, response, listitem, inputtext[])
     TogglePlayerControllable(playerid, false);
 
     PlayerPlayNearbySound(playerid, 5810);
-    Dialog_Show(playerid, "BlackjackBet", DIALOG_STYLE_INPUT, "{COLOR_BLUE}Mayoritas Roleplay "WHITE"- Your Bets", "Welcome to your table, please place your bets:", "Place", "Batal");
+    Dialog_Show(playerid, "BlackjackBet", DIALOG_STYLE_INPUT, "{COLOR_BLUE}Imajinasi Roleplay "WHITE"- Your Bets", "Welcome to your table, please place your bets:", "Place", "Batal");
     return 1;
 }
 

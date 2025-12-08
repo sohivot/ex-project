@@ -96,7 +96,7 @@ ShowKeysHouseList(playerid)
     }
     if(count < MAX_MEMBER_HOUSE)
         strcat(playerName, ""GREEN"+ Berikan Kunci");
-    ShowPlayerDialog(playerid, DIALOG_HKEYS, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Pemegang Kunci", playerName, "Pilih", "Batal");
+    ShowPlayerDialog(playerid, DIALOG_HKEYS, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Pemegang Kunci", playerName, "Pilih", "Batal");
     return 1;
 }
 
@@ -875,7 +875,7 @@ ShowHouseWeapons(playerid, hid)
         else 
             format(shstr, sizeof(shstr), "%s"GREEN"%d\t"GREEN"%s\t"GREEN"%d\n", shstr, i, ReturnWeaponName(HouseData[hid][hsWeapon][i]), HouseData[hid][hsAmmo][i]);
     }
-    ShowPlayerDialog(playerid, DIALOG_WEAPON_CHEST, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Weapon Chest", shstr, "Pilih", "Batal");
+    ShowPlayerDialog(playerid, DIALOG_WEAPON_CHEST, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Weapon Chest", shstr, "Pilih", "Batal");
     return 1;
 }
 
@@ -947,7 +947,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
                     if(!House_HaveAccess(playerid, hid))
                     {
                         new title[100];
-                        format(title, sizeof(title), ""Mayoritas"Mayoritas Roleplay "WHITE"- %s", HouseData[hid][hsOwner]);
+                        format(title, sizeof(title), ""Imajinasi"Imajinasi Roleplay "WHITE"- %s", HouseData[hid][hsOwner]);
                         PlayerPlaySound(playerid, 5206, 0.0, 0.0, 0.0);
                     }
                     if(AccountData[playerid][ActivityTime] != 0) return ShowTDN(playerid, NOTIFICATION_WARNING, "Anda sedang melakukan sesuatu, harap tunggu!");
@@ -1024,7 +1024,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
                     \nBrankas\
                     \n"GRAY"Musik\
                     \nPemegang Kunci", hid, GetLocation(HouseData[hid][hsExtPos][0], HouseData[hid][hsExtPos][1], HouseData[hid][hsExtPos][2]));
-                    ShowPlayerDialog(playerid, DIALOG_HOUSE_BRANKAS, DIALOG_STYLE_LIST, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- %s", HouseData[hid][hsOwner]),
+                    ShowPlayerDialog(playerid, DIALOG_HOUSE_BRANKAS, DIALOG_STYLE_LIST, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- %s", HouseData[hid][hsOwner]),
                     shstr, "Pilih", "Batal");
                 } 
                 else 
@@ -1039,7 +1039,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
                     \n"GRAY"Weapon Chest\
                     \nBrankas\
                     \n"GRAY"Musik", hid, GetLocation(HouseData[hid][hsExtPos][0], HouseData[hid][hsExtPos][1], HouseData[hid][hsExtPos][2]));
-                    ShowPlayerDialog(playerid, DIALOG_HOUSE_BRANKAS, DIALOG_STYLE_LIST, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- %s", HouseData[hid][hsOwner]),
+                    ShowPlayerDialog(playerid, DIALOG_HOUSE_BRANKAS, DIALOG_STYLE_LIST, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- %s", HouseData[hid][hsOwner]),
                     shstr, "Pilih", "Batal");             
                 }
             }
@@ -1064,7 +1064,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
                 } else format(list, sizeof(list), "%s%d\t%s\t%s\n", list, itt+1, GetVehicleModelName(PlayerVehicle[vehid][pVehModelID]), PlayerVehicle[vehid][pVehPlate]);
             }
             AccountData[playerid][pPark] = ghid;
-            ShowPlayerDialog(playerid, DIALOG_HOUSEGARAGE_OUT, DIALOG_STYLE_TABLIST_HEADERS, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- Garasi Rumah %d", ghid), list, "Pilih", "Batal");
+            ShowPlayerDialog(playerid, DIALOG_HOUSEGARAGE_OUT, DIALOG_STYLE_TABLIST_HEADERS, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- Garasi Rumah %d", ghid), list, "Pilih", "Batal");
             HideShortKey(playerid);
         }
 
@@ -1085,7 +1085,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
                 } else format(list, sizeof(list), "%s%d\t%s\t%s\n", list, itt+1, GetVehicleModelName(PlayerVehicle[vehid][pVehModelID]), PlayerVehicle[vehid][pVehPlate]);
             }
             AccountData[playerid][pPark] = hpid;
-            ShowPlayerDialog(playerid, DIALOG_HOUSEHELIPAD_OUT, DIALOG_STYLE_TABLIST_HEADERS, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- Garasi Helipad %d", hpid), list, "Pilih", "Batal");
+            ShowPlayerDialog(playerid, DIALOG_HOUSEHELIPAD_OUT, DIALOG_STYLE_TABLIST_HEADERS, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- Garasi Helipad %d", hpid), list, "Pilih", "Batal");
         }
     }
     if(newkeys & KEY_CROUCH && GetPlayerState(playerid) == PLAYER_STATE_DRIVER)
@@ -1180,7 +1180,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                     \nBrankas\
                     \n"GRAY"Musik\
                     \nPemegang Kunci", id, GetLocation(HouseData[id][hsExtPos][0], HouseData[id][hsExtPos][1], HouseData[id][hsExtPos][2]));
-                    ShowPlayerDialog(playerid, DIALOG_HOUSE_BRANKAS, DIALOG_STYLE_LIST, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- %s", HouseData[id][hsOwner]),
+                    ShowPlayerDialog(playerid, DIALOG_HOUSE_BRANKAS, DIALOG_STYLE_LIST, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- %s", HouseData[id][hsOwner]),
                     shstr, "Pilih", "Batal");
                 } 
                 else 
@@ -1195,7 +1195,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                     \n"GRAY"Weapon Chest\
                     \nBrankas\
                     \n"GRAY"Musik", id, GetLocation(HouseData[id][hsExtPos][0], HouseData[id][hsExtPos][1], HouseData[id][hsExtPos][2]));
-                    ShowPlayerDialog(playerid, DIALOG_HOUSE_BRANKAS, DIALOG_STYLE_LIST, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- %s", HouseData[id][hsOwner]),
+                    ShowPlayerDialog(playerid, DIALOG_HOUSE_BRANKAS, DIALOG_STYLE_LIST, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- %s", HouseData[id][hsOwner]),
                     shstr, "Pilih", "Batal");             
                 }
                 AccountData[playerid][menuShowed] = false;
@@ -1235,12 +1235,12 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
                             format(str, sizeof(str), "%s%s\t%d\t-\n", str, itemname, amounts);
                         }
-                        ShowPlayerDialog(playerid, DIALOG_HOUSEVAULT_DEPOSIT, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Rumah", str, "Pilih", "Batal");
+                        ShowPlayerDialog(playerid, DIALOG_HOUSEVAULT_DEPOSIT, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Rumah", str, "Pilih", "Batal");
                     }
                     else 
                     {
                         PlayerPlaySound(playerid, 5206, 0.0, 0.0, 0.0);
-                        return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Rumah",
+                        return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Rumah",
                         "Anda tidak memiliki barang untuk disimpan!", "Tutup", "");
                     }
                 }
@@ -1269,12 +1269,12 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
                             format(str, sizeof(str), "%s%s\t%d\t-\n", str, itemname, amounts);
                         }
-                        ShowPlayerDialog(playerid, DIALOG_HOUSEVAULT_WITHDRAW, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Rumah", str, "Pilih", "Batal");
+                        ShowPlayerDialog(playerid, DIALOG_HOUSEVAULT_WITHDRAW, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Rumah", str, "Pilih", "Batal");
                     }
                     else 
                     {
                         PlayerPlaySound(playerid, 5206, 0.0, 0.0, 0.0);
-                        return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Rumah",
+                        return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Rumah",
                         "Tidak ada barang di brankas saat ini!", "Tutup", "");
                     }
                 }
@@ -1305,7 +1305,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
                 new shstr[528];
                 format(shstr, sizeof(shstr), "Anda akan menyimpan item:\nNama: %s\nJumlah di tas: %d\nMohon masukkan berapa jumlah item yang ingin disimpan:", HouseBrankas[playerid][housebrankasTemp], HouseBrankas[playerid][housebrankasQuant]);
-                ShowPlayerDialog(playerid, DIALOG_HOUSEVAULT_IN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Rumah", 
+                ShowPlayerDialog(playerid, DIALOG_HOUSEVAULT_IN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Rumah", 
                 shstr, "Input", "Batal");
             }
         }
@@ -1322,7 +1322,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             {
                 AccountData[playerid][menuShowed] = true;
                 format(shstr, sizeof(shstr), "Anda akan menyimpan item:\nNama: %s\nJumlah di tas: %d\nError: Tidak dapat diisi kosong!\nMohon masukkan berapa jumlah item yang ingin disimpan:", HouseBrankas[playerid][housebrankasTemp], HouseBrankas[playerid][housebrankasQuant]);
-                ShowPlayerDialog(playerid, DIALOG_HOUSEVAULT_IN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Rumah", 
+                ShowPlayerDialog(playerid, DIALOG_HOUSEVAULT_IN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Rumah", 
                 shstr, "Input", "Batal");
                 return 1;
             }
@@ -1331,7 +1331,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             {
                 AccountData[playerid][menuShowed] = true;
                 format(shstr, sizeof(shstr), "Anda akan menyimpan item:\nNama: %s\nJumlah di tas: %d\nError: Hanya dapat diisi angka!\nMohon masukkan berapa jumlah item yang ingin disimpan:", HouseBrankas[playerid][housebrankasTemp], HouseBrankas[playerid][housebrankasQuant]);
-                ShowPlayerDialog(playerid, DIALOG_HOUSEVAULT_IN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Rumah", 
+                ShowPlayerDialog(playerid, DIALOG_HOUSEVAULT_IN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Rumah", 
                 shstr, "Input", "Batal");
                 return 1;
             }
@@ -1340,7 +1340,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             {
                 AccountData[playerid][menuShowed] = true;
                 format(shstr, sizeof(shstr), "Anda akan menyimpan item:\nNama: %s\nJumlah di tas: %d\nError: Jumlah tidak valid!\nMohon masukkan berapa jumlah item yang ingin disimpan:", HouseBrankas[playerid][housebrankasTemp], HouseBrankas[playerid][housebrankasQuant]);
-                ShowPlayerDialog(playerid, DIALOG_HOUSEVAULT_IN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Rumah", 
+                ShowPlayerDialog(playerid, DIALOG_HOUSEVAULT_IN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Rumah", 
                 shstr, "Input", "Batal");
                 return 1;
             }
@@ -1394,7 +1394,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 cache_get_value_name_int(listitem, "hsItemQuantity", HouseBrankas[playerid][housebrankasQuant]);
 
                 format(shstr, sizeof(shstr), "Anda akan mengambil item:\nNama: %s\nJumlah di brankas: %d\nMohon masukkan berapa jumlah yang ingin anda ambil:", HouseBrankas[playerid][housebrankasTemp], HouseBrankas[playerid][housebrankasQuant]);
-                ShowPlayerDialog(playerid, DIALOG_HOUSEVAULT_OUT, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Bengkel",
+                ShowPlayerDialog(playerid, DIALOG_HOUSEVAULT_OUT, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Bengkel",
                 shstr, "Input", "Batal");
             }
         }
@@ -1411,7 +1411,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             {
                 AccountData[playerid][menuShowed] = true;
                 format(shstr, sizeof(shstr), "Anda akan mengambil item:\nNama: %s\nJumlah di brankas: %d\nError: Tidak dapat diisi kosong!\nMohon masukkan berapa jumlah yang ingin anda ambil:", HouseBrankas[playerid][housebrankasTemp], HouseBrankas[playerid][housebrankasQuant]);
-                ShowPlayerDialog(playerid, DIALOG_HOUSEVAULT_OUT, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Rumah", 
+                ShowPlayerDialog(playerid, DIALOG_HOUSEVAULT_OUT, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Rumah", 
                 shstr, "Input", "Batal");
                 return 1;
             }
@@ -1420,7 +1420,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             {
                 AccountData[playerid][menuShowed] = true;
                 format(shstr, sizeof(shstr), "Anda akan mengambil item:\nNama: %s\nJumlah di brankas: %d\nError: Hanya dapat diisi angka!\nMohon masukkan berapa jumlah yang ingin anda ambil:", HouseBrankas[playerid][housebrankasTemp], HouseBrankas[playerid][housebrankasQuant]);
-                ShowPlayerDialog(playerid, DIALOG_HOUSEVAULT_OUT, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Rumah", 
+                ShowPlayerDialog(playerid, DIALOG_HOUSEVAULT_OUT, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Rumah", 
                 shstr, "Input", "Batal");
                 return 1;
             }
@@ -1429,7 +1429,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             {
                 AccountData[playerid][menuShowed] = true;
                 format(shstr, sizeof(shstr), "Anda akan mengambil item:\nNama: %s\nJumlah di brankas: %d\nError: Jumlah tidak valid!\nMohon masukkan berapa jumlah yang ingin anda ambil:", HouseBrankas[playerid][housebrankasTemp], HouseBrankas[playerid][housebrankasQuant]);
-                ShowPlayerDialog(playerid, DIALOG_HOUSEVAULT_OUT, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Rumah", 
+                ShowPlayerDialog(playerid, DIALOG_HOUSEVAULT_OUT, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Rumah", 
                 shstr, "Input", "Batal");
                 return 1;
             }
@@ -1485,11 +1485,11 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                     if(count == 0)
                     {
                         PlayerPlaySound(playerid, 5206, 0, 0, 0);
-                        return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Undang Teman", 
+                        return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Undang Teman", 
                         "Tidak ada player yang berada dekat dengan pintu rumah anda!", "Tutup", "");
                     }
 
-                    ShowPlayerDialog(playerid, DIALOG_HOUSE_INVITE, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Undang Teman", frmxt, "Undang", "Batal");
+                    ShowPlayerDialog(playerid, DIALOG_HOUSE_INVITE, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Undang Teman", frmxt, "Undang", "Batal");
                 }
                 case 4:
                 {
@@ -1509,13 +1509,13 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 case 7:
                 {
                     if(!House_HaveAccess(playerid, id)) return ShowTDN(playerid, NOTIFICATION_ERROR, "Hanya pemilik rumah dan pemegang kunci yang dapat mengakses!");
-                    ShowPlayerDialog(playerid, DIALOG_HOUSEVAULT, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Rumah",
+                    ShowPlayerDialog(playerid, DIALOG_HOUSEVAULT, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Rumah",
                     "Simpan Barang\n"GRAY"Ambil Barang", "Pilih", "Batal");
                     AccountData[playerid][menuShowed] = true;
                 }
                 case 8:// Putar Musik
                 {
-                    Dialog_Show(playerid, DialogHouseMusik, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- House Musik",
+                    Dialog_Show(playerid, DialogHouseMusik, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- House Musik",
                     "House Musik - Cerahi hidupmu secerah matahari di pagi hari\
                     \nKami sarankan anda untuk upload file mp3 ke discord terlebih dahulu.\
                     \n"RED"NOTE: Fitur ini tidak support link dari Youtube secara langsung!\
@@ -1550,7 +1550,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                     \nBrankas\
                     \n"GRAY"Musik\
                     \nPemegang Kunci", hid, GetLocation(HouseData[hid][hsExtPos][0], HouseData[hid][hsExtPos][1], HouseData[hid][hsExtPos][2]));
-                    ShowPlayerDialog(playerid, DIALOG_HOUSE_BRANKAS, DIALOG_STYLE_LIST, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- %s", HouseData[hid][hsOwner]),
+                    ShowPlayerDialog(playerid, DIALOG_HOUSE_BRANKAS, DIALOG_STYLE_LIST, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- %s", HouseData[hid][hsOwner]),
                     shstr, "Pilih", "Batal");
                 } 
                 else 
@@ -1565,7 +1565,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                     \n"GRAY"Weapon Chest\
                     \nBrankas\
                     \n"GRAY"Musik", hid, GetLocation(HouseData[hid][hsExtPos][0], HouseData[hid][hsExtPos][1], HouseData[hid][hsExtPos][2]));
-                    ShowPlayerDialog(playerid, DIALOG_HOUSE_BRANKAS, DIALOG_STYLE_LIST, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- %s", HouseData[hid][hsOwner]),
+                    ShowPlayerDialog(playerid, DIALOG_HOUSE_BRANKAS, DIALOG_STYLE_LIST, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- %s", HouseData[hid][hsOwner]),
                     shstr, "Pilih", "Batal");             
                 }
                 return 1;
@@ -1616,7 +1616,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                     \nBrankas\
                     \n"GRAY"Musik\
                     \nPemegang Kunci", AccountData[playerid][pInHouse], GetLocation(HouseData[AccountData[playerid][pInHouse]][hsExtPos][0], HouseData[AccountData[playerid][pInHouse]][hsExtPos][1], HouseData[AccountData[playerid][pInHouse]][hsExtPos][2]));
-                    ShowPlayerDialog(playerid, DIALOG_HOUSE_BRANKAS, DIALOG_STYLE_LIST, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- %s", HouseData[AccountData[playerid][pInHouse]][hsOwner]),
+                    ShowPlayerDialog(playerid, DIALOG_HOUSE_BRANKAS, DIALOG_STYLE_LIST, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- %s", HouseData[AccountData[playerid][pInHouse]][hsOwner]),
                     shstr, "Pilih", "Batal");
                 } 
                 else 
@@ -1631,7 +1631,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                     \n"GRAY"Weapon Chest\
                     \nBrankas\
                     \n"GRAY"Musik", AccountData[playerid][pInHouse], GetLocation(HouseData[AccountData[playerid][pInHouse]][hsExtPos][0], HouseData[AccountData[playerid][pInHouse]][hsExtPos][1], HouseData[AccountData[playerid][pInHouse]][hsExtPos][2]));
-                    ShowPlayerDialog(playerid, DIALOG_HOUSE_BRANKAS, DIALOG_STYLE_LIST, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- %s", HouseData[AccountData[playerid][pInHouse]][hsOwner]),
+                    ShowPlayerDialog(playerid, DIALOG_HOUSE_BRANKAS, DIALOG_STYLE_LIST, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- %s", HouseData[AccountData[playerid][pInHouse]][hsOwner]),
                     shstr, "Pilih", "Batal");             
                 }
                 return 1;
@@ -1646,7 +1646,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             if(!IsPlayerConnected(targetid)) return ShowTDN(playerid, NOTIFICATION_ERROR, "Pemain tersebut tidak terkoneksi ke server!");
             
             AccountData[targetid][pInviteAccept] = AccountData[playerid][pInHouse];
-            ShowPlayerDialog(targetid, DIALOG_HOUSE_INVITECONF, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Undang Teman", 
+            ShowPlayerDialog(targetid, DIALOG_HOUSE_INVITECONF, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Undang Teman", 
             "Pemilik rumah mengundang anda untuk masuk ke dalam rumahnya", "Iya", "Tidak");
         }
         case DIALOG_HOUSE_INVITECONF:
@@ -1750,7 +1750,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                     \nBrankas\
                     \n"GRAY"Musik\
                     \nPemegang Kunci", houseid, GetLocation(HouseData[houseid][hsExtPos][0], HouseData[houseid][hsExtPos][1], HouseData[houseid][hsExtPos][2]));
-                    ShowPlayerDialog(playerid, DIALOG_HOUSE_BRANKAS, DIALOG_STYLE_LIST, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- %s", HouseData[houseid][hsOwner]),
+                    ShowPlayerDialog(playerid, DIALOG_HOUSE_BRANKAS, DIALOG_STYLE_LIST, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- %s", HouseData[houseid][hsOwner]),
                     shstr, "Pilih", "Batal");
                 } 
                 else 
@@ -1765,18 +1765,18 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                     \n"GRAY"Weapon Chest\
                     \nBrankas\
                     \n"GRAY"Musik", houseid, GetLocation(HouseData[houseid][hsExtPos][0], HouseData[houseid][hsExtPos][1], HouseData[houseid][hsExtPos][2]));
-                    ShowPlayerDialog(playerid, DIALOG_HOUSE_BRANKAS, DIALOG_STYLE_LIST, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- %s", HouseData[houseid][hsOwner]),
+                    ShowPlayerDialog(playerid, DIALOG_HOUSE_BRANKAS, DIALOG_STYLE_LIST, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- %s", HouseData[houseid][hsOwner]),
                     shstr, "Pilih", "Batal");             
                 }
                 return 1;
             }
 
-            if(HouseMemberName[playerid][listitem][0] == EOS) return ShowPlayerDialog(playerid, DIALOG_HKEYS_ADD, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Bagikan Kunci",
+            if(HouseMemberName[playerid][listitem][0] == EOS) return ShowPlayerDialog(playerid, DIALOG_HKEYS_ADD, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Bagikan Kunci",
             "Mohon masukkan playerid yang ingin diberikan kunci rumah:", "Input", "Kembali");
 
             static shstr[255];
             format(shstr, sizeof(shstr), "Apakah anda yakin ingin menarik kunci dari %s?", HouseMemberName[playerid][listitem]);
-            ShowPlayerDialog(playerid, DIALOG_HKEYS_REMOVE, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay"WHITE"- Pemegang Kunci", shstr, "Iya", "Tidak");
+            ShowPlayerDialog(playerid, DIALOG_HKEYS_REMOVE, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay"WHITE"- Pemegang Kunci", shstr, "Iya", "Tidak");
             SetPVarString(playerid, "RemoveKeysName", HouseMemberName[playerid][listitem]);
         }
         case DIALOG_HKEYS_REMOVE:
@@ -1826,7 +1826,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                     \nBrankas\
                     \n"GRAY"Musik\
                     \nPemegang Kunci", id, GetLocation(HouseData[id][hsExtPos][0], HouseData[id][hsExtPos][1], HouseData[id][hsExtPos][2]));
-                    ShowPlayerDialog(playerid, DIALOG_HOUSE_BRANKAS, DIALOG_STYLE_LIST, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- %s", HouseData[id][hsOwner]),
+                    ShowPlayerDialog(playerid, DIALOG_HOUSE_BRANKAS, DIALOG_STYLE_LIST, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- %s", HouseData[id][hsOwner]),
                     shstr, "Pilih", "Batal");
                 } 
                 else 
@@ -1841,16 +1841,16 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                     \n"GRAY"Weapon Chest\
                     \nBrankas\
                     \n"GRAY"Musik", id, GetLocation(HouseData[id][hsExtPos][0], HouseData[id][hsExtPos][1], HouseData[id][hsExtPos][2]));
-                    ShowPlayerDialog(playerid, DIALOG_HOUSE_BRANKAS, DIALOG_STYLE_LIST, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- %s", HouseData[id][hsOwner]),
+                    ShowPlayerDialog(playerid, DIALOG_HOUSE_BRANKAS, DIALOG_STYLE_LIST, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- %s", HouseData[id][hsOwner]),
                     shstr, "Pilih", "Batal");             
                 }
                 return 1;
             }
 
-            if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_HKEYS_ADD, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Bagikan Kunci",
+            if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_HKEYS_ADD, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Bagikan Kunci",
             "Error: Tidak dapat diisi kosong!\nMohon masukkan playerid yang ingin diberikan kunci rumah:", "Input", "Kembali");
 
-            if(!IsNumeric(inputtext)) return ShowPlayerDialog(playerid, DIALOG_HKEYS_ADD, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Bagikan Kunci",
+            if(!IsNumeric(inputtext)) return ShowPlayerDialog(playerid, DIALOG_HKEYS_ADD, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Bagikan Kunci",
             "Error: Hanya dapat diisi angka!\nMohon masukkan playerid yang ingin diberikan kunci rumah:", "Input", "Kembali");
             
             new targetid = strval(inputtext);
@@ -1892,7 +1892,7 @@ Dialog:DialogHouseMusik(playerid, response, listitem, inputtext[])
             \nBrankas\
             \n"GRAY"Musik\
             \nPemegang Kunci", AccountData[playerid][pInHouse], GetLocation(HouseData[AccountData[playerid][pInHouse]][hsExtPos][0], HouseData[AccountData[playerid][pInHouse]][hsExtPos][1], HouseData[AccountData[playerid][pInHouse]][hsExtPos][2]));
-            ShowPlayerDialog(playerid, DIALOG_HOUSE_BRANKAS, DIALOG_STYLE_LIST, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- %s", HouseData[AccountData[playerid][pInHouse]][hsOwner]),
+            ShowPlayerDialog(playerid, DIALOG_HOUSE_BRANKAS, DIALOG_STYLE_LIST, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- %s", HouseData[AccountData[playerid][pInHouse]][hsOwner]),
             shstr, "Pilih", "Batal");
         } 
         else 
@@ -1907,7 +1907,7 @@ Dialog:DialogHouseMusik(playerid, response, listitem, inputtext[])
             \n"GRAY"Weapon Chest\
             \nBrankas\
             \n"GRAY"Musik", AccountData[playerid][pInHouse], GetLocation(HouseData[AccountData[playerid][pInHouse]][hsExtPos][0], HouseData[AccountData[playerid][pInHouse]][hsExtPos][1], HouseData[AccountData[playerid][pInHouse]][hsExtPos][2]));
-            ShowPlayerDialog(playerid, DIALOG_HOUSE_BRANKAS, DIALOG_STYLE_LIST, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- %s", HouseData[AccountData[playerid][pInHouse]][hsOwner]),
+            ShowPlayerDialog(playerid, DIALOG_HOUSE_BRANKAS, DIALOG_STYLE_LIST, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- %s", HouseData[AccountData[playerid][pInHouse]][hsOwner]),
             shstr, "Pilih", "Batal");             
         }
         return 1;
@@ -1917,7 +1917,7 @@ Dialog:DialogHouseMusik(playerid, response, listitem, inputtext[])
     {
         static jskc[512];
         format(jskc, sizeof(jskc), ""VERONA_ARWIN"House Music - Cerahi Hidupmu Secerah Matahari Di Pagi Hari\nError: Tidak dapat diisi kosong!\n"VERONA_ARWIN"Kami sarankan anda untuk upload file mp3 ke discord terlebih dahulu.\n"RED_E"Note: Fitur ini tidak support link Youtube secara langsung!\n\n"YELLOW"(Apabila file mp3 telah di upload ke discord, silahkan copy linknya dan paste dibawah ini):");
-        Dialog_Show(playerid, DialogHouseMusik, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- House Musik", jskc, "Input", "Cancel");
+        Dialog_Show(playerid, DialogHouseMusik, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- House Musik", jskc, "Input", "Cancel");
         return 1;
     }
 
@@ -1925,7 +1925,7 @@ Dialog:DialogHouseMusik(playerid, response, listitem, inputtext[])
     {
         static jskc[512];
         format(jskc, sizeof(jskc), ""VERONA_ARWIN"House Music - Cerahi Hidupmu Secerah Matahari Di Pagi Hari\n\n"VERONA_ARWIN"Kami sarankan anda untuk upload file mp3 ke discord terlebih dahulu.\n"RED_E"Note: Fitur ini tidak support link Youtube secara langsung!\n\n"YELLOW"(Apabila file mp3 telah di upload ke discord, silahkan copy linknya dan paste dibawah ini):");
-        Dialog_Show(playerid, DialogHouseMusik, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- House Musik", jskc, "Input", "Cancel");
+        Dialog_Show(playerid, DialogHouseMusik, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- House Musik", jskc, "Input", "Cancel");
         return 1;
     }
 

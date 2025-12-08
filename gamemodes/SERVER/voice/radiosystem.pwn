@@ -59,7 +59,7 @@ VoiceSistemLoadTextdraw(playerid)
     PlayerTextDrawFont(playerid, ATRP_RadioTD[playerid][4], 4);
     PlayerTextDrawSetProportional(playerid, ATRP_RadioTD[playerid][4], 1);
 
-    ATRP_RadioTD[playerid][5] = CreatePlayerTextDraw(playerid, 443.000, 366.000, "Mayoritaslkie");
+    ATRP_RadioTD[playerid][5] = CreatePlayerTextDraw(playerid, 443.000, 366.000, "Imajinasilkie");
     PlayerTextDrawLetterSize(playerid, ATRP_RadioTD[playerid][5], 0.170, 1.299);
     PlayerTextDrawAlignment(playerid, ATRP_RadioTD[playerid][5], 2);
     PlayerTextDrawColor(playerid, ATRP_RadioTD[playerid][5], -1);
@@ -283,7 +283,7 @@ hook ClickDynPlayerTextdraw(playerid, PlayerText: playertextid)
 {
     if(playertextid == ATRP_RadioTD[playerid][10]) //set freq
     {   
-        ShowPlayerDialog(playerid, DIALOG_RADIO_FREQ, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Radio Fx",
+        ShowPlayerDialog(playerid, DIALOG_RADIO_FREQ, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Radio Fx",
         "Masukkan frekuensi radio yang ingin diterapkan pada kolom dibawah ini\
         \n(Frekuensi harus berada diantara 0 - 9999)\
         \nCatatan: Masukkan frekuensi 0 untuk memutuskan saluran frekuensi/netral", "Submit", "Batal");
@@ -349,17 +349,17 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         case DIALOG_RADIO_FREQ:
         {
             if(!response) return 1;
-            if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_RADIO_FREQ, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Radio Fx",
+            if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_RADIO_FREQ, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Radio Fx",
             "Error: Tidak dapat diisi kosong!\nMasukkan frekuensi radio yang ingin diterapkan pada kolom dibawah ini\
             \n(Frekuensi harus berada diantara 0 - 9999)\
             \nCatatan: Masukkan frekuensi 0 untuk memutuskan saluran frekuensi/netral", "Submit", "Batal");
 
-            if(!IsNumeric(inputtext)) return ShowPlayerDialog(playerid, DIALOG_RADIO_FREQ, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Radio Fx",
+            if(!IsNumeric(inputtext)) return ShowPlayerDialog(playerid, DIALOG_RADIO_FREQ, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Radio Fx",
             "Error: Hanya dapat diisi angka!\nMasukkan frekuensi radio yang ingin diterapkan pada kolom dibawah ini\
             \n(Frekuensi harus berada diantara 0 - 9999)\
             \nCatatan: Masukkan frekuensi 0 untuk memutuskan saluran frekuensi/netral", "Submit", "Batal");
 
-            if(strval(inputtext) < 0 || strval(inputtext) > 9999) return ShowPlayerDialog(playerid, DIALOG_RADIO_FREQ, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Radio Fx",
+            if(strval(inputtext) < 0 || strval(inputtext) > 9999) return ShowPlayerDialog(playerid, DIALOG_RADIO_FREQ, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Radio Fx",
             "Error: Frequency dimulai dari 0 - 9999!\nMasukkan frekuensi radio yang ingin diterapkan pada kolom dibawah ini\
             \n(Frekuensi harus berada diantara 0 - 9999)\
             \nCatatan: Masukkan frekuensi 0 untuk memutuskan saluran frekuensi/netral", "Submit", "Batal");
@@ -394,7 +394,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             }
             else if(freq == 3)
             {
-                if(AccountData[playerid][pFaction] != FACTION_PEMERINTAH) return ShowTDN(playerid, NOTIFICATION_ERROR, "Freq 3 khusus Instansi Pemerntah Mayoritas!");
+                if(AccountData[playerid][pFaction] != FACTION_PEMERINTAH) return ShowTDN(playerid, NOTIFICATION_ERROR, "Freq 3 khusus Instansi Pemerntah Imajinasi!");
                 
                 PlayerTextDrawSetString(playerid, ATRP_RadioTD[playerid][7], "1");
                 CallRemoteFunction("AssignFreqToFSVoice", "ddd", playerid, true, freq);
@@ -582,7 +582,7 @@ CMD:sv(playerid, params[])
 {
     if(!IsPlayerConnected(playerid)) return 0;
 
-    ShowPlayerDialog(playerid, DIALOG_VOICEMODE, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Voice Range",
+    ShowPlayerDialog(playerid, DIALOG_VOICEMODE, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Voice Range",
     ""RED"Teriak\
     \nNormal\
     \n"YELLOW"Berbisik", "Pilih", "Batal");
@@ -594,7 +594,7 @@ CMD:vkeys(playerid, params[])
     if(!IsPlayerConnected(playerid))
         return 0;
     
-    ShowPlayerDialog(playerid, DIALOG_VOICEKEYS, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Voice Keybind",
+    ShowPlayerDialog(playerid, DIALOG_VOICEKEYS, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Voice Keybind",
     "Keybind: B (Default)\
     \n"GRAY"Keybind: R\
     \nKeybind: X\

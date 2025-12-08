@@ -138,7 +138,7 @@ Vehicle_ObjectAddObjects(playerid, vehicleid, model, type)
                 VehicleObjects[vehicleid][slot][vehObjectFontSize] = 24; 
             }
 
-            Dialog_Show(playerid, DIALOG_MODSHOPMOVE, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Modshop", "Position\nPosition (Manual)", "Select", "Close");
+            Dialog_Show(playerid, DIALOG_MODSHOPMOVE, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Modshop", "Position\nPosition (Manual)", "Select", "Close");
             
             TakePlayerMoneyEx(playerid, 30000);
             SendClientMessageEx(playerid, ARWIN, "MODSHOP"WHITE": Anda membeli "YELLOW"%s"WHITE" dengan Harga "GREEN"$30.000", GetVehObjectNameByModel(VehicleObjects[vehicleid][slot][vehObject]));
@@ -225,7 +225,7 @@ Vehicle_SpotLightAdd(playerid, vehicleid, model, type)
             VehicleObjects[vehicleid][slot][vehObjectPosRY] = 0.0;
             VehicleObjects[vehicleid][slot][vehObjectPosRZ] = 0.0;
 
-            Dialog_Show(playerid, DIALOG_SPOTLIGHT, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Modshop", "Position\nPosition (Manual)\nLight Color", "Select", "Close");
+            Dialog_Show(playerid, DIALOG_SPOTLIGHT, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Modshop", "Position\nPosition (Manual)\nLight Color", "Select", "Close");
             
             TakePlayerMoneyEx(playerid, 10000);
             SendClientMessageEx(playerid, ARWIN, "MODSHOP"WHITE": Anda membeli "YELLOW"Spotlights"WHITE" dengan Harga "GREEN"$10,000");
@@ -367,7 +367,7 @@ Vehicle_LightColorSync(vehicleid, slot, id, playerid)
     Streamer_SetFloatData(STREAMER_TYPE_OBJECT, VehicleObjects[vehicleid][slot][vehObject], E_STREAMER_DRAW_DISTANCE, 15);
     Streamer_SetFloatData(STREAMER_TYPE_OBJECT, VehicleObjects[vehicleid][slot][vehObject], E_STREAMER_STREAM_DISTANCE, 15);
     //Vehicle_ObjectSave(vehicleid, slot); // Setelah warna di ubah pastikan selalu di save!
-    Dialog_Show(playerid, DIALOG_SPOTLIGHT, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Modshop", "Position\nPosition (Manual)\nLight Color\nSave", "Select", "Close");
+    Dialog_Show(playerid, DIALOG_SPOTLIGHT, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Modshop", "Position\nPosition (Manual)\nLight Color\nSave", "Select", "Close");
     return 1;
 }
 
@@ -591,7 +591,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 				}
                 case 5:
                 {
-                    Dialog_Show(playerid, MODSHOP_CUSTOM, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Modshop",
+                    Dialog_Show(playerid, MODSHOP_CUSTOM, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Modshop",
                     "Mohon masukkan ID Object/Aksesoris yang ingin anda Pasang\nNOTE: Anda dapat melihat ID Object di: https://dev.prineside.com/en/gtasa_samp_model_id/", "Input", "Batal");
                 }
             }

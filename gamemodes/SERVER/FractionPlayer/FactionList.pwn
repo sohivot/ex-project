@@ -74,7 +74,7 @@ Dialog:FactionMemberList(playerid, response, listitem, inputtext[])
 
         format(playerName, MAX_PLAYER_NAME, inputtext);
         MemberNameForAction[playerid] = playerName;
-        format(sha, sizeof(sha), ""Mayoritas"Mayoritas Roleplay "WHITE"- Kelola "YELLOW"%s", playerName);
+        format(sha, sizeof(sha), ""Imajinasi"Imajinasi Roleplay "WHITE"- Kelola "YELLOW"%s", playerName);
         Dialog_Show(playerid, FactionMemberListAction, DIALOG_STYLE_LIST, sha, 
         "Promote\
         \n"GRAY"Demote\

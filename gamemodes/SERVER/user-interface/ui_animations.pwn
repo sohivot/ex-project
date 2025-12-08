@@ -1158,7 +1158,7 @@ CMD:eilist(playerid, params[])
 	if(!IsPlayerConnected(playerid)) return false;
 	new xjjs[512];
 	format(xjjs, sizeof(xjjs), "salam\npeluk");
-	Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Anim Interaksi", xjjs, "Tutup", "");
+	Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Anim Interaksi", xjjs, "Tutup", "");
 	return 1;
 }
 

@@ -167,7 +167,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
             if(IsPlayerInjured(playerid)) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda sedang pingsan!");
             if(AccountData[playerid][pJob] != JOB_TAILOR) return false;
 
-            Dialog_Show(playerid, DialogOlahTailor, DIALOG_STYLE_TABLIST_HEADERS, "Olah Bahan -"Mayoritas" Mayoritas Roleplay",
+            Dialog_Show(playerid, DialogOlahTailor, DIALOG_STYLE_TABLIST_HEADERS, "Olah Bahan -"Imajinasi" Imajinasi Roleplay",
             "Bahan\tKebutuhan\
             \nKain\t1 Benang\
             \n"LIGHTGREY"Pakaian\t1 Kain", "Olah", "Batal");

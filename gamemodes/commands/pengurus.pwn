@@ -35,7 +35,7 @@ CMD:createredeem(playerid, params[])
     format(str, sizeof(str), "%s\n{FFFFFF}- Kode dapat berisi dari 1 hingga 30 karakter", str);
     format(str, sizeof(str), "%s\n- Uang dari $1 hingga $50.000", str);
     format(str, sizeof(str), "%s\n- Dapat digunakan oleh 1 hingga 1000 Player", str);
-    ShowPlayerDialog(playerid, DIALOG_PROMO_CREATE, DIALOG_STYLE_INPUT, "Mayoritas Roleplay "YELLOW_E"/"WHITE_E"/ Create Redeem Code", str, "Input", "Batal");
+    ShowPlayerDialog(playerid, DIALOG_PROMO_CREATE, DIALOG_STYLE_INPUT, "Imajinasi Roleplay "YELLOW_E"/"WHITE_E"/ Create Redeem Code", str, "Input", "Batal");
 	return 1;
 }
 CMD:vote(playerid, params[])
@@ -263,7 +263,7 @@ CMD:updatedb(playerid, params[])
 	{
 		SavePlayerVehicle(i);
 	}
-	SendClientMessageToAllEx(X11_ARWIN, "[AdmCmd] "RED"%s"ARWIN1" Telah membackup semua data pemain online ke "PINK1"Mayoritas Database", AccountData[playerid][pAdminname]);
+	SendClientMessageToAllEx(X11_ARWIN, "[AdmCmd] "RED"%s"ARWIN1" Telah membackup semua data pemain online ke "PINK1"Imajinasi Database", AccountData[playerid][pAdminname]);
 	return 1;
 }
 

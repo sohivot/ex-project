@@ -280,7 +280,7 @@ task ScheduleMTExecute[1000]()
                 SavePlayerVehicle(i);
 			}*/
 			SaveAll();
-			SendClientMessageToAllEx(X11_RED, "[AdmCmd]"ARWIN1" Server Telah membackup semua data pemain dan kendaraan ke "PINK1"Mayoritas Database");
+			SendClientMessageToAllEx(X11_RED, "[AdmCmd]"ARWIN1" Server Telah membackup semua data pemain dan kendaraan ke "PINK1"Imajinasi Database");
 			SendRconCommand("exit");
 		}
 	}
@@ -334,7 +334,7 @@ public DeleteCharQuery(playerid, UCP[])
 			
 			format(sha, sizeof(sha), "%s%s\n", sha, charname);
 		}
-		Dialog_Show(playerid, DeleteCharList, DIALOG_STYLE_LIST, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- Char %s", UCP), sha, "Delete", "Cancel");
+		Dialog_Show(playerid, DeleteCharList, DIALOG_STYLE_LIST, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- Char %s", UCP), sha, "Delete", "Cancel");
 	}
 	return 1;
 }
@@ -361,7 +361,7 @@ Dialog:DeleteCharList(playerid, response, listitem, inputtext[])
 			\nChar Name: %s\
 			\nUCP Name: %s\
 			\nDatabase ID: %d", charname, ucpname, playerID);
-			ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Delete Char", kckstr, "Tutup", "");
+			ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Delete Char", kckstr, "Tutup", "");
 
 			mysql_tquery(mdb_query, sprintf("DELETE FROM `player_characters` WHERE `pID`=%d", playerID));
 			mysql_tquery(mdb_query, sprintf("DELETE FROM `player_vehicles` WHERE `PVeh_OwnerID`=%d", playerID));

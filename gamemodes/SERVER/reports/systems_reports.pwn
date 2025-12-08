@@ -177,7 +177,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             strunpack(frmxt, ReportData[reportid][rText]);
             format(shstr, sizeof(shstr), ""WHITE"Player Detail: "PINK1"%s [%s] (%d)\n"WHITE"Reports: "YELLOW"%s\n"WHITE"Answer: "LIGHTGREEN"(Input Below)", 
             ReturnName(ReportData[reportid][rPlayer]), AccountData[ReportData[reportid][rPlayer]][pUCP], ReportData[reportid][rPlayer], frmxt);
-            ShowPlayerDialog(playerid, DIALOG_REPORTSREPLY, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Answer Report", shstr, "Answer", "Cancel");
+            ShowPlayerDialog(playerid, DIALOG_REPORTSREPLY, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Answer Report", shstr, "Answer", "Cancel");
 
             SetPVarInt(playerid, "ReportListitemID", reportid);
         }
@@ -194,7 +194,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             {
                 format(shstr, sizeof(shstr), ""RED"Error:"WHITE" Tidak dapat diisi kosong!\n"WHITE"Player Detail: "PINK1"%s [%s] (%d)\n"WHITE"Reports: "YELLOW"%s\n"WHITE"Answer: "LIGHTGREEN"(Input Below)", 
                 ReturnName(ReportData[reportid][rPlayer]), AccountData[ReportData[reportid][rPlayer]][pUCP], ReportData[reportid][rPlayer], frmxt);
-                return ShowPlayerDialog(playerid, DIALOG_REPORTSREPLY, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Answer Report", shstr, "Answer", "Cancel");
+                return ShowPlayerDialog(playerid, DIALOG_REPORTSREPLY, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Answer Report", shstr, "Answer", "Cancel");
             }
 
             new targetid = ReportData[reportid][rPlayer];

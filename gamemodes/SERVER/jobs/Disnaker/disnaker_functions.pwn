@@ -102,7 +102,7 @@ Dialog:DISNAKER_MENU(playerid, response, listitem, inputtext[])
             countkargo, 
             countrecycler,
             countbeban);
-            ShowPlayerDialog(playerid, DIALOG_DISNAKER, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Disnaker", string, "Pilih", "Batal");
+            ShowPlayerDialog(playerid, DIALOG_DISNAKER, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Disnaker", string, "Pilih", "Batal");
         }
     }    
     else Info(playerid, "Anda telah membatalkan pilihan");
@@ -116,12 +116,12 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
         
         if(IsPlayerInRangeOfPoint(playerid, 2.0, 1376.320556, 1573.715454, 17.000314))
         {
-            Dialog_Show(playerid, KTP_MENU, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Pemerintah Menu",
+            Dialog_Show(playerid, KTP_MENU, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Pemerintah Menu",
             "Membuat KTP", "Pilih", "Batal");
         }
         if(IsPlayerInRangeOfPoint(playerid, 2.0, 1611.540283,-1280.542114,17.457134))
         {
-            Dialog_Show(playerid, DISNAKER_MENU, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Disneker Menu",
+            Dialog_Show(playerid, DISNAKER_MENU, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Disneker Menu",
             "Dinas Tenaga Kerja", "Pilih", "Batal");
         }        
         
@@ -203,7 +203,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
             countpetani, 
             countkargo, 
             countrecycler);
-            ShowPlayerDialog(playerid, DIALOG_DISNAKER, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Disnaker", string, "Pilih", "Batal");
+            ShowPlayerDialog(playerid, DIALOG_DISNAKER, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Disnaker", string, "Pilih", "Batal");
 		}*/
     }
     return 1;

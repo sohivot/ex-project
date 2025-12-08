@@ -213,7 +213,7 @@ ptask PlayerDelay[1000](playerid)
 		{
 			AccountData[playerid][pGunLic] = 0;
 			AccountData[playerid][pGunLicTime] = 0;
-			Info(playerid, "Masa berlaku Lisensi Senjata anda sudah habis, silakan perpanjang ke Kepolisian Mayoritas!");
+			Info(playerid, "Masa berlaku Lisensi Senjata anda sudah habis, silakan perpanjang ke Kepolisian Imajinasi!");
 		}
 	}
 	if(AccountData[playerid][pHuntingLic] > 0)
@@ -222,7 +222,7 @@ ptask PlayerDelay[1000](playerid)
 		{
 			AccountData[playerid][pHuntingLic] = 0;
 			AccountData[playerid][pHuntingLicTime] = 0;
-			Info(playerid, "Masa berlaku Lisensi Hunting anda sudah habis, silakan perpanjang ke Pemerintahan Mayoritas!");
+			Info(playerid, "Masa berlaku Lisensi Hunting anda sudah habis, silakan perpanjang ke Pemerintahan Imajinasi!");
 		}
 	}
 	// Sim Expired
@@ -232,7 +232,7 @@ ptask PlayerDelay[1000](playerid)
 		{
 			AccountData[playerid][pSimA] = 0;
 			AccountData[playerid][pSimATime] = 0;
-			SendClientMessageEx(playerid, -1, ""YELLOW"INFORMATION:"WHITE" Masa Waktu Sim A Anda sudah tidak berlaku, anda bisa memperpanjangnya di Kepolisian Mayoritas");
+			SendClientMessageEx(playerid, -1, ""YELLOW"INFORMATION:"WHITE" Masa Waktu Sim A Anda sudah tidak berlaku, anda bisa memperpanjangnya di Kepolisian Imajinasi");
 		}
 	}
 	if(AccountData[playerid][pSimB] > 0)
@@ -241,7 +241,7 @@ ptask PlayerDelay[1000](playerid)
 		{
 			AccountData[playerid][pSimB] = 0;
 			AccountData[playerid][pSimBTime] = 0;
-			SendClientMessageEx(playerid, -1, ""YELLOW"INFORMATION:"WHITE" Masa Waktu Sim B Anda sudah tidak berlaku, anda bisa memperpanjangnya di Kepolisian Mayoritas");
+			SendClientMessageEx(playerid, -1, ""YELLOW"INFORMATION:"WHITE" Masa Waktu Sim B Anda sudah tidak berlaku, anda bisa memperpanjangnya di Kepolisian Imajinasi");
 		}
 	}
 	if(AccountData[playerid][pSimC] > 0)
@@ -250,7 +250,7 @@ ptask PlayerDelay[1000](playerid)
 		{
 			AccountData[playerid][pSimC] = 0;
 			AccountData[playerid][pSimCTime] = 0;
-			SendClientMessageEx(playerid, -1, ""YELLOW"INFORMATION:"WHITE" Masa Waktu Sim C Anda sudah tidak berlaku, anda bisa memperpanjangnya di Kepolisian Mayoritas");
+			SendClientMessageEx(playerid, -1, ""YELLOW"INFORMATION:"WHITE" Masa Waktu Sim C Anda sudah tidak berlaku, anda bisa memperpanjangnya di Kepolisian Imajinasi");
 		}
 	}
 	// SKS Expired Checking
@@ -258,8 +258,8 @@ ptask PlayerDelay[1000](playerid)
 	{
 		if(AccountData[playerid][pSKSTime] != 0 && AccountData[playerid][pSKSTime] <= gettime())
 		{
-			Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Surat Keterangan Sehat", "Masa aktif Surat Keterangan Sehat Anda Sudah Habis\
-			\nAnda diharuskan untuk memperpanjang ke Mitra EMS Mayoritas Jika berkenan", "Tutup", "");
+			Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Surat Keterangan Sehat", "Masa aktif Surat Keterangan Sehat Anda Sudah Habis\
+			\nAnda diharuskan untuk memperpanjang ke Mitra EMS Imajinasi Jika berkenan", "Tutup", "");
 			AccountData[playerid][pSKS] = 0;
 			AccountData[playerid][pSKSTime] = 0;
 			format(AccountData[playerid][pSKSNameDoc], 32, "None");
@@ -272,8 +272,8 @@ ptask PlayerDelay[1000](playerid)
 	{
 		if(AccountData[playerid][pSKCKTime] != 0 && AccountData[playerid][pSKCKTime] <= gettime())
 		{
-			Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Surat Keterangan Cacatan Kepolisian", "Masa aktif Surat Keterangan Cacatan Kepolisian/SKCK Anda Sudah Habis\
-			\nAnda diharuskan untuk memperpanjang ke Kepolisian Mayoritas Jika berkenan", "Tutup", "");
+			Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Surat Keterangan Cacatan Kepolisian", "Masa aktif Surat Keterangan Cacatan Kepolisian/SKCK Anda Sudah Habis\
+			\nAnda diharuskan untuk memperpanjang ke Kepolisian Imajinasi Jika berkenan", "Tutup", "");
 			AccountData[playerid][pSKCK] = 0;
 			AccountData[playerid][pSKCKTime] = 0;
 			format(AccountData[playerid][pSKCKNamePol], 32, "None");
@@ -286,8 +286,8 @@ ptask PlayerDelay[1000](playerid)
 	{
 		if(AccountData[playerid][pBPJSTime] != 0 && AccountData[playerid][pBPJSTime] <= gettime())
 		{
-			Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kartu Mayoritas Sehat", "Masa aktif Kartu Mayoritas Sehat/BPJS Anda Sudah Habis\
-			\nAnda diharuskan untuk memperpanjang ke Mitra EMS Mayoritas Jika berkenan", "Tutup", "");
+			Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kartu Imajinasi Sehat", "Masa aktif Kartu Imajinasi Sehat/BPJS Anda Sudah Habis\
+			\nAnda diharuskan untuk memperpanjang ke Mitra EMS Imajinasi Jika berkenan", "Tutup", "");
 			AccountData[playerid][pBPJS] = 0;
 			AccountData[playerid][pBPJSTime] = 0;
 			format(AccountData[playerid][pBPJSLevel], 32, "None");

@@ -142,7 +142,7 @@ CMD:blackjack(playerid, params[])
     TogglePlayerControllable(playerid, false);
 
     PlayerPlayNearbySound(playerid, 5810);
-    Dialog_Show(playerid, BlackjackBet, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Your Bets", "Welcome to your table, please place your bets:", "Place", "Batal");
+    Dialog_Show(playerid, BlackjackBet, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Your Bets", "Welcome to your table, please place your bets:", "Place", "Batal");
     return 1;
 }
 

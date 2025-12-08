@@ -344,7 +344,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
                             }
                         }
                     }
-                    Dialog_Show(playerid, DialogFamiliesGarage, DIALOG_STYLE_TABLIST_HEADERS, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- Garasi %s", FamiliesGarage[i][gFamName]), twsmk, "Pilih", "Batal");
+                    Dialog_Show(playerid, DialogFamiliesGarage, DIALOG_STYLE_TABLIST_HEADERS, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- Garasi %s", FamiliesGarage[i][gFamName]), twsmk, "Pilih", "Batal");
                 } else ShowTDN(playerid, NOTIFICATION_ERROR, "Hanya families terkait yang dapat menggunakan Garasi!");
                 HideShortKey(playerid);
             }

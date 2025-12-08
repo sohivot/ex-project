@@ -288,7 +288,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
             if(AccountData[playerid][pLevel] < 15) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda harus memiliki level 15 untuk mengambil Uranium!");
             if(AccountData[playerid][ActivityTime] != 0) return ShowTDN(playerid, NOTIFICATION_WARNING, "Anda sedang melakukan sesuatu, tunggu hingga progress selesai!");
 
-            Dialog_Show(playerid, MixerUraniumConf, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Make Uranium",
+            Dialog_Show(playerid, MixerUraniumConf, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Make Uranium",
             "Apakah anda yakin ingin membuat Uranium dengan bahan sebagai berikut?\n\n"ORANGE"Uranium ACD (%d/5)\nGaram (%d/15)\nBotol (%d/1)\nAir Mineral (%d/5)", "Iya", "Tidak",
             Inventory_Count(playerid, "Uranium ACD"), Inventory_Count(playerid, "Garam"), Inventory_Count(playerid, "Botol"), Inventory_Count(playerid, "Air Mineral"));
         }

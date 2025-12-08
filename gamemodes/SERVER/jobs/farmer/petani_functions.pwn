@@ -396,7 +396,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
     {
         if(IsPlayerInRangeOfPoint(playerid, 2.0, -547.7806, -185.1288, 78.4063))
         {
-            ShowPlayerDialog(playerid, DIALOG_BUY_SEEDS, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay"WHITE" - Beli Bibit",
+            ShowPlayerDialog(playerid, DIALOG_BUY_SEEDS, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay"WHITE" - Beli Bibit",
             "Jenis Bibit\tHarga\
             \nCabe\t"DARKGREEN"$7\
             \nTebu\t"DARKGREEN"$10\
@@ -407,7 +407,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
         {
             if(AccountData[playerid][pJob] == JOB_FARMER)
             {
-                ShowPlayerDialog(playerid, DIALOG_FARMER_OLAH, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Olah Tanaman",
+                ShowPlayerDialog(playerid, DIALOG_FARMER_OLAH, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Olah Tanaman",
                 "Item\tReqruitment\
                 \nSambal\tCabe: 4 | Botol: 1\
                 \n"GRAY"Beras\t"GRAY"Padi: 4 | Kain: 1\
@@ -452,19 +452,19 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             {
                 case 0:// cabe
                 {
-                    ShowPlayerDialog(playerid, DIALOG_BIBIT_CABE, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Bibit Cabe", 
+                    ShowPlayerDialog(playerid, DIALOG_BIBIT_CABE, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Bibit Cabe", 
                     ""WHITE"Anda akan membeli "YELLOW"bibit cabe"WHITE" seharga "DARKGREEN"$7/bibit\
                     \n"YELLOW"(Masukkan berapa banyak bibit yang ingin anda beli):", "Input", "Batal");
                 }
                 case 1:// tebu
                 {
-                    ShowPlayerDialog(playerid, DIALOG_BIBIT_TEBU, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Bibit Tebu", 
+                    ShowPlayerDialog(playerid, DIALOG_BIBIT_TEBU, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Bibit Tebu", 
                     ""WHITE"Anda akan membeli "YELLOW"bibit tebu"WHITE" seharga "DARKGREEN"$10/bibit\
                     \n"YELLOW"(Masukkan berapa banyak bibit yang ingin anda beli):", "Input", "Batal");
                 }
                 case 2:// padi
                 {
-                    ShowPlayerDialog(playerid, DIALOG_BIBIT_PADI, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Bibit Padi", 
+                    ShowPlayerDialog(playerid, DIALOG_BIBIT_PADI, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Bibit Padi", 
                     ""WHITE"Anda akan membeli "YELLOW"bibit padi"WHITE" seharga "DARKGREEN"$8/bibit\
                     \n"YELLOW"(Masukkan berapa banyak bibit yang ingin anda beli):", "Input", "Batal");
                 }
@@ -476,21 +476,21 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             
             if(isnull(inputtext))
             {
-                return ShowPlayerDialog(playerid, DIALOG_BIBIT_CABE, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Bibit Cabe", 
+                return ShowPlayerDialog(playerid, DIALOG_BIBIT_CABE, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Bibit Cabe", 
                 ""WHITE"ERROR: Tidak dapat diisi kosong!\nAnda akan membeli "YELLOW"bibit cabe"WHITE" seharga "DARKGREEN"$7/bibit\
                 \n"YELLOW"(Masukkan berapa banyak bibit yang ingin anda beli):", "Input", "Batal");
             }
 
             if(!IsNumeric(inputtext))
             {
-                return ShowPlayerDialog(playerid, DIALOG_BIBIT_CABE, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Bibit Cabe", 
+                return ShowPlayerDialog(playerid, DIALOG_BIBIT_CABE, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Bibit Cabe", 
                 ""WHITE"ERROR: Hanya dapat diisi angka!\nAnda akan membeli "YELLOW"bibit cabe"WHITE" seharga "DARKGREEN"$7/bibit\
                 \n"YELLOW"(Masukkan berapa banyak bibit yang ingin anda beli):", "Input", "Batal");
             }
 
             if(strval(inputtext) < 1 || strval(inputtext) > strval(inputtext) * 7)
             {
-                return ShowPlayerDialog(playerid, DIALOG_BIBIT_CABE, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Bibit Cabe", 
+                return ShowPlayerDialog(playerid, DIALOG_BIBIT_CABE, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Bibit Cabe", 
                 ""WHITE"ERROR: Jumlah tidak valid atau uang anda tidak cukup!\nAnda akan membeli "YELLOW"bibit cabe"WHITE" seharga "DARKGREEN"$7/bibit\
                 \n"YELLOW"(Masukkan berapa banyak bibit yang ingin anda beli):", "Input", "Batal");
             }
@@ -510,21 +510,21 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             
             if(isnull(inputtext))
             {
-                return ShowPlayerDialog(playerid, DIALOG_BIBIT_TEBU, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Bibit Tebu", 
+                return ShowPlayerDialog(playerid, DIALOG_BIBIT_TEBU, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Bibit Tebu", 
                 ""WHITE"ERROR: Tidak dapat diisi kosong!\nAnda akan membeli "YELLOW"bibit tebu"WHITE" seharga "DARKGREEN"$10/bibit\
                 \n"YELLOW"(Masukkan berapa banyak bibit yang ingin anda beli):", "Input", "Batal");
             }
 
             if(!IsNumeric(inputtext))
             {
-                return ShowPlayerDialog(playerid, DIALOG_BIBIT_TEBU, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Bibit Tebu", 
+                return ShowPlayerDialog(playerid, DIALOG_BIBIT_TEBU, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Bibit Tebu", 
                 ""WHITE"ERROR: Hanya dapat diisi angka!\nAnda akan membeli "YELLOW"bibit tebu"WHITE" seharga "DARKGREEN"$10/bibit\
                 \n"YELLOW"(Masukkan berapa banyak bibit yang ingin anda beli):", "Input", "Batal");
             }
 
             if(strval(inputtext) < 1 || strval(inputtext) > strval(inputtext) * 10)
             {
-                return ShowPlayerDialog(playerid, DIALOG_BIBIT_TEBU, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Bibit Tebu", 
+                return ShowPlayerDialog(playerid, DIALOG_BIBIT_TEBU, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Bibit Tebu", 
                 ""WHITE"ERROR: Jumlah tidak valid atau uang anda tidak cukup!\nAnda akan membeli "YELLOW"bibit tebu"WHITE" seharga "DARKGREEN"$10/bibit\
                 \n"YELLOW"(Masukkan berapa banyak bibit yang ingin anda beli):", "Input", "Batal");
             }
@@ -544,21 +544,21 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             
             if(isnull(inputtext))
             {
-                return ShowPlayerDialog(playerid, DIALOG_BIBIT_PADI, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Bibit Padi", 
+                return ShowPlayerDialog(playerid, DIALOG_BIBIT_PADI, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Bibit Padi", 
                 ""WHITE"ERROR: Tidak dapat diisi kosong!\nAnda akan membeli "YELLOW"bibit padi"WHITE" seharga "DARKGREEN"$8/bibit\
                 \n"YELLOW"(Masukkan berapa banyak bibit yang ingin anda beli):", "Input", "Batal");
             }
 
             if(!IsNumeric(inputtext))
             {
-                return ShowPlayerDialog(playerid, DIALOG_BIBIT_PADI, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Bibit Padi", 
+                return ShowPlayerDialog(playerid, DIALOG_BIBIT_PADI, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Bibit Padi", 
                 ""WHITE"ERROR: Hanya dapat diisi angka!\nAnda akan membeli "YELLOW"bibit padi"WHITE" seharga "DARKGREEN"$8/bibit\
                 \n"YELLOW"(Masukkan berapa banyak bibit yang ingin anda beli):", "Input", "Batal");
             }
 
             if(strval(inputtext) < 1 || strval(inputtext) > strval(inputtext) * 8)
             {
-                return ShowPlayerDialog(playerid, DIALOG_BIBIT_PADI, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Bibit Padi", 
+                return ShowPlayerDialog(playerid, DIALOG_BIBIT_PADI, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Bibit Padi", 
                 ""WHITE"ERROR: Jumlah tidak valid!\nAnda akan membeli "YELLOW"bibit padi"WHITE" seharga "DARKGREEN"$8/bibit\
                 \n"YELLOW"(Masukkan berapa banyak bibit yang ingin anda beli):", "Input", "Batal");
             }

@@ -2,7 +2,7 @@
 new Text:StressPurple[1]; 
 new Text: RobberyGlobalTD[5];
 new Text: gServerTextdraws[1];
-new Text: Mayoritas_WM[3];
+new Text: Imajinasi_WM[3];
 new Text: MRP_Warning[10];
 new Text: gServerMessage[7];
 new Text:AsuransiTD[5];
@@ -1379,7 +1379,7 @@ CreatePlayerTextDraws(playerid)
     PlayerTextDrawFont(playerid, KTAtextdraws[playerid][12], 1);
     PlayerTextDrawSetProportional(playerid, KTAtextdraws[playerid][12], 1);
 
-    KTAtextdraws[playerid][13] = CreatePlayerTextDraw(playerid, 443.000, 217.000, "Kepolisian Kota Mayoritas");
+    KTAtextdraws[playerid][13] = CreatePlayerTextDraw(playerid, 443.000, 217.000, "Kepolisian Kota Imajinasi");
     PlayerTextDrawLetterSize(playerid, KTAtextdraws[playerid][13], 0.188, 1.098);
     PlayerTextDrawAlignment(playerid, KTAtextdraws[playerid][13], 2);
     PlayerTextDrawColor(playerid, KTAtextdraws[playerid][13], 255);
@@ -1698,7 +1698,7 @@ CreatePlayerTextDraws(playerid)
     PlayerTextDrawFont(playerid, Watermarktextdraws[playerid][13], 1);
     PlayerTextDrawSetProportional(playerid, Watermarktextdraws[playerid][13], 1);
 
-    Watermarktextdraws[playerid][14] = CreatePlayerTextDraw(playerid, 328.799, 25.798, "Mayoritas");
+    Watermarktextdraws[playerid][14] = CreatePlayerTextDraw(playerid, 328.799, 25.798, "Imajinasi");
     PlayerTextDrawLetterSize(playerid, Watermarktextdraws[playerid][14], 0.270, 1.098);
     PlayerTextDrawAlignment(playerid, Watermarktextdraws[playerid][14], 2);
     PlayerTextDrawColor(playerid, Watermarktextdraws[playerid][14], -260013825);
@@ -2558,7 +2558,7 @@ CreatePlayerTextDraws(playerid)
     PlayerTextDrawFont(playerid, ktpTextdraws[playerid][12], 1);
     PlayerTextDrawSetProportional(playerid, ktpTextdraws[playerid][12], 1);
 
-    ktpTextdraws[playerid][13] = CreatePlayerTextDraw(playerid, 404.000, 234.000, "PEMERINTAH_KOTA_Mayoritas");
+    ktpTextdraws[playerid][13] = CreatePlayerTextDraw(playerid, 404.000, 234.000, "PEMERINTAH_KOTA_Imajinasi");
     PlayerTextDrawLetterSize(playerid, ktpTextdraws[playerid][13], 0.150, 1.299);
     PlayerTextDrawTextSize(playerid, ktpTextdraws[playerid][13], 400.000, 17.000);
     PlayerTextDrawAlignment(playerid, ktpTextdraws[playerid][13], 1);
@@ -2657,7 +2657,7 @@ CreatePlayerTextDraws(playerid)
     PlayerTextDrawFont(playerid, ktpTextdraws[playerid][21], 0);
     PlayerTextDrawSetProportional(playerid, ktpTextdraws[playerid][21], 1);
 
-    ktpTextdraws[playerid][22] = CreatePlayerTextDraw(playerid, 365.000, 314.000, "WARGA_NEGARA_Mayoritas");
+    ktpTextdraws[playerid][22] = CreatePlayerTextDraw(playerid, 365.000, 314.000, "WARGA_NEGARA_Imajinasi");
     PlayerTextDrawLetterSize(playerid, ktpTextdraws[playerid][22], 0.158, 1.098);
     PlayerTextDrawTextSize(playerid, ktpTextdraws[playerid][22], 400.000, 17.000);
     PlayerTextDrawAlignment(playerid, ktpTextdraws[playerid][22], 1);
@@ -2668,7 +2668,7 @@ CreatePlayerTextDraws(playerid)
     PlayerTextDrawFont(playerid, ktpTextdraws[playerid][22], 1);
     PlayerTextDrawSetProportional(playerid, ktpTextdraws[playerid][22], 1);
 
-    ktpTextdraws[playerid][23] = CreatePlayerTextDraw(playerid, 365.000, 322.000, "KARTU_TANDA_PENDUDUK_INI_RESMI_DIKELUARKAN_PEMERINTAH_Mayoritas");
+    ktpTextdraws[playerid][23] = CreatePlayerTextDraw(playerid, 365.000, 322.000, "KARTU_TANDA_PENDUDUK_INI_RESMI_DIKELUARKAN_PEMERINTAH_Imajinasi");
     PlayerTextDrawLetterSize(playerid, ktpTextdraws[playerid][23], 0.112, 0.898);
     PlayerTextDrawTextSize(playerid, ktpTextdraws[playerid][23], 620.000, 20.000);
     PlayerTextDrawAlignment(playerid, ktpTextdraws[playerid][23], 1);
@@ -2690,7 +2690,7 @@ CreatePlayerTextDraws(playerid)
     PlayerTextDrawFont(playerid, ktpTextdraws[playerid][24], 1);
     PlayerTextDrawSetProportional(playerid, ktpTextdraws[playerid][24], 1);
 
-    ktpTextdraws[playerid][25] = CreatePlayerTextDraw(playerid, 365.000, 336.000, "SEBAGAI_WARGA_Mayoritas");
+    ktpTextdraws[playerid][25] = CreatePlayerTextDraw(playerid, 365.000, 336.000, "SEBAGAI_WARGA_Imajinasi");
     PlayerTextDrawLetterSize(playerid, ktpTextdraws[playerid][25], 0.112, 0.898);
     PlayerTextDrawTextSize(playerid, ktpTextdraws[playerid][25], 620.000, 20.000);
     PlayerTextDrawAlignment(playerid, ktpTextdraws[playerid][25], 1);
@@ -2712,7 +2712,7 @@ CreatePlayerTextDraws(playerid)
     PlayerTextDrawFont(playerid, VR_ATMTD[playerid][0], 4);
     PlayerTextDrawSetProportional(playerid, VR_ATMTD[playerid][0], 1);
 
-    VR_ATMTD[playerid][1] = CreatePlayerTextDraw(playerid, 186.000, 111.000, "Mayoritas");
+    VR_ATMTD[playerid][1] = CreatePlayerTextDraw(playerid, 186.000, 111.000, "Imajinasi");
     PlayerTextDrawLetterSize(playerid, VR_ATMTD[playerid][1], 0.250, 1.399);
     PlayerTextDrawAlignment(playerid, VR_ATMTD[playerid][1], 1);
     PlayerTextDrawColor(playerid, VR_ATMTD[playerid][1], -1);
@@ -3183,7 +3183,7 @@ CreatePlayerTextDraws(playerid)
     PlayerTextDrawFont(playerid, VR_BANNEDTD[playerid][1], 4);
     PlayerTextDrawSetProportional(playerid, VR_BANNEDTD[playerid][1], 1);
 
-    VR_BANNEDTD[playerid][2] = CreatePlayerTextDraw(playerid, 116.000, 104.000, "Mayoritas Roleplay");
+    VR_BANNEDTD[playerid][2] = CreatePlayerTextDraw(playerid, 116.000, 104.000, "Imajinasi Roleplay");
     PlayerTextDrawLetterSize(playerid, VR_BANNEDTD[playerid][2], 0.300, 1.500);
     PlayerTextDrawAlignment(playerid, VR_BANNEDTD[playerid][2], 1);
     PlayerTextDrawColor(playerid, VR_BANNEDTD[playerid][2], -1);
@@ -3313,7 +3313,7 @@ CreatePlayerTextDraws(playerid)
     PlayerTextDrawFont(playerid, VR_BANNEDTD[playerid][14], 1);
     PlayerTextDrawSetProportional(playerid, VR_BANNEDTD[playerid][14], 1);
 
-    VR_BANNEDTD[playerid][15] = CreatePlayerTextDraw(playerid, 387.000, 172.000, "Mayoritas Roleplay");
+    VR_BANNEDTD[playerid][15] = CreatePlayerTextDraw(playerid, 387.000, 172.000, "Imajinasi Roleplay");
     PlayerTextDrawLetterSize(playerid, VR_BANNEDTD[playerid][15], 0.150, 1.100);
     PlayerTextDrawAlignment(playerid, VR_BANNEDTD[playerid][15], 1);
     PlayerTextDrawColor(playerid, VR_BANNEDTD[playerid][15], -1);
@@ -4599,7 +4599,7 @@ CreateTextDraw()
     TextDrawFont(gServerMessage[4], 1);
     TextDrawSetProportional(gServerMessage[4], 1);
 
-    gServerMessage[5] = TextDrawCreate(379.000, 104.000, "Admin By: Mayoritas - Exeren");
+    gServerMessage[5] = TextDrawCreate(379.000, 104.000, "Admin By: Imajinasi - Exeren");
     TextDrawLetterSize(gServerMessage[5], 0.189, 1.298);
     TextDrawAlignment(gServerMessage[5], 2);
     TextDrawColor(gServerMessage[5], -1);
@@ -4701,7 +4701,7 @@ CreateTextDraw()
     TextDrawFont(MRP_Warning[7], 4);
     TextDrawSetProportional(MRP_Warning[7], 1);
 
-    MRP_Warning[8] = TextDrawCreate(256.000, 193.000, "ANAK BUAH WAHYU DILARANG MAIN DI MayoritasTOD");
+    MRP_Warning[8] = TextDrawCreate(256.000, 193.000, "ANAK BUAH WAHYU DILARANG MAIN DI ImajinasiTOD");
     TextDrawLetterSize(MRP_Warning[8], 0.250, 1.299);
     TextDrawTextSize(MRP_Warning[8], 381.000, 7.000);
     TextDrawAlignment(MRP_Warning[8], 1);
@@ -4712,7 +4712,7 @@ CreateTextDraw()
     TextDrawFont(MRP_Warning[8], 1);
     TextDrawSetProportional(MRP_Warning[8], 1);
 
-    MRP_Warning[9] = TextDrawCreate(397.000, 242.000, "Warned by: Mayoritas - exeren.");
+    MRP_Warning[9] = TextDrawCreate(397.000, 242.000, "Warned by: Imajinasi - exeren.");
     TextDrawLetterSize(MRP_Warning[9], 0.159, 1.098);
     TextDrawTextSize(MRP_Warning[9], 462.000, -5.000);
     TextDrawAlignment(MRP_Warning[9], 3);
@@ -4724,37 +4724,37 @@ CreateTextDraw()
     TextDrawSetProportional(MRP_Warning[9], 1);
  /*   
     //nama server
-    Mayoritas_WM[0] = TextDrawCreate(285.000, 6.000, "");
-    TextDrawLetterSize(Mayoritas_WM[0], 0.469, 2.199);
-    TextDrawAlignment(Mayoritas_WM[0], 1);
-    TextDrawColor(Mayoritas_WM[0], -65281);
-    TextDrawSetShadow(Mayoritas_WM[0], 1);
-    TextDrawSetOutline(Mayoritas_WM[0], 1);
-    TextDrawBackgroundColor(Mayoritas_WM[0], 255);
-    TextDrawFont(Mayoritas_WM[0], 0);
-    TextDrawSetProportional(Mayoritas_WM[0], 1);
+    Imajinasi_WM[0] = TextDrawCreate(285.000, 6.000, "");
+    TextDrawLetterSize(Imajinasi_WM[0], 0.469, 2.199);
+    TextDrawAlignment(Imajinasi_WM[0], 1);
+    TextDrawColor(Imajinasi_WM[0], -65281);
+    TextDrawSetShadow(Imajinasi_WM[0], 1);
+    TextDrawSetOutline(Imajinasi_WM[0], 1);
+    TextDrawBackgroundColor(Imajinasi_WM[0], 255);
+    TextDrawFont(Imajinasi_WM[0], 0);
+    TextDrawSetProportional(Imajinasi_WM[0], 1);
 
-    Mayoritas_WM[1] = TextDrawCreate(298.000, 11.000, "Mayoritas");
-    TextDrawLetterSize(Mayoritas_WM[1], 0.199, 1.098);
-    TextDrawTextSize(Mayoritas_WM[1], -3.000, 0.000);
-    TextDrawAlignment(Mayoritas_WM[1], 1);
-    TextDrawColor(Mayoritas_WM[1], -65281);
-    TextDrawSetShadow(Mayoritas_WM[1], 1);
-    TextDrawSetOutline(Mayoritas_WM[1], 0);
-    TextDrawBackgroundColor(Mayoritas_WM[1], 150);
-    TextDrawFont(Mayoritas_WM[1], 1);
-    TextDrawSetProportional(Mayoritas_WM[1], 1);
+    Imajinasi_WM[1] = TextDrawCreate(298.000, 11.000, "Imajinasi");
+    TextDrawLetterSize(Imajinasi_WM[1], 0.199, 1.098);
+    TextDrawTextSize(Imajinasi_WM[1], -3.000, 0.000);
+    TextDrawAlignment(Imajinasi_WM[1], 1);
+    TextDrawColor(Imajinasi_WM[1], -65281);
+    TextDrawSetShadow(Imajinasi_WM[1], 1);
+    TextDrawSetOutline(Imajinasi_WM[1], 0);
+    TextDrawBackgroundColor(Imajinasi_WM[1], 150);
+    TextDrawFont(Imajinasi_WM[1], 1);
+    TextDrawSetProportional(Imajinasi_WM[1], 1);
 
-    Mayoritas_WM[2] = TextDrawCreate(303.000, 18.000, "ROLEPLAY");
-    TextDrawLetterSize(Mayoritas_WM[2], 0.178, 1.098);
-    TextDrawTextSize(Mayoritas_WM[2], -3.000, 0.000);
-    TextDrawAlignment(Mayoritas_WM[2], 1);
-    TextDrawColor(Mayoritas_WM[2], -1);
-    TextDrawSetShadow(Mayoritas_WM[2], 1);
-    TextDrawSetOutline(Mayoritas_WM[2], 0);
-    TextDrawBackgroundColor(Mayoritas_WM[2], 255);
-    TextDrawFont(Mayoritas_WM[2], 1);
-    TextDrawSetProportional(Mayoritas_WM[2], 1);
+    Imajinasi_WM[2] = TextDrawCreate(303.000, 18.000, "ROLEPLAY");
+    TextDrawLetterSize(Imajinasi_WM[2], 0.178, 1.098);
+    TextDrawTextSize(Imajinasi_WM[2], -3.000, 0.000);
+    TextDrawAlignment(Imajinasi_WM[2], 1);
+    TextDrawColor(Imajinasi_WM[2], -1);
+    TextDrawSetShadow(Imajinasi_WM[2], 1);
+    TextDrawSetOutline(Imajinasi_WM[2], 0);
+    TextDrawBackgroundColor(Imajinasi_WM[2], 255);
+    TextDrawFont(Imajinasi_WM[2], 1);
+    TextDrawSetProportional(Imajinasi_WM[2], 1);
 */
 //td nama
 
@@ -4947,7 +4947,7 @@ CreateTextDraw()
     TextDrawFont(RobberyGlobalTD[2], 4);
     TextDrawSetProportional(RobberyGlobalTD[2], 1);
 
-    RobberyGlobalTD[3] = TextDrawCreate(44.000, 293.000, "Mayoritas Roleplay~n~Perampokan Warung");
+    RobberyGlobalTD[3] = TextDrawCreate(44.000, 293.000, "Imajinasi Roleplay~n~Perampokan Warung");
     TextDrawLetterSize(RobberyGlobalTD[3], 0.129, 0.999);
     TextDrawAlignment(RobberyGlobalTD[3], 1);
     TextDrawColor(RobberyGlobalTD[3], -1);
@@ -5127,7 +5127,7 @@ CreateTextDraw()
     TextDrawFont(KickZ2[6], 1);
     TextDrawSetProportional(KickZ2[6], 1);
 
-    KickZ2[7] = TextDrawCreate(200.000, 205.000, "[MayoritasRoleplay]");
+    KickZ2[7] = TextDrawCreate(200.000, 205.000, "[ImajinasiRoleplay]");
     TextDrawLetterSize(KickZ2[7], 0.170, 0.999);
     TextDrawAlignment(KickZ2[7], 1);
     TextDrawColor(KickZ2[7], -1);

@@ -261,7 +261,7 @@ CMD:createdoor(playerid, params[])
 	{
 		format(shstr, sizeof(shstr), "%s#%d\t%s\n", shstr, i, DoorData[i][dName]);
 	}
-	Dialog_Show(playerid, DIALOG_GOTO_DOOR, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Dynamic Door", shstr, "Select", "Cancel");
+	Dialog_Show(playerid, DIALOG_GOTO_DOOR, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Dynamic Door", shstr, "Select", "Cancel");
 	return 1;
 }
 

@@ -251,15 +251,15 @@ hook ClickDynPlayerTextdraw(playerid, PlayerText: playertextid)
 {
 	if(playertextid == VR_ATMTD[playerid][36])// Withdraw
 	{
-		ShowPlayerDialog(playerid, DIALOG_ATM_WITHDRAW, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fleeca Bank", "Mohon masukan berapa jumlah uang yang anda ingin anda ambil:", "Submit", "Batal");
+		ShowPlayerDialog(playerid, DIALOG_ATM_WITHDRAW, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fleeca Bank", "Mohon masukan berapa jumlah uang yang anda ingin anda ambil:", "Submit", "Batal");
 	}
 	if(playertextid == VR_ATMTD[playerid][37])// Deposit
 	{
-		ShowPlayerDialog(playerid, DIALOG_ATM_DEPOSIT, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fleeca Bank", "Mohon masukan berapa jumlah uang yang ingin anda masukkan:", "Submit", "Batal");
+		ShowPlayerDialog(playerid, DIALOG_ATM_DEPOSIT, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fleeca Bank", "Mohon masukan berapa jumlah uang yang ingin anda masukkan:", "Submit", "Batal");
 	}
 	if(playertextid == VR_ATMTD[playerid][38])// Transfer
 	{
-		ShowPlayerDialog(playerid, DIALOG_ATM_TRANSFER, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fleeca Bank", "Mohon masukkan nomor rekening yang ingin anda transfer:", "Submit", "Batal");
+		ShowPlayerDialog(playerid, DIALOG_ATM_TRANSFER, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fleeca Bank", "Mohon masukkan nomor rekening yang ingin anda transfer:", "Submit", "Batal");
 	}
 	if(playertextid == VR_ATMTD[playerid][43])// Log Out
 	{
@@ -276,10 +276,10 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		{
 			if(!response) return 1;
 
-			if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_ATM_TRANSFER, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fleeca Bank", 
+			if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_ATM_TRANSFER, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fleeca Bank", 
 			"Error: Harus diisi tidak dapat kosong!\nMohon masukkan nomor rekening yang ingin anda transfer:", "Submit", "Batal");
 
-			if(!IsNumeric(inputtext)) return ShowPlayerDialog(playerid, DIALOG_ATM_TRANSFER, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fleeca Bank", 
+			if(!IsNumeric(inputtext)) return ShowPlayerDialog(playerid, DIALOG_ATM_TRANSFER, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fleeca Bank", 
 			"Error: Hanya dapat diisi angka!\nMohon masukkan nomor rekening yang ingin anda transfer:", "Submit", "Batal");
 
 			new query[128];
@@ -293,19 +293,19 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
 			if(isnull(inputtext)) 
 			{
-				return ShowPlayerDialog(playerid, DIALOG_ATM_TRANSFER1, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fleeca Bank", 
+				return ShowPlayerDialog(playerid, DIALOG_ATM_TRANSFER1, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fleeca Bank", 
 				"Error: Harus diisi tidak dapat kosong!\nMohon masukkan nominal uang yang ingin anda transfer:", "Submit", "Batal");
 			}
 
 			if(!IsNumeric(inputtext)) 
 			{
-				return ShowPlayerDialog(playerid, DIALOG_ATM_TRANSFER1, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fleeca Bank", 
+				return ShowPlayerDialog(playerid, DIALOG_ATM_TRANSFER1, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fleeca Bank", 
 				"Error: Hanya dapat diisi angka!\nMohon masukkan nominal uang yang ingin anda transfer:", "Submit", "Batal");
 			}
 
 			if(strval(inputtext) < 1 || strval(inputtext) > AccountData[playerid][pBankMoney]) 
 			{
-				return ShowPlayerDialog(playerid, DIALOG_ATM_TRANSFER1, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fleeca Bank", 
+				return ShowPlayerDialog(playerid, DIALOG_ATM_TRANSFER1, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fleeca Bank", 
 				"Error: Jumlah tidak valid!\nMohon masukkan nominal uang yang ingin anda transfer:", "Submit", "Batal");
 			}
 
@@ -332,14 +332,14 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			
 			if(isnull(inputtext))
 			{
-				ShowPlayerDialog(playerid, DIALOG_ATM_DEPOSIT, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fleeca Bank", 
+				ShowPlayerDialog(playerid, DIALOG_ATM_DEPOSIT, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fleeca Bank", 
 				"Error: Tidak dapat diisi kosong!\nMohon masukan berapa jumlah uang yang ingin anda masukkan:", "Submit", "Batal");
 				return 1;
 			}
 
 			if(!IsNumeric(inputtext))
 			{
-				ShowPlayerDialog(playerid, DIALOG_ATM_DEPOSIT, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fleeca Bank", 
+				ShowPlayerDialog(playerid, DIALOG_ATM_DEPOSIT, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fleeca Bank", 
 				"Error: Hanya dapat diisi angka!\nMohon masukan berapa jumlah uang yang ingin anda masukkan:", "Submit", "Batal");
 				return 1;
 			}
@@ -364,14 +364,14 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
 			if(isnull(inputtext))
 			{
-				ShowPlayerDialog(playerid, DIALOG_ATM_WITHDRAW, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fleeca Bank", 
+				ShowPlayerDialog(playerid, DIALOG_ATM_WITHDRAW, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fleeca Bank", 
 				"Error: Tidak dapat diisi kosong!\nMohon masukan berapa jumlah uang yang anda ingin anda ambil:", "Submit", "Batal");
 				return 1;
 			}
 
 			if(!IsNumeric(inputtext))
 			{
-				ShowPlayerDialog(playerid, DIALOG_ATM_WITHDRAW, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fleeca Bank", 
+				ShowPlayerDialog(playerid, DIALOG_ATM_WITHDRAW, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fleeca Bank", 
 				"Error: Hanya dapat diisi angka!\nMohon masukan berapa jumlah uang yang anda ingin anda ambil:", "Submit", "Batal");
 				return 1;
 			}
@@ -406,7 +406,7 @@ FUNC::SearchRekening(playerid, norek)
 		new ownerRek = GetRekeningOwner(norek);
         if(!IsPlayerConnected(ownerRek)) return ShowTDN(playerid, NOTIFICATION_ERROR, "Pemain tersebut tidak terkoneksi ke server!");
 		AccountData[playerid][pTransferRek] = norek;
-		ShowPlayerDialog(playerid, DIALOG_ATM_TRANSFER1, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fleeca Bank", "Mohon masukkan nominal uang yang ingin anda transfer:", "Submit", "Batal");
+		ShowPlayerDialog(playerid, DIALOG_ATM_TRANSFER1, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fleeca Bank", "Mohon masukkan nominal uang yang ingin anda transfer:", "Submit", "Batal");
 	}
 	return 1;
 }

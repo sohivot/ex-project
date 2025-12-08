@@ -111,7 +111,7 @@ CreateSpawnTextdraws()
     TextDrawFont(serverSpawn[9], 1);
     TextDrawSetProportional(serverSpawn[9], 1);
 
-    serverSpawn[10] = TextDrawCreate(99.000, 132.000, "Bandara Mayoritas");
+    serverSpawn[10] = TextDrawCreate(99.000, 132.000, "Bandara Imajinasi");
     TextDrawLetterSize(serverSpawn[10], 0.200, 1.199);
     TextDrawAlignment(serverSpawn[10], 2);
     TextDrawColor(serverSpawn[10], -1);
@@ -121,7 +121,7 @@ CreateSpawnTextdraws()
     TextDrawFont(serverSpawn[10], 1);
     TextDrawSetProportional(serverSpawn[10], 1);
 
-    serverSpawn[11] = TextDrawCreate(99.000, 132.000, "Bandara Mayoritas");
+    serverSpawn[11] = TextDrawCreate(99.000, 132.000, "Bandara Imajinasi");
     TextDrawLetterSize(serverSpawn[11], 0.200, 1.199);
     TextDrawAlignment(serverSpawn[11], 2);
     TextDrawColor(serverSpawn[11], -1);
@@ -131,7 +131,7 @@ CreateSpawnTextdraws()
     TextDrawFont(serverSpawn[11], 1);
     TextDrawSetProportional(serverSpawn[11], 1);
 
-    serverSpawn[12] = TextDrawCreate(99.000, 155.000, "Pelabuhan Mayoritas");
+    serverSpawn[12] = TextDrawCreate(99.000, 155.000, "Pelabuhan Imajinasi");
     TextDrawLetterSize(serverSpawn[12], 0.200, 1.199);
     TextDrawAlignment(serverSpawn[12], 2);
     TextDrawColor(serverSpawn[12], -1);
@@ -141,7 +141,7 @@ CreateSpawnTextdraws()
     TextDrawFont(serverSpawn[12], 1);
     TextDrawSetProportional(serverSpawn[12], 1);
 
-    serverSpawn[13] = TextDrawCreate(99.000, 179.000, "Carrnaval Mayoritas");
+    serverSpawn[13] = TextDrawCreate(99.000, 179.000, "Carrnaval Imajinasi");
     TextDrawLetterSize(serverSpawn[13], 0.200, 1.199);
     TextDrawAlignment(serverSpawn[13], 2);
     TextDrawColor(serverSpawn[13], -1);

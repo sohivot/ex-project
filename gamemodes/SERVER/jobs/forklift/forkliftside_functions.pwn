@@ -105,7 +105,7 @@ hook OnPlayerStateChange(playerid, newstate, oldstate)
         if(!AccountData[playerid][pForkliftTime])
         {
             SetCameraBehindPlayer(playerid);
-            ShowPlayerDialog(playerid, DIALOG_FORKLIFT_START, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Forklift Sidejob",
+            ShowPlayerDialog(playerid, DIALOG_FORKLIFT_START, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Forklift Sidejob",
             "Apakah anda ingin memulai tugas forklift?\nAnda akan menerima bayaran setelah membongkar 10 create", "Iya", "Tidak");
         }
         else

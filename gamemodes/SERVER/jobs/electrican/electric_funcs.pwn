@@ -202,7 +202,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
         {
             if(ToggleElectric == 1) return ShowTDN(playerid, NOTIFICATION_ERROR, "Job Electric sedang dimatikan karena alasan tertentu.");
             
-            Dialog_Show(playerid, ElectricanMenu, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Electrican Job",
+            Dialog_Show(playerid, ElectricanMenu, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Electrican Job",
             "Membuat group baru\
             \nUndang ke dalam group\
             \nKeluarkan dari group\
@@ -240,7 +240,7 @@ hook OnPlayerEnterDynamicCP(playerid, STREAMER_TAG_CP:checkpointid)
     {
         if(checkpointid == ElectricCheckpoint[playerid][0])
         {
-            Dialog_Show(playerid, FixElectric1, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+            Dialog_Show(playerid, FixElectric1, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
             "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
             \n\n"RED"[KUNING] "GREEN"[BIRU]" ""WHITE"[MERAH]\
             \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -248,7 +248,7 @@ hook OnPlayerEnterDynamicCP(playerid, STREAMER_TAG_CP:checkpointid)
         
         if(checkpointid == ElectricCheckpoint[playerid][1])
         {
-            Dialog_Show(playerid, FixElectric2, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+            Dialog_Show(playerid, FixElectric2, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
             "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
             \n\n"GREEN"[MERAH] "YELLOW"[HIJAU]" ""RED"[UNGU]\
             \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -256,7 +256,7 @@ hook OnPlayerEnterDynamicCP(playerid, STREAMER_TAG_CP:checkpointid)
         
         if(checkpointid == ElectricCheckpoint[playerid][2])
         {
-            Dialog_Show(playerid, FixElectric3, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+            Dialog_Show(playerid, FixElectric3, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
             "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
             \n\n"PURPLE"[ABU] "RED"[KUNING]" ""YELLOW"[UNGU]\
             \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -264,7 +264,7 @@ hook OnPlayerEnterDynamicCP(playerid, STREAMER_TAG_CP:checkpointid)
 
         if(checkpointid == ElectricCheckpoint[playerid][3])
         {
-            Dialog_Show(playerid, FixElectric4, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+            Dialog_Show(playerid, FixElectric4, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
             "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
             \n\n"RED"[HIJAU] "YELLOW"[UNGU]" ""GREEN"[MERAH]\
             \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -272,7 +272,7 @@ hook OnPlayerEnterDynamicCP(playerid, STREAMER_TAG_CP:checkpointid)
 
         if(checkpointid == ElectricCheckpoint[playerid][4])
         {
-            Dialog_Show(playerid, FixElectric5, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+            Dialog_Show(playerid, FixElectric5, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
             "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
             \n\n"YELLOW"[KUNING] "PURPLE"[UNGU]" ""RED"[KUNING]\
             \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -280,7 +280,7 @@ hook OnPlayerEnterDynamicCP(playerid, STREAMER_TAG_CP:checkpointid)
 
         if(checkpointid == ElectricCheckpoint[playerid][5])
         {
-            Dialog_Show(playerid, FixElectric6, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+            Dialog_Show(playerid, FixElectric6, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
             "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
             \n\n"PURPLE"[KUNING] "PURPLE"[BIRU]" ""RED"[HIJAU]\
             \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -288,7 +288,7 @@ hook OnPlayerEnterDynamicCP(playerid, STREAMER_TAG_CP:checkpointid)
 
         if(checkpointid == ElectricCheckpoint[playerid][6])
         {
-            Dialog_Show(playerid, FixElectric7, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+            Dialog_Show(playerid, FixElectric7, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
             "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
             \n\n"RED"[KUNING] "BLACK"[BIRU]" ""GREEN"[MERAH]\
             \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -296,7 +296,7 @@ hook OnPlayerEnterDynamicCP(playerid, STREAMER_TAG_CP:checkpointid)
 
         if(checkpointid == ElectricCheckpoint[playerid][7])
         {
-            Dialog_Show(playerid, FixElectric8, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+            Dialog_Show(playerid, FixElectric8, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
             "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
             \n\n"BLUE"[HIJAU] "PURPLE"[KUNING]" ""GREEN"[MERAH]\
             \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -304,7 +304,7 @@ hook OnPlayerEnterDynamicCP(playerid, STREAMER_TAG_CP:checkpointid)
 
         if(checkpointid == ElectricCheckpoint[playerid][8])
         {
-            Dialog_Show(playerid, FixElectric9, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+            Dialog_Show(playerid, FixElectric9, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
             "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
             \n\n"BLUE"[KUNING] "RED"[UNGU]" ""GREEN"[MERAH]\
             \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -312,7 +312,7 @@ hook OnPlayerEnterDynamicCP(playerid, STREAMER_TAG_CP:checkpointid)
 
         if(checkpointid == ElectricCheckpoint[playerid][9])
         {
-            Dialog_Show(playerid, FixElectric10, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+            Dialog_Show(playerid, FixElectric10, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
             "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
             \n\n"RED"[KUNING] "GREEN"[BIRU]" ""PURPLE"[MERAH]\
             \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -320,7 +320,7 @@ hook OnPlayerEnterDynamicCP(playerid, STREAMER_TAG_CP:checkpointid)
         
         if(checkpointid == ElectricCheckpoint[playerid][10])
         {
-            Dialog_Show(playerid, FixElectric11, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+            Dialog_Show(playerid, FixElectric11, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
             "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
             \n\n"YELLOW"[UNGU] "YELLOW"[BIRU]" ""RED"[ORANGE]\
             \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -328,7 +328,7 @@ hook OnPlayerEnterDynamicCP(playerid, STREAMER_TAG_CP:checkpointid)
         
         if(checkpointid == ElectricCheckpoint[playerid][11])
         {
-            Dialog_Show(playerid, FixElectric12, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+            Dialog_Show(playerid, FixElectric12, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
             "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
             \n\n"LIGHTGREY"[ABU] "GREEN"[BIRU]" ""RED"[YELLOW]\
             \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -336,7 +336,7 @@ hook OnPlayerEnterDynamicCP(playerid, STREAMER_TAG_CP:checkpointid)
         
         if(checkpointid == ElectricCheckpoint[playerid][12])
         {
-            Dialog_Show(playerid, FixElectric13, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+            Dialog_Show(playerid, FixElectric13, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
             "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
             \n\n"ORANGE"[MERAH] "GREEN"[OREN]" ""PURPLE"[ABU]\
             \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -344,7 +344,7 @@ hook OnPlayerEnterDynamicCP(playerid, STREAMER_TAG_CP:checkpointid)
         
         if(checkpointid == ElectricCheckpoint[playerid][13])
         {
-            Dialog_Show(playerid, FixElectric14, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+            Dialog_Show(playerid, FixElectric14, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
             "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
             \n\n"WHITE"[KUNING] "BLUE"[HIJAU]" ""YELLOW"[MERAH]\
             \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -352,7 +352,7 @@ hook OnPlayerEnterDynamicCP(playerid, STREAMER_TAG_CP:checkpointid)
         
         if(checkpointid == ElectricCheckpoint[playerid][14])
         {
-            Dialog_Show(playerid, FixElectric15, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+            Dialog_Show(playerid, FixElectric15, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
             "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
             \n\n"ORANGE"[OREN] "RED"[BIRU]" ""YELLOW"[MERAH]\
             \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -360,7 +360,7 @@ hook OnPlayerEnterDynamicCP(playerid, STREAMER_TAG_CP:checkpointid)
         
         if(checkpointid == ElectricCheckpoint[playerid][15])
         {
-            Dialog_Show(playerid, FixElectric16, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+            Dialog_Show(playerid, FixElectric16, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
             "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
             \n\n"RED"[KUNING] "BLUE"[HIJAU]" ""GREEN"[OREN]\
             \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -368,7 +368,7 @@ hook OnPlayerEnterDynamicCP(playerid, STREAMER_TAG_CP:checkpointid)
         
         if(checkpointid == ElectricCheckpoint[playerid][16])
         {
-            Dialog_Show(playerid, FixElectric17, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+            Dialog_Show(playerid, FixElectric17, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
             "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
             \n\n"RED"[KUNING] "LIGHTGREY"[UNGU]" ""PURPLE"[HIJAU]\
             \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -376,7 +376,7 @@ hook OnPlayerEnterDynamicCP(playerid, STREAMER_TAG_CP:checkpointid)
         
         if(checkpointid == ElectricCheckpoint[playerid][17])
         {
-            Dialog_Show(playerid, FixElectric18, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+            Dialog_Show(playerid, FixElectric18, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
             "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
             \n\n"BLUE"[OREN] "RED"[BIRU]" ""YELLOW"[MERAH]\
             \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -384,7 +384,7 @@ hook OnPlayerEnterDynamicCP(playerid, STREAMER_TAG_CP:checkpointid)
         
         if(checkpointid == ElectricCheckpoint[playerid][18])
         {
-            Dialog_Show(playerid, FixElectric19, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+            Dialog_Show(playerid, FixElectric19, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
             "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
             \n\n"PURPLE"[HIJAU] "RED"[KUNING]" ""PURPLE"[MERAH]\
             \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -392,7 +392,7 @@ hook OnPlayerEnterDynamicCP(playerid, STREAMER_TAG_CP:checkpointid)
         
         if(checkpointid == ElectricCheckpoint[playerid][19])
         {
-            Dialog_Show(playerid, FixElectric20, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+            Dialog_Show(playerid, FixElectric20, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
             "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
             \n\n"RED"[KUNING] "RED"[BIRU]" ""PURPLE"[OREN]\
             \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -400,7 +400,7 @@ hook OnPlayerEnterDynamicCP(playerid, STREAMER_TAG_CP:checkpointid)
         
         if(checkpointid == ElectricCheckpoint[playerid][20])
         {
-            Dialog_Show(playerid, FixElectric21, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+            Dialog_Show(playerid, FixElectric21, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
             "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
             \n\n"YELLOW"[UNGU] "RED"[OREN]" ""ORANGE"[HITAM]\
             \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -408,7 +408,7 @@ hook OnPlayerEnterDynamicCP(playerid, STREAMER_TAG_CP:checkpointid)
         
         if(checkpointid == ElectricCheckpoint[playerid][21])
         {
-            Dialog_Show(playerid, FixElectric22, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+            Dialog_Show(playerid, FixElectric22, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
             "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
             \n\n"GREEN"[PUTIH] "GREEN"[UNGU]" ""ORANGE"[OREN]\
             \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -416,7 +416,7 @@ hook OnPlayerEnterDynamicCP(playerid, STREAMER_TAG_CP:checkpointid)
         
         if(checkpointid == ElectricCheckpoint[playerid][22])
         {
-            Dialog_Show(playerid, FixElectric23, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+            Dialog_Show(playerid, FixElectric23, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
             "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
             \n\n"WHITE"[PUTIH] "YELLOW"[BIRU]" ""RED"[KUNING]\
             \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -424,7 +424,7 @@ hook OnPlayerEnterDynamicCP(playerid, STREAMER_TAG_CP:checkpointid)
         
         if(checkpointid == ElectricCheckpoint[playerid][23])
         {
-            Dialog_Show(playerid, FixElectric24, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+            Dialog_Show(playerid, FixElectric24, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
             "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
             \n\n"ORANGE"[OREN] "RED"[MERAH]" ""GREEN"[KUNING]\
             \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -432,7 +432,7 @@ hook OnPlayerEnterDynamicCP(playerid, STREAMER_TAG_CP:checkpointid)
         
         if(checkpointid == ElectricCheckpoint[playerid][24])
         {
-            Dialog_Show(playerid, FixElectric25, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+            Dialog_Show(playerid, FixElectric25, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
             "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
             \n\n"BLUE"[KUNING] "ORANGE"[BIRU]" ""PURPLE"[HITAM]\
             \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -440,7 +440,7 @@ hook OnPlayerEnterDynamicCP(playerid, STREAMER_TAG_CP:checkpointid)
         
         if(checkpointid == ElectricCheckpoint[playerid][25])
         {
-            Dialog_Show(playerid, FixElectric26, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+            Dialog_Show(playerid, FixElectric26, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
             "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
             \n\n"YELLOW"[KUNING] "PURPLE"[MERAH]" ""LIGHTGREY"[ABU]\
             \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -448,7 +448,7 @@ hook OnPlayerEnterDynamicCP(playerid, STREAMER_TAG_CP:checkpointid)
         
         if(checkpointid == ElectricCheckpoint[playerid][26])
         {
-            Dialog_Show(playerid, FixElectric27, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+            Dialog_Show(playerid, FixElectric27, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
             "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
             \n\n"RED"[KUNING] "GREEN"[BIRU]" ""PURPLE"[MERAH]\
             \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -456,7 +456,7 @@ hook OnPlayerEnterDynamicCP(playerid, STREAMER_TAG_CP:checkpointid)
         
         if(checkpointid == ElectricCheckpoint[playerid][27])
         {
-            Dialog_Show(playerid, FixElectric28, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+            Dialog_Show(playerid, FixElectric28, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
             "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
             \n\n"PURPLE"[KUNING] "YELLOW"[BIRU]" ""BLUE"[MERAH]\
             \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -464,7 +464,7 @@ hook OnPlayerEnterDynamicCP(playerid, STREAMER_TAG_CP:checkpointid)
         
         if(checkpointid == ElectricCheckpoint[playerid][28])
         {
-            Dialog_Show(playerid, FixElectric29, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+            Dialog_Show(playerid, FixElectric29, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
             "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
             \n\n"GREEN"[KUNING] "WHITE"[BIRU]" ""ORANGE"[MERAH]\
             \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -472,7 +472,7 @@ hook OnPlayerEnterDynamicCP(playerid, STREAMER_TAG_CP:checkpointid)
         
         if(checkpointid == ElectricCheckpoint[playerid][29])
         {
-            Dialog_Show(playerid, FixElectric30, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+            Dialog_Show(playerid, FixElectric30, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
             "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
             \n\n"YELLOW"[KUNING] "YELLOW"[BIRU]" ""PURPLE"[MERAH]\
             \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -490,22 +490,22 @@ Dialog:ElectricanMenu(playerid, response, listitem, inputtext[])
         {
             case 0: // Buat Group Baru
             {
-                Dialog_Show(playerid, ElectricanInputGroup, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Create Group",
+                Dialog_Show(playerid, ElectricanInputGroup, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Create Group",
                 "Harap masukkan nama group anda dibawah sini:", "Input", "Cancel");
             }
             case 1: // Invite orang
             {
-                Dialog_Show(playerid, ElectricInvite, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Create Group",
+                Dialog_Show(playerid, ElectricInvite, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Create Group",
                 "Harap masukkan player id yang ingin kamu undang ke group:", "Invite", "Cancel");
             }
             case 2: // Kick Group Member
             {
-                Dialog_Show(playerid, ElectricKick, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Create Group",
+                Dialog_Show(playerid, ElectricKick, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Create Group",
                 "Harap masukkan player id yang ingin kamu kick dari group anda:", "Invite", "Cancel");
             }
             case 3: // Join Group Member
             {
-                Dialog_Show(playerid, ElectricJoinGroup, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Create Group",
+                Dialog_Show(playerid, ElectricJoinGroup, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Create Group",
                 "Harap masukkan group id job yang ingin anda ikuti:", "Invite", "Cancel");
             }
             case 4: // Start Job
@@ -613,10 +613,10 @@ Dialog:ElectricJoinGroup(playerid, response, listitem, inputtext[])
     if(AccountData[playerid][pInjured]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda sedang pingsan!");
     if(PlayerElectricJob[playerid][ElectricWithPlayerID] != INVALID_PLAYER_ID) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda sudah berada di dalam grup!");
     
-    if(isnull(inputtext)) return Dialog_Show(playerid, ElectricJoinGroup, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Create Group",
+    if(isnull(inputtext)) return Dialog_Show(playerid, ElectricJoinGroup, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Create Group",
     "Error: Tidak dapat diisi kosong!\nHarap masukkan group id job yang ingin anda ikuti:", "Invite", "Cancel");
 
-    if(!IsNumeric(inputtext)) return Dialog_Show(playerid, ElectricJoinGroup, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Create Group",
+    if(!IsNumeric(inputtext)) return Dialog_Show(playerid, ElectricJoinGroup, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Create Group",
     "Error: Hanya dapat diisi angka!\nHarap masukkan group id job yang ingin anda ikuti:", "Invite", "Cancel");
     
     new bool: found = false;
@@ -645,15 +645,15 @@ Dialog:ElectricKick(playerid, response, listitem, inputtext[])
     if(!response) return Info(playerid, "Anda telah membatalkan pilihan!");
     if(PlayerElectricJob[playerid][ElectricGroup][0] == EOS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda tidak memiliki group di pekerjaan ini!");
 
-    if(isnull(inputtext)) return Dialog_Show(playerid, ElectricKick, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Create Group",
+    if(isnull(inputtext)) return Dialog_Show(playerid, ElectricKick, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Create Group",
     "Error: Tidak dapat diisi kosong!\nHarap masukkan player id yang ingin kamu kick dari group anda:", "Invite", "Cancel");
 
-    if(!IsNumeric(inputtext)) return Dialog_Show(playerid, ElectricKick, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Create Group",
+    if(!IsNumeric(inputtext)) return Dialog_Show(playerid, ElectricKick, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Create Group",
     "Error: Hanya dapat diisi angka!\nHarap masukkan player id yang ingin kamu kick dari group anda:", "Invite", "Cancel");    
 
     new otherid = strval(inputtext);
 
-    if(PlayerElectricJob[otherid][ElectricWithPlayerID] != playerid) return Dialog_Show(playerid, ElectricKick, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Create Group",
+    if(PlayerElectricJob[otherid][ElectricWithPlayerID] != playerid) return Dialog_Show(playerid, ElectricKick, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Create Group",
     "Error: Pemain tersebut tidak berada di dalam group anda!\nHarap masukkan player id yang ingin kamu kick dari group anda:", "Invite", "Cancel");
 
     PlayerElectricJob[playerid][ElectricWithPlayerID] = INVALID_PLAYER_ID;
@@ -668,13 +668,13 @@ Dialog:ElectricanInputGroup(playerid, response, listitem, inputtext[])
     if(!response) return Info(playerid, "Anda telah membatalkan pilihan!");
     if(AccountData[playerid][pInjured]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda sedang pingsan!");
 
-    if(isnull(inputtext)) return Dialog_Show(playerid, ElectricanInputGroup, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Create Group",
+    if(isnull(inputtext)) return Dialog_Show(playerid, ElectricanInputGroup, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Create Group",
     "Error: Tidak dapat diisi kosong!\nHarap masukkan nama group anda dibawah sini:", "Input", "Cancel");
 
-    if(IsNumeric(inputtext)) return Dialog_Show(playerid, ElectricanInputGroup, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Create Group",
+    if(IsNumeric(inputtext)) return Dialog_Show(playerid, ElectricanInputGroup, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Create Group",
     "Error: Tidak dapat diisi angka!\nHarap masukkan nama group anda dibawah sini:", "Input", "Cancel");
 
-    if(strlen(inputtext) < 7) return Dialog_Show(playerid, ElectricanInputGroup, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Create Group",
+    if(strlen(inputtext) < 7) return Dialog_Show(playerid, ElectricanInputGroup, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Create Group",
     "Error: Nama Group setidaknya lebih dari 7 huruf!\nHarap masukkan nama group anda dibawah sini:", "Input", "Cancel");
 
     PlayerElectricJob[playerid][ElectricLeader] = playerid;
@@ -689,18 +689,18 @@ Dialog:ElectricInvite(playerid, response, listitem, inputtext[])
     if(!response) return Info(playerid, "Anda telah membatalkan pilihan!");
     if(PlayerElectricJob[playerid][ElectricGroup][0] == EOS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda harus membuat group terlebih dahulu!");
 
-    if(isnull(inputtext)) return Dialog_Show(playerid, ElectricInvite, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Invite Group",
+    if(isnull(inputtext)) return Dialog_Show(playerid, ElectricInvite, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Invite Group",
     "Error: Tidak dapat diisi kosong!\nHarap masukkan player id yang ingin kamu undang ke group:", "Input", "Cancel");
 
-    if(!IsNumeric(inputtext)) return Dialog_Show(playerid, ElectricInvite, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Invite Group",
+    if(!IsNumeric(inputtext)) return Dialog_Show(playerid, ElectricInvite, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Invite Group",
     "Error: Hanya dapat memasukkan angka!\nHarap masukkan player id yang ingin kamu undang ke group:", "Input", "Cancel");
 
-    if(strval(inputtext) == INVALID_PLAYER_ID || !IsPlayerConnected(strval(inputtext))) return Dialog_Show(playerid, ElectricInvite, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Invite Group",
+    if(strval(inputtext) == INVALID_PLAYER_ID || !IsPlayerConnected(strval(inputtext))) return Dialog_Show(playerid, ElectricInvite, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Invite Group",
     "Error: Pemain yang anda undang tidak berada di dalam server!\nHarap masukkan player id yang ingin kamu undang ke group:", "Input", "Cancel");
 
     new otherid = strval(inputtext);
 
-    if(!IsPlayerNearPlayer(playerid, otherid, 5.0)) return Dialog_Show(playerid, ElectricInvite, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Invite Group",
+    if(!IsPlayerNearPlayer(playerid, otherid, 5.0)) return Dialog_Show(playerid, ElectricInvite, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Invite Group",
     "Error: Pemain tersebut harus berada di dekat anda!\nHarap masukkan player id yang ingin kamu undang ke group:", "Input", "Cancel");
 
     Info(playerid, "Anda mengundang "YELLOW"%s(%d)"WHITE" ke group. Harap tunggu respon darinya", ReturnName(otherid), otherid);
@@ -770,7 +770,7 @@ Dialog:FixElectric1(playerid, response, listitem, inputtext[])
     new color1[64], color2[64], color3[64];
     if(sscanf(inputtext, "s[64]s[64]s[64]", color1, color2, color3))
     {
-        return Dialog_Show(playerid, FixElectric1, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+        return Dialog_Show(playerid, FixElectric1, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
         "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
         \n\n"RED"[KUNING] "GREEN"[BIRU]", ""WHITE"[MERAH]\
         \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -839,7 +839,7 @@ Dialog:FixElectric2(playerid, response, listitem, inputtext[])
     new color1[64], color2[64], color3[64];
     if(sscanf(inputtext, "s[64]s[64]s[64]", color1, color2, color3))
     {
-        return Dialog_Show(playerid, FixElectric2, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+        return Dialog_Show(playerid, FixElectric2, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
         "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
         \n\n"GREEN"[MERAH] "YELLOW"[HIJAU]" ""RED"[UNGU]\
         \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -908,7 +908,7 @@ Dialog:FixElectric3(playerid, response, listitem, inputtext[])
     new color1[64], color2[64], color3[64];
     if(sscanf(inputtext, "s[64]s[64]s[64]", color1, color2, color3))
     {
-        return Dialog_Show(playerid, FixElectric3, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+        return Dialog_Show(playerid, FixElectric3, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
         "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
         \n\n"PURPLE"[ABU] "RED"[KUNING]" ""YELLOW"[UNGU]\
         \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -977,7 +977,7 @@ Dialog:FixElectric4(playerid, response, listitem, inputtext[])
     new color1[64], color2[64], color3[64];
     if(sscanf(inputtext, "s[64]s[64]s[64]", color1, color2, color3))
     {
-        return Dialog_Show(playerid, FixElectric4, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+        return Dialog_Show(playerid, FixElectric4, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
         "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
         \n\n"RED"[HIJAU] "YELLOW"[UNGU]" ""GREEN"[MERAH]\
         \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -1046,7 +1046,7 @@ Dialog:FixElectric5(playerid, response, listitem, inputtext[])
     new color1[64], color2[64], color3[64];
     if(sscanf(inputtext, "s[64]s[64]s[64]", color1, color2, color3))
     {
-        return Dialog_Show(playerid, FixElectric5, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+        return Dialog_Show(playerid, FixElectric5, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
         "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
         \n\n"YELLOW"[KUNING] "PURPLE"[UNGU]" ""RED"[KUNING]\
         \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -1115,7 +1115,7 @@ Dialog:FixElectric6(playerid, response, listitem, inputtext[])
     new color1[64], color2[64], color3[64];
     if(sscanf(inputtext, "s[64]s[64]s[64]", color1, color2, color3))
     {
-        return Dialog_Show(playerid, FixElectric6, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+        return Dialog_Show(playerid, FixElectric6, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
         "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
         \n\n"PURPLE"[KUNING] "PURPLE"[BIRU]" ""RED"[HIJAU]\
         \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -1184,7 +1184,7 @@ Dialog:FixElectric7(playerid, response, listitem, inputtext[])
     new color1[64], color2[64], color3[64];
     if(sscanf(inputtext, "s[64]s[64]s[64]", color1, color2, color3))
     {
-        return Dialog_Show(playerid, FixElectric7, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+        return Dialog_Show(playerid, FixElectric7, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
         "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
         \n\n"RED"[KUNING] "BLACK"[BIRU]" ""GREEN"[MERAH]\
         \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -1253,7 +1253,7 @@ Dialog:FixElectric8(playerid, response, listitem, inputtext[])
     new color1[64], color2[64], color3[64];
     if(sscanf(inputtext, "s[64]s[64]s[64]", color1, color2, color3))
     {
-        return Dialog_Show(playerid, FixElectric8, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+        return Dialog_Show(playerid, FixElectric8, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
         "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
         \n\n"BLUE"[HIJAU] "PURPLE"[KUNING]" ""GREEN"[MERAH]\
         \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -1322,7 +1322,7 @@ Dialog:FixElectric9(playerid, response, listitem, inputtext[])
     new color1[64], color2[64], color3[64];
     if(sscanf(inputtext, "s[64]s[64]s[64]", color1, color2, color3))
     {
-        return Dialog_Show(playerid, FixElectric9, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+        return Dialog_Show(playerid, FixElectric9, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
         "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
         \n\n"BLUE"[KUNING] "RED"[UNGU]" ""GREEN"[MERAH]\
         \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -1391,7 +1391,7 @@ Dialog:FixElectric10(playerid, response, listitem, inputtext[])
     new color1[64], color2[64], color3[64];
     if(sscanf(inputtext, "s[64]s[64]s[64]", color1, color2, color3))
     {
-        return Dialog_Show(playerid, FixElectric10, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+        return Dialog_Show(playerid, FixElectric10, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
         "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
         \n\n"RED"[KUNING] "GREEN"[BIRU]" ""PURPLE"[MERAH]\
         \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -1460,7 +1460,7 @@ Dialog:FixElectric11(playerid, response, listitem, inputtext[])
     new color1[64], color2[64], color3[64];
     if(sscanf(inputtext, "s[64]s[64]s[64]", color1, color2, color3))
     {
-        return Dialog_Show(playerid, FixElectric11, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+        return Dialog_Show(playerid, FixElectric11, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
         "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
         \n\n"YELLOW"[UNGU] "YELLOW"[BIRU]" ""RED"[ORANGE]\
         \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -1529,7 +1529,7 @@ Dialog:FixElectric12(playerid, response, listitem, inputtext[])
     new color1[64], color2[64], color3[64];
     if(sscanf(inputtext, "s[64]s[64]s[64]", color1, color2, color3))
     {
-        return Dialog_Show(playerid, FixElectric12, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+        return Dialog_Show(playerid, FixElectric12, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
         "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
         \n\n"LIGHTGREY"[ABU] "GREEN"[BIRU]" ""RED"[YELLOW]\
         \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -1598,7 +1598,7 @@ Dialog:FixElectric13(playerid, response, listitem, inputtext[])
     new color1[64], color2[64], color3[64];
     if(sscanf(inputtext, "s[64]s[64]s[64]", color1, color2, color3))
     {
-        return Dialog_Show(playerid, FixElectric13, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+        return Dialog_Show(playerid, FixElectric13, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
         "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
         \n\n"ORANGE"[MERAH] "GREEN"[OREN]" ""PURPLE"[ABU]\
         \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -1667,7 +1667,7 @@ Dialog:FixElectric14(playerid, response, listitem, inputtext[])
     new color1[64], color2[64], color3[64];
     if(sscanf(inputtext, "s[64]s[64]s[64]", color1, color2, color3))
     {
-        return Dialog_Show(playerid, FixElectric14, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+        return Dialog_Show(playerid, FixElectric14, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
         "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
         \n\n"WHITE"[KUNING] "BLUE"[HIJAU]" ""YELLOW"[MERAH]\
         \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -1736,7 +1736,7 @@ Dialog:FixElectric15(playerid, response, listitem, inputtext[])
     new color1[64], color2[64], color3[64];
     if(sscanf(inputtext, "s[64]s[64]s[64]", color1, color2, color3))
     {
-        return Dialog_Show(playerid, FixElectric15, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+        return Dialog_Show(playerid, FixElectric15, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
         "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
         \n\n"ORANGE"[OREN] "RED"[BIRU]" ""YELLOW"[MERAH]\
         \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -1805,7 +1805,7 @@ Dialog:FixElectric16(playerid, response, listitem, inputtext[])
     new color1[64], color2[64], color3[64];
     if(sscanf(inputtext, "s[64]s[64]s[64]", color1, color2, color3))
     {
-        return Dialog_Show(playerid, FixElectric16, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+        return Dialog_Show(playerid, FixElectric16, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
         "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
         \n\n"RED"[KUNING] "BLUE"[HIJAU]" ""GREEN"[OREN]\
         \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -1874,7 +1874,7 @@ Dialog:FixElectric17(playerid, response, listitem, inputtext[])
     new color1[64], color2[64], color3[64];
     if(sscanf(inputtext, "s[64]s[64]s[64]", color1, color2, color3))
     {
-        return Dialog_Show(playerid, FixElectric17, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+        return Dialog_Show(playerid, FixElectric17, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
         "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
         \n\n"RED"[KUNING] "LIGHTGREY"[UNGU]" ""PURPLE"[HIJAU]\
         \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -1943,7 +1943,7 @@ Dialog:FixElectric18(playerid, response, listitem, inputtext[])
     new color1[64], color2[64], color3[64];
     if(sscanf(inputtext, "s[64]s[64]s[64]", color1, color2, color3))
     {
-        return Dialog_Show(playerid, FixElectric18, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+        return Dialog_Show(playerid, FixElectric18, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
         "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
         \n\n"BLUE"[OREN] "RED"[BIRU]" ""YELLOW"[MERAH]\
         \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -2012,7 +2012,7 @@ Dialog:FixElectric19(playerid, response, listitem, inputtext[])
     new color1[64], color2[64], color3[64];
     if(sscanf(inputtext, "s[64]s[64]s[64]", color1, color2, color3))
     {
-        return Dialog_Show(playerid, FixElectric19, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+        return Dialog_Show(playerid, FixElectric19, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
         "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
         \n\n"PURPLE"[HIJAU] "RED"[KUNING]" ""PURPLE"[MERAH]\
         \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -2081,7 +2081,7 @@ Dialog:FixElectric20(playerid, response, listitem, inputtext[])
     new color1[64], color2[64], color3[64];
     if(sscanf(inputtext, "s[64]s[64]s[64]", color1, color2, color3))
     {
-        return Dialog_Show(playerid, FixElectric20, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+        return Dialog_Show(playerid, FixElectric20, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
         "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
         \n\n"RED"[KUNING] "RED"[BIRU]" ""PURPLE"[OREN]\
         \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -2150,7 +2150,7 @@ Dialog:FixElectric21(playerid, response, listitem, inputtext[])
     new color1[64], color2[64], color3[64];
     if(sscanf(inputtext, "s[64]s[64]s[64]", color1, color2, color3))
     {
-        return Dialog_Show(playerid, FixElectric21, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+        return Dialog_Show(playerid, FixElectric21, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
         "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
         \n\n"YELLOW"[UNGU] "RED"[OREN]" ""ORANGE"[HITAM]\
         \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -2219,7 +2219,7 @@ Dialog:FixElectric22(playerid, response, listitem, inputtext[])
     new color1[64], color2[64], color3[64];
     if(sscanf(inputtext, "s[64]s[64]s[64]", color1, color2, color3))
     {
-        return Dialog_Show(playerid, FixElectric22, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+        return Dialog_Show(playerid, FixElectric22, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
         "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
         \n\n"GREEN"[PUTIH] "GREEN"[UNGU]" ""ORANGE"[OREN]\
         \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -2288,7 +2288,7 @@ Dialog:FixElectric23(playerid, response, listitem, inputtext[])
     new color1[64], color2[64], color3[64];
     if(sscanf(inputtext, "s[64]s[64]s[64]", color1, color2, color3))
     {
-        return Dialog_Show(playerid, FixElectric23, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+        return Dialog_Show(playerid, FixElectric23, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
         "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
         \n\n"WHITE"[PUTIH] "YELLOW"[BIRU]" ""RED"[KUNING]\
         \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -2357,7 +2357,7 @@ Dialog:FixElectric24(playerid, response, listitem, inputtext[])
     new color1[64], color2[64], color3[64];
     if(sscanf(inputtext, "s[64]s[64]s[64]", color1, color2, color3))
     {
-        return Dialog_Show(playerid, FixElectric24, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+        return Dialog_Show(playerid, FixElectric24, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
         "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
         \n\n"ORANGE"[OREN] "RED"[MERAH]" ""GREEN"[KUNING]\
         \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -2426,7 +2426,7 @@ Dialog:FixElectric25(playerid, response, listitem, inputtext[])
     new color1[64], color2[64], color3[64];
     if(sscanf(inputtext, "s[64]s[64]s[64]", color1, color2, color3))
     {
-        return Dialog_Show(playerid, FixElectric25, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+        return Dialog_Show(playerid, FixElectric25, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
         "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
         \n\n"BLUE"[KUNING] "ORANGE"[BIRU]" ""PURPLE"[HITAM]\
         \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -2495,7 +2495,7 @@ Dialog:FixElectric26(playerid, response, listitem, inputtext[])
     new color1[64], color2[64], color3[64];
     if(sscanf(inputtext, "s[64]s[64]s[64]", color1, color2, color3))
     {
-        return Dialog_Show(playerid, FixElectric26, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+        return Dialog_Show(playerid, FixElectric26, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
         "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
         \n\n"YELLOW"[KUNING] "PURPLE"[MERAH]" ""LIGHTGREY"[ABU]\
         \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -2564,7 +2564,7 @@ Dialog:FixElectric27(playerid, response, listitem, inputtext[])
     new color1[64], color2[64], color3[64];
     if(sscanf(inputtext, "s[64]s[64]s[64]", color1, color2, color3))
     {
-        return Dialog_Show(playerid, FixElectric27, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+        return Dialog_Show(playerid, FixElectric27, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
         "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
         \n\n"RED"[KUNING] "GREEN"[BIRU]" ""PURPLE"[MERAH]\
         \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -2633,7 +2633,7 @@ Dialog:FixElectric28(playerid, response, listitem, inputtext[])
     new color1[64], color2[64], color3[64];
     if(sscanf(inputtext, "s[64]s[64]s[64]", color1, color2, color3))
     {
-        return Dialog_Show(playerid, FixElectric28, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+        return Dialog_Show(playerid, FixElectric28, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
         "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
         \n\n"PURPLE"[KUNING] "YELLOW"[BIRU]" ""BLUE"[MERAH]\
         \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -2702,7 +2702,7 @@ Dialog:FixElectric29(playerid, response, listitem, inputtext[])
     new color1[64], color2[64], color3[64];
     if(sscanf(inputtext, "s[64]s[64]s[64]", color1, color2, color3))
     {
-        return Dialog_Show(playerid, FixElectric29, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+        return Dialog_Show(playerid, FixElectric29, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
         "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
         \n\n"GREEN"[KUNING] "WHITE"[BIRU]" ""ORANGE"[MERAH]\
         \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");
@@ -2771,7 +2771,7 @@ Dialog:FixElectric30(playerid, response, listitem, inputtext[])
     new color1[64], color2[64], color3[64];
     if(sscanf(inputtext, "s[64]s[64]s[64]", color1, color2, color3))
     {
-        return Dialog_Show(playerid, FixElectric30, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Kelistrikan",
+        return Dialog_Show(playerid, FixElectric30, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Kelistrikan",
         "harap berikan nama warna dalam bahasa indonesia yang sesuai dengan warna di sekitar teks di bawah ini\
         \n\n"YELLOW"[KUNING] "YELLOW"[BIRU]" ""PURPLE"[MERAH]\
         \n"RED"(Harap berikan nama warna saja berdasarkan warna teks di atas tanpa '[' atau ']')", "Input", "Cancel");

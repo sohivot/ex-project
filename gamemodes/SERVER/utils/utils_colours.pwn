@@ -66,7 +66,7 @@
 #define REACTIONS   "{FD4141}"
 #define COLOR_GPS	"{9AD0EC}"
 
-#define Mayoritas		"{057BFA}"//"{1865B8}"
+#define Imajinasi		"{057BFA}"//"{1865B8}"
 #define VERONA		"{ffff00}"
 #define VTWITTER	"{0599fb}"
 #define VERONADOT	"{FFFF00}[!] {FFFFFF}"

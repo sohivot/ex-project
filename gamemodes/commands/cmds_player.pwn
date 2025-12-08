@@ -207,7 +207,7 @@ CMD:settings(playerid, params[])
 	\n"WHITE"HUD Style\t%s", AccountData[playerid][pID], AccountData[playerid][pUCP], AccountData[playerid][pName], GetPlayerRenderName(playerid),
 	AccountData[playerid][pTogAutoEngine] ? ""GREEN"Aktif" : ""RED"Nonaktif", AccountData[playerid][pTogPM] ? ""GREEN"Aktif" : ""RED"Nonaktif", AccountData[playerid][pTogGlobal] ? ""GREEN"Aktif" : ""RED"Nonaktif",
 	AccountData[playerid][pStyleNotif] == 1 ? ""YELLOW"Textdraw" : ""YELLOW"Chat Logs", AccountData[playerid][pHUDMode] == 1 ? ""YELLOW"Kiri" : ""YELLOW"Tengah");
-	Dialog_Show(playerid, DialogToggle, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Settings", list, "Pilih", "Batal");
+	Dialog_Show(playerid, DialogToggle, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Settings", list, "Pilih", "Batal");
 	return 1;
 }
 
@@ -276,14 +276,14 @@ CMD:mywarn(playerid, params[])
 
 			format(list, sizeof(list), "%s%s\t%s\t%s\t%s\n", list, typename, sender, ReturnDateNoTime(date), reason);
 		}
-		ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Riwayat Peringatan", list, "Tutup", "");
+		ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Riwayat Peringatan", list, "Tutup", "");
 	}
 	else 
 	{
 		new list[255];
 		format(list, sizeof(list), "Type\tPenerbit\tTanggal\tAlasan\n");
 		format(list, sizeof(list), "%sTidak ada peringatan yang dapat ditampilkan kepadamu.", list);
-		ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Riwayat Peringatan", list, "Tutup", "");
+		ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Riwayat Peringatan", list, "Tutup", "");
 	}
 	return 1;
 }
@@ -305,7 +305,7 @@ CMD:delay(playerid, params[])
 	AccountData[playerid][pSweeperTime]/60,
 	AccountData[playerid][pForkliftTime]/60,
 	AccountData[playerid][pTrashmasterDelay]/60);
-	ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Waktu Delay", shstr, "Tutup", "");
+	ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Waktu Delay", shstr, "Tutup", "");
 	return 1;
 }
 
@@ -354,7 +354,7 @@ CMD:sm(playerid, params[])
 	\nCarsteal\t2 Polisi & 1 EMS\t%s\
 	\n"GRAY"Rampok Warung\t"GRAY"2 Polisi & 1 EMS\t%s\
 	\nPeperangan/Rampok Bank\t2 Polisi & 1 EMS\t%s", status1, status2, status3, status4, status5);
-	ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Status Mendung", list, "Tutup", "");
+	ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Status Mendung", list, "Tutup", "");
 	return 1;
 }
 
@@ -458,7 +458,7 @@ CMD:evipname(playerid, params[])
 {
 	if(!AccountData[playerid][pVip]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan Pengguna Vip!");	
 
-	ShowPlayerDialog(playerid, DIALOG_VIP_NAME, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Vip Name Custom",
+	ShowPlayerDialog(playerid, DIALOG_VIP_NAME, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Vip Name Custom",
 	"Gunakan format dibawah ini untuk menambahkan warna\
 	\n- (b) = Warna Biru\
 	\n- (p) = Warna Pink\
@@ -478,7 +478,7 @@ CMD:mprice(playerid, params[])
 		return 0;
 	
 	static frmtprice[2856];
-	format(frmtprice, sizeof(frmtprice), ""YELLOW"========== [Dinas Pekerjaan Kota Mayoritas] ==========\
+	format(frmtprice, sizeof(frmtprice), ""YELLOW"========== [Dinas Pekerjaan Kota Imajinasi] ==========\
 	\n\n"WHITE"------ [Hasil Pertambangan] ------\
 	\n"WHITE"~> Harga Tembaga: "RED"%s"ARWIN1"/pcs"WHITE" =>"GREEN" %s"ARWIN1"/pcs\
 	\n"WHITE"~> Harga Besi: "RED"%s"ARWIN1"/pcs"WHITE" =>"GREEN" %s"ARWIN1"/pcs\
@@ -510,7 +510,7 @@ CMD:mprice(playerid, params[])
 	FormatMoney(OldPakaianPrice), FormatMoney(PakaianPrice),
 	FormatMoney(OldKayuKemasPrice), FormatMoney(KayuKemasPrice),
 	FormatMoney(OldGasPrice), FormatMoney(GasPrice));
-	ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Harga Penjualan", frmtprice, "Tutup", "");
+	ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Harga Penjualan", frmtprice, "Tutup", "");
 	return 1;
 }
 
@@ -525,7 +525,7 @@ CMD:cmusik(playerid, params[])
 	
 	if(!IsPlayerInAnyVehicle(playerid)) return ShowTDN(playerid, NOTIFICATION_ERROR, "Hanya bisa digunakan  didalam kendaraan!");
 	if(GetPlayerState(playerid) != PLAYER_STATE_DRIVER) return ShowTDN(playerid, NOTIFICATION_ERROR, "Kamu harus pindah ke kursi Driver untuk menggunakan ini!");
-	Dialog_Show(playerid, VehicleAudioPlayer, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Vehicle Music", "Spotify - Cerahi Hidupmu Secerah Matahari Di Pagi Hari\n\n"GRAY"Kami sarankan anda untuk upload file mp3 ke discord terlebih dahulu.\n"RED_E"Note: Fitur ini tidak support link Youtube secara langsung!\nMasukan off untuk mematikan lagu!\n\n"YELLOW"(Apabila file mp3 telah di upload ke discord, silahkan copy linknya dan paste dibawah ini):",
+	Dialog_Show(playerid, VehicleAudioPlayer, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Vehicle Music", "Spotify - Cerahi Hidupmu Secerah Matahari Di Pagi Hari\n\n"GRAY"Kami sarankan anda untuk upload file mp3 ke discord terlebih dahulu.\n"RED_E"Note: Fitur ini tidak support link Youtube secara langsung!\nMasukan off untuk mematikan lagu!\n\n"YELLOW"(Apabila file mp3 telah di upload ke discord, silahkan copy linknya dan paste dibawah ini):",
 	"Input", "Batal");
 	return 1;
 }
@@ -535,7 +535,7 @@ Dialog:VehicleAudioPlayer(playerid, response, listitem, inputtext[])
 	if(response)
 	{
 		if(strlen(inputtext) < 1 || strlen(inputtext) > 128)
-			return 	Dialog_Show(playerid, VehicleAudioPlayer, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Vehicle Music", "ERROR, panjang link tidak boleh di bawah 1 maximal 128 karakter!\n\nSpotify - Cerahi Hidupmu Secerah Matahari Di Pagi Hari\n\n"GRAY"Kami sarankan anda untuk upload file mp3 ke discord terlebih dahulu.\n"RED_E"Note: Fitur ini tidak support link Youtube secara langsung!\nMasukan off untuk mematikan lagu!\n\n"YELLOW"(Apabila file mp3 telah di upload ke discord, silahkan copy linknya dan paste dibawah ini):", "Input", "Batal");
+			return 	Dialog_Show(playerid, VehicleAudioPlayer, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Vehicle Music", "ERROR, panjang link tidak boleh di bawah 1 maximal 128 karakter!\n\nSpotify - Cerahi Hidupmu Secerah Matahari Di Pagi Hari\n\n"GRAY"Kami sarankan anda untuk upload file mp3 ke discord terlebih dahulu.\n"RED_E"Note: Fitur ini tidak support link Youtube secara langsung!\nMasukan off untuk mematikan lagu!\n\n"YELLOW"(Apabila file mp3 telah di upload ke discord, silahkan copy linknya dan paste dibawah ini):", "Input", "Batal");
 
 		PlayVehicleAudioInCar(playerid, inputtext);
 	}
@@ -552,7 +552,7 @@ Dialog:DialogToggle(playerid, response, listitem, inputtext[])
 		{
 			case 4: // Dynamic Render
 			{
-				ShowPlayerDialog(playerid, DIALOG_STREAMER_CONFIG, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Setting Render",
+				ShowPlayerDialog(playerid, DIALOG_STREAMER_CONFIG, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Setting Render",
 				"Priority\tRendered Object\tRadius Multiplayer\
 				\nVery Low\t250\t0.2\
 				\n"GRAY"Low\t500\t0.5\
@@ -986,7 +986,7 @@ CMD:accept(playerid, params[])
 	}
 	else if(!strcmp(option, "taxi", true))
 	{
-		if(AccountData[playerid][pFaction] != FACTION_TRANS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan Anggota Transportasi Mayoritas!");
+		if(AccountData[playerid][pFaction] != FACTION_TRANS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan Anggota Transportasi Imajinasi!");
 		if(!AccountData[playerid][pDutyTrans]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda tidak sedang On Duty TRANS!");
 		if(AccountData[playerid][pInjured]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda tidak dapat menerima panggilan saat pingsan!");
 		if(!IsPlayerInAnyVehicle(playerid) || GetPlayerState(playerid) == PLAYER_STATE_ONFOOT) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda harus berada didalam kendaraan Trans!");
@@ -1139,7 +1139,7 @@ CMD:elist(playerid, params[])
 {
 	if(AccountData[playerid][IsLoggedIn] == false) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda harus login untuk menggunakan ini");
 
-	ShowPlayerDialog(playerid, DialogElist, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- List Animasi", "Elist\nEprop Anim\nInteraksi Anim", "Pilih", "Batal");
+	ShowPlayerDialog(playerid, DialogElist, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- List Animasi", "Elist\nEprop Anim\nInteraksi Anim", "Pilih", "Batal");
 	return 1;
 }
 
@@ -1168,14 +1168,14 @@ CMD:flist(playerid, params[])
 
 	new shstr[596];
 	format(shstr, sizeof(shstr), "Faction\tOn Duty\
-	\nKepolisian Daerah Mayoritas\t%d\
-	\n"GRAY"EMS Kota Mayoritas\t"GRAY"%d\
-	\nBengkel Kota Mayoritas\t%d\
-	\n"GRAY"Transportasi Kota Mayoritas\t"GRAY"%d\
-	\nPedagang Kota Mayoritas\t%d\
-	\n"GRAY"Pemerintah Daerah Kota Mayoritas\t"GRAY"%d",
+	\nKepolisian Daerah Imajinasi\t%d\
+	\n"GRAY"EMS Kota Imajinasi\t"GRAY"%d\
+	\nBengkel Kota Imajinasi\t%d\
+	\n"GRAY"Transportasi Kota Imajinasi\t"GRAY"%d\
+	\nPedagang Kota Imajinasi\t%d\
+	\n"GRAY"Pemerintah Daerah Kota Imajinasi\t"GRAY"%d",
 	countpd, countems, countbengkel, counttrans, countpdg, countpemer);
-	ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- On Duty List", shstr, "Tutup", "");
+	ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- On Duty List", shstr, "Tutup", "");
 	return 1;
 }
 
@@ -1184,7 +1184,7 @@ CMD:fixme(playerid, params[])
 	if(!AccountData[playerid][IsLoggedIn])
 		return false;
 	
-	Dialog_Show(playerid, DialogFixMe, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Me", "Keluhan\tKeterangan\
+	Dialog_Show(playerid, DialogFixMe, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Me", "Keluhan\tKeterangan\
 	\nBug Visual\tApabila anda tidak dapat melihat object/player apapun (berada di alam baka)\
 	\n"GRAY"Karakter Stuck\t"GRAY"Apabila anda stuck karena tertimpa object/kendaraan sehingga anda tidak dapat bergerak\
 	\nKarakter Freezing\tApabila karakter anda benar benar tidak dapat digerakan atau berjalan sama sekali", "Pilih", "Batal");
@@ -1353,7 +1353,7 @@ CMD:redeem(playerid, params[])
 
     format(str, sizeof(str), "{FFFFFF}Aktivasi kode redeem");
     format(str, sizeof(str), "%s\nMasukkan kode redeem dalam kotak di bawah ini:", str);
-    ShowPlayerDialog(playerid, DIALOG_PROMO_ACTIVATE, DIALOG_STYLE_INPUT, ""YELLOW_E"Mayoritas Roleplay /"WHITE_E"/ Redeem Code", str, "Input", "Batal");
+    ShowPlayerDialog(playerid, DIALOG_PROMO_ACTIVATE, DIALOG_STYLE_INPUT, ""YELLOW_E"Imajinasi Roleplay /"WHITE_E"/ Redeem Code", str, "Input", "Batal");
 	return 1;
 }
 CMD:vip(playerid, params[])
@@ -1361,7 +1361,7 @@ CMD:vip(playerid, params[])
 	if(!AccountData[playerid][IsLoggedIn])
 		return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda harus masuk kedalam server!");
 	
-	Dialog_Show(playerid, DialogVip, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Bantuan", "Jenis Vip\
+	Dialog_Show(playerid, DialogVip, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Bantuan", "Jenis Vip\
 	\nRangers Kuning\
 	\n"GRAY"Rangers Hijau\
 	\nRangers Merah", "Pilih", "Batal");	
@@ -1375,7 +1375,7 @@ Dialog:DialogVip(playerid, response, listitem, inputtext[])
 		{
 			case 0:
 			{
-				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Rangers Kuning",
+				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Rangers Kuning",
 				"Jenis Perintah\tFungsi\
 				\n"GRAY"/evipname\t"GRAY"Menganti Warna Name Global\
 				\n/O\tUntuk Chat Global (DILARANG ABUSE!)\
@@ -1390,7 +1390,7 @@ Dialog:DialogVip(playerid, response, listitem, inputtext[])
 			}
 			case 1:
 			{
-				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay"WHITE" - Rangers Hijau",
+				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay"WHITE" - Rangers Hijau",
 				"Jenis Perintah\tFungsi\
 				\n"GRAY"/evipname\t"GRAY"Menganti Warna Name Global\
 				\n/O\tUntuk Chat Global (DILARANG ABUSE!)\
@@ -1405,7 +1405,7 @@ Dialog:DialogVip(playerid, response, listitem, inputtext[])
 			}
 			case 2:
 			{
-				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay"WHITE" - Rangers Merah",
+				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay"WHITE" - Rangers Merah",
 				"Jenis Perintah\tFungsi\
 				\n"GRAY"/evipname\t"GRAY"Menganti Warna Name Global\
 				\n/O\tUntuk Chat Global (DILARANG ABUSE!)\
@@ -1427,11 +1427,11 @@ CMD:help(playerid, params[])
 	if(!AccountData[playerid][IsLoggedIn])
 		return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda harus masuk kedalam server!");
 	
-	Dialog_Show(playerid, DialogHelp, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Bantuan", "Jenis Bantuan\tKeterangan\
+	Dialog_Show(playerid, DialogHelp, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Bantuan", "Jenis Bantuan\tKeterangan\
 	\nPerintah Dasar\tBerisi beberapa CMD dasar untuk player\
 	\n"GRAY"Perintah Kendaraan\t"GRAY"Berisi beberapa CMD seputar kendaraan\
 	\nPerintah Roleplay\tBerisi beberapa CMD untuk melengkapi roleplay\
-	\n"GRAY"Petunjuk Dasar\tBerisi beberapa petunjuk dasar Mayoritas\
+	\n"GRAY"Petunjuk Dasar\tBerisi beberapa petunjuk dasar Imajinasi\
 	\nPetunjuk Lapar Haus\tBerisi beberapa petunjuk tentang kebutuhan karakter", "Pilih", "Batal");	
 	return 1;
 }
@@ -1444,7 +1444,7 @@ Dialog:DialogHelp(playerid, response, listitem, inputtext[])
 		{
 			case 0:
 			{
-				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Perintah Dasar",
+				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Perintah Dasar",
 				"Jenis Perintah\tKeterangan\
 				\n"GRAY"/settings\t"GRAY"Untuk mensettings toggle server\
 				\n/drag\tMenggendong pemain lain\
@@ -1467,7 +1467,7 @@ Dialog:DialogHelp(playerid, response, listitem, inputtext[])
 			}
 			case 1:
 			{
-				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay"WHITE" - Perintah Kendaraan",
+				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay"WHITE" - Perintah Kendaraan",
 				"Jenis Perintah\tKeterangan\
 				\n/sellveh\tMenjual kendaraan kepada pemain lain\
 				\n"GRAY"/en\t"GRAY"Menyalakan/Mematikan mesin kendaraan secara manual\
@@ -1477,7 +1477,7 @@ Dialog:DialogHelp(playerid, response, listitem, inputtext[])
 			}
 			case 2:
 			{
-				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay"WHITE" - Perintah Roleplay",
+				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay"WHITE" - Perintah Roleplay",
 				"Jenis Perintah\tKeterangan\
 				\n/ado\tMenerangkan situasi dengan label text 3D\
 				\n"GRAY"/me\t"GRAY"Menerangkan aktivitas rp dengan memunculkan label diatas kepala\
@@ -1489,7 +1489,7 @@ Dialog:DialogHelp(playerid, response, listitem, inputtext[])
 			}
 			case 3:
 			{
-				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay"WHITE" - Petunjuk Dasar",
+				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay"WHITE" - Petunjuk Dasar",
 				"Jenis Perintah\tKeterangan\
 				\n/sv\tUntuk mengganti mode jarak suara\
 				\n"GRAY"/e (nama animasi)\t"GRAY"Untuk memainkan animasi\
@@ -1501,8 +1501,8 @@ Dialog:DialogHelp(playerid, response, listitem, inputtext[])
 			}
 			case 4:
 			{
-				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay"WHITE" - Petunjuk Lapar Haus",
-				""WHITE"Dikarenakan "Mayoritas"Mayoritas Roleplay"WHITE" merupakan server dengan mode Roleplay, sudah pasti karakter anda\
+				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay"WHITE" - Petunjuk Lapar Haus",
+				""WHITE"Dikarenakan "Imajinasi"Imajinasi Roleplay"WHITE" merupakan server dengan mode Roleplay, sudah pasti karakter anda\
 				\ndapat merasakan lapar dan haus hingga stress.\
 				\nBagaimana cara membedakannya dan menemukan dilayar monitor anda?\
 				\n\nSecara umum ketiganya terletak dibawah kiri monitor anda,\
@@ -1541,7 +1541,7 @@ CMD:saving(playerid, params[])
 		return ShowTDN(playerid, NOTIFICATION_ERROR, "Kamu belum login!");
 		
 	UpdatePlayerData(playerid);
-	ShowTDN(playerid, NOTIFICATION_INFO, "Successfully updates your account data to "Mayoritas"Mayoritas Database");
+	ShowTDN(playerid, NOTIFICATION_INFO, "Successfully updates your account data to "Imajinasi"Imajinasi Database");
 	return 1;
 }
 
@@ -1574,7 +1574,7 @@ CMD:health(playerid, params[])
 	format(string, sizeof string, "%s "GRAY"Lengan Kiri\t%d.0%\n", string, htka);
 	format(string, sizeof string, "%s "WHITE"Kaki Kanan\t%d.0%\n", string, hkk);
 	format(string, sizeof string, "%s "GRAY"Kaki Kiri\t%d.0%\n", string, hkka);
-	ShowPlayerDialog(playerid, DIALOG_HEALTH, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay"WHITE" - Kesehatan", string, "Tutup", "");
+	ShowPlayerDialog(playerid, DIALOG_HEALTH, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay"WHITE" - Kesehatan", string, "Tutup", "");
     return 1;
 }
 
@@ -1644,7 +1644,7 @@ CMD:pay(playerid, params[])
 	// new dc[712];
 	// format(dc, sizeof dc, "**🔥 | Pay Logs**\n\n**Pengirim**: %s\n**UCP Pengirim**: %s\n**Level**: %d\n\n**Penerima**: %s\n**UCP Penerima**: %s\n**Level**: %d\n\n**Jumlah Nominal**: %s\n\n**NOTE**: Jika Pemberian Uang Melebihi $5000 kepada akun baru ditugaskan kalian para admin untuk bertanya kepada yang bersangkutan mungkin saja mereka melakukan RTM!",
 	// AccountData[playerid][pName], AccountData[playerid][pUCP], AccountData[playerid][pLevel], AccountData[otherid][pName], AccountData[otherid][pUCP], AccountData[otherid][pLevel], FormatMoney(money));
-	// SendEmbedMessage("Mayoritas ROLEPLAY", dc, "Security RTM Money", "https://cdn.discordapp.com/attachments/1011319839366856806/1110744778250919976/20230426_210737-1_2.png", "https://cdn.discordapp.com/attachments/1124221192778285076/1124227665201725450/1.png", "1109630050174779472", 0xeeca0d);
+	// SendEmbedMessage("Imajinasi ROLEPLAY", dc, "Security RTM Money", "https://cdn.discordapp.com/attachments/1011319839366856806/1110744778250919976/20230426_210737-1_2.png", "https://cdn.discordapp.com/attachments/1124221192778285076/1124227665201725450/1.png", "1109630050174779472", 0xeeca0d);
 	return 1;
 }
 
@@ -1853,10 +1853,10 @@ CMD:w(playerid, params[])
 CMD:gps(playerid, params[])
 {
     if(AccountData[playerid][pFaction] == FACTION_EMS && AccountData[playerid][pDutyEms]) {
-    Dialog_Show(playerid, GpsMenu, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Menu Gps",
+    Dialog_Show(playerid, GpsMenu, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Menu Gps",
     "Lokasi GPS\n"GRAY"Signal Emergency (EMS)", "Pilih", "Batal");
     } else {
-    ShowPlayerDialog(playerid, LokasiGps, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Lokasi",
+    ShowPlayerDialog(playerid, LokasiGps, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Lokasi",
     "Lokasi Umum\
     \n"GRAY"Lokasi Pekerjaan\
     \nLokasi Hobi\

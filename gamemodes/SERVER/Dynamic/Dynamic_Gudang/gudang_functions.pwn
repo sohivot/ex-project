@@ -244,7 +244,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
                 {
                     AccountData[playerid][pTempValue] = id;
                     AccountData[playerid][menuShowed] = true;
-                    ShowPlayerDialog(playerid, DIALOG_GUDANG_OPTION, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gudang",
+                    ShowPlayerDialog(playerid, DIALOG_GUDANG_OPTION, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gudang",
                     "Buka Gudang\n"GRAY"Berhenti menyewa gudang\nCek status sewa", "Pilih", "Batal");
                 }
                 else 
@@ -253,7 +253,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
                     format(shstr, sizeof(shstr), "Sewa\t"GREEN"%s / bulan", FormatMoney(GudangData[id][gudangPrice]));
 
                     AccountData[playerid][pTempValue] = id;
-                    ShowPlayerDialog(playerid, DIALOG_GUDANG_BUY, DIALOG_STYLE_LIST, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- Gudang %s", GudangData[id][gudangName]),
+                    ShowPlayerDialog(playerid, DIALOG_GUDANG_BUY, DIALOG_STYLE_LIST, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- Gudang %s", GudangData[id][gudangName]),
                     shstr, "Pilih", "Batal");
                 }
             }
@@ -327,12 +327,12 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             case 0:// Buka gudang
             {
                 AccountData[playerid][menuShowed] = true;
-                ShowPlayerDialog(playerid, DIALOG_GUDANGVAULT, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gudang",
+                ShowPlayerDialog(playerid, DIALOG_GUDANGVAULT, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gudang",
                 "Simpan Barang\n"GRAY"Ambil Barang", "Pilih", "Batal");
             }
             case 1: //berhenti sewa
             {
-                Dialog_Show(playerid, GUDANG_STOPCONF, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay", 
+                Dialog_Show(playerid, GUDANG_STOPCONF, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay", 
                 "Anda yakin ingin berhenti menyewa gudang?\nBarang barang anda akan tersimpan aman. Tidak akan hilang", "Iya", "Tidak");
             }
             case 2: //status sewa
@@ -349,7 +349,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 new gdid = GudangNearest(playerid);
                 if(gdid != -1)
                 {
-                    ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- %s", GudangData[gdid][gudangName]),
+                    ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- %s", GudangData[gdid][gudangName]),
                     shstr, "Tutup", "");
                 }
             }
@@ -382,12 +382,12 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
                         format(str, sizeof(str), "%s%s\t%d\t-\n", str, itemname, amounts);
                     }
-                    ShowPlayerDialog(playerid, DIALOG_GUDANGVAULT_DEPOSIT, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gudang", str, "Pilih", "Batal");
+                    ShowPlayerDialog(playerid, DIALOG_GUDANGVAULT_DEPOSIT, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gudang", str, "Pilih", "Batal");
                 }
                 else
                 {
                     PlayerPlaySound(playerid, 5206, 0.0, 0.0, 0.0);
-                    return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gudang",
+                    return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gudang",
                     "Anda tidak memiliki barang untuk disimpan!", "Tutup", "");
                 }
             }
@@ -406,11 +406,11 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
                         format(shstr, sizeof(shstr), "%s%s\t%d\t-\n", shstr, itemname, amounts);
                     }
-                    ShowPlayerDialog(playerid, DIALOG_GUDANGVAULT_WITHDRAW, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gudang", shstr, "Pilih", "Batal");
+                    ShowPlayerDialog(playerid, DIALOG_GUDANGVAULT_WITHDRAW, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gudang", shstr, "Pilih", "Batal");
                 }
                 else 
                 {
-                    return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gudang",
+                    return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gudang",
                     "Tidak ada barang di gudang saat ini!", "Tutup", "");
                 }
             }
@@ -441,7 +441,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
             new shstr[526];
             format(shstr, sizeof(shstr), "Anda akan menyimpan item:\nNama: %s\nJumlah di tas: %d\nMohon masukkan berapa jumlah item yang ingin disimpan:", GudangBrankas[playerid][gudangBrankasTemp], GudangBrankas[playerid][gudangBrankasQuant]);
-            ShowPlayerDialog(playerid, DIALOG_GUDANGVAULT_IN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gudang", shstr, "Input", "Batal");
+            ShowPlayerDialog(playerid, DIALOG_GUDANGVAULT_IN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gudang", shstr, "Input", "Batal");
         }
     }
     else if(dialogid == DIALOG_GUDANGVAULT_IN)
@@ -457,7 +457,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         {
             AccountData[playerid][menuShowed] = true;
             format(shstr, sizeof(shstr), "Anda akan menyimpan item:\nNama: %s\nJumlah di tas: %d\nTidak dapat diisi kosong!\nMohon masukkan berapa jumlah item yang ingin disimpan:", GudangBrankas[playerid][gudangBrankasTemp], GudangBrankas[playerid][gudangBrankasQuant]);
-            ShowPlayerDialog(playerid, DIALOG_GUDANGVAULT_IN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gudang", 
+            ShowPlayerDialog(playerid, DIALOG_GUDANGVAULT_IN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gudang", 
             shstr, "Input", "Batal");
             return 1;
         }
@@ -466,7 +466,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         {
             AccountData[playerid][menuShowed] = true;
             format(shstr, sizeof(shstr), "Anda akan menyimpan item:\nNama: %s\nJumlah di tas: %d\nHanya dapat diisi angka!\nMohon masukkan berapa jumlah item yang ingin disimpan:", GudangBrankas[playerid][gudangBrankasTemp], GudangBrankas[playerid][gudangBrankasQuant]);
-            ShowPlayerDialog(playerid, DIALOG_GUDANGVAULT_IN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gudang", 
+            ShowPlayerDialog(playerid, DIALOG_GUDANGVAULT_IN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gudang", 
             shstr, "Input", "Batal");
             return 1;
         }
@@ -475,7 +475,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         {
             AccountData[playerid][menuShowed] = true;
             format(shstr, sizeof(shstr), "Anda akan menyimpan item:\nNama: %s\nJumlah di tas: %d\nJumlah tidak valid!\nMohon masukkan berapa jumlah item yang ingin disimpan:", GudangBrankas[playerid][gudangBrankasTemp], GudangBrankas[playerid][gudangBrankasQuant]);
-            ShowPlayerDialog(playerid, DIALOG_GUDANGVAULT_IN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gudang", 
+            ShowPlayerDialog(playerid, DIALOG_GUDANGVAULT_IN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gudang", 
             shstr, "Input", "Batal");
             return 1;
         }
@@ -525,7 +525,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             cache_get_value_name_int(listitem, "itemQuantity", GudangBrankas[playerid][gudangBrankasQuant]);
 
             format(shstr, sizeof(shstr), "Anda akan mengambil item:\nNama: %s\nJumlah di gudang: %d\nMohon masukkan berapa jumlah yang ingin anda ambil:", GudangBrankas[playerid][gudangBrankasTemp], GudangBrankas[playerid][gudangBrankasQuant]);
-            ShowPlayerDialog(playerid, DIALOG_GUDANGVAULT_OUT, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gudang",
+            ShowPlayerDialog(playerid, DIALOG_GUDANGVAULT_OUT, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gudang",
             shstr, "Input", "Batal");
         }
     }
@@ -542,7 +542,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         {
             AccountData[playerid][menuShowed] = true;
             format(shstr, sizeof(shstr), "Anda akan mengambil item:\nNama: %s\nJumlah di gudang: %d\nTidak dapat diisi kosong!\nMohon masukkan berapa jumlah yang ingin anda ambil:", GudangBrankas[playerid][gudangBrankasTemp], GudangBrankas[playerid][gudangBrankasQuant]);
-            ShowPlayerDialog(playerid, DIALOG_GUDANGVAULT_OUT, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gudang",
+            ShowPlayerDialog(playerid, DIALOG_GUDANGVAULT_OUT, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gudang",
             shstr, "Input", "Batal");
             return 1;
         }
@@ -551,7 +551,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         {
             AccountData[playerid][menuShowed] = true;
             format(shstr, sizeof(shstr), "Anda akan mengambil item:\nNama: %s\nJumlah di gudang: %d\nHanya dapat diisi angka!\nMohon masukkan berapa jumlah yang ingin anda ambil:", GudangBrankas[playerid][gudangBrankasTemp], GudangBrankas[playerid][gudangBrankasQuant]);
-            ShowPlayerDialog(playerid, DIALOG_GUDANGVAULT_OUT, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gudang",
+            ShowPlayerDialog(playerid, DIALOG_GUDANGVAULT_OUT, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gudang",
             shstr, "Input", "Batal");
             return 1;
         }
@@ -560,7 +560,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         {
             AccountData[playerid][menuShowed] = true;
             format(shstr, sizeof(shstr), "Anda akan mengambil item:\nNama: %s\nJumlah di gudang: %d\nJumlah tidak valid!\nMohon masukkan berapa jumlah yang ingin anda ambil:", GudangBrankas[playerid][gudangBrankasTemp], GudangBrankas[playerid][gudangBrankasQuant]);
-            ShowPlayerDialog(playerid, DIALOG_GUDANGVAULT_OUT, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gudang",
+            ShowPlayerDialog(playerid, DIALOG_GUDANGVAULT_OUT, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gudang",
             shstr, "Input", "Batal");
             return 1;
         }
@@ -614,7 +614,7 @@ Dialog:GUDANG_STOPCONF(playerid, response, listitem, inputtext[])
     }
     else
     {
-        return ShowPlayerDialog(playerid, DIALOG_GUDANG_OPTION, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gudang",
+        return ShowPlayerDialog(playerid, DIALOG_GUDANG_OPTION, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gudang",
         "Buka Gudang\n"GRAY"Berhenti menyewa gudang\nCek status sewa", "Pilih", "Batal");
     }
     return 1;

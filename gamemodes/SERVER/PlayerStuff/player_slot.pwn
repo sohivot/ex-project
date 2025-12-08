@@ -135,7 +135,7 @@ hook OnGameModeInitEx()
 	TextDrawBoxColor(ReadyText, 0x00000077);
 	TextDrawTextSize(ReadyText, 350, 210);
 	
-	VerText = TextDrawCreate(194.0, SLOT_MACHINE_POS_Y-21, "~r~Mayoritas ~w~SLOT MACHINE");
+	VerText = TextDrawCreate(194.0, SLOT_MACHINE_POS_Y-21, "~r~Imajinasi ~w~SLOT MACHINE");
 	TextDrawFont(VerText, 1);
 	TextDrawSetShadow(VerText, 0);
 	TextDrawSetOutline(VerText, 1);
@@ -377,7 +377,7 @@ CMD:changebet(playerid, params[])
 {
 	if(Gambling[playerid] == G_STATE_READY)
 	{
-		Dialog_Show(playerid, ChangeBetSpin, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Change Bet", 
+		Dialog_Show(playerid, ChangeBetSpin, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Change Bet", 
 		""WHITE"Bet anda saat ini: "GREEN"%s\n\n"WHITE"Mohon masukkan berapa jumlah yang ingin anda pasang dalam taruhan ini:\nMin Bet: "GREEN"$5\n"WHITE"Max Bet: "GREEN"$10",
 		"Bet", "Cancel", FormatMoney(Bet[playerid]));
 	} else ShowTDN(playerid, NOTIFICATION_ERROR, "Anda tidak berada didalam mode slot!");
@@ -425,11 +425,11 @@ Dialog:ChangeBetSpin(playerid, response, listitem, inputtext[])
 	if(response)
 	{
 		new bet = strval(inputtext);
-		if(bet < MIN_BET) return Dialog_Show(playerid, ChangeBetSpin, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Change Bet", 
+		if(bet < MIN_BET) return Dialog_Show(playerid, ChangeBetSpin, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Change Bet", 
 		""WHITE"ERROR: Minimal Bet $10!\n"WHITE"Bet anda saat ini: "GREEN"%s\n\n"WHITE"Mohon masukkan berapa jumlah yang ingin anda pasang dalam taruhan ini:\nMin Bet: "GREEN"$10\n"WHITE"Max Bet: "GREEN"$10",
 		"Bet", "Cancel", FormatMoney(Bet[playerid]));
 
-		if(bet > MAX_BET) return Dialog_Show(playerid, ChangeBetSpin, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Change Bet", 
+		if(bet > MAX_BET) return Dialog_Show(playerid, ChangeBetSpin, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Change Bet", 
 		""WHITE"ERROR: Chip anda tidak cukup!\n"WHITE"Bet anda saat ini: "GREEN"%s\n\n"WHITE"Mohon masukkan berapa jumlah yang ingin anda pasang dalam taruhan ini:\nMin Bet: "GREEN"$10\n"WHITE"Max Bet: "GREEN"$10",
 		"Bet", "Cancel", FormatMoney(Bet[playerid]));
 

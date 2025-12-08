@@ -71,7 +71,7 @@ Optional plugins:
 */
 
 // Standard colours
-#define Y_Mayoritas					0xFF9999D9
+#define Y_Imajinasi					0xFF9999D9
 #define X11_SNOW                    0xFFFAFAAA
 #define X11_GHOSTWHITE              0xF8F8FFAA
 #define X11_GHOST_WHITE             0xF8F8FFAA

@@ -126,7 +126,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
             {
                 if(AccountData[playerid][pInjured]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda sedang pingsan!");
 
-                ShowPlayerDialog(playerid, DIALOG_RECYCLER_START, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Recycler Job", 
+                ShowPlayerDialog(playerid, DIALOG_RECYCLER_START, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Recycler Job", 
                 "Mulai Pekerjaan\n"GRAY"Selesaikan Pekerjaan", "Pilih", "Batal");
             }
 

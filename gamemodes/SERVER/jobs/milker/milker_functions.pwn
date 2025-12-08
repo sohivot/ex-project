@@ -382,7 +382,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
         {
             if(IsPlayerInDynamicArea(playerid, PlayerSusuVars[playerid][SusuJobArea]))
             {
-                ShowPlayerDialog(playerid, DIALOG_SUSU_START, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Pemerah Susu",
+                ShowPlayerDialog(playerid, DIALOG_SUSU_START, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Pemerah Susu",
                 "Mulai Perah susu\nSelesaikan Pekerjaan", "Pilih", "Batal");
             }
 

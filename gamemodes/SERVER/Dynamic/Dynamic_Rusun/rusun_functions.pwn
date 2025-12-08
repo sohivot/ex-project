@@ -68,7 +68,7 @@ RemainingTime(playerid)
     new rsid = RusunNearest(playerid);
     if(rsid != -1)
     {
-        ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- %s", RusunData[rsid][rusunName]),
+        ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- %s", RusunData[rsid][rusunName]),
         shstr, "Tutup", "");
     }
     return 1;
@@ -354,7 +354,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 
         if(IsPlayerInRangeOfPoint(playerid, 1.5, 2234.7104, -1106.1246, 1050.8828) && GetPlayerVirtualWorld(playerid) == AccountData[playerid][pInRusun])
         {
-            ShowPlayerDialog(playerid, DIALOG_RUSUN_BRANKAS, DIALOG_STYLE_LIST, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- %s", RusunData[AccountData[playerid][pInRusun]][rusunName]),
+            ShowPlayerDialog(playerid, DIALOG_RUSUN_BRANKAS, DIALOG_STYLE_LIST, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- %s", RusunData[AccountData[playerid][pInRusun]][rusunName]),
             "Undang\
             \n"GRAY"Pakaian\
             \nMembuang Pakaian\
@@ -369,13 +369,13 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
                 if(RusunData[rsid][rusunOwnerID] != AccountData[playerid][pID])
                 {
                     PlayerPlaySound(playerid, 1085, 0.0, 0.0, 0.0);
-                    ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- %s", RusunData[rsid][rusunName]), 
+                    ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- %s", RusunData[rsid][rusunName]), 
                     "Sudah dimiliki warga lain!", "Tutup", "");
                 }
                 else
                 {
                     AccountData[playerid][pInRusun] = rsid;
-                    ShowPlayerDialog(playerid, DIALOG_RUSUN_OWNED, DIALOG_STYLE_LIST, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- %s", RusunData[rsid][rusunName]), 
+                    ShowPlayerDialog(playerid, DIALOG_RUSUN_OWNED, DIALOG_STYLE_LIST, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- %s", RusunData[rsid][rusunName]), 
                     "Masuk\
                     \n"GRAY"Cek status sewa", "Pilih", "Batal");
                 }
@@ -384,7 +384,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
             {
                 AccountData[playerid][pInRusun] = rsid;
                 format(srss, sizeof(srss), "Sewa\t"GREEN"%s / bulan", FormatMoney(RusunData[rsid][rusunPrice]));
-                ShowPlayerDialog(playerid, DIALOG_RUSUN, DIALOG_STYLE_TABLIST, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- %s", RusunData[rsid][rusunName]),
+                ShowPlayerDialog(playerid, DIALOG_RUSUN, DIALOG_STYLE_TABLIST, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- %s", RusunData[rsid][rusunName]),
                 srss, "Pilih", "Batal");
             }
         }
@@ -478,11 +478,11 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 if(count == 0)
                 {
                     PlayerPlaySound(playerid, 5206, 0.0, 0.0, 0.0);
-                    return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Undang Teman",
+                    return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Undang Teman",
                     "Tidak ada player yang dekat dengan pintu rusun anda!", "Close", "");
                 }
 
-                ShowPlayerDialog(playerid, DIALOG_RUSUN_INVITE, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Undang Teman", frmxt, "Pilih", "Batal");
+                ShowPlayerDialog(playerid, DIALOG_RUSUN_INVITE, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Undang Teman", frmxt, "Pilih", "Batal");
             }
             case 1:
             {
@@ -494,7 +494,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             }
             case 3:
             {
-                ShowPlayerDialog(playerid, DIALOG_RUSUN_BROPTION, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas",
+                ShowPlayerDialog(playerid, DIALOG_RUSUN_BROPTION, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas",
                 "Simpan Barang\n"GRAY"Ambil Barang", "Pilih", "Batal");
             }
         }
@@ -534,12 +534,12 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
                         format(str, sizeof(str), "%s%s\t%d\t-\n", str, itemname, amounts);
                     }
-                    ShowPlayerDialog(playerid, DIALOG_RUSUNVAULT_DEPOSIT, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas", str, "Pilih", "Batal");
+                    ShowPlayerDialog(playerid, DIALOG_RUSUNVAULT_DEPOSIT, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas", str, "Pilih", "Batal");
                 }
                 else 
                 {
                     PlayerPlaySound(playerid, 5206, 0.0, 0.0, 0.0);
-                    return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas",
+                    return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas",
                     "Anda tidak memiliki barang untuk disimpan!", "Tutup", "");
                 }
             }
@@ -558,11 +558,11 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
                         format(str, sizeof(str), "%s%s\t%d\t-\n", str, itemname, amounts);
                     }
-                    ShowPlayerDialog(playerid, DIALOG_RUSUNVAULT_WITHDRAW, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas", str, "Pilih", "Batal");
+                    ShowPlayerDialog(playerid, DIALOG_RUSUNVAULT_WITHDRAW, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas", str, "Pilih", "Batal");
                 }
                 else 
                 {
-                    return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas",
+                    return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas",
                     "Tidak ada barang brankas!", "Tutup", "");
                 }
             }
@@ -577,7 +577,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         {
             if(!IsPlayerConnected(targetid)) return ShowTDN(playerid, NOTIFICATION_ERROR, "Pemain tersebut tidak terkoneksi ke server!");
             SetPVarInt(targetid, "RusunInviteID", rsid);
-            ShowPlayerDialog(targetid, DIALOG_RUSUN_INVITECONF, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Undang Teman",
+            ShowPlayerDialog(targetid, DIALOG_RUSUN_INVITECONF, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Undang Teman",
             "Seseorang mengundang kamu untuk masuk ke dalam rusunnya", "Terima", "Tolak");
         }
     }
@@ -625,7 +625,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
                 new shstr[529];
                 format(shstr, sizeof(shstr), "Anda akan menyimpan item:\nNama: %s\nJumlah di tas: %d\nMohon masukkan berapa jumlah yang ingin di simpan:", RusunBrankas[playerid][rusunbrankasTemp], RusunBrankas[playerid][rusunbrankasQuant]);
-                ShowPlayerDialog(playerid, DIALOG_RUSUNVAULT_IN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas",
+                ShowPlayerDialog(playerid, DIALOG_RUSUNVAULT_IN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas",
                 shstr, "Input", "Batal");
             }
         }
@@ -647,7 +647,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         if(isnull(inputtext))
         {
             format(shstr, sizeof(shstr), "Anda akan menyimpan item:\nNama: %s\nJumlah di tas: %d\nTidak dapat diisi kosong!\nMohon masukkan berapa jumlah yang ingin di simpan:", RusunBrankas[playerid][rusunbrankasTemp], RusunBrankas[playerid][rusunbrankasQuant]);
-            ShowPlayerDialog(playerid, DIALOG_RUSUNVAULT_IN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas",
+            ShowPlayerDialog(playerid, DIALOG_RUSUNVAULT_IN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas",
             shstr, "Input", "Batal");
             return 1;
         }
@@ -655,7 +655,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         if(!IsNumeric(inputtext))
         {
             format(shstr, sizeof(shstr), "Anda akan menyimpan item:\nNama: %s\nJumlah di tas: %d\nHanya dapat diisi angka!\nMohon masukkan berapa jumlah yang ingin di simpan:", RusunBrankas[playerid][rusunbrankasTemp], RusunBrankas[playerid][rusunbrankasQuant]);
-            ShowPlayerDialog(playerid, DIALOG_RUSUNVAULT_IN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas",
+            ShowPlayerDialog(playerid, DIALOG_RUSUNVAULT_IN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas",
             shstr, "Input", "Batal");
             return 1;
         }
@@ -663,7 +663,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         if(strval(inputtext) < 1 || strval(inputtext) > RusunBrankas[playerid][rusunbrankasQuant])
         {
             format(shstr, sizeof(shstr), "Anda akan menyimpan item:\nNama: %s\nJumlah di tas: %d\nJumlah tidak valid!\nMohon masukkan berapa jumlah yang ingin di simpan:", RusunBrankas[playerid][rusunbrankasTemp], RusunBrankas[playerid][rusunbrankasQuant]);
-            ShowPlayerDialog(playerid, DIALOG_RUSUNVAULT_IN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas",
+            ShowPlayerDialog(playerid, DIALOG_RUSUNVAULT_IN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas",
             shstr, "Input", "Batal");
             return 1;
         }
@@ -723,7 +723,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
                 new shstr[528];
                 format(shstr, sizeof(shstr), "Anda akan mengambil item:\nNama: %s\nJumlah di brankas: %d\nMohon masukkan berapa jumlah yang ingin anda ambil dari brankas:", RusunBrankas[playerid][rusunbrankasTemp], RusunBrankas[playerid][rusunbrankasQuant]);
-                ShowPlayerDialog(playerid, DIALOG_RUSUNVAULT_OUT, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas",
+                ShowPlayerDialog(playerid, DIALOG_RUSUNVAULT_OUT, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas",
                 shstr, "Input", "Batal");
             }
         }
@@ -745,7 +745,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         if(isnull(inputtext))
         {
             format(shstr, sizeof(shstr), "Anda akan mengambil item:\nNama: %s\nJumlah di brankas: %d\nTidak dapat diisi kosong!\nMohon masukkan berapa jumlah yang ingin anda ambil dari brankas:", RusunBrankas[playerid][rusunbrankasTemp], RusunBrankas[playerid][rusunbrankasQuant]);
-            ShowPlayerDialog(playerid, DIALOG_RUSUNVAULT_OUT, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas",
+            ShowPlayerDialog(playerid, DIALOG_RUSUNVAULT_OUT, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas",
             shstr, "Input", "Batal");
             return 1;
         }
@@ -753,7 +753,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         if(!IsNumeric(inputtext))
         {
             format(shstr, sizeof(shstr), "Anda akan mengambil item:\nNama: %s\nJumlah di brankas: %d\nHanya dapat diisi angka!\nMohon masukkan berapa jumlah yang ingin anda ambil dari brankas:", RusunBrankas[playerid][rusunbrankasTemp], RusunBrankas[playerid][rusunbrankasQuant]);
-            ShowPlayerDialog(playerid, DIALOG_RUSUNVAULT_OUT, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas",
+            ShowPlayerDialog(playerid, DIALOG_RUSUNVAULT_OUT, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas",
             shstr, "Input", "Batal");
             return 1;
         }
@@ -761,7 +761,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         if(strval(inputtext) < 1 || strval(inputtext) > RusunBrankas[playerid][rusunbrankasQuant])
         {
             format(shstr, sizeof(shstr), "Anda akan mengambil item:\nNama: %s\nJumlah di brankas: %d\nJumlah tidak valid!\nMohon masukkan berapa jumlah yang ingin anda ambil dari brankas:", RusunBrankas[playerid][rusunbrankasTemp], RusunBrankas[playerid][rusunbrankasQuant]);
-            ShowPlayerDialog(playerid, DIALOG_RUSUNVAULT_OUT, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas",
+            ShowPlayerDialog(playerid, DIALOG_RUSUNVAULT_OUT, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas",
             shstr, "Input", "Batal");
             return 1;
         }

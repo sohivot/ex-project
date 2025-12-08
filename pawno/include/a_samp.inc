@@ -41,7 +41,7 @@
 #define MAX_TEXT_DRAWS							(2048)
 #define MAX_PLAYER_TEXT_DRAWS					(256)
 #define MAX_MENUS								(128)
-#define MAX_3DMayoritas_WM						(1024)
+#define MAX_3DImajinasi_WM						(1024)
 #define MAX_3DTEXT_PLAYER						(1024)
 #define MAX_PICKUPS								(4096)
 #define INVALID_MENU							(0xFF)

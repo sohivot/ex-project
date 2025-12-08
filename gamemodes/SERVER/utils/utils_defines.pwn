@@ -1,8 +1,8 @@
 #define TEXT_GAMEMODE	"LastestByExeren"
 #define TEXT_WEBURL		"discord.gg/mayorp"
 #define TEXT_LANGUAGE	"Bahasa Indonesia"
-#define SERVER_BOT      "Mayoritas Security"
-#define SERVER_NAME     "Mayoritas Roleplay"
+#define SERVER_BOT      "Imajinasi Security"
+#define SERVER_NAME     "Imajinasi Roleplay"
 
 #define		MYSQL_HOST 			"127.0.0.1"
 #define		MYSQL_USER 			"root"

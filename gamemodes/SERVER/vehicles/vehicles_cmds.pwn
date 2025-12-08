@@ -217,7 +217,7 @@ CMD:sellveh(playerid, params[])
 			format(AccountData[otherid][pTempText], 256, "%s", PlayerVehicle[i][pVehPlate]);
 			SetPVarString(otherid, "CarName", GetVehicleName(PlayerVehicle[i][pVehPhysic]));
 
-			Dialog_Show(playerid, SellVehMenu, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Metode Pembayaran", "Cash\nSaldo Rekening", "Pilih", "Batal");
+			Dialog_Show(playerid, SellVehMenu, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Metode Pembayaran", "Cash\nSaldo Rekening", "Pilih", "Batal");
 			SetPVarInt(playerid, "CarBuyer", otherid);
 		}
 	}
@@ -237,7 +237,7 @@ Dialog:SellVehMenu(playerid, response, listitem, inputtext[])
 		{
 			case 0: // Cash
 			{
-				Dialog_Show(otherid, BuyvehCashMenu, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Beli Kendaraan",
+				Dialog_Show(otherid, BuyvehCashMenu, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Beli Kendaraan",
 				""WHITE"%s menawarkan anda {FFFF00}%s{FFFFFF} seharga {00FF00}%s\
 				\n"WHITE"Metode Pembayaran: "YELLOW"Cash\
 				\n"WHITE"Tekan "GREEN"Iya"WHITE" untuk membeli kendaraannya\
@@ -246,7 +246,7 @@ Dialog:SellVehMenu(playerid, response, listitem, inputtext[])
 			}
 			case 1: // Bank
 			{
-				Dialog_Show(otherid, BuyvehRekeningMenu, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Beli Kendaraan",
+				Dialog_Show(otherid, BuyvehRekeningMenu, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Beli Kendaraan",
 				""WHITE"%s menawarkan anda {FFFF00}%s{FFFFFF} seharga {00FF00}%s\
 				\n"WHITE"Metode Pembayaran: "YELLOW"Saldo Rekening\
 				\n"WHITE"Tekan "GREEN"Iya"WHITE" untuk membeli kendaraannya\
@@ -708,7 +708,7 @@ CMD:avehlist(playerid, params[])
 		}
 	}
 	if(found)
-		ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Player Vehicle", CMDString, "Tutup", "");
+		ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Player Vehicle", CMDString, "Tutup", "");
 	else 
 		ShowTDN(playerid, NOTIFICATION_WARNING, "Pemain tersebut tidak memiliki kendaraan apapun!");
 	return 1;
@@ -808,7 +808,7 @@ CMD:respawnveh(playerid, params[])
 CMD:myv(playerid, params[])
 {
 	if(!AccountData[playerid][IsLoggedIn]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda harus terkoneksi ke dalam server!");
-	if(!GetOwnedVeh(playerid)) return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kepemilikan Kendaraan", "Anda tidak memiliki kendaraan apapun!", "Tutup", "");
+	if(!GetOwnedVeh(playerid)) return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kepemilikan Kendaraan", "Anda tidak memiliki kendaraan apapun!", "Tutup", "");
 
 	new count = GetOwnedVeh(playerid);
 	static 
@@ -856,7 +856,7 @@ CMD:myv(playerid, params[])
 		else format(list, sizeof(list), "%s\t%s [%d]\t%s %s\t%s"WHITE"/%s/\n", StatusSpawn, GetVehicleModelName(PlayerVehicle[vid][pVehModelID]), PlayerVehicle[vid][pVehID], PlayerVehicle[vid][pVehPlate], PlateStatus, Status1, GetMyVehicleStatus(vid, "Spawned"));
 		strcat(CMDString, list);
 	}
-	ShowPlayerDialog(playerid, DialogMyVeh, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kepemilikan Kendaraan", CMDString, "Cari", "Cancel");
+	ShowPlayerDialog(playerid, DialogMyVeh, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kepemilikan Kendaraan", CMDString, "Cari", "Cancel");
 	return 1;
 }
 
@@ -896,7 +896,7 @@ CMD:windows(playerid, params[])
 	if(!IsPlayerInAnyVehicle(playerid)) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda harus berada di dalam kendaraan untuk menggunakan ini!");
 	if(!IsFourWheelVehicle(vehicleid)) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda hanya dapat menggunakannya di kendaraan roda 4!");
 
-	Dialog_Show(playerid, WindowsControl, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Vehicle Windows Control", "Driver Seat\nPassenger Seat\nBack Left\nBack Right\nClose All", "Choose", "Close");
+	Dialog_Show(playerid, WindowsControl, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Vehicle Windows Control", "Driver Seat\nPassenger Seat\nBack Left\nBack Right\nClose All", "Choose", "Close");
 	return 1;
 }
 

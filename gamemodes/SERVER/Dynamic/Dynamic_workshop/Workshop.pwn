@@ -537,7 +537,7 @@ CMD:wsmodif(playerid, params[])
             format(minsty, sizeof(minsty), "%s"WHITE"Upgrade Kendaraan\n", minsty);
             format(minsty, sizeof(minsty), "\n%s"RED"> Remove Hydraulic\n", minsty);
             format(minsty, sizeof(minsty), "%s"RED"> Remove Nitro\n", minsty);
-            ShowPlayerDialog(playerid, DIALOG_MODIF, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Modifikasi", minsty, "Pilih", "Batal");
+            ShowPlayerDialog(playerid, DIALOG_MODIF, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Modifikasi", minsty, "Pilih", "Batal");
         }
     }
     return 1;

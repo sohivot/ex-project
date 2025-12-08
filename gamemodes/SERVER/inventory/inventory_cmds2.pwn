@@ -298,7 +298,7 @@ CreateInventoryTextdraw(playerid)
     PlayerTextDrawFont(playerid, InventoryTD[playerid][28], 4);
     PlayerTextDrawSetProportional(playerid, InventoryTD[playerid][28], 1);
 
-    InventoryTD[playerid][29] = CreatePlayerTextDraw(playerid, 396.000, 150.000, "Mayoritas");
+    InventoryTD[playerid][29] = CreatePlayerTextDraw(playerid, 396.000, 150.000, "Imajinasi");
     PlayerTextDrawLetterSize(playerid, InventoryTD[playerid][29], 0.190, 1.099);
     PlayerTextDrawAlignment(playerid, InventoryTD[playerid][29], 1);
     PlayerTextDrawColor(playerid, InventoryTD[playerid][29], -1);

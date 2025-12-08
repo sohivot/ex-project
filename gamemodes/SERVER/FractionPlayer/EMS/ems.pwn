@@ -102,7 +102,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 
             if(IsPlayerInDynamicArea(playerid, EMSStuff[EMSLocker]) && AccountData[playerid][pDutyEms])
             {
-                ShowPlayerDialog(playerid, DIALOG_EMS_LOCKER, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Locker EMS",
+                ShowPlayerDialog(playerid, DIALOG_EMS_LOCKER, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Locker EMS",
                 "Baju Biasa\n"GRAY"Baju Dinas", "Pilih", "Batal");
             }
 
@@ -110,7 +110,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
             {
                 if(AccountData[playerid][pFactionRank] < 5) return ShowTDN(playerid, NOTIFICATION_ERROR, "Minimal rank Komisi Disiplin untuk akses desk!");
 
-                ShowPlayerDialog(playerid, DIALOG_EMS_BOSDESK, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Bos Desk",
+                ShowPlayerDialog(playerid, DIALOG_EMS_BOSDESK, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Bos Desk",
                 "Invite\
                 \n"GRAY"Kelola Jabatan\
                 \nKick\
@@ -141,7 +141,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 
             if(IsPlayerInRangeOfPoint(playerid, 2.0, EMSStuff[EMSGaragePOS][0], EMSStuff[EMSGaragePOS][1], EMSStuff[EMSGaragePOS][2]) && AccountData[playerid][pDutyEms])
             {
-                ShowPlayerDialog(playerid, DIALOG_EMS_GARAGE, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Garasi EMS",
+                ShowPlayerDialog(playerid, DIALOG_EMS_GARAGE, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Garasi EMS",
                 "Keluarkan Kendaraan\
                 \n"GRAY"Simpan Kendaraan\
                 \nBeli Kendaraan\
@@ -154,7 +154,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
                 if(NearPlayerOpenStorage(playerid)) return ShowTDN(playerid, NOTIFICATION_ERROR, "Pemain disekitar sedang membuka brankas!");
                 
                 AccountData[playerid][menuShowed] = true;
-                ShowPlayerDialog(playerid, DIALOG_EMSVAULT, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas EMS",
+                ShowPlayerDialog(playerid, DIALOG_EMSVAULT, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas EMS",
                 "Simpan Barang\n"GRAY"Ambil Barang", "Pilih", "Batal");
             }
 
@@ -166,7 +166,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
                 format(sstr, sizeof sstr, "%sPerban\t%d\t$25\n", sstr, Bandage);
                 format(sstr, sizeof sstr, "%sMedkit\t%d\t$75\n", sstr, Medkit);
                 format(sstr, sizeof sstr, "%sAlprazolam\t%d\t$50\n", sstr, PillStress);
-                Dialog_Show(playerid, Brankas_Ems, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Ems", sstr, "Pilih", "Batal");
+                Dialog_Show(playerid, Brankas_Ems, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Ems", sstr, "Pilih", "Batal");
             }
         }
     }
@@ -283,15 +283,15 @@ Dialog:Brankas_Ems(playerid, response, listitem, inputtext[])
         {
             case 0:
             {
-                Dialog_Show(playerid, Perban_Ems, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas EMS", "Mohon ikuti sesuai format berikut:\n[ambil] [jumlah] atau [depo] [jumlah]\nMohon masukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
+                Dialog_Show(playerid, Perban_Ems, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas EMS", "Mohon ikuti sesuai format berikut:\n[ambil] [jumlah] atau [depo] [jumlah]\nMohon masukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
             }
             case 1:
             {
-                Dialog_Show(playerid, Medkit_Ems, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas EMS", "Mohon ikuti sesuai format berikut:\n[ambil] [jumlah] atau [depo] [jumlah]\nMohon masukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
+                Dialog_Show(playerid, Medkit_Ems, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas EMS", "Mohon ikuti sesuai format berikut:\n[ambil] [jumlah] atau [depo] [jumlah]\nMohon masukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
             }
             case 2:
             {
-                Dialog_Show(playerid, Pill_Ems, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas EMS", "Mohon ikuti sesuai format berikut:\n[ambil] [jumlah] atau [depo] [jumlah]\nMohon masukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
+                Dialog_Show(playerid, Pill_Ems, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas EMS", "Mohon ikuti sesuai format berikut:\n[ambil] [jumlah] atau [depo] [jumlah]\nMohon masukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
             }
         }
     }
@@ -305,7 +305,7 @@ Dialog:Pill_Ems(playerid, response, listitem, inputtext[])
         new option[128], amount;
         if(sscanf(inputtext, "s[128]d", option, amount))
         {
-            Dialog_Show(playerid, Pill_Ems, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas EMS", "Mohon ikuti sesuai format berikut:\n[ambil] [jumlah] atau [depo] [jumlah]\nMohon masukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
+            Dialog_Show(playerid, Pill_Ems, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas EMS", "Mohon ikuti sesuai format berikut:\n[ambil] [jumlah] atau [depo] [jumlah]\nMohon masukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
             return 1;
         }
 
@@ -353,7 +353,7 @@ Dialog:Medkit_Ems(playerid, response, listitem, inputtext[])
         new option[128], amount;
         if(sscanf(inputtext, "s[128]d", option, amount))
         {
-            Dialog_Show(playerid, Medkit_Ems, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas EMS", "Mohon ikuti sesuai format berikut:\n[ambil] [jumlah] atau [depo] [jumlah]\nMohon masukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
+            Dialog_Show(playerid, Medkit_Ems, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas EMS", "Mohon ikuti sesuai format berikut:\n[ambil] [jumlah] atau [depo] [jumlah]\nMohon masukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
             return 1;
         }
 
@@ -401,7 +401,7 @@ Dialog:Perban_Ems(playerid, response, listitem, inputtext[])
         new option[128], amount;
         if(sscanf(inputtext, "s[128]d", option, amount))
         {
-            Dialog_Show(playerid, Perban_Ems, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas EMS", "Mohon ikuti sesuai format berikut:\n[ambil] [jumlah] atau [depo] [jumlah]\nMohon masukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
+            Dialog_Show(playerid, Perban_Ems, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas EMS", "Mohon ikuti sesuai format berikut:\n[ambil] [jumlah] atau [depo] [jumlah]\nMohon masukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
             return 1;
         }
 
@@ -456,7 +456,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             {
                 case 0:// perban
                 {
-                    ShowPlayerDialog(playerid, DIALOG_EMSBKCONFIRM, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas EMS",
+                    ShowPlayerDialog(playerid, DIALOG_EMSBKCONFIRM, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas EMS",
                     ""WHITE"Anda akan membeli Perban dengan:\
                     \n\nUang: $150\
                     \nKain: 50x\
@@ -467,7 +467,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 }
                 case 1:// medkit 
                 {
-                    ShowPlayerDialog(playerid, DIALOG_EMSBKCONFIRM, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas EMS",
+                    ShowPlayerDialog(playerid, DIALOG_EMSBKCONFIRM, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas EMS",
                     ""WHITE"Anda akan membeli Medkit dengan:\
                     \n\nUang: $150\
                     \nKain: 20x\
@@ -478,7 +478,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 }
                 case 2:// Alprazolam
                 {
-                    ShowPlayerDialog(playerid, DIALOG_EMSBKCONFIRM, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas EMS",
+                    ShowPlayerDialog(playerid, DIALOG_EMSBKCONFIRM, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas EMS",
                     ""WHITE"Anda akan membeli Alprazolam dengan:\
                     \n\nUang: $150\
                     \nKain: 5x\
@@ -493,11 +493,11 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         case DIALOG_EMSBKCONFIRM:
         {
             if(!response) return ShowTDN(playerid, NOTIFICATION_INFO, "Anda telah membatalkan pilihan!");
-            if(AccountData[playerid][pFaction] != FACTION_EMS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota EMS Mayoritas!");
-            if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_EMSBKCONFIRM, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas EMS",
+            if(AccountData[playerid][pFaction] != FACTION_EMS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota EMS Imajinasi!");
+            if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_EMSBKCONFIRM, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas EMS",
             "Error: Tidak dapat dikosongkan!\
             \n( Masukkan berapa jumlah yang ingin anda beli! )", "Input", "Batal");
-            if(!IsNumeric(inputtext)) return ShowPlayerDialog(playerid, DIALOG_EMSBKCONFIRM, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas EMS",
+            if(!IsNumeric(inputtext)) return ShowPlayerDialog(playerid, DIALOG_EMSBKCONFIRM, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas EMS",
             "Error: Hanya dapat diisi angka!\
             \n( Masukkan berapa jumlah yang ingin anda beli! )", "Input", "Batal");
 
@@ -611,7 +611,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                         }
                         else format(lstr, sizeof(lstr), "%s%d\t%s\t%s\n", lstr, itt+1, GetVehicleModelName(PlayerVehicle[id][pVehModelID]), PlayerVehicle[id][pVehPlate]);
                     }
-                    ShowPlayerDialog(playerid, DIALOG_EMS_GARAGE_TAKEOUT, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Garasi EMS", lstr, "Pilih", "Batal");
+                    ShowPlayerDialog(playerid, DIALOG_EMS_GARAGE_TAKEOUT, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Garasi EMS", lstr, "Pilih", "Batal");
                 }
                 case 1:// Simpan KendaraanA
                 {
@@ -635,11 +635,11 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                             PlayerVehicle[carid][pVehPhysic] = INVALID_VEHICLE_ID;
                         }
                     }
-                    if(!foundnearby) return ShowTDN(playerid, NOTIFICATION_ERROR, "Tidak ada kendaraan dari EMS Mayoritas milik anda di sekitar!");
+                    if(!foundnearby) return ShowTDN(playerid, NOTIFICATION_ERROR, "Tidak ada kendaraan dari EMS Imajinasi milik anda di sekitar!");
                 }
                 case 2:// Beli Kendaraan
                 {
-                    ShowPlayerDialog(playerid, DIALOG_EMS_GARAGE_BUY, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Garasi EMS",
+                    ShowPlayerDialog(playerid, DIALOG_EMS_GARAGE_BUY, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Garasi EMS",
                     "Model\tHarga\
                     \nAmbulance\t$5000\
                     \n"GRAY"Van Jenazah\t"GRAY"$8000\
@@ -665,12 +665,12 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
                             format(list, sizeof(list), "%s%d\t%s\n", list, havpid, GetVehicleModelName(havmod));
                         }
-                        ShowPlayerDialog(playerid, DIALOG_EMS_GARAGE_DELETE, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Hapus Kendaraan", list, "Hapus", "Batal");
+                        ShowPlayerDialog(playerid, DIALOG_EMS_GARAGE_DELETE, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Hapus Kendaraan", list, "Hapus", "Batal");
                     }
                     else 
                     {
                         PlayerPlaySound(playerid, 5206, 0.0, 0.0, 0.0);
-                        return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Hapus Kendaraan", "Anda tidak memiliki kendaraan EMS.", "Tutp", "");
+                        return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Hapus Kendaraan", "Anda tidak memiliki kendaraan EMS.", "Tutp", "");
                     }
                 }
             }
@@ -757,7 +757,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         {
             if(!response) return 1;
             if(AccountData[playerid][ActivityTime] != 0) return ShowTDN(playerid, NOTIFICATION_WARNING, "Anda sedang melakukan sesuatu, harap tunggu!");
-            if(AccountData[playerid][pFaction] != FACTION_EMS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota EMS Mayoritas!");
+            if(AccountData[playerid][pFaction] != FACTION_EMS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota EMS Imajinasi!");
             new targetid = AccountData[playerid][pTarget];
             if(!IsPlayerConnected(targetid)) return ShowTDN(playerid, NOTIFICATION_ERROR, "Pemain tersebut tidak terkoneksi ke server!");
             if(!IsPlayerNearPlayer(playerid, targetid, 3.0)) return ShowTDN(playerid, NOTIFICATION_ERROR, "Pemain tersebut tidak dekat dengan anda!");
@@ -912,13 +912,13 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
                             format(str, sizeof(str), "%s%s\t%d\t-\n", str, itemname, amounts);
                         }
-                        ShowPlayerDialog(playerid, DIALOG_EMSVAULT_DEPOSIT, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas EMS", str, "Pilih", "Batal");
+                        ShowPlayerDialog(playerid, DIALOG_EMSVAULT_DEPOSIT, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas EMS", str, "Pilih", "Batal");
                     }
                     else 
                     {
                         AccountData[playerid][menuShowed] = false;
                         PlayerPlaySound(playerid, 5206, 0.0, 0.0, 0.0);
-                        return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas EMS",
+                        return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas EMS",
                         "Anda tidak memiliki barang untuk disimpan!", "Tutup", "");
                     }
                 }
@@ -936,13 +936,13 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
                             format(str, sizeof(str), "%s%s\t%d\t-\n", str, itemname, amounts);
                         }
-                        ShowPlayerDialog(playerid, DIALOG_EMSVAULT_WITHDRAW, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas EMS", str, "Pilih", "Batal");
+                        ShowPlayerDialog(playerid, DIALOG_EMSVAULT_WITHDRAW, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas EMS", str, "Pilih", "Batal");
                     }
                     else 
                     {
                         AccountData[playerid][menuShowed] = false;
                         PlayerPlaySound(playerid, 5206, 0.0, 0.0, 0.0);
-                        return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas EMS",
+                        return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas EMS",
                         "Tidak ada barang di brankas saat ini!", "Tutup", "");
                     }
                 }
@@ -973,7 +973,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
                 new shstr[528];
                 format(shstr, sizeof(shstr), "Anda akan menyimpan item:\nNama: %s\nJumlah di tas: %d\nMohon masukkan berapa jumlah item yang ingin disimpan:", FactionBrankas[playerid][factionBrankasTemp], FactionBrankas[playerid][factionBrankasQuant]);
-                ShowPlayerDialog(playerid, DIALOG_EMSVAULT_IN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas EMS", 
+                ShowPlayerDialog(playerid, DIALOG_EMSVAULT_IN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas EMS", 
                 shstr, "Input", "Batal");
             }
         }
@@ -990,7 +990,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             {
                 AccountData[playerid][menuShowed] = true;
                 format(shstr, sizeof(shstr), "Anda akan menyimpan item:\nNama: %s\nJumlah di tas: %d\nTidak dapat diisi kosong!\nMohon masukkan berapa jumlah item yang ingin disimpan:", FactionBrankas[playerid][factionBrankasTemp], FactionBrankas[playerid][factionBrankasQuant]);
-                ShowPlayerDialog(playerid, DIALOG_EMSVAULT_IN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas EMS", 
+                ShowPlayerDialog(playerid, DIALOG_EMSVAULT_IN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas EMS", 
                 shstr, "Input", "Batal");
                 return 1;
             }
@@ -999,7 +999,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             {
                 AccountData[playerid][menuShowed] = true;
                 format(shstr, sizeof(shstr), "Anda akan menyimpan item:\nNama: %s\nJumlah di tas: %d\nHanya dapat diisi angka!\nMohon masukkan berapa jumlah item yang ingin disimpan:", FactionBrankas[playerid][factionBrankasTemp], FactionBrankas[playerid][factionBrankasQuant]);
-                ShowPlayerDialog(playerid, DIALOG_EMSVAULT_IN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas EMS", 
+                ShowPlayerDialog(playerid, DIALOG_EMSVAULT_IN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas EMS", 
                 shstr, "Input", "Batal");
                 return 1;
             }
@@ -1008,7 +1008,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             {
                 AccountData[playerid][menuShowed] = true;
                 format(shstr, sizeof(shstr), "Anda akan menyimpan item:\nNama: %s\nJumlah di tas: %d\nJumlah tidak valid!\nMohon masukkan berapa jumlah item yang ingin disimpan:", FactionBrankas[playerid][factionBrankasTemp], FactionBrankas[playerid][factionBrankasQuant]);
-                ShowPlayerDialog(playerid, DIALOG_EMSVAULT_IN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas EMS", 
+                ShowPlayerDialog(playerid, DIALOG_EMSVAULT_IN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas EMS", 
                 shstr, "Input", "Batal");
                 return 1;
             }
@@ -1061,13 +1061,13 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 cache_get_value_name_int(listitem, "Quantity", FactionBrankas[playerid][factionBrankasQuant]);
 
                 format(shstr, sizeof(shstr), "Anda akan mengambil item:\nNama: %s\nJumlah tersimpan: %d\nMohon masukkan berapa jumlah yang ingin anda ambil:", FactionBrankas[playerid][factionBrankasTemp], FactionBrankas[playerid][factionBrankasQuant]);
-                ShowPlayerDialog(playerid, DIALOG_EMSVAULT_OUT, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas EMS",
+                ShowPlayerDialog(playerid, DIALOG_EMSVAULT_OUT, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas EMS",
                 shstr, "Input", "Batal");
             }
             else 
             {
                 AccountData[playerid][menuShowed] = false;
-                ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas EMS",
+                ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas EMS",
                 "Brankas ini isinya kosong!", "Tutup", "");
             }
         }
@@ -1084,7 +1084,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             {
                 AccountData[playerid][menuShowed] = true;
                 format(shstr, sizeof(shstr), "Anda akan mengambil item:\nNama: %s\nJumlah tersimpan: %d\nTidak dapat diisi kosong!\nMohon masukkan berapa jumlah yang ingin anda ambil:", FactionBrankas[playerid][factionBrankasTemp], FactionBrankas[playerid][factionBrankasQuant]);
-                ShowPlayerDialog(playerid, DIALOG_EMSVAULT_OUT, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas EMS",
+                ShowPlayerDialog(playerid, DIALOG_EMSVAULT_OUT, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas EMS",
                 shstr, "Input", "Batal");
                 return 1;
             }
@@ -1093,7 +1093,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             {
                 AccountData[playerid][menuShowed] = true;
                 format(shstr, sizeof(shstr), "Anda akan mengambil item:\nNama: %s\nJumlah tersimpan: %d\nHanya dapat diisi angka!\nMohon masukkan berapa jumlah yang ingin anda ambil:", FactionBrankas[playerid][factionBrankasTemp], FactionBrankas[playerid][factionBrankasQuant]);
-                ShowPlayerDialog(playerid, DIALOG_EMSVAULT_OUT, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas EMS",
+                ShowPlayerDialog(playerid, DIALOG_EMSVAULT_OUT, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas EMS",
                 shstr, "Input", "Batal");
                 return 1;
             }
@@ -1102,7 +1102,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             {
                 AccountData[playerid][menuShowed] = true;
                 format(shstr, sizeof(shstr), "Anda akan mengambil item:\nNama: %s\nJumlah tersimpan: %d\nJumlah tidak valid!\nMohon masukkan berapa jumlah yang ingin anda ambil:", FactionBrankas[playerid][factionBrankasTemp], FactionBrankas[playerid][factionBrankasQuant]);
-                ShowPlayerDialog(playerid, DIALOG_EMSVAULT_OUT, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas EMS",
+                ShowPlayerDialog(playerid, DIALOG_EMSVAULT_OUT, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas EMS",
                 shstr, "Input", "Batal");
                 return 1;
             }
@@ -1138,7 +1138,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         case DIALOG_EMS_GARAGE_DELETE:
         {
             if(!response) return ShowTDN(playerid, NOTIFICATION_INFO, "Anda telah membatalkan pilihan");
-            if(AccountData[playerid][pFaction] != FACTION_EMS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan bagian dari EMS Mayoritas!");
+            if(AccountData[playerid][pFaction] != FACTION_EMS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan bagian dari EMS Imajinasi!");
 
             new frmtdel[151], Cache:execute;
             mysql_format(mdb_query, frmtdel, sizeof(frmtdel), "SELECT * FROM `player_vehicles` WHERE `PVeh_Faction` = 3 AND `PVeh_OwnerID` = %d", AccountData[playerid][pID]);
@@ -1157,7 +1157,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                     format(kckstr, sizeof(kckstr), "Anda berhasil menghapus kendaraan:\
                     \nDatabase ID: %d\
                     \nModel: %s", hvid, GetVehicleModelName(hvmod));
-                    ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Hapus Kendaraan", kckstr, "Tutup", "");
+                    ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Hapus Kendaraan", kckstr, "Tutup", "");
 
                     new pvid = GetFactionVehicleIDFromListitem(playerid, listitem, FACTION_EMS);
 
@@ -1183,7 +1183,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         case DIALOG_EMS_BOSDESK:
         {
             if(!response) return ShowTDN(playerid, NOTIFICATION_INFO, "Anda telah membatalkan pilihan");
-            if(AccountData[playerid][pFaction] != FACTION_EMS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan bagian dari EMS Mayoritas!");
+            if(AccountData[playerid][pFaction] != FACTION_EMS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan bagian dari EMS Imajinasi!");
             if(IsPlayerInjured(playerid)) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda sedang pingsan tidak dapat mengakses Bos Desk!");
             switch(listitem)
             {
@@ -1200,11 +1200,11 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                     if(count == 0)
                     {
                         PlayerPlaySound(playerid, 5206, 0.0, 0.0, 0.0);
-                        return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Invite",
+                        return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Invite",
                         "Tidak ada orang di sekitar anda!", "Tutup", "");
                     }
 
-                    ShowPlayerDialog(playerid, DIALOG_EMS_INVITE, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Invite", frmxt, "Pilih", "Batal");
+                    ShowPlayerDialog(playerid, DIALOG_EMS_INVITE, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Invite", frmxt, "Pilih", "Batal");
                 }
                 case 1:// Kelola Jabatan
                 {
@@ -1224,12 +1224,12 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
                             format(shstr, sizeof(shstr), "%s%s\t%s\t%s\n", shstr, fckname, EMSRank[fckrank], fcklastlogin);
                         }
-                        ShowPlayerDialog(playerid, DIALOG_EMSSETRANK, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Set Jabatan", shstr, "Pilih", "Batal");
+                        ShowPlayerDialog(playerid, DIALOG_EMSSETRANK, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Set Jabatan", shstr, "Pilih", "Batal");
                     }
                     else 
                     {
                         PlayerPlaySound(playerid, 5206, 0.0, 0.0, 0.0);
-                        return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Set Jabatan", "Tidak ada Anggota EMS!", "Tutup", "");
+                        return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Set Jabatan", "Tidak ada Anggota EMS!", "Tutup", "");
                     }
                 }
                 case 2:// Kick Offline / Online
@@ -1250,12 +1250,12 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
                             format(shstr, sizeof(shstr), "%s%s\t%s\t%s\n", shstr, fckname, EMSRank[fckrank], fcklastlogin);
                         }
-                        ShowPlayerDialog(playerid, DIALOG_EMSKICKMEMBER, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kick Anggota", shstr, "Kick", "Batal");
+                        ShowPlayerDialog(playerid, DIALOG_EMSKICKMEMBER, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kick Anggota", shstr, "Kick", "Batal");
                     }
                     else 
                     {
                         PlayerPlaySound(playerid, 5206, 0.0, 0.0, 0.0);
-                        return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kick Anggota", "Tidak ada Anggota EMS!", "Tutup", "");
+                        return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kick Anggota", "Tidak ada Anggota EMS!", "Tutup", "");
                     }
                 }
                 case 3:// Anggota Online
@@ -1280,23 +1280,23 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                         }
                     }
                     format(lstr, sizeof lstr, "%s\n", lstr);
-                    Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Anggota", lstr, "Close", "");
+                    Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Anggota", lstr, "Close", "");
                 }
                 case 4:// Saldo Finansial
                 {
                     new frmxt[158];
-                    format(frmxt, sizeof(frmxt), "Perusahaan EMS Mayoritas saat ini memiliki saldo sebesar:\ 
+                    format(frmxt, sizeof(frmxt), "Perusahaan EMS Imajinasi saat ini memiliki saldo sebesar:\ 
                     \n"DARKGREEN"%s", FormatMoney(EMSMoneyVault));
-                    ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- EMS Money", frmxt, "Tutup", "");
+                    ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- EMS Money", frmxt, "Tutup", "");
                 }
                 case 5:// Deposit saldo
                 {
-                    ShowPlayerDialog(playerid, DIALOG_DEPOSIT_EMS, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- EMS Deposit", 
+                    ShowPlayerDialog(playerid, DIALOG_DEPOSIT_EMS, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- EMS Deposit", 
                     "Mohon masukkan nominal deposit untuk saldo perusahaan:", "Input", "Batal");
                 }
                 case 6://
                 {
-                    ShowPlayerDialog(playerid, DIALOG_WITHDRAW_EMS, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- EMS Withdraw", 
+                    ShowPlayerDialog(playerid, DIALOG_WITHDRAW_EMS, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- EMS Withdraw", 
                     "Mohon masukkan nominal penarikan tunai dari saldo perusahaan:", "Input", "Batal");
                 }
             }
@@ -1304,7 +1304,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         case DIALOG_DEPOSIT_EMS:
         {
             if(!response) return ShowTDN(playerid, NOTIFICATION_INFO, "Anda telah membatalkan pilihan");
-            if(AccountData[playerid][pFaction] != FACTION_EMS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota EMS Mayoritas!");
+            if(AccountData[playerid][pFaction] != FACTION_EMS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota EMS Imajinasi!");
             if(AccountData[playerid][pFactionRank] < 5) return ShowTDN(playerid, NOTIFICATION_ERROR, "Minimal rank Komisi Disiplin untuk akses Bos Desk!");
             new depocash = strval(inputtext), frmtmny[128];
             if(depocash > AccountData[playerid][pMoney]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Uang anda tidak sebanyak itu!");
@@ -1313,7 +1313,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             EMSMoneyVault += depocash;
             mysql_format(mdb_query, frmtmny, sizeof(frmtmny), "UPDATE `stuffs` SET `emsmoneyvault` = %d WHERE `ID` = 0", EMSMoneyVault);
             mysql_tquery(mdb_query, frmtmny);
-            ShowTDN(playerid, NOTIFICATION_SUKSES, sprintf("Anda berhasil deposit %s untuk EMS Mayoritas", FormatMoney(depocash)));
+            ShowTDN(playerid, NOTIFICATION_SUKSES, sprintf("Anda berhasil deposit %s untuk EMS Imajinasi", FormatMoney(depocash)));
 
             static frmtx[255];
             format(frmtx, sizeof(frmtx), "EMS - Deposit Uang %s ke dalam perusahaan", FormatMoney(depocash));
@@ -1322,7 +1322,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         case DIALOG_WITHDRAW_EMS:
         {
             if(!response) return ShowTDN(playerid, NOTIFICATION_INFO, "Anda telah membatalkan pilihan");
-            if(AccountData[playerid][pFaction] != FACTION_EMS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota EMS Mayoritas!");
+            if(AccountData[playerid][pFaction] != FACTION_EMS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota EMS Imajinasi!");
             if(AccountData[playerid][pFactionRank] < 5) return ShowTDN(playerid, NOTIFICATION_ERROR, "Minimal rank Komisi Disiplin untuk akses Bos Desk!");
             new withdrawcash = strval(inputtext), frmtmny[128];
             if(withdrawcash > EMSMoneyVault) return ShowTDN(playerid, NOTIFICATION_ERROR, "Uang perusahaan tidak sebanyak itu!");
@@ -1335,13 +1335,13 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
             AddFMoneyLog(AccountData[playerid][pName], AccountData[playerid][pUCP], withdrawcash, "EMS");
 
-            ShowTDN(playerid, NOTIFICATION_SUKSES, sprintf("Anda berhasil withdraw %s dari EMS Mayoritas", FormatMoney(withdrawcash)));
+            ShowTDN(playerid, NOTIFICATION_SUKSES, sprintf("Anda berhasil withdraw %s dari EMS Imajinasi", FormatMoney(withdrawcash)));
 
         }
         case DIALOG_EMSKICKMEMBER:
         {
             if(!response) return ShowTDN(playerid, NOTIFICATION_INFO, "Anda telah membatalkan pilihan");
-            if(AccountData[playerid][pFaction] != FACTION_EMS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota EMS Mayoritas!");
+            if(AccountData[playerid][pFaction] != FACTION_EMS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota EMS Imajinasi!");
             if(AccountData[playerid][pFactionRank] < 5) return ShowTDN(playerid, NOTIFICATION_ERROR, "Minimal rank Komisi Disiplin untuk mengakses Bos Desk!");
 
             mysql_query(mdb_query, "SELECT * FROM `player_characters` WHERE `Char_Faction` = 3 ORDER BY `Char_FactionRank` DESC");
@@ -1396,7 +1396,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                         if(AccountData[i][pUsingUniform])
                             AccountData[i][pUsingUniform] = false;
                         SetPlayerSkin(i, AccountData[i][pSkin]);
-                        ShowTDN(i, NOTIFICATION_WARNING, "Anda telah dikeluarkan dari faction EMS Mayoritas!");
+                        ShowTDN(i, NOTIFICATION_WARNING, "Anda telah dikeluarkan dari faction EMS Imajinasi!");
                     }
                 }
                 mysql_format(mdb_query, icsr, sizeof(icsr), "UPDATE `player_characters` SET `Char_Faction`=0, `Char_FactionRank`=0, `Char_UsingUniform`=0 WHERE `pID`=%d", pidrow);
@@ -1405,7 +1405,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 Nama: %s\n\
                 Rank: %s\n\
                 Last Online: %s", fckname, EMSRank[fckrank], fcklastlogin);
-                ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kick Anggota",
+                ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kick Anggota",
                 kckstr, "Tutup", "");
                 
                 AccountData[playerid][pTempSQLFactMemberID] = -1;
@@ -1415,7 +1415,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         case DIALOG_EMSSETRANK:
         {
             if(!response) return ShowTDN(playerid, NOTIFICATION_INFO, "Anda telah membatalkan pilihan");
-            if(AccountData[playerid][pFaction] != FACTION_EMS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota EMS Mayoritas!");
+            if(AccountData[playerid][pFaction] != FACTION_EMS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota EMS Imajinasi!");
             if(AccountData[playerid][pFactionRank] < 5) return ShowTDN(playerid, NOTIFICATION_ERROR, "Minimal rank Komisi Disiplin untuk mengakses Bos Desk!");
 
             mysql_query(mdb_query, "SELECT * FROM `player_characters` WHERE `Char_Faction` = 3 ORDER BY `Char_FactionRank` DESC");
@@ -1426,7 +1426,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 cache_get_value_name_int(listitem, "Char_FactionRank", AccountData[playerid][pTempSQLFactRank]);
                 if(AccountData[playerid][pID] == AccountData[playerid][pTempSQLFactMemberID]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Kamu tidak dapat mengatur jabatan sendiri!");
                 if(AccountData[playerid][pTempSQLFactRank] >= AccountData[playerid][pFactionRank]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Tidak dapat mengatur jabatan rank diatasmu!");
-                ShowPlayerDialog(playerid, DIALOG_RANK_SET_EMS, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kelola Jabatan", \
+                ShowPlayerDialog(playerid, DIALOG_RANK_SET_EMS, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kelola Jabatan", \
                 "Silahkan pilih jabatan untuk ditetapkan (masukkan angka saja):\n\
                 1. Training\n\
                 2. Perawat\n\
@@ -1444,10 +1444,10 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         case DIALOG_RANK_SET_EMS:
         {
             if(!response) return ShowTDN(playerid, NOTIFICATION_INFO, "Anda telah membatalkan pilihan");
-            if(AccountData[playerid][pFaction] != FACTION_EMS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota EMS Mayoritas!");
+            if(AccountData[playerid][pFaction] != FACTION_EMS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota EMS Imajinasi!");
             if(AccountData[playerid][pFactionRank] < 5) return ShowTDN(playerid, NOTIFICATION_ERROR, "Minimal rank Komisi Disiplin untuk akses Bos Desk!");
 
-            if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_RANK_SET_EMS, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kelola Jabatan", \
+            if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_RANK_SET_EMS, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kelola Jabatan", \
             "Error: Tidak dapat diisi kosong!\n\
             Silahkan pilih jabatan untuk ditetapkan (masukkan angka saja):\n\
             1. Training\n\
@@ -1462,7 +1462,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             10.Wadir Utam\n\
             11.Direktur Utama", "Set", "Batal");
 
-            if(!IsNumeric(inputtext)) return ShowPlayerDialog(playerid, DIALOG_RANK_SET_EMS, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kelola Jabatan", \
+            if(!IsNumeric(inputtext)) return ShowPlayerDialog(playerid, DIALOG_RANK_SET_EMS, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kelola Jabatan", \
             "Error: Hanya dapat diisi angka!\n\
             Silahkan pilih jabatan untuk ditetapkan (masukkan angka saja):\n\
             1. Training\n\
@@ -1477,7 +1477,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             10.Wadir Utam\n\
             11.Direktur Utama", "Set", "Batal");
 
-            if(strval(inputtext) < 1 || strval(inputtext) > AccountData[playerid][pFactionRank]) return ShowPlayerDialog(playerid, DIALOG_RANK_SET_EMS, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kelola Jabatan", \
+            if(strval(inputtext) < 1 || strval(inputtext) > AccountData[playerid][pFactionRank]) return ShowPlayerDialog(playerid, DIALOG_RANK_SET_EMS, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kelola Jabatan", \
             "Error: Tidak dapat diisi dibawah 1 atau lebih tinggi dari jabatan anda!\n\
             Silahkan pilih jabatan untuk ditetapkan (masukkan angka saja):\n\
             1. Training\n\
@@ -1511,7 +1511,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         {
             if(!response) return 0;
             if(AccountData[playerid][pCharStory] < 0) return Error(playerid, "player belum ada karakter story");
-            if(AccountData[playerid][pFaction] != FACTION_EMS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota EMS Mayoritas!");
+            if(AccountData[playerid][pFaction] != FACTION_EMS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota EMS Imajinasi!");
             if(AccountData[playerid][pFactionRank] < 5) return ShowTDN(playerid, NOTIFICATION_ERROR, "Minimal rank Komisi Disiplin untuk akses bos desk!");
 
             new targetid = NearestPlayer[playerid][listitem];
@@ -1537,7 +1537,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 }
                 case 1:
                 {
-                    ShowPlayerDialog(playerid, DIALOG_EMS_CLOTHES, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Lemari EMS", 
+                    ShowPlayerDialog(playerid, DIALOG_EMS_CLOTHES, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Lemari EMS", 
                     "Dokter 1\ 
                     \n"GRAY"Dokter 2\ 
                     \nDokter 3\ 
@@ -1697,7 +1697,7 @@ public EMSReviving(playerid, targetid)
 /*DialogPages:EmsSetRank(playerid, response, listitem, inputtext[])
 {
     if(!response) return ShowTDN(playerid, NOTIFICATION_INFO, "Anda telah membatalkan pilihan");
-    if(AccountData[playerid][pFaction] != FACTION_EMS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota EMS Mayoritas!");
+    if(AccountData[playerid][pFaction] != FACTION_EMS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota EMS Imajinasi!");
     if(AccountData[playerid][pFactionRank] < 5) return ShowTDN(playerid, NOTIFICATION_ERROR, "Minimal rank Komisi Disiplin untuk mengakses Bos Desk!");
 
     mysql_query(mdb_query, "SELECT * FROM `player_characters` WHERE `Char_Faction` = 3 ORDER BY `Char_FactionRank` DESC");
@@ -1708,7 +1708,7 @@ public EMSReviving(playerid, targetid)
         cache_get_value_name_int(listitem, "Char_FactionRank", AccountData[playerid][pTempSQLFactRank]);
         if(AccountData[playerid][pID] == AccountData[playerid][pTempSQLFactMemberID]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Kamu tidak dapat mengatur jabatan sendiri!");
         if(AccountData[playerid][pTempSQLFactRank] >= AccountData[playerid][pFactionRank]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Tidak dapat mengatur jabatan rank diatasmu!");
-        ShowPlayerDialog(playerid, DIALOG_RANK_SET_EMS, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kelola Jabatan", \
+        ShowPlayerDialog(playerid, DIALOG_RANK_SET_EMS, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kelola Jabatan", \
         "Silahkan pilih jabatan untuk ditetapkan (masukkan angka saja):\n\
         1. Training\n\
         2. Perawat\n\
@@ -1728,7 +1728,7 @@ public EMSReviving(playerid, targetid)
 DialogPages:EmsKickMember(playerid, response, listitem, inputtext[])
 {
     if(!response) return ShowTDN(playerid, NOTIFICATION_INFO, "Anda telah membatalkan pilihan");
-    if(AccountData[playerid][pFaction] != FACTION_EMS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota EMS Mayoritas!");
+    if(AccountData[playerid][pFaction] != FACTION_EMS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota EMS Imajinasi!");
     if(AccountData[playerid][pFactionRank] < 5) return ShowTDN(playerid, NOTIFICATION_ERROR, "Minimal rank Komisi Disiplin untuk mengakses Bos Desk!");
 
     mysql_query(mdb_query, "SELECT * FROM `player_characters` WHERE `Char_Faction` = 3 ORDER BY `Char_FactionRank` DESC");
@@ -1783,7 +1783,7 @@ DialogPages:EmsKickMember(playerid, response, listitem, inputtext[])
                 if(AccountData[i][pUsingUniform])
                     AccountData[i][pUsingUniform] = false;
                 SetPlayerSkin(i, AccountData[i][pSkin]);
-                ShowTDN(i, NOTIFICATION_WARNING, "Anda telah dikeluarkan dari faction EMS Mayoritas!");
+                ShowTDN(i, NOTIFICATION_WARNING, "Anda telah dikeluarkan dari faction EMS Imajinasi!");
             }
         }
         mysql_format(mdb_query, icsr, sizeof(icsr), "UPDATE `player_characters` SET `Char_Faction`=0, `Char_FactionRank`=0, `Char_UsingUniform`=0 WHERE `pID`=%d", pidrow);
@@ -1792,7 +1792,7 @@ DialogPages:EmsKickMember(playerid, response, listitem, inputtext[])
         Nama: %s\n\
         Rank: %s\n\
         Last Online: %s", fckname, EMSRank[fckrank], fcklastlogin);
-        ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kick Anggota",
+        ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kick Anggota",
         kckstr, "Tutup", "");
         
         AccountData[playerid][pTempSQLFactMemberID] = -1;

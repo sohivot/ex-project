@@ -32,7 +32,7 @@ ShowFactionMenu(playerid)
         strcat(sha, ""GRAY"Riwayat Kriminal\n");
         strcat(sha, ""WHITE"Buat catatan kriminal\n");
         strcat(sha, ""GRAY"Hapus catatan kriminal\n");
-        ShowPlayerDialog(playerid, DIALOG_POLICE_PANEL, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Faction Panel (Polisi)", sha, "Pilih", "Batal");
+        ShowPlayerDialog(playerid, DIALOG_POLICE_PANEL, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Faction Panel (Polisi)", sha, "Pilih", "Batal");
     }
     
     if (AccountData[playerid][pFaction] == FACTION_PEMERINTAH)
@@ -46,7 +46,7 @@ ShowFactionMenu(playerid)
         strcat(sha, ""GRAY"Borgol\n");
         strcat(sha, ""WHITE"Lepas borgol\n");
         strcat(sha, ""GRAY"Cek blacklist\n");
-        ShowPlayerDialog(playerid, DIALOG_PEMERINTAH_PANEL, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Faction Panel (PEMER)", sha, "Pilih", "Batal");
+        ShowPlayerDialog(playerid, DIALOG_PEMERINTAH_PANEL, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Faction Panel (PEMER)", sha, "Pilih", "Batal");
     }
 
     if (AccountData[playerid][pFaction] == FACTION_EMS)
@@ -64,7 +64,7 @@ ShowFactionMenu(playerid)
         strcat(str, ""GRAY"Masukkan korban ke mobil\n");
         strcat(str, ""WHITE"Drop korban\n");
         strcat(str, ""GRAY"Cek blacklist\n");
-        ShowPlayerDialog(playerid, DIALOG_EMS_PANEL, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Faction Panel (EMS)", str, "Pilih", "Batal");
+        ShowPlayerDialog(playerid, DIALOG_EMS_PANEL, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Faction Panel (EMS)", str, "Pilih", "Batal");
     }
 
     if (AccountData[playerid][pFaction] == FACTION_BENGKEL)
@@ -76,7 +76,7 @@ ShowFactionMenu(playerid)
         strcat(str, ""GRAY"Cek blacklist\n");
         strcat(str, ""WHITE"Ikat\n");
         strcat(str, ""GRAY"Lepas ikatan\n");
-        ShowPlayerDialog(playerid, DIALOG_BENGKEL_PANEL, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Faction Panel (Bennys)", str, "Pilih", "Batal");
+        ShowPlayerDialog(playerid, DIALOG_BENGKEL_PANEL, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Faction Panel (Bennys)", str, "Pilih", "Batal");
     }
 
     if (AccountData[playerid][pFaction] == FACTION_PEDAGANG)
@@ -86,7 +86,7 @@ ShowFactionMenu(playerid)
         strcat(str, ""GRAY"Kartu identitas\n");
         strcat(str, ""WHITE"Invoice manual\n");
         strcat(str, ""GRAY"Cek blacklist\n");
-        Dialog_Show(playerid, DIALOG_PEDAGANG_PANEL, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Faction Panel (Pedagang)", str, "Pilih", "Batal");
+        Dialog_Show(playerid, DIALOG_PEDAGANG_PANEL, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Faction Panel (Pedagang)", str, "Pilih", "Batal");
     }
 
     if (AccountData[playerid][pFaction] == FACTION_GOJEK)
@@ -101,7 +101,7 @@ ShowFactionMenu(playerid)
         strcat(str, ""WHITE"Invoice Belum Terbayar\n");
         strcat(str, ""GRAY"Periksa\n");
         strcat(str, ""WHITE"Cek Blacklist\n");
-        Dialog_Show(playerid, DIALOG_TENTARA_PANEL, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Faction Panel (Tentara)", str, "Pilih", "Batal");
+        Dialog_Show(playerid, DIALOG_TENTARA_PANEL, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Faction Panel (Tentara)", str, "Pilih", "Batal");
     }
 
     if (AccountData[playerid][pFamily] != -1)
@@ -120,7 +120,7 @@ ShowFactionMenu(playerid)
         strcat(str, ""WHITE"Ambil Uang Paksa\n");
         strcat(str, ""GRAY"Cek Senjata\n");
 
-        ShowPlayerDialog(playerid, DIALOG_FAMILY_PANEL, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE" - Faction Menu (Gang)", str, "Pilih", "Batal");
+        ShowPlayerDialog(playerid, DIALOG_FAMILY_PANEL, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE" - Faction Menu (Gang)", str, "Pilih", "Batal");
     }
     return 1;
 }
@@ -178,7 +178,7 @@ Dialog:PANEL_NONE(playerid, response, listitem, inputtext[])
             SendRPMeAboveHead(playerid, "Melepaskan gendongan", X11_LIGHTGREEN);
         }
         else
-            Dialog_Show(playerid, PANEL_DRAG, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Drag/Undrag Person", frmtx, "Pilih", "Batal");
+            Dialog_Show(playerid, PANEL_DRAG, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Drag/Undrag Person", frmtx, "Pilih", "Batal");
     } else {
         ShowTDN(playerid, NOTIFICATION_WARNING, "Tidak ada orang disekitar anda!");
         for (new i = 0; i < MAX_PLAYERS; i ++) NearestPlayer[playerid][i] = INVALID_PLAYER_ID;
@@ -205,7 +205,7 @@ Dialog:PANEL_DRAG(playerid, response, listitem, inputtext[])
     
     if (!GetPVarInt(playerid, "OnCarry") && IsDragging[playerid] == INVALID_PLAYER_ID)
     {
-        Dialog_Show(targetid, PANEL_DRAGCONF, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Drag/Undrag Person",
+        Dialog_Show(targetid, PANEL_DRAGCONF, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Drag/Undrag Person",
         "Seseorang ingin menggendong anda, apakah anda setuju?\nAnda dapat melepaskan gendongannya dengan '/uncarry'", "Setuju", "Tidak");
         AccountData[targetid][pDragOffer] = playerid;
         // foreach(new i : Player) if (IsPlayerConnected(i))

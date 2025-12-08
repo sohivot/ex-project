@@ -151,7 +151,7 @@ Dialog:DIALOG_PEDAGANG_PANEL(playerid, response, listitem, inputtext[])
         return 1;
     }
 
-    if(AccountData[playerid][pFaction] != FACTION_PEDAGANG) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan bagian dari Pedagang Mayoritas!");
+    if(AccountData[playerid][pFaction] != FACTION_PEDAGANG) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan bagian dari Pedagang Imajinasi!");
     new targetid = AccountData[playerid][pTarget];
     if(!IsPlayerConnected(targetid)) return ShowTDN(playerid, NOTIFICATION_ERROR, "Pemain tersebut tidak terkoneksi kedalam server!");
     if(!IsPlayerNearPlayer(playerid, targetid, 3.0)) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda tidak dekat dengan player tersebut!");
@@ -205,7 +205,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 
             if(IsPlayerInDynamicArea(playerid, Pedagang_Stuff[PdgLocker]) && AccountData[playerid][pDutyPedagang])
             {
-                ShowPlayerDialog(playerid, DIALOG_LOCKERPEDAGANG, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Locker Pedagang",
+                ShowPlayerDialog(playerid, DIALOG_LOCKERPEDAGANG, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Locker Pedagang",
                 "Baju Biasa\
                 \n"GRAY"Pedagang 1\
                 \nPedagang 2\
@@ -216,7 +216,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
             if((IsPlayerInDynamicArea(playerid, Pedagang_Stuff[PdgCooking]) || IsPlayerInDynamicArea(playerid, Pedagang_Stuff[PdgCookingEms])) && AccountData[playerid][pDutyPedagang])
             {
                 if(!AccountData[playerid][pUsingUniform]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Silahkan ganti pakaian anda terlebih dahulu!");
-                ShowPlayerDialog(playerid, DIALOG_LOUNGES_MASAK, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Dapur Pedagang",
+                ShowPlayerDialog(playerid, DIALOG_LOUNGES_MASAK, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Dapur Pedagang",
                 "Nama\tBahan #1\tBahan #2\tBahan #3\
                 \nNasi\tBeras\tGaram\tSambal\
                 \n"GRAY"Bakso\tIkan\tSambal\tGaram\
@@ -251,13 +251,13 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
                 format(shstr, sizeof(shstr), "%s"GRAY"Es Teh\t%d\n", shstr, EsTeh);
                 format(shstr, sizeof(shstr), "%sKopi Kenangan\t%d\n", shstr, KopiKenangan);
                 format(shstr, sizeof(shstr), "%s"GRAY"Cocho Matcha\t%d\n", shstr, CochoMatcha);
-                Dialog_Show(playerid, BrankasLounge, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Pedagang", shstr, "Pilih", "Batal");
+                Dialog_Show(playerid, BrankasLounge, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Pedagang", shstr, "Pilih", "Batal");
                 HideShortKey(playerid);
             }
 
             if(IsPlayerInRangeOfPoint(playerid, 1.5, Pedagang_Stuff[PdggaragePos][0], Pedagang_Stuff[PdggaragePos][1], Pedagang_Stuff[PdggaragePos][2]) && AccountData[playerid][pDutyPedagang])
             {
-                ShowPlayerDialog(playerid, DIALOG_PEDAGANG_GARAGE, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Garasi Pedagang",
+                ShowPlayerDialog(playerid, DIALOG_PEDAGANG_GARAGE, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Garasi Pedagang",
                 "Keluarkan Kendaraan\
                 \n"GRAY"Simpan Kendaraan\
                 \nBeli Kendaraan\
@@ -268,7 +268,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
             if(IsPlayerInDynamicArea(playerid, Pedagang_Stuff[PdgDesk]))
             {
                 if(AccountData[playerid][pFactionRank] < 5) return ShowTDN(playerid, NOTIFICATION_ERROR, "Minimal rank Wakil CEO untuk akses Desk!");
-                Dialog_Show(playerid, BosDesk_Pedagang, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Bos Desk",
+                Dialog_Show(playerid, BosDesk_Pedagang, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Bos Desk",
                 "Invite\
                 \n"GRAY"Kelola Jabatan\
                 \nKick\
@@ -302,11 +302,11 @@ Dialog:BosDesk_Pedagang(playerid, response, listitem, inputtext[])
 				if(count == 0)
 				{
 					PlayerPlaySound(playerid, 5206, 0.0, 0.0, 0.0);
-					return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Invite",
+					return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Invite",
 					"Tidak ada orang di sekitar anda!", "Tutup", "");
 				}
 
-                Dialog_Show(playerid, Pedagang_Invite, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Bos Desk", frmxt, "Pilih", "Batal");
+                Dialog_Show(playerid, Pedagang_Invite, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Bos Desk", frmxt, "Pilih", "Batal");
             }
             case 1: // Kelola Jabatan offline / online
 			{
@@ -326,12 +326,12 @@ Dialog:BosDesk_Pedagang(playerid, response, listitem, inputtext[])
 
                         format(shstr, sizeof(shstr), "%s%s\t%s\t%s\n", shstr, fckname, PedagangRank[fckrank], fcklastlogin);
                     }
-                    ShowPlayerDialog(playerid, DIALOG_PEDSETRANK, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Set Jabatan", shstr, "Pilih", "Batal");
+                    ShowPlayerDialog(playerid, DIALOG_PEDSETRANK, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Set Jabatan", shstr, "Pilih", "Batal");
                 }
                 else 
                 {
                     PlayerPlaySound(playerid, 5206, 0.0, 0.0, 0.0);
-                    return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Set Jabatan", "Tidak ada Anggota Pedagang!", "Tutup", "");
+                    return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Set Jabatan", "Tidak ada Anggota Pedagang!", "Tutup", "");
                 }
 			}
 			case 2:
@@ -352,12 +352,12 @@ Dialog:BosDesk_Pedagang(playerid, response, listitem, inputtext[])
 
                         format(shstr, sizeof(shstr), "%s%s\t%s\t%s\n", shstr, fckname, PedagangRank[fckrank], fcklastlogin);
                     }
-                    ShowPlayerDialog(playerid, DIALOG_PEDKICKMEMBER, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kick Anggota", shstr, "Kick", "Batal");
+                    ShowPlayerDialog(playerid, DIALOG_PEDKICKMEMBER, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kick Anggota", shstr, "Kick", "Batal");
                 }
                 else 
                 {
                     PlayerPlaySound(playerid, 5206, 0.0, 0.0, 0.0);
-                    return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kick Anggota", "Tidak ada Anggota Bengkel!", "Tutup", "");
+                    return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kick Anggota", "Tidak ada Anggota Bengkel!", "Tutup", "");
                 }
 			}
 			case 3:
@@ -382,25 +382,25 @@ Dialog:BosDesk_Pedagang(playerid, response, listitem, inputtext[])
 					}
 				}
 				format(lstr, sizeof lstr, "%s\n", lstr);
-				Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Anggota", lstr, "Close", "");
+				Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Anggota", lstr, "Close", "");
 			}
 			case 4:
 			{
 				new sstr[512];
 				format(sstr, sizeof sstr, "Saldo Finansial Pedagang saat ini memiliki saldo sebesar %s\nSiapapun yang melakukan korupsi pada uang PT akan dikenakan sanksi bahkan\ndapat dikeluarkan!", FormatMoney(RestoMoneyVault));
-				Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Saldo Finansial", sstr, "Close", "");
+				Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Saldo Finansial", sstr, "Close", "");
 			}
 			case 5:
 			{
 				new sstr[512];
 				format(sstr, sizeof sstr, "Mohon ikuti format berikut:\nGunakanlah format depo [jumlah] untuk deposit ke Brankas\nGunakan tanpa tanda ][ pada kolom dibawah ini:");
-				Dialog_Show(playerid, SaldoPedagangDeposit, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Pedagang", sstr, "Input", "Batal");
+				Dialog_Show(playerid, SaldoPedagangDeposit, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Pedagang", sstr, "Input", "Batal");
 			}
 			case 6:
 			{
 				new sstr[512];
 				format(sstr, sizeof sstr, "Mohon ikuti format berikut:\nGunakanlah format ambil [jumlah] untuk menarik saldo dari Brankas\nGunakan tanpa tanda ][ pada kolom dibawah ini:");
-				Dialog_Show(playerid, SaldoPedagangWithdraw, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Pedagang", sstr, "Input", "Batal");
+				Dialog_Show(playerid, SaldoPedagangWithdraw, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Pedagang", sstr, "Input", "Batal");
 			}
         }
     }
@@ -418,7 +418,7 @@ Dialog:SaldoPedagangDeposit(playerid, response, listitem, inputtext[])
         {
             new sstr[512];
             format(sstr, sizeof sstr, "Mohon ikuti format berikut:\nGunakanlah format depo [jumlah] untuk deposit ke Brankas\nGunakan tanpa tanda ][ pada kolom dibawah ini:");
-            Dialog_Show(playerid, SaldoPedagangDeposit, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Pedagang", sstr, "Input", "Batal");
+            Dialog_Show(playerid, SaldoPedagangDeposit, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Pedagang", sstr, "Input", "Batal");
             return 1;
         }
         if(!strcmp(string, "depo", true))
@@ -450,7 +450,7 @@ Dialog:SaldoPedagangWithdraw(playerid, response, listitem, inputtext[])
         {
             new sstr[512];
             format(sstr, sizeof sstr, "Mohon ikuti format berikut:\nGunakanlah format ambil [jumlah] untuk menarik saldo dari Brankas\nGunakan tanpa tanda ][ pada kolom dibawah ini:");
-            Dialog_Show(playerid, SaldoPedagangWithdraw, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Pedagang", sstr, "Input", "Batal");
+            Dialog_Show(playerid, SaldoPedagangWithdraw, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Pedagang", sstr, "Input", "Batal");
             return 1;
         }
         if(!strcmp(string, "ambil", true))
@@ -499,67 +499,67 @@ Dialog:BrankasLounge(playerid, response, listitem, inputtext[])
         {
             case 0:
             {
-                Dialog_Show(playerid, BrankasSambal, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
+                Dialog_Show(playerid, BrankasSambal, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
             }
             case 1:
             {
-                Dialog_Show(playerid, BrankasBeras, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
+                Dialog_Show(playerid, BrankasBeras, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
             }
             case 2:
             {
-                Dialog_Show(playerid, BrankasGula, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
+                Dialog_Show(playerid, BrankasGula, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
             }
             case 3:
             {
-                Dialog_Show(playerid, BrankasGaram, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
+                Dialog_Show(playerid, BrankasGaram, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
             }
             case 4:
             {
-                Dialog_Show(playerid, BrankasIkan, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
+                Dialog_Show(playerid, BrankasIkan, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
             }
             case 5:
             {
-                Dialog_Show(playerid, BrankasAyamFillet, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
+                Dialog_Show(playerid, BrankasAyamFillet, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
             }
             case 6:
             {
-                Dialog_Show(playerid, BrankasSusuOlahan, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
+                Dialog_Show(playerid, BrankasSusuOlahan, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
             }
             case 7:
             {
-                Dialog_Show(playerid, BrankasAirMineral, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
+                Dialog_Show(playerid, BrankasAirMineral, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
             }
             case 8:
             {
-                Dialog_Show(playerid, BrankasNasgor, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
+                Dialog_Show(playerid, BrankasNasgor, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
             }
             case 9:
             {
-                Dialog_Show(playerid, BrankasBakso, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
+                Dialog_Show(playerid, BrankasBakso, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
             }
             case 10:
             {
-                Dialog_Show(playerid, BrankasNasiPecel, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
+                Dialog_Show(playerid, BrankasNasiPecel, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
             }
             case 11:
             {
-                Dialog_Show(playerid, BrankasBuburPedas, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
+                Dialog_Show(playerid, BrankasBuburPedas, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
             }
             case 12:
             {
-                Dialog_Show(playerid, BrankasSusuFresh, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
+                Dialog_Show(playerid, BrankasSusuFresh, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
             }
             case 13:
             {
-                Dialog_Show(playerid, BrankasEsTeh, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
+                Dialog_Show(playerid, BrankasEsTeh, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
             }
             case 14:
             {
-                Dialog_Show(playerid, BrankasKopiKenangan, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
+                Dialog_Show(playerid, BrankasKopiKenangan, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
             }
             case 15:
             {
-                Dialog_Show(playerid, BrankasCochoMatcha, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
+                Dialog_Show(playerid, BrankasCochoMatcha, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
             }
         }
     }
@@ -576,7 +576,7 @@ Dialog:BrankasSambal(playerid, response, listitem, inputtext[])
         new option[128], amount;
         if(sscanf(inputtext,"s[128]d", option, amount))
         {
-            Dialog_Show(playerid, BrankasSambal, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
+            Dialog_Show(playerid, BrankasSambal, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
             return 1;
         }
 
@@ -623,7 +623,7 @@ Dialog:BrankasBeras(playerid, response, listitem, inputtext[])
         new option[128], amount;
         if(sscanf(inputtext,"s[128]d", option, amount))
         {
-            Dialog_Show(playerid, BrankasBeras, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
+            Dialog_Show(playerid, BrankasBeras, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
             return 1;
         }
 
@@ -670,7 +670,7 @@ Dialog:BrankasGula(playerid, response, listitem, inputtext[])
         new option[128], amount;
         if(sscanf(inputtext,"s[128]d", option, amount))
         {
-            Dialog_Show(playerid, BrankasGula, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
+            Dialog_Show(playerid, BrankasGula, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
             return 1;
         }
 
@@ -717,7 +717,7 @@ Dialog:BrankasGaram(playerid, response, listitem, inputtext[])
         new option[128], amount;
         if(sscanf(inputtext,"s[128]d", option, amount))
         {
-            Dialog_Show(playerid, BrankasGaram, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
+            Dialog_Show(playerid, BrankasGaram, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
             return 1;
         }
 
@@ -764,7 +764,7 @@ Dialog:BrankasIkan(playerid, response, listitem, inputtext[])
         new option[128], amount;
         if(sscanf(inputtext,"s[128]d", option, amount))
         {
-            Dialog_Show(playerid, BrankasIkan, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
+            Dialog_Show(playerid, BrankasIkan, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
             return 1;
         }
 
@@ -811,7 +811,7 @@ Dialog:BrankasAyamFillet(playerid, response, listitem, inputtext[])
         new option[128], amount;
         if(sscanf(inputtext,"s[128]d", option, amount))
         {
-            Dialog_Show(playerid, BrankasAyamFillet, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
+            Dialog_Show(playerid, BrankasAyamFillet, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
             return 1;
         }
 
@@ -860,7 +860,7 @@ Dialog:BrankasSusuOlahan(playerid, response, listitem, inputtext[])
         new option[128], amount;
         if(sscanf(inputtext,"s[128]d", option, amount))
         {
-            Dialog_Show(playerid, BrankasSusuOlahan, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
+            Dialog_Show(playerid, BrankasSusuOlahan, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
             return 1;
         }
 
@@ -907,7 +907,7 @@ Dialog:BrankasAirMineral(playerid, response, listitem, inputtext[])
         new option[128], amount;
         if(sscanf(inputtext,"s[128]d", option, amount))
         {
-            Dialog_Show(playerid, BrankasAirMineral, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
+            Dialog_Show(playerid, BrankasAirMineral, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
             return 1;
         }
 
@@ -954,7 +954,7 @@ Dialog:BrankasNasgor(playerid, response, listitem, inputtext[])
         new option[128], amount;
         if(sscanf(inputtext,"s[128]d", option, amount))
         {
-            Dialog_Show(playerid, BrankasNasgor, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
+            Dialog_Show(playerid, BrankasNasgor, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
             return 1;
         }
 
@@ -1001,7 +1001,7 @@ Dialog:BrankasBakso(playerid, response, listitem, inputtext[])
         new option[128], amount;
         if(sscanf(inputtext,"s[128]d", option, amount))
         {
-            Dialog_Show(playerid, BrankasBakso, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
+            Dialog_Show(playerid, BrankasBakso, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
             return 1;
         }
 
@@ -1048,7 +1048,7 @@ Dialog:BrankasNasiPecel(playerid, response, listitem, inputtext[])
         new option[128], amount;
         if(sscanf(inputtext,"s[128]d", option, amount))
         {
-            Dialog_Show(playerid, BrankasNasiPecel, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
+            Dialog_Show(playerid, BrankasNasiPecel, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
             return 1;
         }
 
@@ -1095,7 +1095,7 @@ Dialog:BrankasBuburPedas(playerid, response, listitem, inputtext[])
         new option[128], amount;
         if(sscanf(inputtext,"s[128]d", option, amount))
         {
-            Dialog_Show(playerid, BrankasBuburPedas, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
+            Dialog_Show(playerid, BrankasBuburPedas, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
             return 1;
         }
 
@@ -1142,7 +1142,7 @@ Dialog:BrankasSusuFresh(playerid, response, listitem, inputtext[])
         new option[128], amount;
         if(sscanf(inputtext,"s[128]d", option, amount))
         {
-            Dialog_Show(playerid, BrankasSusuFresh, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
+            Dialog_Show(playerid, BrankasSusuFresh, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
             return 1;
         }
 
@@ -1189,7 +1189,7 @@ Dialog:BrankasEsTeh(playerid, response, listitem, inputtext[])
         new option[128], amount;
         if(sscanf(inputtext,"s[128]d", option, amount))
         {
-            Dialog_Show(playerid, BrankasEsTeh, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
+            Dialog_Show(playerid, BrankasEsTeh, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
             return 1;
         }
 
@@ -1236,7 +1236,7 @@ Dialog:BrankasKopiKenangan(playerid, response, listitem, inputtext[])
         new option[128], amount;
         if(sscanf(inputtext,"s[128]d", option, amount))
         {
-            Dialog_Show(playerid, BrankasKopiKenangan, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
+            Dialog_Show(playerid, BrankasKopiKenangan, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
             return 1;
         }
 
@@ -1283,7 +1283,7 @@ Dialog:BrankasCochoMatcha(playerid, response, listitem, inputtext[])
         new option[128], amount;
         if(sscanf(inputtext,"s[128]d", option, amount))
         {
-            Dialog_Show(playerid, BrankasCochoMatcha, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
+            Dialog_Show(playerid, BrankasCochoMatcha, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Pedagang", "Mohon ikuti format berikut\n[ambil] [jumlah] atau [depo] [jumlah]\nMasukkan tanpa tanda ][ pada kolom dibawah ini:", "Input", "Batal");
             return 1;
         }
 
@@ -1330,7 +1330,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         case DIALOG_LOCKERPEDAGANG:
         {
             if(!response) return ShowTDN(playerid, NOTIFICATION_INFO, "Anda telah membatalkan pilihan");
-            if(AccountData[playerid][pFaction] != FACTION_PEDAGANG) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Resto Mayoritas!");
+            if(AccountData[playerid][pFaction] != FACTION_PEDAGANG) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Resto Imajinasi!");
 
             switch(listitem)
             {
@@ -1363,7 +1363,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         case DIALOG_PEDAGANG_GARAGE:
         {
             if(!response) return ShowTDN(playerid, NOTIFICATION_INFO, "Anda telah membatalkan pilihan");
-            if(AccountData[playerid][pFaction] != FACTION_PEDAGANG) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan bagian dari Pedagang Mayoritas!");
+            if(AccountData[playerid][pFaction] != FACTION_PEDAGANG) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan bagian dari Pedagang Imajinasi!");
             if(AccountData[playerid][pInjured]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda sedang pingsan!");
 
             switch(listitem)
@@ -1382,7 +1382,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                             format(lstr, sizeof(lstr), "%s%d\t%s\t%s", lstr, itt+1, GetVehicleModelName(PlayerVehicle[id][pVehModelID]), PlayerVehicle[id][pVehPlate]);
                         } else format(lstr, sizeof(lstr), "%s%d\t%s\t%s\n", lstr, itt+1, GetVehicleModelName(PlayerVehicle[id][pVehModelID]), PlayerVehicle[id][pVehPlate]);
                     }
-                    ShowPlayerDialog(playerid, DIALOG_PEDAGANG_GARAGE_TAKEOUT, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Garasi Pedagang", lstr, "Pilih", "Batal");
+                    ShowPlayerDialog(playerid, DIALOG_PEDAGANG_GARAGE_TAKEOUT, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Garasi Pedagang", lstr, "Pilih", "Batal");
                 }
                 case 1:// Simpan Kendaraan
                 {
@@ -1406,11 +1406,11 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                             PlayerVehicle[carid][pVehPhysic] = INVALID_VEHICLE_ID;
                         }
                     }
-                    if(!foundnearby) return ShowTDN(playerid, NOTIFICATION_ERROR, "Tidak ada kendaraan dari Pedagang Mayoritas milik anda di sekitar!");
+                    if(!foundnearby) return ShowTDN(playerid, NOTIFICATION_ERROR, "Tidak ada kendaraan dari Pedagang Imajinasi milik anda di sekitar!");
                 }
                 case 2:// Buy Kendaraan
                 {
-                    ShowPlayerDialog(playerid, DIALOG_PEDAGANG_GARAGE_BUY, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Beli Kendaraan", 
+                    ShowPlayerDialog(playerid, DIALOG_PEDAGANG_GARAGE_BUY, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Beli Kendaraan", 
                     "Model\tHarga\
                     \nRancher Resto\t$6000\
                     \n"GRAY"Sanchez\t"GRAY"$4000\
@@ -1436,12 +1436,12 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
                             format(list, sizeof(list), "%s%d\t%s\n", list, havpid, GetVehicleModelName(havmod));
                         }
-                        ShowPlayerDialog(playerid, DIALOG_PEDAGANG_GARAGE_DELETE, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Hapus Kendaraan", list, "Hapus", "Batal");
+                        ShowPlayerDialog(playerid, DIALOG_PEDAGANG_GARAGE_DELETE, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Hapus Kendaraan", list, "Hapus", "Batal");
                     }
                     else 
                     {
                         PlayerPlaySound(playerid, 5206, 0.0, 0.0, 0.0);
-                        return Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Hapus Kendaraan", "Anda tidak memiliki kendaraan Pedagang", "Tutup", "");
+                        return Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Hapus Kendaraan", "Anda tidak memiliki kendaraan Pedagang", "Tutup", "");
                     }
                 }
             }
@@ -1499,7 +1499,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         case DIALOG_PEDAGANG_GARAGE_TAKEOUT:
         {
             if(!response) return ShowTDN(playerid, NOTIFICATION_INFO, "Anda telah membatalkan pilihan");
-            if(AccountData[playerid][pFaction] != FACTION_PEDAGANG) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Resto Mayoritas!");
+            if(AccountData[playerid][pFaction] != FACTION_PEDAGANG) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Resto Imajinasi!");
             if(listitem == -1) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda belum memilih kendaraan untuk dikeluarkan!");
 
             new id = GetVehicleIDStoredFactGarage(playerid, listitem, FACTION_PEDAGANG);
@@ -1531,7 +1531,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         case DIALOG_PEDAGANG_GARAGE_DELETE:
         {
             if(!response) return ShowTDN(playerid, NOTIFICATION_INFO, "Anda telah membatalkan pilihan");
-            if(AccountData[playerid][pFaction] != FACTION_PEDAGANG) return ShowTDN(playerid, NOTIFICATION_INFO, "Anda bukan anggota Pedagang Mayoritas");
+            if(AccountData[playerid][pFaction] != FACTION_PEDAGANG) return ShowTDN(playerid, NOTIFICATION_INFO, "Anda bukan anggota Pedagang Imajinasi");
 
             new frmtdel[158], Cache:execute;
             mysql_format(mdb_query, frmtdel, sizeof(frmtdel), "SELECT * FROM `player_vehicles` WHERE `PVeh_Faction` = 6 AND `PVeh_OwnerID` = %d", AccountData[playerid][pID]);
@@ -1549,7 +1549,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                     format(kckstr, sizeof(kckstr), "Anda berhasil menghapus kendaraan:\
                     \nDatabase ID: %d\
                     \nModel: %s", havpid, GetVehicleModelName(havmods));
-                    ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Hapus Kendaraan", kckstr, "Tutup", "");
+                    ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Hapus Kendaraan", kckstr, "Tutup", "");
 
                     new pvid = GetFactionVehicleIDFromListitem(playerid, listitem, FACTION_PEDAGANG);
 
@@ -1574,10 +1574,10 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         case DIALOG_RANK_SET_PEDAGANG:
         {
             if(!response) return ShowTDN(playerid, NOTIFICATION_INFO, "Anda telah membatalkan pilihan");
-            if(AccountData[playerid][pFaction] != FACTION_PEDAGANG) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Pedagang Mayoritas!");
+            if(AccountData[playerid][pFaction] != FACTION_PEDAGANG) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Pedagang Imajinasi!");
             if(AccountData[playerid][pFactionRank] < 5) return ShowTDN(playerid, NOTIFICATION_ERROR, "Minimal Rank Wakil CEO untuk akses Bos Desk!");
 
-            if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_RANK_SET_PEDAGANG, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kelola Jabatan", \
+            if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_RANK_SET_PEDAGANG, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kelola Jabatan", \
             "Error: Tidak dapat diisi kosong!\n\
             Silahkan pilih jabatan untuk ditetapkan (masukkan angka saja):\n\
             1. Magang\n\
@@ -1587,7 +1587,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             5. Wakil CEO\n\
             6. CEO", "Set", "Batal");
 
-            if(!IsNumeric(inputtext)) return ShowPlayerDialog(playerid, DIALOG_RANK_SET_PEDAGANG, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kelola Jabatan", \
+            if(!IsNumeric(inputtext)) return ShowPlayerDialog(playerid, DIALOG_RANK_SET_PEDAGANG, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kelola Jabatan", \
             "Error: Hanya dapat diisi angka!\n\
             Silahkan pilih jabatan untuk ditetapkan (masukkan angka saja):\n\
             1. Magang\n\
@@ -1597,7 +1597,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             5. Wakil CEO\n\
             6. CEO", "Set", "Batal");
 
-            if(strval(inputtext) < 1 || strval(inputtext) > AccountData[playerid][pFactionRank]) return ShowPlayerDialog(playerid, DIALOG_RANK_SET_PEDAGANG, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kelola Jabatan", \
+            if(strval(inputtext) < 1 || strval(inputtext) > AccountData[playerid][pFactionRank]) return ShowPlayerDialog(playerid, DIALOG_RANK_SET_PEDAGANG, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kelola Jabatan", \
             "Error: Tidak dapat diisi dibawah 1 atau lebih tinggi dari jabatan anda!\n\
             Silahkan pilih jabatan untuk ditetapkan (masukkan angka saja):\n\
             1. Magang\n\
@@ -1625,7 +1625,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         case DIALOG_PEDKICKMEMBER:
         {
             if(!response) return ShowTDN(playerid, NOTIFICATION_INFO, "Anda telah membatalkan pilihan");
-            if(AccountData[playerid][pFaction] != FACTION_PEDAGANG) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Pedagang Mayoritas!");
+            if(AccountData[playerid][pFaction] != FACTION_PEDAGANG) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Pedagang Imajinasi!");
             if(AccountData[playerid][pFactionRank] < 5) return ShowTDN(playerid, NOTIFICATION_ERROR, "Minimal rank Wakil CEO untuk mengakses Bos Desk!");
 
             mysql_query(mdb_query, "SELECT * FROM `player_characters` WHERE `Char_Faction` = 6 ORDER BY `Char_FactionRank` DESC");
@@ -1681,7 +1681,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                             AccountData[i][pUsingUniform] = false;
                         SetPlayerSkin(i, AccountData[i][pSkin]);
                         RefreshFactionMap(i);
-                        ShowTDN(i, NOTIFICATION_WARNING, "Anda telah dikeluarkan dari faction Pedagang Mayoritas!");
+                        ShowTDN(i, NOTIFICATION_WARNING, "Anda telah dikeluarkan dari faction Pedagang Imajinasi!");
                     }
                 }
                 mysql_format(mdb_query, icsr, sizeof(icsr), "UPDATE `player_characters` SET `Char_Faction`=0, `Char_FactionRank`=0, `Char_UsingUniform`=0 WHERE `pID`=%d", pidrow);
@@ -1690,7 +1690,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 Nama: %s\n\
                 Rank: %s\n\
                 Last Online: %s", fckname, PedagangRank[fckrank], fcklastlogin);
-                ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kick Anggota",
+                ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kick Anggota",
                 kckstr, "Tutup", "");
 
                 AccountData[playerid][pTempSQLFactMemberID] = -1;
@@ -1700,7 +1700,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         case DIALOG_PEDSETRANK:
         {
             if(!response) return ShowTDN(playerid, NOTIFICATION_INFO, "Anda telah membatalkan pilihan");
-            if(AccountData[playerid][pFaction] != FACTION_PEDAGANG) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Pedagang Mayoritas!");
+            if(AccountData[playerid][pFaction] != FACTION_PEDAGANG) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Pedagang Imajinasi!");
             if(AccountData[playerid][pFactionRank] < 5) return ShowTDN(playerid, NOTIFICATION_ERROR, "Minimal rank Wakil CEO untuk mengakses Bos Desk!");
 
             mysql_query(mdb_query, "SELECT * FROM `player_characters` WHERE `Char_Faction` = 6 ORDER BY `Char_FactionRank` DESC");
@@ -1711,7 +1711,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 cache_get_value_name_int(listitem, "Char_FactionRank", AccountData[playerid][pTempSQLFactRank]);
                 if(AccountData[playerid][pID] == AccountData[playerid][pTempSQLFactMemberID]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Kamu tidak dapat mengatur jabatan sendiri!");
                 if(AccountData[playerid][pTempSQLFactRank] >= AccountData[playerid][pFactionRank]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Tidak dapat mengatur jabatan rank diatasmu!");
-                ShowPlayerDialog(playerid, DIALOG_RANK_SET_PEDAGANG, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kelola Jabatan", \
+                ShowPlayerDialog(playerid, DIALOG_RANK_SET_PEDAGANG, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kelola Jabatan", \
                 "Silahkan pilih jabatan untuk ditetapkan (masukkan angka saja):\n\
                 1. Magang\n\
                 2. Junior\n\
@@ -1802,7 +1802,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 /*DialogPages:PedagangSetRank(playerid, response, listitem, inputtext[])
 {
     if(!response) return ShowTDN(playerid, NOTIFICATION_INFO, "Anda telah membatalkan pilihan");
-    if(AccountData[playerid][pFaction] != FACTION_PEDAGANG) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Pedagang Mayoritas!");
+    if(AccountData[playerid][pFaction] != FACTION_PEDAGANG) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Pedagang Imajinasi!");
     if(AccountData[playerid][pFactionRank] < 5) return ShowTDN(playerid, NOTIFICATION_ERROR, "Minimal rank Wakil CEO untuk mengakses Bos Desk!");
 
     mysql_query(mdb_query, "SELECT * FROM `player_characters` WHERE `Char_Faction` = 6 ORDER BY `Char_FactionRank` DESC");
@@ -1813,7 +1813,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         cache_get_value_name_int(listitem, "Char_FactionRank", AccountData[playerid][pTempSQLFactRank]);
         if(AccountData[playerid][pID] == AccountData[playerid][pTempSQLFactMemberID]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Kamu tidak dapat mengatur jabatan sendiri!");
         if(AccountData[playerid][pTempSQLFactRank] >= AccountData[playerid][pFactionRank]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Tidak dapat mengatur jabatan rank diatasmu!");
-        ShowPlayerDialog(playerid, DIALOG_RANK_SET_PEDAGANG, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kelola Jabatan", \
+        ShowPlayerDialog(playerid, DIALOG_RANK_SET_PEDAGANG, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kelola Jabatan", \
         "Silahkan pilih jabatan untuk ditetapkan (masukkan angka saja):\n\
         1. Magang\n\
         2. Junior\n\
@@ -1828,7 +1828,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 DialogPages:PedagangKickMember(playerid, response, listitem, inputtext[])
 {
     if(!response) return ShowTDN(playerid, NOTIFICATION_INFO, "Anda telah membatalkan pilihan");
-    if(AccountData[playerid][pFaction] != FACTION_PEDAGANG) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Pedagang Mayoritas!");
+    if(AccountData[playerid][pFaction] != FACTION_PEDAGANG) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Pedagang Imajinasi!");
     if(AccountData[playerid][pFactionRank] < 5) return ShowTDN(playerid, NOTIFICATION_ERROR, "Minimal rank Wakil CEO untuk mengakses Bos Desk!");
 
     mysql_query(mdb_query, "SELECT * FROM `player_characters` WHERE `Char_Faction` = 6 ORDER BY `Char_FactionRank` DESC");
@@ -1884,7 +1884,7 @@ DialogPages:PedagangKickMember(playerid, response, listitem, inputtext[])
                     AccountData[i][pUsingUniform] = false;
                 SetPlayerSkin(i, AccountData[i][pSkin]);
                 RefreshFactionMap(i);
-                ShowTDN(i, NOTIFICATION_WARNING, "Anda telah dikeluarkan dari faction Pedagang Mayoritas!");
+                ShowTDN(i, NOTIFICATION_WARNING, "Anda telah dikeluarkan dari faction Pedagang Imajinasi!");
             }
         }
         mysql_format(mdb_query, icsr, sizeof(icsr), "UPDATE `player_characters` SET `Char_Faction`=0, `Char_FactionRank`=0, `Char_UsingUniform`=0 WHERE `pID`=%d", pidrow);
@@ -1893,7 +1893,7 @@ DialogPages:PedagangKickMember(playerid, response, listitem, inputtext[])
         Nama: %s\n\
         Rank: %s\n\
         Last Online: %s", fckname, PedagangRank[fckrank], fcklastlogin);
-        ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kick Anggota",
+        ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kick Anggota",
         kckstr, "Tutup", "");
 
         AccountData[playerid][pTempSQLFactMemberID] = -1;

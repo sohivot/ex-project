@@ -221,7 +221,7 @@ CMD:event(playerid, params[])
 		if(GetPVarInt(playerid, "EventTDM")) {
 			DialogTDMShow(playerid);
 		}
-        else Dialog_Show(playerid, eventType, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Event Type", "Team Deathmatch\n"GRAY"Jetpack Race\nDeathMatch", "Pilih", "Batal");
+        else Dialog_Show(playerid, eventType, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Event Type", "Team Deathmatch\n"GRAY"Jetpack Race\nDeathMatch", "Pilih", "Batal");
 	}
 	else if(!strcmp(option, "end")) {
 		if(CheckAdmin(playerid, 4))

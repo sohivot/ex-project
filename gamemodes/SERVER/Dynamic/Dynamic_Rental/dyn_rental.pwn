@@ -299,7 +299,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
                     if(count >= 1) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda tidak dapat menggunakan Rental jika Trans Duty lebih dari 1 orang!");
                     
                     new title[100];
-                    format(title, sizeof(title), ""Mayoritas"Mayoritas Roleplay "WHITE"- Rental %02d", rentid);
+                    format(title, sizeof(title), ""Imajinasi"Imajinasi Roleplay "WHITE"- Rental %02d", rentid);
                     Dialog_Show(playerid, DialogRents, DIALOG_STYLE_TABLIST_HEADERS, title, 
                     "Jenis Kendaraan\tHarga Rental\
                     \nFaggio\t$300\
@@ -309,7 +309,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
                 case 2: // Boat
                 {
                     new title[100];
-                    format(title, sizeof(title), ""Mayoritas"Mayoritas Roleplay "WHITE"- Rental %02d", rentid);
+                    format(title, sizeof(title), ""Imajinasi"Imajinasi Roleplay "WHITE"- Rental %02d", rentid);
                     Dialog_Show(playerid, DialogRents, DIALOG_STYLE_TABLIST_HEADERS, title, 
                     "Jenis Kendaraan\tHarga Rental\
                     \nSpeeder\t$500\

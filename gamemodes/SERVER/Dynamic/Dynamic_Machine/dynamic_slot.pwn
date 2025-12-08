@@ -248,7 +248,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 //             new title[100];
 //             if(isnull(inputtext))
 //             {
-//                 format(title, sizeof(title), ""Mayoritas"Mayoritas Roleplay "WHITE"- Mesin %02d", id+1);
+//                 format(title, sizeof(title), ""Imajinasi"Imajinasi Roleplay "WHITE"- Mesin %02d", id+1);
 //                 ShowPlayerDialog(playerid, DIALOG_SLOT_BID, DIALOG_STYLE_INPUT, title, 
 //                 "Error: Tidak dapat diisi kosong!\nMasukkan berapa jumlah uang yang ingin anda bid:", "Bid", "Batal");
 //                 return 1;
@@ -256,7 +256,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 
 //             if(!IsNumeric(inputtext))
 //             {
-//                 format(title, sizeof(title), ""Mayoritas"Mayoritas Roleplay "WHITE"- Mesin %02d", id+1);
+//                 format(title, sizeof(title), ""Imajinasi"Imajinasi Roleplay "WHITE"- Mesin %02d", id+1);
 //                 ShowPlayerDialog(playerid, DIALOG_SLOT_BID, DIALOG_STYLE_INPUT, title, 
 //                 "Error: Hanya dapat diisi angka!\nMasukkan berapa jumlah uang yang ingin anda bid:", "Bid", "Batal");
 //                 return 1;
@@ -264,7 +264,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 
 //             if(strval(inputtext) < 1 || strval(inputtext) > AccountData[playerid][pMoney])
 //             {
-//                 format(title, sizeof(title), ""Mayoritas"Mayoritas Roleplay "WHITE"- Mesin %02d", id+1);
+//                 format(title, sizeof(title), ""Imajinasi"Imajinasi Roleplay "WHITE"- Mesin %02d", id+1);
 //                 ShowPlayerDialog(playerid, DIALOG_SLOT_BID, DIALOG_STYLE_INPUT, title, 
 //                 "Error: Jumlah tidak valid!\nMasukkan berapa jumlah uang yang ingin anda bid:", "Bid", "Batal");
 //                 return 1;

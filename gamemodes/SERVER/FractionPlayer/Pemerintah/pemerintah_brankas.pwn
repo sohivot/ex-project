@@ -38,8 +38,8 @@ stock Pemerintah_OpenStorage(playerid, facid)
             }
         }
     }
-    if(!count3) return Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Pemerintah", "Tidak ada barang apapun dibrankas saat ini!", "Tutup", "");
-    Dialog_Show(playerid, PemerintahBrankasItem, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Pemerintah", str, "Pilih", "Batal");
+    if(!count3) return Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Pemerintah", "Tidak ada barang apapun dibrankas saat ini!", "Tutup", "");
+    Dialog_Show(playerid, PemerintahBrankasItem, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Pemerintah", str, "Pilih", "Batal");
     return 1;
 }
 
@@ -211,7 +211,7 @@ Dialog:PemerintahBrankasItem(playerid, response, listitem, inputtext[])
         if(PemerintahStorage[facid][AccountData[playerid][pListItemGudang]][ItemExists])
         {
             format(str, sizeof(str), "Anda akan mengambil barang:\nNama: %s\nJumlah di brankas: %d\nMohon masukan jumlah yang ingin anda ambil:", name, PemerintahStorage[facid][AccountData[playerid][pListItemGudang]][ItemQuantity]);
-            Dialog_Show(playerid, PemerintahWithdraw, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Pemerintah", str, "Submit", "Back");
+            Dialog_Show(playerid, PemerintahWithdraw, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Pemerintah", str, "Submit", "Back");
         }
     }
     return 1;

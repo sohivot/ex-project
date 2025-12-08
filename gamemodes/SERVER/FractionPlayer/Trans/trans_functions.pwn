@@ -137,13 +137,13 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
                 if(AccountData[playerid][pFactionRank] < 4) return ShowTDN(playerid, NOTIFICATION_ERROR, "Minimal rank Kepala Transport untuk akses Brankas!");
 
                 AccountData[playerid][menuShowed] = true;
-                ShowPlayerDialog(playerid, DIALOG_TRANSVAULT, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Trans",
+                ShowPlayerDialog(playerid, DIALOG_TRANSVAULT, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Trans",
                 "Simpan Barang\n"GRAY"Ambil Barang", "Pilih", "Batal");
             }
 
             if(IsPlayerInDynamicArea(playerid, Trans_Stuff[TransLocker]) && AccountData[playerid][pDutyTrans])
             {
-                ShowPlayerDialog(playerid, DIALOG_TRANS_LOCKER, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Locker Trans",
+                ShowPlayerDialog(playerid, DIALOG_TRANS_LOCKER, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Locker Trans",
                 "Baju Biasa\n"GRAY"Baju 1\nBaju 2", "Pilih", "Batal");
             }
 
@@ -151,7 +151,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
             {
                 if(AccountData[playerid][pFactionRank] < 4) return ShowTDN(playerid, NOTIFICATION_ERROR, "Minimal rank Kepala Transport untuk akses desk!");
 
-				ShowPlayerDialog(playerid, DIALOG_TRANS_DESK, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Bos Desk",
+				ShowPlayerDialog(playerid, DIALOG_TRANS_DESK, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Bos Desk",
 				"Invite\
 				\n"GRAY"Kelola Jabatan\
 				\nKick\
@@ -163,7 +163,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 
             if(IsPlayerInRangeOfPoint(playerid, 2.0, Trans_Stuff[TransgaragePos][0], Trans_Stuff[TransgaragePos][1], Trans_Stuff[TransgaragePos][2]) && AccountData[playerid][pDutyTrans])
             {
-                ShowPlayerDialog(playerid, DIALOG_TRANS_GARAGE, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Garasi Trans",
+                ShowPlayerDialog(playerid, DIALOG_TRANS_GARAGE, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Garasi Trans",
                 "Keluarkan Kendaraan\
                 \n"GRAY"Simpan Kendaraan\
                 \nBeli Kendaraan\
@@ -181,7 +181,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         case DIALOG_TRANS_DESK:
         {
             if(!response) return 1;
-            if(AccountData[playerid][pFaction] != FACTION_TRANS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Transportasi Mayoritas!");
+            if(AccountData[playerid][pFaction] != FACTION_TRANS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Transportasi Imajinasi!");
             if(AccountData[playerid][pFactionRank] < 4) return ShowTDN(playerid, NOTIFICATION_ERROR, "Minimal rank Kepala Transport untuk akses desk!");
             switch(listitem)
             {
@@ -198,11 +198,11 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                     if(count == 0)
 					{
 						PlayerPlaySound(playerid, 5206, 0.0, 0.0, 0.0);
-						return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Invite",
+						return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Invite",
 						"Tidak ada orang di sekitar anda!", "Tutup", "");
 					}
 
-					ShowPlayerDialog(playerid, DIALOG_TRANS_INVITECONF, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Invite", frmxt, "Pilih", "Batal");
+					ShowPlayerDialog(playerid, DIALOG_TRANS_INVITECONF, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Invite", frmxt, "Pilih", "Batal");
                 }
                 case 1:
                 {
@@ -222,12 +222,12 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
 							format(shstr, sizeof(shstr), "%s%s\t%s\t%s\n", shstr, fckname, TransRank[fckrank], fcklastlogin);
 						}
-						ShowPlayerDialog(playerid, DIALOG_TRANSSETRANK, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Set Jabatan", shstr, "Pilih", "Batal");
+						ShowPlayerDialog(playerid, DIALOG_TRANSSETRANK, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Set Jabatan", shstr, "Pilih", "Batal");
 					}
 					else 
 					{
 						PlayerPlaySound(playerid, 5206, 0.0, 0.0, 0.0);
-						return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Set Jabatan", "Tidak ada Anggota Trans!", "Tutup", "");
+						return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Set Jabatan", "Tidak ada Anggota Trans!", "Tutup", "");
 					}
                 }
                 case 2:
@@ -248,12 +248,12 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
 							format(shstr, sizeof(shstr), "%s%s\t%s\t%s\n", shstr, fckname, TransRank[fckrank], fcklastlogin);
 						}
-						ShowPlayerDialog(playerid, DIALOG_TRANSKICKMEMBER, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kick Anggota", shstr, "Kick", "Batal");
+						ShowPlayerDialog(playerid, DIALOG_TRANSKICKMEMBER, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kick Anggota", shstr, "Kick", "Batal");
 					}
 					else 
 					{
 						PlayerPlaySound(playerid, 5206, 0.0, 0.0, 0.0);
-						return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kick Anggota", "Tidak ada Anggota Trans!", "Tutup", "");
+						return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kick Anggota", "Tidak ada Anggota Trans!", "Tutup", "");
 					}
                 }
                 case 3:
@@ -264,23 +264,23 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 					{
 						format(list, sizeof(list), "%s%s\t%s\t%s\n", list, AccountData[i][pName], GetFactionRank(i), AccountData[i][pDutyTrans] ? ""GREEN"On Duty" : ""DARKRED"Off Duty");
 					}
-					ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Anggota", list, "Tutup", "");
+					ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Anggota", list, "Tutup", "");
                 }
                 case 4:
                 {
                     new frmxt[158];
-					format(frmxt, sizeof(frmxt), "Perusahaan Transportasi Mayoritas saat ini memiliki saldo sebesar\
+					format(frmxt, sizeof(frmxt), "Perusahaan Transportasi Imajinasi saat ini memiliki saldo sebesar\
 					\n"DARKGREEN"%s", FormatMoney(TransMoneyVault));
-					ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Trans Money", frmxt, "Tutup", "");
+					ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Trans Money", frmxt, "Tutup", "");
                 }
 				case 5:
 				{
-					ShowPlayerDialog(playerid, DIALOG_DEPOSIT_TRANS, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Trans Deposit",
+					ShowPlayerDialog(playerid, DIALOG_DEPOSIT_TRANS, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Trans Deposit",
 					"Mohon masukkan nominal deposit untuk saldo perusahaan:", "Input", "Batal");
 				}
 				case 6:
 				{
-					ShowPlayerDialog(playerid, DIALOG_WITHDRAW_TRANS, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Trans Withdraw",
+					ShowPlayerDialog(playerid, DIALOG_WITHDRAW_TRANS, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Trans Withdraw",
 					"Mohon masukkan nominal penarikan tunai dari saldo perusahaan:", "Input", "Batal");
 				}
             }
@@ -288,7 +288,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         case DIALOG_TRANS_LOCKER:
         {
             if(!response) return 0;
-            if(AccountData[playerid][pFaction] != FACTION_TRANS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Transportasi Mayoritas!");
+            if(AccountData[playerid][pFaction] != FACTION_TRANS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Transportasi Imajinasi!");
 
             switch(listitem)
             {
@@ -302,7 +302,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             static icsr[855];
             if(!response) return 1;
             if(AccountData[playerid][pCharStory] < 0) return Error(playerid, "player belum ada karakter story");
-            if(AccountData[playerid][pFaction] != FACTION_TRANS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Transportasi Mayoritas!");
+            if(AccountData[playerid][pFaction] != FACTION_TRANS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Transportasi Imajinasi!");
             if(AccountData[playerid][pFactionRank] < 4) return ShowTDN(playerid, NOTIFICATION_ERROR, "Minimal rank Kepala Transport untuk akses desk!");
 
             new targetid = NearestPlayer[playerid][listitem];
@@ -317,7 +317,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         case DIALOG_TRANSSETRANK:
         {
             if(!response) return 1;
-            if(AccountData[playerid][pFaction] != FACTION_TRANS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Tansportasi Mayoritas!");
+            if(AccountData[playerid][pFaction] != FACTION_TRANS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Tansportasi Imajinasi!");
             if(AccountData[playerid][pFactionRank] < 4) return ShowTDN(playerid, NOTIFICATION_ERROR, "Minimal rank Kepala Transport untuk akses desk!");
 
             mysql_query(mdb_query, "SELECT * FROM `player_characters` WHERE `Char_Faction`= 4 ORDER BY `Char_FactionRank` DESC");
@@ -328,7 +328,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 cache_get_value_name_int(listitem, "Char_FactionRank", AccountData[playerid][pTempSQLFactRank]);
                 if(AccountData[playerid][pID] == AccountData[playerid][pTempSQLFactMemberID]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Kamu tidak dapat mengatur jabatan sendiri!");
                 if(AccountData[playerid][pTempSQLFactRank] >= AccountData[playerid][pFactionRank]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Tidak dapat mengatur jabatan rank diatasmu!");
-                ShowPlayerDialog(playerid, DIALOG_RANK_SET_TRANS, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kelola Jabatan",
+                ShowPlayerDialog(playerid, DIALOG_RANK_SET_TRANS, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kelola Jabatan",
                 "Silahkan pilih jabatan untuk ditetapkan (masukkan angka saja):\
                 \n1. Magang\
                 \n2. Junior\
@@ -340,7 +340,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         case DIALOG_TRANSKICKMEMBER:
         {
             if(!response) return 1;
-            if(AccountData[playerid][pFaction] != FACTION_TRANS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Transportasi Mayoritas!");
+            if(AccountData[playerid][pFaction] != FACTION_TRANS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Transportasi Imajinasi!");
             if(AccountData[playerid][pFactionRank] < 4) return ShowTDN(playerid, NOTIFICATION_ERROR, "Minimal rank Kepala Transport untuk mengakses Bos Desk!");
 
             mysql_query(mdb_query, "SELECT * FROM `player_characters` WHERE `Char_Faction` = 4 ORDER BY `Char_FactionRank` DESC");
@@ -396,7 +396,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                             AccountData[i][pUsingUniform] = false;
                         SetPlayerSkin(i, AccountData[i][pSkin]);
                         RefreshFactionMap(i);
-                        ShowTDN(i, NOTIFICATION_WARNING, "Anda telah dikeluarkan dari faction Transportasi Mayoritas!");
+                        ShowTDN(i, NOTIFICATION_WARNING, "Anda telah dikeluarkan dari faction Transportasi Imajinasi!");
                     }
                 }
                 mysql_format(mdb_query, icsr, sizeof(icsr), "UPDATE `player_characters` SET `Char_Faction`=0, `Char_FactionRank`=0, `Char_UsingUniform`=0 WHERE `pID`=%d", pidrow);
@@ -405,7 +405,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 \nNama: %s\
                 \nRank: %s\
                 \nLast Online: %s", fckname, TransRank[fckrank], fcklastlogin);
-                ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kick Anggota",
+                ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kick Anggota",
                 kckstr, "Tutup", "");
 
                 AccountData[playerid][pTempSQLFactMemberID] = -1;
@@ -415,10 +415,10 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         case DIALOG_RANK_SET_TRANS:
 		{
 			if(!response) return 1;
-			if(AccountData[playerid][pFaction] != FACTION_TRANS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Transportasi Mayoritas!");
+			if(AccountData[playerid][pFaction] != FACTION_TRANS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Transportasi Imajinasi!");
 			if(AccountData[playerid][pFactionRank] < 4) return ShowTDN(playerid, NOTIFICATION_ERROR, "Minimal Rank Kepala Transport untuk akses desk!");
 
-			if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_RANK_SET_TRANS, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kelola Jabatan", \
+			if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_RANK_SET_TRANS, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kelola Jabatan", \
 			"Error: Tidak dapat diisi kosong!\n\
 			Silahkan pilih jabatan untuk ditetapkan (masukkan angka saja):\
 			\n1. Magang\
@@ -427,7 +427,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			\n4. Kepala Transport\
 			\n5. Trans CEO", "Set", "Batal");
 
-			if(!IsNumeric(inputtext)) return ShowPlayerDialog(playerid, DIALOG_RANK_SET_TRANS, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kelola Jabatan", \
+			if(!IsNumeric(inputtext)) return ShowPlayerDialog(playerid, DIALOG_RANK_SET_TRANS, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kelola Jabatan", \
 			"Error: Hanya dapat diisi angka!\n\
 			Silahkan pilih jabatan untuk ditetapkan (masukkan angka saja):\
 			\n1. Magang\
@@ -436,7 +436,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			\n4. Kepala Transport\
 			\n5. Trans CEO", "Set", "Batal");
 
-			if(strval(inputtext) < 1 || strval(inputtext) > AccountData[playerid][pFactionRank]) return ShowPlayerDialog(playerid, DIALOG_RANK_SET_TRANS, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kelola Jabatan", \
+			if(strval(inputtext) < 1 || strval(inputtext) > AccountData[playerid][pFactionRank]) return ShowPlayerDialog(playerid, DIALOG_RANK_SET_TRANS, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kelola Jabatan", \
 			"Error: Tidak dapat diisi dibawah 1 atau lebih tinggi dari jabatan anda!\n\
 			Silahkan pilih jabatan untuk ditetapkan (masukkan angka saja):\
 			\n1. Magang\
@@ -463,7 +463,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         case DIALOG_DEPOSIT_TRANS:
 		{
 			if(!response) return ShowTDN(playerid, NOTIFICATION_INFO, "Anda telah membatalkan pilihan");
-			if(AccountData[playerid][pFaction] != FACTION_TRANS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Transportasi Mayoritas!");
+			if(AccountData[playerid][pFaction] != FACTION_TRANS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Transportasi Imajinasi!");
 			if(AccountData[playerid][pFactionRank] < 4) return ShowTDN(playerid, NOTIFICATION_ERROR, "Minimal Rank Kepala Transport untuk akses desk!");
 			new depocash = strval(inputtext), frmtmny[128];
 			if(depocash > AccountData[playerid][pMoney]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Uang anda tidak sebanyak itu!");
@@ -472,7 +472,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			TransMoneyVault += depocash;
 			mysql_format(mdb_query, frmtmny, sizeof(frmtmny), "UPDATE `stuffs` SET `transmoneyvault` = %d WHERE `ID` = 0", TransMoneyVault);
 			mysql_tquery(mdb_query, frmtmny);
-			ShowTDN(playerid, NOTIFICATION_SUKSES, sprintf("Anda berhasil deposit %s untuk Trans Mayoritas", FormatMoney(depocash)));
+			ShowTDN(playerid, NOTIFICATION_SUKSES, sprintf("Anda berhasil deposit %s untuk Trans Imajinasi", FormatMoney(depocash)));
 		
             static frmtx[255];
             format(frmtx, sizeof(frmtx), "TRANS - Deposit Uang %s ke dalam perusahaan", FormatMoney(depocash));
@@ -481,7 +481,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		case DIALOG_WITHDRAW_TRANS:
 		{
 			if(!response) return ShowTDN(playerid, NOTIFICATION_INFO, "Anda telah membatalkan pilihan");
-			if(AccountData[playerid][pFaction] != FACTION_TRANS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Transportasi Mayoritas!");
+			if(AccountData[playerid][pFaction] != FACTION_TRANS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Transportasi Imajinasi!");
 			if(AccountData[playerid][pFactionRank] < 4) return ShowTDN(playerid, NOTIFICATION_ERROR, "Minimal Rank Kepala Transport untuk akses desk!");
 			new withdrawcash = strval(inputtext), frmtmny[128];
 			if(withdrawcash > TransMoneyVault) return ShowTDN(playerid, NOTIFICATION_ERROR, "Uang perusahaan tidak sebanyak itu!");
@@ -494,14 +494,14 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
 			AddFMoneyLog(AccountData[playerid][pName], AccountData[playerid][pUCP], withdrawcash, "Trans");
 
-			ShowTDN(playerid, NOTIFICATION_SUKSES, sprintf("Anda berhasil withdraw %s dari Trans Mayoritas", FormatMoney(withdrawcash)));
+			ShowTDN(playerid, NOTIFICATION_SUKSES, sprintf("Anda berhasil withdraw %s dari Trans Imajinasi", FormatMoney(withdrawcash)));
 
        
 		}
         case DIALOG_TRANS_GARAGE:
         {
             if(!response) return 1;
-            if(AccountData[playerid][pFaction] != FACTION_TRANS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Transportasi Mayoritas!");
+            if(AccountData[playerid][pFaction] != FACTION_TRANS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Transportasi Imajinasi!");
 
             switch(listitem)
             {
@@ -519,7 +519,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 							format(list,sizeof(list),"%s%d\t%s\t%s",list,x+1,GetVehicleModelName(PlayerVehicle[id][pVehModelID]),PlayerVehicle[id][pVehPlate]);
 						} else format(list,sizeof(list),"%s%d\t%s\t%s\n",list,x+1,GetVehicleModelName(PlayerVehicle[id][pVehModelID]),PlayerVehicle[id][pVehPlate]);
                     }
-                    ShowPlayerDialog(playerid, DIALOG_TRANS_GARAGE_TAKEOUT, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Garasi Trans", list, "Pilih", "Batal");
+                    ShowPlayerDialog(playerid, DIALOG_TRANS_GARAGE_TAKEOUT, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Garasi Trans", list, "Pilih", "Batal");
                 }
                 case 1:// in
 				{
@@ -528,7 +528,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 					{
 						if(PlayerVehicle[carid][pVehOwnerID] != AccountData[playerid][pID]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Kendaraan ini bukan milik anda!");
 						if(PlayerVehicle[carid][pVehRental] > 0) return ShowTDN(playerid, NOTIFICATION_ERROR, "Kendaraan rental tidak dapat disimpan digarasi Faction!");
-						if(PlayerVehicle[carid][pVehFaction] != FACTION_TRANS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Kendaraan tersebut bukan kendaraan Trans Mayoritas!");
+						if(PlayerVehicle[carid][pVehFaction] != FACTION_TRANS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Kendaraan tersebut bukan kendaraan Trans Imajinasi!");
 						
 						Vehicle_GetStatus(carid);
 						PlayerVehicle[carid][pVehFactStored] = FACTION_TRANS;
@@ -544,11 +544,11 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 							PlayerVehicle[carid][pVehPhysic] = INVALID_VEHICLE_ID;
 						}
 					}
-					if(!foundnearby) return ShowTDN(playerid, NOTIFICATION_ERROR, "Tidak ada kendaraan dari Transportasi Mayoritas milik anda di sekitar!");
+					if(!foundnearby) return ShowTDN(playerid, NOTIFICATION_ERROR, "Tidak ada kendaraan dari Transportasi Imajinasi milik anda di sekitar!");
 				}
                 case 2: //buy
                 {
-                    ShowPlayerDialog(playerid, DIALOG_TRANS_GARAGE_BUY, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Beli Kendaraan",
+                    ShowPlayerDialog(playerid, DIALOG_TRANS_GARAGE_BUY, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Beli Kendaraan",
                     "Model\tHarga\
                     \nTaxi\t$8500\
                     \n"GRAY"Cabbie\t"GRAY"$5000\
@@ -574,12 +574,12 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
 							format(list, sizeof(list), "%s%d\t%s\n", list, havpid, GetVehicleModelName(havmod));
 						}
-						ShowPlayerDialog(playerid, DIALOG_TRANS_GARAGE_DELETE, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Hapus Kendaraan", list, "Hapus", "Batal");
+						ShowPlayerDialog(playerid, DIALOG_TRANS_GARAGE_DELETE, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Hapus Kendaraan", list, "Hapus", "Batal");
 					}
 					else 
 					{
 						PlayerPlaySound(playerid, 5206, 0.0, 0.0, 0.0);
-						return Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Hapus Kendaraan", "Anda tidak memiliki kendaraan Trans", "Tutup", "");
+						return Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Hapus Kendaraan", "Anda tidak memiliki kendaraan Trans", "Tutup", "");
 					}
 				}
             }
@@ -587,7 +587,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         case DIALOG_TRANS_GARAGE_TAKEOUT:
         {
             if(!response) return 1;
-            if(AccountData[playerid][pFaction] != FACTION_TRANS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Transportasi Mayoritas!");
+            if(AccountData[playerid][pFaction] != FACTION_TRANS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Transportasi Imajinasi!");
             if(listitem == -1) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda belum memilih kendaraan untuk dikeluarkan!");
 
             new id = GetVehicleIDStoredFactGarage(playerid, listitem, FACTION_TRANS);
@@ -619,7 +619,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         case DIALOG_TRANS_GARAGE_BUY:
         {
             if(!response) return 1;
-            if(AccountData[playerid][pFaction] != FACTION_TRANS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Transportasi Mayoritas!");
+            if(AccountData[playerid][pFaction] != FACTION_TRANS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Transportasi Imajinasi!");
             if(!IsPlayerInRangeOfPoint(playerid, 2.0, Trans_Stuff[TransgaragePos][0], Trans_Stuff[TransgaragePos][1], Trans_Stuff[TransgaragePos][2])) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda tidak ditempat Garasi Trans!");
 
             // new count = 0;
@@ -665,7 +665,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         case DIALOG_TRANS_GARAGE_DELETE:
 		{
 			if(!response) return 1;
-			if(AccountData[playerid][pFaction] != FACTION_TRANS) return ShowTDN(playerid, NOTIFICATION_INFO, "Anda bukan anggota Transportasi Mayoritas");
+			if(AccountData[playerid][pFaction] != FACTION_TRANS) return ShowTDN(playerid, NOTIFICATION_INFO, "Anda bukan anggota Transportasi Imajinasi");
 
 			new frmtdel[158], Cache:execute;
 			mysql_format(mdb_query, frmtdel, sizeof(frmtdel), "SELECT * FROM `player_vehicles` WHERE `PVeh_Faction` = 4 AND `PVeh_OwnerID` = %d", AccountData[playerid][pID]);
@@ -685,7 +685,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                     format(kckstr, sizeof(kckstr), "Anda berhasil menghapus kendaraan:\
                     \nDatabase ID: %d\
                     \nModel: %s", havpid, GetVehicleModelName(havmods));
-                    ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Hapus Kendaraan", kckstr, "Tutup", "");
+                    ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Hapus Kendaraan", kckstr, "Tutup", "");
 
                     new pvid = GetFactionVehicleIDFromListitem(playerid, listitem, FACTION_TRANS);
 
@@ -717,7 +717,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			if(AccountData[playerid][pFaction] != FACTION_TRANS) 
             {
                 AccountData[playerid][menuShowed] = false;   
-                return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Transportasi Mayoritas!");
+                return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Transportasi Imajinasi!");
             }
 			switch(listitem)
 			{
@@ -742,13 +742,13 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
                             format(str, sizeof(str), "%s%s\t%d\t-\n", str, itemname, amounts);
                         }
-                        ShowPlayerDialog(playerid, DIALOG_TRANSVAULT_DEPOSIT, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Trans", str, "Pilih", "Batal");
+                        ShowPlayerDialog(playerid, DIALOG_TRANSVAULT_DEPOSIT, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Trans", str, "Pilih", "Batal");
                     }
                     else 
                     {
                         AccountData[playerid][menuShowed] = false;
                         PlayerPlaySound(playerid, 5206, 0.0, 0.0, 0.0);
-                        return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Trans",
+                        return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Trans",
                         "Anda tidak memiliki barang untuk disimpan!", "Tutup", "");
                     }
                 }
@@ -766,12 +766,12 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
                             format(str, sizeof(str), "%s%s\t%d\t-\n", str, itemname, amounts);
                         }
-                        ShowPlayerDialog(playerid, DIALOG_TRANSVAULT_WITHDRAW, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Trans", str, "Pilih", "Batal");
+                        ShowPlayerDialog(playerid, DIALOG_TRANSVAULT_WITHDRAW, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Trans", str, "Pilih", "Batal");
                     }
                     else 
                     {
                         AccountData[playerid][menuShowed] = false;
-                        return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Trans",
+                        return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Trans",
                         "Tidak ada barang di brankas saat ini!", "Tutup", "");
                     }
                 }
@@ -802,7 +802,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
                 new shstr[528];
                 format(shstr, sizeof(shstr), "Anda akan menyimpan item:\nNama: %s\nJumlah di tas: %d\nMohon masukkan berapa jumlah item yang ingin disimpan:", FactionBrankas[playerid][factionBrankasTemp], FactionBrankas[playerid][factionBrankasQuant]);
-                ShowPlayerDialog(playerid, DIALOG_TRANSVAULT_IN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Trans", 
+                ShowPlayerDialog(playerid, DIALOG_TRANSVAULT_IN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Trans", 
                 shstr, "Input", "Batal");
             }
 		}
@@ -819,7 +819,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             {
                 AccountData[playerid][menuShowed] = true;
                 format(shstr, sizeof(shstr), "Anda akan menyimpan item:\nNama: %s\nJumlah di tas: %d\nTidak dapat diisi kosong!\nMohon masukkan berapa jumlah item yang ingin disimpan:", FactionBrankas[playerid][factionBrankasTemp], FactionBrankas[playerid][factionBrankasQuant]);
-                ShowPlayerDialog(playerid, DIALOG_TRANSVAULT_IN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Trans", 
+                ShowPlayerDialog(playerid, DIALOG_TRANSVAULT_IN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Trans", 
                 shstr, "Input", "Batal");
                 return 1;
             }
@@ -828,7 +828,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             {
                 AccountData[playerid][menuShowed] = true;
                 format(shstr, sizeof(shstr), "Anda akan menyimpan item:\nNama: %s\nJumlah di tas: %d\nHanya dapat diisi angka!\nMohon masukkan berapa jumlah item yang ingin disimpan:", FactionBrankas[playerid][factionBrankasTemp], FactionBrankas[playerid][factionBrankasQuant]);
-                ShowPlayerDialog(playerid, DIALOG_TRANSVAULT_IN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Trans", 
+                ShowPlayerDialog(playerid, DIALOG_TRANSVAULT_IN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Trans", 
                 shstr, "Input", "Batal");
                 return 1;
             }
@@ -837,7 +837,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             {
                 AccountData[playerid][menuShowed] = true;
                 format(shstr, sizeof(shstr), "Anda akan menyimpan item:\nNama: %s\nJumlah di tas: %d\nJumlah tidak valid!\nMohon masukkan berapa jumlah item yang ingin disimpan:", FactionBrankas[playerid][factionBrankasTemp], FactionBrankas[playerid][factionBrankasQuant]);
-                ShowPlayerDialog(playerid, DIALOG_TRANSVAULT_IN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Trans", 
+                ShowPlayerDialog(playerid, DIALOG_TRANSVAULT_IN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Trans", 
                 shstr, "Input", "Batal");
                 return 1;
             }
@@ -886,13 +886,13 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 cache_get_value_name_int(listitem, "Quantity", FactionBrankas[playerid][factionBrankasQuant]);
 
                 format(shstr, sizeof(shstr), "Anda akan mengambil item:\nNama: %s\nJumlah tersimpan: %d\nMohon masukkan berapa jumlah yang ingin anda ambil:", FactionBrankas[playerid][factionBrankasTemp], FactionBrankas[playerid][factionBrankasQuant]);
-                ShowPlayerDialog(playerid, DIALOG_TRANSVAULT_OUT, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Trans",
+                ShowPlayerDialog(playerid, DIALOG_TRANSVAULT_OUT, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Trans",
                 shstr, "Input", "Batal");
             }
             else 
             {
                 AccountData[playerid][menuShowed] = false;
-                ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Trans",
+                ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Trans",
                 "Brankas ini isinya kosong!", "Tutup", "");
             }
 		}
@@ -909,7 +909,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             {
                 AccountData[playerid][menuShowed] = true;
                 format(shstr, sizeof(shstr), "Anda akan mengambil item:\nNama: %s\nJumlah tersimpan: %d\nTidak dapat diisi kosong!\nMohon masukkan berapa jumlah yang ingin anda ambil:", FactionBrankas[playerid][factionBrankasTemp], FactionBrankas[playerid][factionBrankasQuant]);
-                ShowPlayerDialog(playerid, DIALOG_TRANSVAULT_OUT, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Trans",
+                ShowPlayerDialog(playerid, DIALOG_TRANSVAULT_OUT, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Trans",
                 shstr, "Input", "Batal");
                 return 1;
             }
@@ -918,7 +918,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             {
                 AccountData[playerid][menuShowed] = true;
                 format(shstr, sizeof(shstr), "Anda akan mengambil item:\nNama: %s\nJumlah tersimpan: %d\nHanya dapat diisi angka!\nMohon masukkan berapa jumlah yang ingin anda ambil:", FactionBrankas[playerid][factionBrankasTemp], FactionBrankas[playerid][factionBrankasQuant]);
-                ShowPlayerDialog(playerid, DIALOG_TRANSVAULT_OUT, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Trans",
+                ShowPlayerDialog(playerid, DIALOG_TRANSVAULT_OUT, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Trans",
                 shstr, "Input", "Batal");
                 return 1;
             }
@@ -927,7 +927,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             {
                 AccountData[playerid][menuShowed] = true;
                 format(shstr, sizeof(shstr), "Anda akan mengambil item:\nNama: %s\nJumlah tersimpan: %d\nJumlah tidak valid!\nMohon masukkan berapa jumlah yang ingin anda ambil:", FactionBrankas[playerid][factionBrankasTemp], FactionBrankas[playerid][factionBrankasQuant]);
-                ShowPlayerDialog(playerid, DIALOG_TRANSVAULT_OUT, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Trans",
+                ShowPlayerDialog(playerid, DIALOG_TRANSVAULT_OUT, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Trans",
                 shstr, "Input", "Batal");
                 return 1;
             }
@@ -973,7 +973,7 @@ public OnTransDeposit(playerid)
 /*DialogPages:TransSetRank(playerid, response, listitem, inputtext[])
 {
     if(!response) return 1;
-    if(AccountData[playerid][pFaction] != FACTION_TRANS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Tansportasi Mayoritas!");
+    if(AccountData[playerid][pFaction] != FACTION_TRANS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Tansportasi Imajinasi!");
     if(AccountData[playerid][pFactionRank] < 4) return ShowTDN(playerid, NOTIFICATION_ERROR, "Minimal rank Kepala Transport untuk akses desk!");
 
     mysql_query(mdb_query, "SELECT * FROM `player_characters` WHERE `Char_Faction`= 4 ORDER BY `Char_FactionRank` DESC");
@@ -984,7 +984,7 @@ public OnTransDeposit(playerid)
         cache_get_value_name_int(listitem, "Char_FactionRank", AccountData[playerid][pTempSQLFactRank]);
         if(AccountData[playerid][pID] == AccountData[playerid][pTempSQLFactMemberID]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Kamu tidak dapat mengatur jabatan sendiri!");
         if(AccountData[playerid][pTempSQLFactRank] >= AccountData[playerid][pFactionRank]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Tidak dapat mengatur jabatan rank diatasmu!");
-        ShowPlayerDialog(playerid, DIALOG_RANK_SET_TRANS, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kelola Jabatan",
+        ShowPlayerDialog(playerid, DIALOG_RANK_SET_TRANS, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kelola Jabatan",
 		"Silahkan pilih jabatan untuk ditetapkan (masukkan angka saja):\
 		\n1. Magang\
 		\n2. Junior\
@@ -998,7 +998,7 @@ public OnTransDeposit(playerid)
 DialogPages:TransKickMember(playerid, response, listitem, inputtext[])
 {
     if(!response) return 1;
-    if(AccountData[playerid][pFaction] != FACTION_TRANS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Transportasi Mayoritas!");
+    if(AccountData[playerid][pFaction] != FACTION_TRANS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Transportasi Imajinasi!");
     if(AccountData[playerid][pFactionRank] < 4) return ShowTDN(playerid, NOTIFICATION_ERROR, "Minimal rank Kepala Transport untuk mengakses Bos Desk!");
 
     mysql_query(mdb_query, "SELECT * FROM `player_characters` WHERE `Char_Faction` = 4 ORDER BY `Char_FactionRank` DESC");
@@ -1054,7 +1054,7 @@ DialogPages:TransKickMember(playerid, response, listitem, inputtext[])
 					AccountData[i][pUsingUniform] = false;
 				SetPlayerSkin(i, AccountData[i][pSkin]);
 				RefreshFactionMap(i);
-                ShowTDN(i, NOTIFICATION_WARNING, "Anda telah dikeluarkan dari faction Transportasi Mayoritas!");
+                ShowTDN(i, NOTIFICATION_WARNING, "Anda telah dikeluarkan dari faction Transportasi Imajinasi!");
             }
         }
         mysql_format(mdb_query, icsr, sizeof(icsr), "UPDATE `player_characters` SET `Char_Faction`=0, `Char_FactionRank`=0, `Char_UsingUniform`=0 WHERE `pID`=%d", pidrow);
@@ -1063,7 +1063,7 @@ DialogPages:TransKickMember(playerid, response, listitem, inputtext[])
         \nNama: %s\
         \nRank: %s\
         \nLast Online: %s", fckname, TransRank[fckrank], fcklastlogin);
-        ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kick Anggota",
+        ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kick Anggota",
         kckstr, "Tutup", "");
 
 		AccountData[playerid][pTempSQLFactMemberID] = -1;

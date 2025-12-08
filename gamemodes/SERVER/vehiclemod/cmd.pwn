@@ -146,7 +146,7 @@ CMD:buymod(playerid, params[])
         else 
         {
             Player_EditVehicleObject[playerid] = vehicleid;
-            Dialog_Show(playerid, EditingVehObject, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Modshop", string, "Select", "Exit");
+            Dialog_Show(playerid, EditingVehObject, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Modshop", string, "Select", "Exit");
         }
     }
     return 1;

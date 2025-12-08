@@ -114,13 +114,13 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 
 			if(IsPlayerInDynamicArea(playerid, Gojek_Stuff[GojekBrankas]) && AccountData[playerid][pDutyGojek])
 			{
-				ShowPlayerDialog(playerid, DIALOG_GOJVAULT, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Gojek",
+				ShowPlayerDialog(playerid, DIALOG_GOJVAULT, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Gojek",
 				"Simpan Barang\n"GRAY"Ambil Barang", "Pilih", "Batal");
 			}
 
 			if(IsPlayerInDynamicArea(playerid, Gojek_Stuff[GojekLocker]) && AccountData[playerid][pDutyGojek])
 			{
-				ShowPlayerDialog(playerid, DIALOG_GOJEK_LOCKER, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Locker Gojek", 
+				ShowPlayerDialog(playerid, DIALOG_GOJEK_LOCKER, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Locker Gojek", 
 				"Baju Warga\n"GRAY"Baju Kerja", "Pilih", "Batal");
 			}
 
@@ -128,7 +128,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 			{
 				if(AccountData[playerid][pFactionRank] < 4) return ShowTDN(playerid, NOTIFICATION_ERROR, "Minimal rank Bendahara untuk akses desk!");
 
-				ShowPlayerDialog(playerid, DIALOG_BOSDESK_GOJEK, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Bos Desk",
+				ShowPlayerDialog(playerid, DIALOG_BOSDESK_GOJEK, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Bos Desk",
 				"Invite\ 
 				\n"GRAY"Kelola Jabatan\ 
 				\nKick\ 
@@ -140,7 +140,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 
 			if(IsPlayerInRangeOfPoint(playerid, 2.0, Gojek_Stuff[GojekGaragePOS][0], Gojek_Stuff[GojekGaragePOS][1], Gojek_Stuff[GojekGaragePOS][2]) && AccountData[playerid][pDutyGojek])
 			{
-				ShowPlayerDialog(playerid, DIALOG_GOJEK_GARAGE, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Garasi Gojek",
+				ShowPlayerDialog(playerid, DIALOG_GOJEK_GARAGE, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Garasi Gojek",
 				"Keluarkan Kendaraan\ 
 				\n"GRAY"Simpan Kendaraan\ 
 				\nBeli Kendaraan\ 
@@ -189,7 +189,7 @@ DialogPages:GojekSetRank(playerid, response, listitem, inputtext[])
         cache_get_value_name_int(listitem, "Char_FactionRank", AccountData[playerid][pTempSQLFactRank]);
         if(AccountData[playerid][pID] == AccountData[playerid][pTempSQLFactMemberID]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Kamu tidak dapat mengatur jabatan sendiri!");
         if(AccountData[playerid][pTempSQLFactRank] >= AccountData[playerid][pFactionRank]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Tidak dapat mengatur jabatan rank diatasmu!");
-        ShowPlayerDialog(playerid, DIALOG_RANK_SET_GOJEK, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kelola Jabatan",
+        ShowPlayerDialog(playerid, DIALOG_RANK_SET_GOJEK, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kelola Jabatan",
 		"Silahkan pilih jabatan untuk ditetapkan (masukkan angka saja):\ 
 		\n1. Magang\ 
 		\n2. Junior\ 
@@ -269,7 +269,7 @@ DialogPages:GojekKickMember(playerid, response, listitem, inputtext[])
         Nama: %s\n\
         Rank: %s\n\
         Last Online: %s", fckname, GojekRank[fckrank], fcklastlogin);
-        ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kick Anggota",
+        ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kick Anggota",
         kckstr, "Tutup", "");
 
 		AccountData[playerid][pTempSQLFactMemberID] = -1;
@@ -302,11 +302,11 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 					if(count == 0)
 					{
 						PlayerPlaySound(playerid, 5206, 0.0, 0.0, 0.0);
-						return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Invite",
+						return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Invite",
 						"Tidak ada orang di sekitar anda!", "Tutup", "");
 					}
 
-					ShowPlayerDialog(playerid, DIALOG_GOJEK_INVITECONF, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Invite", frmxt, "Pilih", "Batal");
+					ShowPlayerDialog(playerid, DIALOG_GOJEK_INVITECONF, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Invite", frmxt, "Pilih", "Batal");
 				}
 				case 1:
 				{
@@ -326,12 +326,12 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
 							AddDialogListitem(playerid, "%s\t%s\t%s", fckname, GojekRank[fckrank], fcklastlogin);
 						}
-						ShowPlayerDialogPages(playerid, "GojekSetRank", DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Set Jabatan", "Pilih", "Batal", 15, ""GREEN">> Lanjut", ""ORANGE"<< Kembali");
+						ShowPlayerDialogPages(playerid, "GojekSetRank", DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Set Jabatan", "Pilih", "Batal", 15, ""GREEN">> Lanjut", ""ORANGE"<< Kembali");
 					}
 					else 
 					{
 						PlayerPlaySound(playerid, 5206, 0.0, 0.0, 0.0);
-						return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Set Jabatan", "Tidak ada Anggota Gojek!", "Tutup", "");
+						return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Set Jabatan", "Tidak ada Anggota Gojek!", "Tutup", "");
 					}
 				}
 				case 2:
@@ -352,12 +352,12 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
 							AddDialogListitem(playerid, "%s\t%s\t%s", fckname, GojekRank[fckrank], fcklastlogin);
 						}
-						ShowPlayerDialogPages(playerid, "GojekKickMember", DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kick Anggota", "Kick", "Batal", 15, ""GREEN">> Lanjut", ""ORANGE"<< Kembali");
+						ShowPlayerDialogPages(playerid, "GojekKickMember", DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kick Anggota", "Kick", "Batal", 15, ""GREEN">> Lanjut", ""ORANGE"<< Kembali");
 					}
 					else 
 					{
 						PlayerPlaySound(playerid, 5206, 0.0, 0.0, 0.0);
-						return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kick Anggota", "Tidak ada Anggota Gojek!", "Tutup", "");
+						return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kick Anggota", "Tidak ada Anggota Gojek!", "Tutup", "");
 					}
 				}
 				case 3:
@@ -368,23 +368,23 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 					{
 						format(list, sizeof(list), "%s%s\t%s\t%s\n", list, AccountData[i][pName], GetFactionRank(i), AccountData[i][pDutyPD] ? ""GREEN"On Duty" : ""DARKRED"Off Duty");
 					}
-					ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Anggota", list, "Tutup", "");
+					ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Anggota", list, "Tutup", "");
 				}
 				case 4:
 				{
 					new frmxt[158];
 					format(frmxt, sizeof(frmxt), "Perusahaan Gojek Verona saat ini memiliki saldo sebesar\ 
 					\n"DARKGREEN"%s", FormatMoney(GojekMoneyVault));
-					ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek Money", frmxt, "Tutup", "");
+					ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek Money", frmxt, "Tutup", "");
 				}
 				case 5:
 				{
-					ShowPlayerDialog(playerid, DIALOG_DEPOSIT_GOJEK, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek Deposit",
+					ShowPlayerDialog(playerid, DIALOG_DEPOSIT_GOJEK, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek Deposit",
 					"Mohon masukkan nominal deposit untuk saldo perusahaan:", "Input", "Batal");
 				}
 				case 6:
 				{
-					ShowPlayerDialog(playerid, DIALOG_WITHDRAW_GOJEK, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Gojek Withdraw",
+					ShowPlayerDialog(playerid, DIALOG_WITHDRAW_GOJEK, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Gojek Withdraw",
 					"Mohon masukkan nominal penarikan tunai dari saldo perusahaan:", "Input", "Batal");
 				}
 			}
@@ -433,7 +433,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			if(AccountData[playerid][pFaction] != FACTION_GOJEK) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Gojek Verona!");
 			if(AccountData[playerid][pFactionRank] < 5) return ShowTDN(playerid, NOTIFICATION_ERROR, "Minimal Rank Asisten Bos untuk akses Bos Desk!");
 
-			if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_RANK_SET_GOJEK, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kelola Jabatan", \
+			if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_RANK_SET_GOJEK, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kelola Jabatan", \
 			"Error: Tidak dapat diisi kosong!\n\
 			Silahkan pilih jabatan untuk ditetapkan (masukkan angka saja):\n\
 			1. Magang\n\
@@ -443,7 +443,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			5. Asisten Bos\n\
 			6. Bos Gojek", "Set", "Batal");
 
-			if(!IsNumeric(inputtext)) return ShowPlayerDialog(playerid, DIALOG_RANK_SET_GOJEK, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kelola Jabatan", \
+			if(!IsNumeric(inputtext)) return ShowPlayerDialog(playerid, DIALOG_RANK_SET_GOJEK, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kelola Jabatan", \
 			"Error: Hanya dapat diisi angka!\n\
 			Silahkan pilih jabatan untuk ditetapkan (masukkan angka saja):\n\
 			1. Magang\n\
@@ -453,7 +453,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			5. Asisten Bos\n\
 			6. Bos Gojek", "Set", "Batal");
 
-			if(strval(inputtext) < 1 || strval(inputtext) > AccountData[playerid][pFactionRank]) return ShowPlayerDialog(playerid, DIALOG_RANK_SET_GOJEK, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kelola Jabatan", \
+			if(strval(inputtext) < 1 || strval(inputtext) > AccountData[playerid][pFactionRank]) return ShowPlayerDialog(playerid, DIALOG_RANK_SET_GOJEK, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kelola Jabatan", \
 			"Error: Tidak dapat diisi dibawah 1 atau lebih tinggi dari jabatan anda!\n\
 			Silahkan pilih jabatan untuk ditetapkan (masukkan angka saja):\n\
 			1. Magang\n\
@@ -531,7 +531,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 							format(list,sizeof(list),"%s%d\t%s\t%s",list,iter+1,GetVehicleModelName(PlayerVehicle[id][pVehModelID]),PlayerVehicle[id][pVehPlate]);
 						} else format(list,sizeof(list),"%s%d\t%s\t%s\n",list,iter+1,GetVehicleModelName(PlayerVehicle[id][pVehModelID]),PlayerVehicle[id][pVehPlate]);
 					}
-					ShowPlayerDialog(playerid, DIALOG_GOJEK_GARAGE_TAKEOUT, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Garasi Gojek", list, "Pilih", "Batal");
+					ShowPlayerDialog(playerid, DIALOG_GOJEK_GARAGE_TAKEOUT, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Garasi Gojek", list, "Pilih", "Batal");
 				}
 				case 1:// Simpan Vehicle
 				{
@@ -560,7 +560,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 				}
 				case 2://Beli Kendaraan
 				{
-					ShowPlayerDialog(playerid, DIALOG_GOJEK_GARAGE_BUY, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Beli Kendaraan",
+					ShowPlayerDialog(playerid, DIALOG_GOJEK_GARAGE_BUY, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Beli Kendaraan",
 					"Model\tHarga\ 
 					\nWayfarer\t$4000\ 
 					\n"GRAY"FCR-900\t"GRAY"$5000\ 
@@ -586,12 +586,12 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
 							format(list, sizeof(list), "%s%d\t%s\n", list, havpid, GetVehicleModelName(havmod));
 						}
-						ShowPlayerDialog(playerid, DIALOG_GOJEK_GARAGE_DELETE, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Hapus Kendaraan", list, "Hapus", "Batal");
+						ShowPlayerDialog(playerid, DIALOG_GOJEK_GARAGE_DELETE, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Hapus Kendaraan", list, "Hapus", "Batal");
 					}
 					else 
 					{
 						PlayerPlaySound(playerid, 5206, 0.0, 0.0, 0.0);
-						return Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Hapus Kendaraan", "Anda tidak memiliki kendaraan Gojek", "Tutup", "");
+						return Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Hapus Kendaraan", "Anda tidak memiliki kendaraan Gojek", "Tutup", "");
 					}
 				}
 			}
@@ -691,7 +691,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 				format(kckstr, sizeof(kckstr), "Anda berhasil menghapus kendaraan:\
 				\nDatabase ID: %d\
 				\nModel: %s", havpid, GetVehicleModelName(havmods));
-				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Hapus Kendaraan", kckstr, "Tutup", "");
+				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Hapus Kendaraan", kckstr, "Tutup", "");
 
 				new pvid = GetFactionVehicleIDFromListitem(playerid, listitem, FACTION_GOJEK);
 
@@ -737,12 +737,12 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
                             format(str, sizeof(str), "%s%s\t%d\t-\n", str, itemname, amounts);
                         }
-                        ShowPlayerDialog(playerid, DIALOG_GOJVAULT_DEPOSIT, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Gojek", str, "Pilih", "Batal");
+                        ShowPlayerDialog(playerid, DIALOG_GOJVAULT_DEPOSIT, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Gojek", str, "Pilih", "Batal");
                     }
                     else 
                     {
                         PlayerPlaySound(playerid, 5206, 0.0, 0.0, 0.0);
-                        return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Gojek",
+                        return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Gojek",
                         "Anda tidak memiliki barang untuk disimpan!", "Tutup", "");
                     }
                 }
@@ -760,11 +760,11 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
                             format(str, sizeof(str), "%s%s\t%d\t-\n", str, itemname, amounts);
                         }
-                        ShowPlayerDialog(playerid, DIALOG_GOJVAULT_WITHDRAW, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Gojek", str, "Pilih", "Batal");
+                        ShowPlayerDialog(playerid, DIALOG_GOJVAULT_WITHDRAW, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Gojek", str, "Pilih", "Batal");
                     }
                     else 
                     {
-                        return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Gojek",
+                        return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Gojek",
                         "Tidak ada barang di brankas saat ini!", "Tutup", "");
                     }
                 }
@@ -793,7 +793,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
                 new shstr[528];
                 format(shstr, sizeof(shstr), "Anda akan menyimpan item:\nNama: %s\nJumlah di tas: %d\nMohon masukkan berapa jumlah item yang ingin disimpan:", FactionBrankas[playerid][factionBrankasTemp], FactionBrankas[playerid][factionBrankasQuant]);
-                ShowPlayerDialog(playerid, DIALOG_GOJVAULT_IN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Gojek", 
+                ShowPlayerDialog(playerid, DIALOG_GOJVAULT_IN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Gojek", 
                 shstr, "Input", "Batal");
             }
 		}
@@ -808,7 +808,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             if(isnull(inputtext))
             {
                 format(shstr, sizeof(shstr), "Anda akan menyimpan item:\nNama: %s\nJumlah di tas: %d\nTidak dapat diisi kosong!\nMohon masukkan berapa jumlah item yang ingin disimpan:", FactionBrankas[playerid][factionBrankasTemp], FactionBrankas[playerid][factionBrankasQuant]);
-                ShowPlayerDialog(playerid, DIALOG_GOJVAULT_IN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Gojek", 
+                ShowPlayerDialog(playerid, DIALOG_GOJVAULT_IN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Gojek", 
                 shstr, "Input", "Batal");
                 return 1;
             }
@@ -816,7 +816,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             if(!IsNumeric(inputtext))
             {
                 format(shstr, sizeof(shstr), "Anda akan menyimpan item:\nNama: %s\nJumlah di tas: %d\nHanya dapat diisi angka!\nMohon masukkan berapa jumlah item yang ingin disimpan:", FactionBrankas[playerid][factionBrankasTemp], FactionBrankas[playerid][factionBrankasQuant]);
-                ShowPlayerDialog(playerid, DIALOG_GOJVAULT_IN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Gojek", 
+                ShowPlayerDialog(playerid, DIALOG_GOJVAULT_IN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Gojek", 
                 shstr, "Input", "Batal");
                 return 1;
             }
@@ -824,7 +824,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             if(strval(inputtext) < 1 || strval(inputtext) > FactionBrankas[playerid][factionBrankasQuant])
             {
                 format(shstr, sizeof(shstr), "Anda akan menyimpan item:\nNama: %s\nJumlah di tas: %d\nJumlah tidak valid!\nMohon masukkan berapa jumlah item yang ingin disimpan:", FactionBrankas[playerid][factionBrankasTemp], FactionBrankas[playerid][factionBrankasQuant]);
-                ShowPlayerDialog(playerid, DIALOG_GOJVAULT_IN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Gojek", 
+                ShowPlayerDialog(playerid, DIALOG_GOJVAULT_IN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Gojek", 
                 shstr, "Input", "Batal");
                 return 1;
             }
@@ -870,12 +870,12 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 cache_get_value_name_int(listitem, "Quantity", FactionBrankas[playerid][factionBrankasQuant]);
 
                 format(shstr, sizeof(shstr), "Anda akan mengambil item:\nNama: %s\nJumlah tersimpan: %d\nMohon masukkan berapa jumlah yang ingin anda ambil:", FactionBrankas[playerid][factionBrankasTemp], FactionBrankas[playerid][factionBrankasQuant]);
-                ShowPlayerDialog(playerid, DIALOG_GOJVAULT_OUT, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Gojek",
+                ShowPlayerDialog(playerid, DIALOG_GOJVAULT_OUT, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Gojek",
                 shstr, "Input", "Batal");
             }
             else 
             {
-                ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Gojek",
+                ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Gojek",
                 "Brankas ini isinya kosong!", "Tutup", "");
             }
 		}
@@ -890,7 +890,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             if(isnull(inputtext))
             {
                 format(shstr, sizeof(shstr), "Anda akan mengambil item:\nNama: %s\nJumlah tersimpan: %d\nTidak dapat diisi kosong!\nMohon masukkan berapa jumlah yang ingin anda ambil:", FactionBrankas[playerid][factionBrankasTemp], FactionBrankas[playerid][factionBrankasQuant]);
-                ShowPlayerDialog(playerid, DIALOG_GOJVAULT_OUT, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Gojek",
+                ShowPlayerDialog(playerid, DIALOG_GOJVAULT_OUT, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Gojek",
                 shstr, "Input", "Batal");
                 return 1;
             }
@@ -898,7 +898,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             if(!IsNumeric(inputtext))
             {
                 format(shstr, sizeof(shstr), "Anda akan mengambil item:\nNama: %s\nJumlah tersimpan: %d\nHanya dapat diisi angka!\nMohon masukkan berapa jumlah yang ingin anda ambil:", FactionBrankas[playerid][factionBrankasTemp], FactionBrankas[playerid][factionBrankasQuant]);
-                ShowPlayerDialog(playerid, DIALOG_GOJVAULT_OUT, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Gojek",
+                ShowPlayerDialog(playerid, DIALOG_GOJVAULT_OUT, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Gojek",
                 shstr, "Input", "Batal");
                 return 1;
             }
@@ -906,7 +906,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             if(strval(inputtext) < 1 || strval(inputtext) > FactionBrankas[playerid][factionBrankasQuant])
             {
                 format(shstr, sizeof(shstr), "Anda akan mengambil item:\nNama: %s\nJumlah tersimpan: %d\nJumlah tidak valid!\nMohon masukkan berapa jumlah yang ingin anda ambil:", FactionBrankas[playerid][factionBrankasTemp], FactionBrankas[playerid][factionBrankasQuant]);
-                ShowPlayerDialog(playerid, DIALOG_GOJVAULT_OUT, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Gojek",
+                ShowPlayerDialog(playerid, DIALOG_GOJVAULT_OUT, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Gojek",
                 shstr, "Input", "Batal");
                 return 1;
             }

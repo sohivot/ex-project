@@ -291,23 +291,23 @@ ShowDurringBlacklist(playerid, targetid)
     } 
     
     format(strgbg, sizeof(strgbg), ""GRAY"Daftar Blacklist Dari "YELLOW"%s.\
-    \n\n"GRAY"- [Kepolisian Daerah Mayoritas] -\
+    \n\n"GRAY"- [Kepolisian Daerah Imajinasi] -\
     \nStatus: "YELLOW"%s\
     \n"GRAY"Petugas: %s\
     \nAlasan: %s\
-    \n\n- [Pemerintah Daerah Mayoritas] -\
+    \n\n- [Pemerintah Daerah Imajinasi] -\
     \nStatus: "YELLOW"%s\
     \n"GRAY"Petugas: %s\
     \nAlasan: %s\
-    \n\n- [EMS Kota Mayoritas] -\
+    \n\n- [EMS Kota Imajinasi] -\
     \nStatus: "YELLOW"%s\
     \n"GRAY"Petugas: %s\
     \nAlasan: %s\
-    \n\n- [Bengkel Kota Mayoritas]-\
+    \n\n- [Bengkel Kota Imajinasi]-\
     \nStatus: "YELLOW"%s\
     \n"GRAY"Petugas: %s\
     \nAlasan: %s\
-    \n\n- [Pedagang Kota Mayoritas] -\
+    \n\n- [Pedagang Kota Imajinasi] -\
     \nStatus: "YELLOW"%s\
     \n"GRAY"Petugas: %s\
     \nAlasan: %s", 
@@ -327,7 +327,7 @@ ShowDurringBlacklist(playerid, targetid)
     status5,
     BlackListInfo[targetid][PEDAIssuer],
     BlackListInfo[targetid][PEDAReason]);
-    ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Cek Blacklist", strgbg, "Tutup", "");
+    ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Cek Blacklist", strgbg, "Tutup", "");
     return 1;
 }
 

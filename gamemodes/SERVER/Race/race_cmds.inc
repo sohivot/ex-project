@@ -32,7 +32,7 @@ CMD:race(playerid, params[])
 			return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda harus berada di dalam kendaraan!");
 
         AccountData[playerid][pSelesaiCP] = 0;
-        Dialog_Show(playerid, raceSelect, DIALOG_STYLE_LIST, "Mayoritas Roleplay {FF0000}/{FFFFFF}/ Racing Systems", "10 Checkpoints\n{BABABA}15 Checkpoints\n20 Checkpoints", "Pilih", "Tutup");
+        Dialog_Show(playerid, raceSelect, DIALOG_STYLE_LIST, "Imajinasi Roleplay {FF0000}/{FFFFFF}/ Racing Systems", "10 Checkpoints\n{BABABA}15 Checkpoints\n20 Checkpoints", "Pilih", "Tutup");
 	}
     else if (!strcmp(options, "clear", true))
 	{
@@ -147,7 +147,7 @@ CMD:race(playerid, params[])
             }
 			strcat(output, sprintf("%d.\t%s\t%s\n", i, typerace, GetLocation(RaceData[i][raceAwal][0], RaceData[i][raceAwal][1], RaceData[i][raceAwal][2])));
         }
-		Dialog_Show(playerid, TrackRace, DIALOG_STYLE_TABLIST_HEADERS, "Mayoritas Roleplay {FF0000}/{FFFFFF}/ My Race", output, "Menu", "Tutup");
+		Dialog_Show(playerid, TrackRace, DIALOG_STYLE_TABLIST_HEADERS, "Imajinasi Roleplay {FF0000}/{FFFFFF}/ My Race", output, "Menu", "Tutup");
 	}
     else if(!strcmp(options, "leave", true))
     {

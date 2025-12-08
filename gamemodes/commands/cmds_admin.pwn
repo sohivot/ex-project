@@ -106,7 +106,7 @@ CMD:ahealth(playerid, params[])
 	format(string, sizeof string, "%s "GRAY"Lengan Kiri\t%d.0%\n", string, htka);
 	format(string, sizeof string, "%s "WHITE"Kaki Kanan\t%d.0%\n", string, hkk);
 	format(string, sizeof string, "%s "GRAY"Kaki Kiri\t%d.0%\n", string, hkka);
-	ShowPlayerDialog(playerid, DIALOG_HEALTH, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay"WHITE" - Kesehatan", string, "Tutup", "");
+	ShowPlayerDialog(playerid, DIALOG_HEALTH, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay"WHITE" - Kesehatan", string, "Tutup", "");
     return 1;
 }
 
@@ -178,11 +178,11 @@ CMD:aweap(playerid, params[])
 	if(!found)
     {
         PlayerPlaySound(playerid, 1085, 0.0, 0.0, 0.0);
-        return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kepemilikan Senjata",
+        return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kepemilikan Senjata",
         "Pemain tersebut tidak memiliki senjata apapun!", "Tutup", "");
     }
 
-	ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- %s", ReturnName(otherid)),
+	ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- %s", ReturnName(otherid)),
 	sha, "Tutup", "");
 	return 1;
 }
@@ -334,7 +334,7 @@ CMD:fightstyle(playerid, params[])
 	if(!AccountData[playerid][pVip]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan Pengguna Vip!");
 	if(!Dialog_Opened(playerid))
 	{
-		Dialog_Show(playerid, DIALOG_SELECT_FSTYLE, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fight Style",
+		Dialog_Show(playerid, DIALOG_SELECT_FSTYLE, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fight Style",
 		"Fight Normal\
 		\n"GRAY"Fight Boxing\
 		\nFight Kungfu\
@@ -427,7 +427,7 @@ CMD:onlinelist(playerid, params[])
 		GetElapsedTime(AccountData[i][OnlineTimer], hours, minutes, seconds);
 		format(string, sizeof(string), "%s"PINK"P%d:"WHITE" %s\t%d Jam %d Menit\n", string, i, AccountData[i][pName], hours, minutes);
 	}
-	ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- List Online", string, "Tutup", "");
+	ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- List Online", string, "Tutup", "");
 	return 1;
 }
 
@@ -444,9 +444,9 @@ CMD:listafk(playerid, params[])
 		find = true;
 	}
 	if(!find)
-		Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Player AFK", "Tidak ada pemain yang sedang AFK", "Tutup", "");
+		Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Player AFK", "Tidak ada pemain yang sedang AFK", "Tutup", "");
 	else 
-		Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Player AFK", string, "Tutup", "");
+		Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Player AFK", string, "Tutup", "");
 	return 1;		
 }
 
@@ -696,9 +696,9 @@ CMD:panel(playerid, params[])
 		return PermissionError(playerid);
 
 	if(g_ServerLocked)
-		Dialog_Show(playerid, ServerPanel, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Server Panel", "Unlock Server\n"GRAY"Set Hostname\nSet Weburl\n"GRAY"Server Info", "Pilih", "Batal");
+		Dialog_Show(playerid, ServerPanel, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Server Panel", "Unlock Server\n"GRAY"Set Hostname\nSet Weburl\n"GRAY"Server Info", "Pilih", "Batal");
 
-	else Dialog_Show(playerid, ServerPanel, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Server Panel", "Lock Server\n"GRAY"Set Hostname\nSet Weburl\n"GRAY"Server Info", "Pilih", "Batal");
+	else Dialog_Show(playerid, ServerPanel, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Server Panel", "Lock Server\n"GRAY"Set Hostname\nSet Weburl\n"GRAY"Server Info", "Pilih", "Batal");
 	return 1;
 }
 Dialog:ServerPanel(playerid, response, listitem, inputtext[])
@@ -719,11 +719,11 @@ Dialog:ServerPanel(playerid, response, listitem, inputtext[])
 					SendRconCommand("password 0");
 					SendStaffMessage(X11_ARWIN, ""RED"%s"ARWIN1" telah membuka kunci Server", GetAdminName(playerid));
 				}
-				else Dialog_Show(playerid, LockServer, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Lock Server", "Harap masukan password untuk mengunci server\n"YELLOW"(Masukan dikolom bawah ini):", "Lock", "Cancel");
+				else Dialog_Show(playerid, LockServer, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Lock Server", "Harap masukan password untuk mengunci server\n"YELLOW"(Masukan dikolom bawah ini):", "Lock", "Cancel");
 			}
-            case 1: Dialog_Show(playerid, SetHostname, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Set Hostname", "Harap masukkan hostname baru server\n"YELLOW"(Masukan dikolom bawah ini):", "Submit", "Back");
-            case 2: Dialog_Show(playerid, SetWeburl, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Set Weburl", "Harap masukkan Weburl / MOTD Server yang akan digunakan\nCth: discord.gg/Mayoritasrp", "Submit", "Batal");
-			case 3: Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Server Information", "Category\tValue\nDynamic Object:\t%d\nVehicle's Count:\t%d", "Close", "", Streamer_CountItems(STREAMER_TYPE_OBJECT), GetVehiclePoolSize());
+            case 1: Dialog_Show(playerid, SetHostname, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Set Hostname", "Harap masukkan hostname baru server\n"YELLOW"(Masukan dikolom bawah ini):", "Submit", "Back");
+            case 2: Dialog_Show(playerid, SetWeburl, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Set Weburl", "Harap masukkan Weburl / MOTD Server yang akan digunakan\nCth: discord.gg/Imajinasirp", "Submit", "Batal");
+			case 3: Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Server Information", "Category\tValue\nDynamic Object:\t%d\nVehicle's Count:\t%d", "Close", "", Streamer_CountItems(STREAMER_TYPE_OBJECT), GetVehiclePoolSize());
 		}
 	}
 	else ShowTDN(playerid, NOTIFICATION_INFO, "Anda membatalkan pilihan!");
@@ -737,7 +737,7 @@ Dialog:LockServer(playerid, response, listitem, inputtext[])
     if(response)
     {
         if(isnull(inputtext) || !strcmp(inputtext, "0"))
-            return Dialog_Show(playerid, LockServer, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Lock Server", "Harap masukan password untuk mengunci server\n"YELLOW"(Masukan dikolom bawah ini):", "Lock", "Back");
+            return Dialog_Show(playerid, LockServer, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Lock Server", "Harap masukan password untuk mengunci server\n"YELLOW"(Masukan dikolom bawah ini):", "Lock", "Back");
 
         if(strlen(inputtext) > 32)
             return Dialog_Show(playerid, LockServer, DIALOG_STYLE_INPUT, "Lock Server", "Error: Harap masukan karakter kurang dari 32 characters.\n\nHarap masukan password untuk mengunci server\n"YELLOW"(Masukan dikolom bawah ini):", "Lock", "Back");
@@ -762,7 +762,7 @@ Dialog:SetHostname(playerid, response, listitem, inputtext[])
     if(response)
     {
         if(isnull(inputtext))
-            return Dialog_Show(playerid, SetHostname, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Set Hostname", "Harap masukkan hostname baru server\n"YELLOW"(Masukan dikolom bawah ini):", "Submit", "Back");
+            return Dialog_Show(playerid, SetHostname, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Set Hostname", "Harap masukkan hostname baru server\n"YELLOW"(Masukan dikolom bawah ini):", "Submit", "Back");
 
         static
             str[128];
@@ -782,8 +782,8 @@ Dialog:SetWeburl(playerid, response, listitem, inputtext[])
 
 	if(!response) return callcmd::panel(playerid, "\1");
 
-	if(isnull(inputtext)) return Dialog_Show(playerid, SetWeburl, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Set Weburl", 
-	"Error: Tidak dapat diisi kosong!\nHarap masukkan Weburl / MOTD Server yang akan digunakan\nCth: discord.gg/Mayoritasrp", "Submit", "Batal");
+	if(isnull(inputtext)) return Dialog_Show(playerid, SetWeburl, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Set Weburl", 
+	"Error: Tidak dapat diisi kosong!\nHarap masukkan Weburl / MOTD Server yang akan digunakan\nCth: discord.gg/Imajinasirp", "Submit", "Batal");
 
 	static frmxt[225];
 	format(frmxt, sizeof(frmxt), "weburl %s", inputtext);
@@ -1040,7 +1040,7 @@ Function: RespawnVehicleJobs(playerid)
 CMD:ahelp(playerid, params[])
 {
 	if(AccountData[playerid][pAdmin] < 1 && AccountData[playerid][pTheStars] < 1) return PermissionError(playerid);
-	ShowPlayerDialog(playerid, DIALOG_ADMIN_HELP, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Admin Help",
+	ShowPlayerDialog(playerid, DIALOG_ADMIN_HELP, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Admin Help",
 	"Trial Admin / The Stars\
 	\n"GRAY"Helper\
 	\nAdmin I\
@@ -1076,7 +1076,7 @@ CMD:dynhelp(playerid, params[])
 	\n"GRAY"Dynamic Button Door\t"GRAY"Berisi CMD seputar Dynamic Button Door\
 	\nDynamic Object [Mapping]\tBerisi CMD seputar Dynamic Object\
 	\n"GRAY"Dynamic Uranium\tBerisi CMD seputar Dynamic Uranium");
-	ShowPlayerDialog(playerid, DIALOG_DYNAMIC_HELP, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Dynamic Help", shstr, "Pilih", "Batal");
+	ShowPlayerDialog(playerid, DIALOG_DYNAMIC_HELP, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Dynamic Help", shstr, "Pilih", "Batal");
 	return 1;
 }
 
@@ -1218,9 +1218,9 @@ CMD:stafflist(playerid, params[])
 		count++;
 	}
 	if(count == 0)
-		ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Staff List", "Tidak ada administrator yang online!", "Tutup", "");
+		ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Staff List", "Tidak ada administrator yang online!", "Tutup", "");
 	else
-		ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Staff List", shstr, "Tutup", "");
+		ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Staff List", shstr, "Tutup", "");
 	return 1;
 }
 
@@ -1256,7 +1256,7 @@ CMD:checknetwork(playerid, params[])
 		;
 
 		GetNetworkStats(stats, sizeof(stats));
-		Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Network Stats", stats, "Close", "");
+		Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Network Stats", stats, "Close", "");
 	}
 	return 1;
 }
@@ -1295,9 +1295,9 @@ CMD:admins(playerid, params[])
 		}
 	}
 	if(count == 0)
-		Error(playerid, "Tidak ada administrator online dikota!"); // ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Online Administrator", "Tidak ada administrator online dikota!", "Tutup", "");
+		Error(playerid, "Tidak ada administrator online dikota!"); // ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Online Administrator", "Tidak ada administrator online dikota!", "Tutup", "");
 	else
-		ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Online Administrator", list, "Close", "");
+		ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Online Administrator", list, "Close", "");
 	return 1;
 }
 
@@ -1322,9 +1322,9 @@ CMD:ajail(playerid, params[])
 		}
 	}
 	if(count == 0)
-		ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Player Jail", "Tidak ada pemain dalam masa jail admin!", "Close", "");
+		ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Player Jail", "Tidak ada pemain dalam masa jail admin!", "Close", "");
 	else 
-		ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Player Jail", shstr, "Close", "");
+		ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Player Jail", shstr, "Close", "");
 	return 1;
 }
 
@@ -2871,7 +2871,7 @@ CMD:kick(playerid, params[])
 	TextDrawSetString(Text:KickZ2[5], sstr);
 	TextDrawShowForPlayer(userid, KickZ2[5]);
 
-	TextDrawSetString(Text:KickZ2[7], "[ MayoritasRoleplay ]");
+	TextDrawSetString(Text:KickZ2[7], "[ ImajinasiRoleplay ]");
 	TextDrawShowForPlayer(userid, KickZ2[7]);
 
 	SelectTextDraw(userid, -1970630657);
@@ -3113,14 +3113,14 @@ CMD:awarn(playerid, params[])
 
 			format(list, sizeof(list), "%s%s\t%s\t%s\t%s\n", list, typename, sender, ReturnDateNoTime(date), reason);
 		}
-		ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- %s(%d)", AccountData[otherid][pName], otherid), list, "Tutup", "");
+		ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- %s(%d)", AccountData[otherid][pName], otherid), list, "Tutup", "");
 	}
 	else
 	{
 		new list[255];
 		format(list, sizeof(list), "Type\tPenerbit\tTanggal\tAlasan\n");
 		format(list, sizeof(list), "%sTidak ada peringatan yang dapat ditampilkan kepadamu.", list);
-		ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- %s(%d)", AccountData[otherid][pName], otherid), list, "Tutup", "");
+		ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- %s(%d)", AccountData[otherid][pName], otherid), list, "Tutup", "");
 	}
 	cache_delete(execute);
 	return 1;
@@ -4550,7 +4550,7 @@ CMD:stopsong(playerid)
 CMD:joblist(playerid, params[])
 {
 	if(AccountData[playerid][pAdmin] < 1) return PermissionError(playerid);
-	ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Job List",
+	ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Job List",
 	"0\tPengangguran\
 	\n"GRAY"1\tSupir Bus\
 	\n2\tPenambang\
@@ -4668,11 +4668,11 @@ CMD:fixes(playerid, params[])
 	if(count == 0)
 	{
 		PlayerPlaySound(playerid, 5206, 0.0, 0.0, 0.0);
-		return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Fix Request",
+		return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Fix Request",
 		"Tidak ada player request fix untuk saat ini!", "Tutup", "");
 	}
 
-	ShowPlayerDialog(playerid, DIALOG_FIXMEACC, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay"WHITE" - Fix Request", list, "Pilih", "Batal");
+	ShowPlayerDialog(playerid, DIALOG_FIXMEACC, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay"WHITE" - Fix Request", list, "Pilih", "Batal");
 	return 1;
 }
 
@@ -4827,7 +4827,7 @@ public OfflineStats(playerid, const name[])
 		format(shstr, sizeof(shstr), "%s"GRAY"Skin ID\t\t:	"GRAY"%d\n", shstr, Skin);
 		format(shstr, sizeof(shstr), "%sTanggal Pembuatan Akun\t\t:	%s\n", shstr, RegDate);
 		format(shstr, sizeof(shstr), "%s"GRAY"Riwayat Terakhir Login\t\t:	"GRAY"%s\n", shstr, LastLogin);
-		ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Offline Stats", shstr, "Tutup", "");
+		ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Offline Stats", shstr, "Tutup", "");
 		cache_delete(CheckFamilies);
 	}
 	return 1;

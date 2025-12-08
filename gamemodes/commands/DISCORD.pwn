@@ -14,7 +14,7 @@ public DCC_DM_EMBED(str[], pin, id[])
 {
 	new DCC_Channel: PM, query[255];
 	PM = DCC_GetCreatedPrivateChannel();
-	new DCC_Embed:embed = DCC_CreateEmbed(.title="Mayoritas ROLEPLAY", .image_url="https://media.discordapp.net/attachments/1159376834337701941/1160296311287988325/A4.png?ex=65342525&is=6521b025&hm=287210874fb4c4797d73e750d1c9da1d9a8c39f9873617d5f1a38e56127a2c9b&=&width=607&height=607", .footer_text = "Pemberitahuan Tiket Mayoritas Roleplay");
+	new DCC_Embed:embed = DCC_CreateEmbed(.title="Imajinasi ROLEPLAY", .image_url="https://media.discordapp.net/attachments/1159376834337701941/1160296311287988325/A4.png?ex=65342525&is=6521b025&hm=287210874fb4c4797d73e750d1c9da1d9a8c39f9873617d5f1a38e56127a2c9b&=&width=607&height=607", .footer_text = "Pemberitahuan Tiket Imajinasi Roleplay");
 
 	new shstr[1218];
 	format(shstr, sizeof(shstr), "Yang terhormat, %s.\
@@ -44,10 +44,10 @@ public DCC_DM_LUPAPW(pin, id[])
 	new DCC_Channel:PM;
 	PM = DCC_GetCreatedPrivateChannel();
 
-	new DCC_Embed:embed = DCC_CreateEmbed(.title="Pemulihan Akun - Mayoritas Roleplay", .image_url="https://media.discordapp.net/attachments/1159376834337701941/1160296311287988325/A4.png?ex=65342525&is=6521b025&hm=287210874fb4c4797d73e750d1c9da1d9a8c39f9873617d5f1a38e56127a2c9b&=&width=669&height=669", .footer_text = "Mayoritas Roleplay #1");
+	new DCC_Embed:embed = DCC_CreateEmbed(.title="Pemulihan Akun - Imajinasi Roleplay", .image_url="https://media.discordapp.net/attachments/1159376834337701941/1160296311287988325/A4.png?ex=65342525&is=6521b025&hm=287210874fb4c4797d73e750d1c9da1d9a8c39f9873617d5f1a38e56127a2c9b&=&width=669&height=669", .footer_text = "Imajinasi Roleplay #1");
 	new str1[1000];
 
-	format(str1, sizeof str1, "⚠ **Peringatan**\nAnda telah meminta layanan lupa password.\nJika ini bukan permintaan anda, maka abaikan saja pesan ini!\n\n**Kode Pemulihan**:\n```\n%d\n```\nMasuklah ke server dan masukkan Kode Pemulihan untuk\nmembuat ulang kata sandi!\n**#MayoritasRoleplay**\n_~Server kita terpVehInteriorah_", pin);
+	format(str1, sizeof str1, "⚠ **Peringatan**\nAnda telah meminta layanan lupa password.\nJika ini bukan permintaan anda, maka abaikan saja pesan ini!\n\n**Kode Pemulihan**:\n```\n%d\n```\nMasuklah ke server dan masukkan Kode Pemulihan untuk\nmembuat ulang kata sandi!\n**#ImajinasiRoleplay**\n_~Server kita terpVehInteriorah_", pin);
 	
 	DCC_SetEmbedDescription(embed, str1);
 	DCC_SetEmbedColor(embed, 0xff9999);
@@ -67,7 +67,7 @@ public CheckAccountUCP(DiscordID[])
 	new dc[512];
 	new DCC_Channel:registchannel, DCC_User: user;
 	registchannel = DCC_FindChannelById("1160993063234179102");
-	new DCC_Embed:regist = DCC_CreateEmbed(.footer_text = "Penjaga Kota Mayoritas Roleplay", .thumbnail_url = "https://media.discordapp.net/attachments/1159376834337701941/1160296311287988325/A4.png?ex=65342525&is=6521b025&hm=287210874fb4c4797d73e750d1c9da1d9a8c39f9873617d5f1a38e56127a2c9b&=&width=669&height=669");
+	new DCC_Embed:regist = DCC_CreateEmbed(.footer_text = "Penjaga Kota Imajinasi Roleplay", .thumbnail_url = "https://media.discordapp.net/attachments/1159376834337701941/1160296311287988325/A4.png?ex=65342525&is=6521b025&hm=287210874fb4c4797d73e750d1c9da1d9a8c39f9873617d5f1a38e56127a2c9b&=&width=669&height=669");
 	format(dc, sizeof dc, "> :white_check_mark: UCP Berhasil di reset password!\nSilahkan cek Direct Message Anda!");
 
 	user = DCC_FindUserById(DiscordID);
@@ -86,7 +86,7 @@ public CheckDiscordUCP(DiscordID[], Nama_UCP[])
 	new VerifCode = RandomEx(111111, 999999);
 	if(cache_num_rows())
 	{
-		SendEmbedMessage("Mayoritas ROLEPLAY", "> :x1: ** Nama UCP ** tersebut sudah ada dalam Database!\n> Gunakan ** Nama UCP ** yang lain", "#MayoritasROLEPLAY", "", "", "1159376835772153862", 0xf0635e);
+		SendEmbedMessage("Imajinasi ROLEPLAY", "> :x1: ** Nama UCP ** tersebut sudah ada dalam Database!\n> Gunakan ** Nama UCP ** yang lain", "#ImajinasiROLEPLAY", "", "", "1159376835772153862", 0xf0635e);
 		return 1;
 	}
 	else 
@@ -97,7 +97,7 @@ public CheckDiscordUCP(DiscordID[], Nama_UCP[])
 		DCC_SetGuildMemberNickname(GuildID, UserID, sprintf("Warga | %s", Nama_UCP));
 		DCC_AddGuildMemberRole(GuildID, UserID, WargaRole);
 		
-		SendEmbedMessage("Mayoritas ROLEPLAY", sprintf("> :white_check_mark: UCP **%s** telah berhasil didaftarkan!\n> Silahkan untuk mengecek direct message dari Bot", Nama_UCP), "#MayoritasROLEPLAY", "", "", "1159376835772153862", 0xf0635e);
+		SendEmbedMessage("Imajinasi ROLEPLAY", sprintf("> :white_check_mark: UCP **%s** telah berhasil didaftarkan!\n> Silahkan untuk mengecek direct message dari Bot", Nama_UCP), "#ImajinasiROLEPLAY", "", "", "1159376835772153862", 0xf0635e);
 		DCC_CreatePrivateChannel(UserID, "DCC_DM_EMBED", "sds", Nama_UCP, VerifCode, DiscordID);
 	}
 	return 1;
@@ -108,7 +108,7 @@ public CheckDiscordPlayer(DiscordID[])
 {
 	if(!cache_num_rows())
 	{
-		SendEmbedMessage("Mayoritas ROLEPLAY", "> :x1: Anda belum pernah membuat UCP Sebelumnya!", "Penjaga Kota Mayoritas Roleplay", "", "", "1160993063234179102", 0xff0000);
+		SendEmbedMessage("Imajinasi ROLEPLAY", "> :x1: Anda belum pernah membuat UCP Sebelumnya!", "Penjaga Kota Imajinasi Roleplay", "", "", "1160993063234179102", 0xff0000);
 	}
 	else
 	{
@@ -129,7 +129,7 @@ public CheckDiscordID(DiscordID[], Nama_UCP[])
 
 		new frmxt[155];
 		format(frmxt, sizeof(frmxt), "> :x: Sebelumnya anda sudah mengambil tiket dengan nama **%s**", UCP);
-		SendEmbedMessage("Mayoritas ROLEPLAY!", frmxt, "#MayoritasROLEPLAY", "", "", "1159376835772153862", 0xf0635e);
+		SendEmbedMessage("Imajinasi ROLEPLAY!", frmxt, "#ImajinasiROLEPLAY", "", "", "1159376835772153862", 0xf0635e);
 		return 1;
 	}
 	else 
@@ -191,7 +191,7 @@ DCMD:icmsg(user, channel, params[])
 
 	if(sscanf(params, "s[128]", shstr))
 	{
-		SendEmbedMessage("SYNTAX USAGE", "!icmsg [pesan]", "Mayoritas Roleplay #1", "", "", "1302140466439127050", 0x707371);
+		SendEmbedMessage("SYNTAX USAGE", "!icmsg [pesan]", "Imajinasi Roleplay #1", "", "", "1302140466439127050", 0x707371);
 		return 1;
 	}
 
@@ -207,7 +207,7 @@ DCMD:icmsg(user, channel, params[])
 		SendClientMessageToAllEx(X11_ARWIN, "-> %s", shstr);
 	}
 
-	SendEmbedMessage("MESSAGE TO SERVER", shstr, "Mayoritas Roleplay #1", "", "", "1302140466439127050", 0x707371);
+	SendEmbedMessage("MESSAGE TO SERVER", shstr, "Imajinasi Roleplay #1", "", "", "1302140466439127050", 0x707371);
 	return 1;
 }
 
@@ -219,17 +219,17 @@ DCMD:update(user, channel, params[])
 
 	if (strcmp(id, "1002869262135869501", true) != 0)
     {
-        SendEmbedMessage("ERROR", "Hanya Founder yang dapat menggunakan discord command ini!", "Mayoritas Roleplay #Updates", "", "", "1010976548326756422", 0x3bd17c);
+        SendEmbedMessage("ERROR", "Hanya Founder yang dapat menggunakan discord command ini!", "Imajinasi Roleplay #Updates", "", "", "1010976548326756422", 0x3bd17c);
         return 1;
     }
 	
 	if(isnull(params))
 	{
-		return SendEmbedMessage("SYNTAX USAGE", "!update [list update]", "Mayoritas Roleplay #Updates", "", "", "1010976548326756422", 0x3bd17c);
+		return SendEmbedMessage("SYNTAX USAGE", "!update [list update]", "Imajinasi Roleplay #Updates", "", "", "1010976548326756422", 0x3bd17c);
 	}
 
 	format(shstr, sizeof(shstr), "%s", params);
-	SendEmbedMessage("UPDATES", shstr, "Mayoritas Roleplay #Updates", "https://cdn.discordapp.com/attachments/1063836454586962020/1111675562428207165/verona_1.jpg", "", "1010976548326756422", 0x3bd17c);
+	SendEmbedMessage("UPDATES", shstr, "Imajinasi Roleplay #Updates", "https://cdn.discordapp.com/attachments/1063836454586962020/1111675562428207165/verona_1.jpg", "", "1010976548326756422", 0x3bd17c);
 	return 1;
 }
 
@@ -237,8 +237,8 @@ DCMD:players(user, channel, params[])
 {
 	new dc[555];
 
-	new DCC_Embed:leave = DCC_CreateEmbed(.title = "Mayoritas Roleplay", .footer_text = "Penjaga Pintu Kota #1");
-	format(dc, sizeof(dc), "**Pemain yang sedang dikota Mayoritas Roleplay saat ini:**\n**Jumlah:** %d", Iter_Count(Player));
+	new DCC_Embed:leave = DCC_CreateEmbed(.title = "Imajinasi Roleplay", .footer_text = "Penjaga Pintu Kota #1");
+	format(dc, sizeof(dc), "**Pemain yang sedang dikota Imajinasi Roleplay saat ini:**\n**Jumlah:** %d", Iter_Count(Player));
 	DCC_SetEmbedDescription(leave, dc);
 	DCC_SetEmbedColor(leave, 0xff8fd5);
 	DCC_SendChannelEmbedMessage(channel, leave);
@@ -254,13 +254,13 @@ DCMD:ambiltiket(user, channel, params[])
 	
 	if(isnull(params))
 	{
-		SendEmbedMessage("Mayoritas ROLEPLAY", "**Gunakan Format: !ambiltiket [nama ucp]**\n**NOTE: Gunakan nama UCP valid tidak kurang dari 5 atau lebih dari 10 huruf!**", "#MayoritasROLEPLAY", "", "", "1159376835772153862", 0xf0635e);
+		SendEmbedMessage("Imajinasi ROLEPLAY", "**Gunakan Format: !ambiltiket [nama ucp]**\n**NOTE: Gunakan nama UCP valid tidak kurang dari 5 atau lebih dari 10 huruf!**", "#ImajinasiROLEPLAY", "", "", "1159376835772153862", 0xf0635e);
 		return 1;
 	}
 
 	if(!IsValidNameUCP(params))
 	{
-		SendEmbedMessage("Mayoritas ROLEPLAY", "> **Gunakan Nama UCP Yang Valid!**\n\n:white_check_mark:**Contoh UCP Yang Valid**: _**Cecep**_, _**Pragos**_\n:x:**Contoh UCP yang salah**: _**Banteng_Merah**_, _**Ucok?**_\n\n>>> **NOTE: Jangan menggunakan symbol pada nama ucp anda sepert `#`, `&` atau apapun itu**\n**Usahakan untuk membuat Nama UCP Jangan terlalu sulit agar dapat mudah diingat**", "#MayoritasROLEPLAY", "", "", "1159376835772153862", 0xf0635e);
+		SendEmbedMessage("Imajinasi ROLEPLAY", "> **Gunakan Nama UCP Yang Valid!**\n\n:white_check_mark:**Contoh UCP Yang Valid**: _**Cecep**_, _**Pragos**_\n:x:**Contoh UCP yang salah**: _**Banteng_Merah**_, _**Ucok?**_\n\n>>> **NOTE: Jangan menggunakan symbol pada nama ucp anda sepert `#`, `&` atau apapun itu**\n**Usahakan untuk membuat Nama UCP Jangan terlalu sulit agar dapat mudah diingat**", "#ImajinasiROLEPLAY", "", "", "1159376835772153862", 0xf0635e);
 		return 1;
 	}
 

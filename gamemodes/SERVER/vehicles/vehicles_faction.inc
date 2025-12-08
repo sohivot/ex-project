@@ -292,7 +292,7 @@ public OnFactionVehicleRespawn(i)
 			SetDynamicObjectMaterialText(FactionVehObject[PlayerFactionVeh[i][pVehFactPhysic]][1], 0, "{FFFFFF}Resto", 130, "Arial", 80, 1, 0, 0, 1);
 			AttachDynamicObjectToVehicle(FactionVehObject[PlayerFactionVeh[i][pVehFactPhysic]][1], PlayerFactionVeh[i][pVehFactPhysic], -1.220, 0.520, -0.139, 0.000, 0.000, -90.000);
 			FactionVehObject[PlayerFactionVeh[i][pVehFactPhysic]][2] = CreateDynamicObject(2662,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
-			SetDynamicObjectMaterialText(FactionVehObject[PlayerFactionVeh[i][pVehFactPhysic]][2], 0, "{FFFFFF}Mayoritas", 130, "Arial", 60, 1, 0, 0, 1);
+			SetDynamicObjectMaterialText(FactionVehObject[PlayerFactionVeh[i][pVehFactPhysic]][2], 0, "{FFFFFF}Imajinasi", 130, "Arial", 60, 1, 0, 0, 1);
 			AttachDynamicObjectToVehicle(FactionVehObject[PlayerFactionVeh[i][pVehFactPhysic]][2], PlayerFactionVeh[i][pVehFactPhysic], -1.220, 0.369, -0.369, 0.000, 0.000, -90.000);
 			FactionVehObject[PlayerFactionVeh[i][pVehFactPhysic]][3] = CreateDynamicObject(2662,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
 			SetDynamicObjectMaterialText(FactionVehObject[PlayerFactionVeh[i][pVehFactPhysic]][3], 0, "{FFFFFF}/", 130, "Webdings", 150, 1, 0, 0, 1);
@@ -307,7 +307,7 @@ public OnFactionVehicleRespawn(i)
 			SetDynamicObjectMaterialText(FactionVehObject[PlayerFactionVeh[i][pVehFactPhysic]][6], 0, "{FFFFFF},", 130, "Webdings", 120, 1, 0, 0, 1);
 			AttachDynamicObjectToVehicle(FactionVehObject[PlayerFactionVeh[i][pVehFactPhysic]][6], PlayerFactionVeh[i][pVehFactPhysic], 1.217, 0.559, -0.119, 0.000, 0.000, 90.000);
 			FactionVehObject[PlayerFactionVeh[i][pVehFactPhysic]][7] = CreateDynamicObject(2662,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
-			SetDynamicObjectMaterialText(FactionVehObject[PlayerFactionVeh[i][pVehFactPhysic]][7], 0, "{FFFFFF}Mayoritas", 130, "Arial", 60, 1, 0, 0, 1);
+			SetDynamicObjectMaterialText(FactionVehObject[PlayerFactionVeh[i][pVehFactPhysic]][7], 0, "{FFFFFF}Imajinasi", 130, "Arial", 60, 1, 0, 0, 1);
 			AttachDynamicObjectToVehicle(FactionVehObject[PlayerFactionVeh[i][pVehFactPhysic]][7], PlayerFactionVeh[i][pVehFactPhysic], 1.205, 0.129, -0.369, 0.000, 0.000, 450.000);
 			FactionVehObject[PlayerFactionVeh[i][pVehFactPhysic]][8] = CreateDynamicObject(2662,0.0,0.0,-1000.0,0.0,0.0,0.0,0,0,-1,300.0,300.0);
 			SetDynamicObjectMaterialText(FactionVehObject[PlayerFactionVeh[i][pVehFactPhysic]][8], 0, "{FFFFFF}/", 130, "Webdings", 150, 1, 0, 0, 1);

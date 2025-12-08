@@ -60,7 +60,7 @@ CMD:setrender(playerid, params[])
 	strcat(str, "Normal\t700 (default)\t1.0\n");
 	strcat(str, "High\t800\t1.5\n");
 	strcat(str, "Max\t950\t2.0\n");
-	Dialog_Show(playerid, StreamerSetting, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Render Setting", str, "Pilih", "Batal");
+	Dialog_Show(playerid, StreamerSetting, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Render Setting", str, "Pilih", "Batal");
 	return 1;
 }*/
 
@@ -103,7 +103,7 @@ GetPlayerRenderName(playerid)
 	if(!SQL_IsCharacterLogged(playerid))
 		return 0;
 	
-	ShowPlayerDialog(playerid, DIALOG_STREAMER_CONFIG, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Render Settings",
+	ShowPlayerDialog(playerid, DIALOG_STREAMER_CONFIG, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Render Settings",
 	"Jenis\tRadius\
 	\nSoft\t300.0\
 	\n"GRAY"Medium\t500.0\

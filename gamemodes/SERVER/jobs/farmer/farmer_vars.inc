@@ -288,7 +288,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
             strcat(sstr, ""WHITE"Gula\t"WHITE"Tebu: 4 | Kain: 1\n");
             strcat(sstr, ""WHITE"Garam\t"WHITE"Garam Kristal: 4 | Botol: 1\n");
             strcat(str, sstr, sizeof sstr);
-            ShowPlayerDialog(playerid, DIALOG_FARMER_OLAH, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Mengolah Tanaman", str, "Pilih", "Batal");   
+            ShowPlayerDialog(playerid, DIALOG_FARMER_OLAH, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Mengolah Tanaman", str, "Pilih", "Batal");   
         }
 
         if(IsPlayerInDynamicArea(playerid, PlayerFarmVars[playerid][PetaniTebu]) && !PlayerFarmVars[playerid][DurringTebu])

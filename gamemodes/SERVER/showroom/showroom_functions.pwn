@@ -470,7 +470,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
             if(AccountData[playerid][pInjured]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda sedang pingsan!");
             EnableAntiCheatForPlayer(playerid, 4, false);
             
-            ShowPlayerDialog(playerid, DIALOG_SHOWROOM_MENU, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Showroom",
+            ShowPlayerDialog(playerid, DIALOG_SHOWROOM_MENU, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Showroom",
             "Truk Ringan & Vans\
             \n"GRAY"SUV & Wagon\
             \nMotor & Sepeda\
@@ -572,7 +572,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 }
                 case 6: 
                 {
-                    ShowPlayerDialog(playerid, DIALOG_SHOWROOM_SELL, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Jual Kendaraan",
+                    ShowPlayerDialog(playerid, DIALOG_SHOWROOM_SELL, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Jual Kendaraan",
                     "Hai, kamu ingin menjual kendaraan?\n(Mohon masukkan VID Kendaraan anda yang ingin dijual di kolom bawah ini):", "Submit", "Batal");
                 }
             }

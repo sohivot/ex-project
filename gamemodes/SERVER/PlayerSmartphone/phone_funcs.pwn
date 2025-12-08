@@ -1335,7 +1335,7 @@ ATRPhoneBankLoad(playerid)
     PlayerTextDrawFont(playerid, ATRP_BankTD[playerid][14], 4);
     PlayerTextDrawSetProportional(playerid, ATRP_BankTD[playerid][14], 1);
 
-    ATRP_BankTD[playerid][15] = CreatePlayerTextDraw(playerid, 544.000, 198.000, "Mayoritas BANK");
+    ATRP_BankTD[playerid][15] = CreatePlayerTextDraw(playerid, 544.000, 198.000, "Imajinasi BANK");
     PlayerTextDrawLetterSize(playerid, ATRP_BankTD[playerid][15], 0.210, 1.099);
     PlayerTextDrawAlignment(playerid, ATRP_BankTD[playerid][15], 2);
     PlayerTextDrawColor(playerid, ATRP_BankTD[playerid][15], -1);
@@ -2099,7 +2099,7 @@ hook ClickDynPlayerTextdraw(playerid, PlayerText: playertextid)
 
     if(playertextid == ContactButtonPhone[playerid])
     {
-        ShowPlayerDialog(playerid, DialogOpenContact, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kontak", "Tambahkan Kontak Baru\nLihat Daftar Kontak", "Pilih", "Batal");
+        ShowPlayerDialog(playerid, DialogOpenContact, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kontak", "Tambahkan Kontak Baru\nLihat Daftar Kontak", "Pilih", "Batal");
     }
 
     if(playertextid == GpsButtonPhone[playerid])
@@ -2109,10 +2109,10 @@ hook ClickDynPlayerTextdraw(playerid, PlayerText: playertextid)
         //if(PlayerKargoVars[playerid][KargoStarted]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda sedang bekerja sebagai Supir Kargo!");
 
         if(AccountData[playerid][pFaction] == FACTION_EMS && AccountData[playerid][pDutyEms]) {
-            Dialog_Show(playerid, GpsMenu, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Menu Gps",
+            Dialog_Show(playerid, GpsMenu, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Menu Gps",
             "Lokasi GPS\n"GRAY"Signal Emergency (EMS)", "Pilih", "Batal");
         } else {
-            ShowPlayerDialog(playerid, LokasiGps, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Lokasi",
+            ShowPlayerDialog(playerid, LokasiGps, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Lokasi",
             "Lokasi Umum\
             \n"GRAY"Lokasi Pekerjaan\
             \nLokasi Hobi\
@@ -2137,12 +2137,12 @@ hook ClickDynPlayerTextdraw(playerid, PlayerText: playertextid)
         format(strings, sizeof(strings), "Status: %s\
         \nShare Contacts", AccountData[playerid][AirdropPermission] ? ""LIGHTGREEN"Share Contact diizinkan" : ""RED"Share Contact tidak diizinkan");
         
-        ShowPlayerDialog(playerid, DIALOG_AIRDROPDISPLAY, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Airdrop", strings, "Pilih", "Batal");
+        ShowPlayerDialog(playerid, DIALOG_AIRDROPDISPLAY, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Airdrop", strings, "Pilih", "Batal");
     }
 
     if(playertextid == SettingButtonPhone[playerid])
     {
-        Dialog_Show(playerid, SettingPhone, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Pengaturan",
+        Dialog_Show(playerid, SettingPhone, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Pengaturan",
         "Tentang Ponsel\
         \n"GRAY"Ubah Nada Dering Telepon\
         \nHapus Nada Dering\
@@ -2177,13 +2177,13 @@ hook ClickDynPlayerTextdraw(playerid, PlayerText: playertextid)
         if(AccountData[playerid][phoneAirplaneMode]) 
             return ShowTDN(playerid, NOTIFICATION_ERROR, "Smartphone sedang dalam Mode Pesawat!");
 
-        ShowPlayerDialog(playerid, DIALOG_YELLOW_PAGE_MENU, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Yellow Pages",
+        ShowPlayerDialog(playerid, DIALOG_YELLOW_PAGE_MENU, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Yellow Pages",
         "Melihat antrian iklan\nKirim iklan baru", "Pilih", "Batal");
     }
 
     if(playertextid == CallButtonPhone[playerid])
     {
-        ShowPlayerDialog(playerid, DialogTelepon, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Telepon", "Mohon masukan nomor telepon yang ingin anda hubungi:", "Telfon", "Batal");
+        ShowPlayerDialog(playerid, DialogTelepon, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Telepon", "Mohon masukan nomor telepon yang ingin anda hubungi:", "Telfon", "Batal");
     }
 
     if(playertextid == BankButtonPhone[playerid])
@@ -2207,7 +2207,7 @@ hook ClickDynPlayerTextdraw(playerid, PlayerText: playertextid)
         if(AccountData[playerid][phoneAirplaneMode]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Smartphone anda sedang Mode Pesawat!");
         if(AccountData[playerid][pTaxiPlayer] != INVALID_PLAYER_ID) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda sedang menjadi penumpang di Trans!");
         
-        ShowPlayerDialog(playerid, DIALOG_TRANSORDER, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Pesan Transportasi",
+        ShowPlayerDialog(playerid, DIALOG_TRANSORDER, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Pesan Transportasi",
         "Hai, kamu ingin memesan Trans, mau kemana hari ini?", "Input", "Batal");
     }
 
@@ -2244,7 +2244,7 @@ hook ClickDynPlayerTextdraw(playerid, PlayerText: playertextid)
 
     if(playertextid == TransferBankButton[playerid])
     {
-        ShowPlayerDialog(playerid, DialogTransfer, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Transfer", 
+        ShowPlayerDialog(playerid, DialogTransfer, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Transfer", 
         "Mohon masukkan nomor rekening yang ingin anda transfer:", "Submit", "Batal");
     }
 
@@ -2252,7 +2252,7 @@ hook ClickDynPlayerTextdraw(playerid, PlayerText: playertextid)
     {
         if(AccountData[playerid][pEarphone] != 1) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda tidak memiliki Earphone!");
         
-        ShowPlayerDialog(playerid, DialogSpotify, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Spotify", "Matikan Musik\nPutar Musik", "Select", "Cancel");
+        ShowPlayerDialog(playerid, DialogSpotify, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Spotify", "Matikan Musik\nPutar Musik", "Select", "Cancel");
     }
 
     if(playertextid == ATRP_SpotifyTD[playerid][18]) // boomboox
@@ -2263,7 +2263,7 @@ hook ClickDynPlayerTextdraw(playerid, PlayerText: playertextid)
 		{
 			if(IsPlayerInRangeOfPoint(playerid, 3.0, GetPVarFloat(playerid, "BBX"), GetPVarFloat(playerid, "BBY"), GetPVarFloat(playerid, "BBZ")))
 			{
-				ShowPlayerDialog(playerid, DANN_BOOMBOX, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Boombox", "Matikan Boombox\nPutar Musik", "Select", "Cancel");
+				ShowPlayerDialog(playerid, DANN_BOOMBOX, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Boombox", "Matikan Boombox\nPutar Musik", "Select", "Cancel");
 			}
 			else
 			{
@@ -2281,7 +2281,7 @@ hook ClickDynPlayerTextdraw(playerid, PlayerText: playertextid)
         if(AccountData[playerid][phoneAirplaneMode]) 
             return ShowTDN(playerid, NOTIFICATION_ERROR, "Smartphone sedang dalam Mode Pesawat!");
 
-        ShowPlayerDialog(playerid, DIALOG_TWITTER_SIGN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Daftar Twitter",
+        ShowPlayerDialog(playerid, DIALOG_TWITTER_SIGN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Daftar Twitter",
         "Hai, selamat datang di Twitter!\
         \nSilahkan masukkan username Twitter kamu, ini akan ditampilkan pada setiap post tweet yang kamu buat:\
         \nIngat: Username hanya dapat berupa huruf dan angka, tidak menggunakan simbol!\
@@ -2293,7 +2293,7 @@ hook ClickDynPlayerTextdraw(playerid, PlayerText: playertextid)
         if(AccountData[playerid][phoneAirplaneMode]) 
             return ShowTDN(playerid, NOTIFICATION_ERROR, "Smartphone sedang dalam Mode Pesawat!");
 
-        ShowPlayerDialog(playerid, DIALOG_TWITTER_LOGIN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Login Twitter", 
+        ShowPlayerDialog(playerid, DIALOG_TWITTER_LOGIN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Login Twitter", 
         "Hai, selamat datang di Twitter!\
         \nSilahkan masukkan username Twitter kamu yang telah terdaftar:", "Input", "Batal");
     }
@@ -2476,21 +2476,21 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         case DIALOG_TWITTER_LOGIN:
         {
             if(!response) return 1;
-            if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_TWITTER_LOGIN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Login Twitter", 
+            if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_TWITTER_LOGIN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Login Twitter", 
             "Error: Tidak dapat diisi kosong!\nHai, selamat datang di Twitter!\nSilahkan masukkan username Twitter kamu yang telah terdaftar:", "Input", "Batal");
 
             if(strcmp(inputtext, AccountData[playerid][TwitterName])) return ShowTDN(playerid, NOTIFICATION_WARNING, sprintf("Akum Twitter %s tidak ditemukan!", inputtext));
 
-            ShowPlayerDialog(playerid, DIALOG_TWITTER_LOGINPASSWORD, DIALOG_STYLE_PASSWORD, ""Mayoritas"Mayoritas Roleplay "WHITE"- Login Twitter", 
+            ShowPlayerDialog(playerid, DIALOG_TWITTER_LOGINPASSWORD, DIALOG_STYLE_PASSWORD, ""Imajinasi"Imajinasi Roleplay "WHITE"- Login Twitter", 
             sprintf("Hai, %s!\nSilahkan masukkan kata sandi akun Twitter kamu untuk masuk:", inputtext), "Input", "Batal");
         }
         case DIALOG_TWITTER_LOGINPASSWORD:
         {
             if(!response) return 1;
-            if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_TWITTER_LOGINPASSWORD, DIALOG_STYLE_PASSWORD, ""Mayoritas"Mayoritas Roleplay "WHITE"- Login Twitter", 
+            if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_TWITTER_LOGINPASSWORD, DIALOG_STYLE_PASSWORD, ""Imajinasi"Imajinasi Roleplay "WHITE"- Login Twitter", 
             sprintf("Error: Anda harus memasukkan kata sandi!\nHai, %s!\nSilahkan masukkan kata sandi akun Twitter kamu untuk masuk:", AccountData[playerid][TwitterName]), "Input", "Batal");
 
-            if(strcmp(inputtext, AccountData[playerid][TwitterPassword])) return ShowPlayerDialog(playerid, DIALOG_TWITTER_LOGINPASSWORD, DIALOG_STYLE_PASSWORD, ""Mayoritas"Mayoritas Roleplay "WHITE"- Login Twitter", 
+            if(strcmp(inputtext, AccountData[playerid][TwitterPassword])) return ShowPlayerDialog(playerid, DIALOG_TWITTER_LOGINPASSWORD, DIALOG_STYLE_PASSWORD, ""Imajinasi"Imajinasi Roleplay "WHITE"- Login Twitter", 
             sprintf("Error: Kata sandi yang anda masukkan salah!\nHai, %s!\nSilahkan masukkan kata sandi akun Twitter kamu untuk masuk:", AccountData[playerid][TwitterName]), "Input", "Batal");
 
             AccountData[playerid][Twitter] = true;
@@ -2500,27 +2500,27 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         case DIALOG_TWITTER_SIGN:
         {
             if(!response) return 1;
-            if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_TWITTER_SIGN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Daftar Twitter", "Error: Tidak dapat diisi kosong!\nHai, selamat datang di Twitter!\
+            if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_TWITTER_SIGN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Daftar Twitter", "Error: Tidak dapat diisi kosong!\nHai, selamat datang di Twitter!\
             \nSilahkan masukkan username Twitter kamu, ini akan ditampilkan pada setiap post tweet yang kamu buat:\
             \nIngat: Username hanya dapat berupa huruf dan angka, tidak menggunakan simbol!\
             \nPanjang username 7 - 24 karakter!", "Set", "Batal");
 
-            if(strlen(inputtext) < 7 || strlen(inputtext) > 24) return ShowPlayerDialog(playerid, DIALOG_TWITTER_SIGN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Daftar Twitter", "Error: Nama tidak dapat kurang dari 7 huruf atau lebih dari 24!\nHai, selamat datang di Twitter!\
+            if(strlen(inputtext) < 7 || strlen(inputtext) > 24) return ShowPlayerDialog(playerid, DIALOG_TWITTER_SIGN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Daftar Twitter", "Error: Nama tidak dapat kurang dari 7 huruf atau lebih dari 24!\nHai, selamat datang di Twitter!\
             \nSilahkan masukkan username Twitter kamu, ini akan ditampilkan pada setiap post tweet yang kamu buat:\
             \nIngat: Username hanya dapat berupa huruf dan angka, tidak menggunakan simbol!\
             \nPanjang username 7 - 24 karakter!", "Set", "Batal");
 
             format(AccountData[playerid][pTempText], 24, inputtext);
-            ShowPlayerDialog(playerid, DIALOG_TWITTER_SIGNPASSWORD, DIALOG_STYLE_PASSWORD, ""Mayoritas"Mayoritas Roleplay "WHITE"- Daftar Twitter", 
+            ShowPlayerDialog(playerid, DIALOG_TWITTER_SIGNPASSWORD, DIALOG_STYLE_PASSWORD, ""Imajinasi"Imajinasi Roleplay "WHITE"- Daftar Twitter", 
             sprintf("Hai %s!\nSilahkan massukan kata sandi untuk akun Twitter kamu:\nIngat: Panjang kata sandi 7 - 32 Karakter!\nTahap ini tidak dapat dibatalkan!", inputtext), "Set", "");
         }
         case DIALOG_TWITTER_SIGNPASSWORD:
         {
             if(!response) return 1;
-            if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_TWITTER_SIGNPASSWORD, DIALOG_STYLE_PASSWORD, ""Mayoritas"Mayoritas Roleplay "WHITE"- Daftar Twitter", 
+            if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_TWITTER_SIGNPASSWORD, DIALOG_STYLE_PASSWORD, ""Imajinasi"Imajinasi Roleplay "WHITE"- Daftar Twitter", 
             sprintf("Error: Tidak dapat diisi kosong!\nHai, %s!\nSilahkan masukkan kata sandi untuk akun Twitter kamu:\nIngat: Panjang kata sandi 7 - 32 Karakter!\nTahap ini tidak dapat dibatalkan!", AccountData[playerid][pTempText]), "Set", "");
 
-            if(strlen(inputtext) < 7 || strlen(inputtext) > 32) return ShowPlayerDialog(playerid, DIALOG_TWITTER_SIGNPASSWORD, DIALOG_STYLE_PASSWORD, ""Mayoritas"Mayoritas Roleplay "WHITE"- Daftar Twitter", 
+            if(strlen(inputtext) < 7 || strlen(inputtext) > 32) return ShowPlayerDialog(playerid, DIALOG_TWITTER_SIGNPASSWORD, DIALOG_STYLE_PASSWORD, ""Imajinasi"Imajinasi Roleplay "WHITE"- Daftar Twitter", 
             sprintf("Error: Password tidak dapat kurang dari 7 atau 32 huruf!\nHai, %s!\nSilahkan masukkan kata sandi untuk akun Twitter kamu:\nIngat: Panjang kata sandi 7 - 32 Karakter!\nTahap ini tidak dapat dibatalkan!", AccountData[playerid][pTempText]), "Set", "");
 
             format(AccountData[playerid][TwitterName], 128, AccountData[playerid][pTempText]);
@@ -2534,7 +2534,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             {
                 case 0: // 
                 {
-                    ShowPlayerDialog(playerid, DIALOG_ADD_CONTACT, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Tambah Kontak", 
+                    ShowPlayerDialog(playerid, DIALOG_ADD_CONTACT, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Tambah Kontak", 
                     "Mohon masukkan nama kontak yang akan disimpan dibawah ini:", "Set", "Batal");
                 }
                 case 1: //
@@ -2560,7 +2560,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                     format(strings, sizeof(strings), "Status: %s\
                     \nShare Contacts", AccountData[playerid][AirdropPermission] ? ""LIGHTGREEN"Share Contact diizinkan" : ""RED"Share Contact tidak diizinkan");
                     
-                    ShowPlayerDialog(playerid, DIALOG_AIRDROPDISPLAY, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Airdrop", strings, "Pilih", "Batal");
+                    ShowPlayerDialog(playerid, DIALOG_AIRDROPDISPLAY, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Airdrop", strings, "Pilih", "Batal");
                 }
                 case 1: // share
                 {
@@ -2578,11 +2578,11 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                     if(count == 0)
                     {
                         PlayerPlaySound(playerid, 5206, 0.0, 0.0, 0.0);
-                        return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Airdrop",
+                        return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Airdrop",
                         "Tidak ada player yang dekat dengan anda!", "Tutup", "");
                     }
 
-                    ShowPlayerDialog(playerid, DIALOG_AIRDROP, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Airdrop", frmxt, "Pilih", "Batal");
+                    ShowPlayerDialog(playerid, DIALOG_AIRDROP, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Airdrop", frmxt, "Pilih", "Batal");
                 }
             }
         }
@@ -2599,7 +2599,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
             new shstr[522];
             format(shstr, sizeof(shstr), "Anda menerima permintaan penyimpanan kotak dari:\nNama: %s\nNomor HP: %s\nApakah anda yakin ingin menyimpan kontak tersebut?", AccountData[playerid][pName], AccountData[playerid][pPhone]);
-            ShowPlayerDialog(targetid, DIALOG_AIRDROP_CONF, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Airdrop", shstr, "Iya", "Tidak");
+            ShowPlayerDialog(targetid, DIALOG_AIRDROP_CONF, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Airdrop", shstr, "Iya", "Tidak");
         }
         case DIALOG_AIRDROP_CONF:
         {
@@ -2693,41 +2693,41 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
             if(isnull(inputtext))
             {
-                ShowPlayerDialog(playerid, DIALOG_ADD_CONTACT, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Tambah Kontak", 
+                ShowPlayerDialog(playerid, DIALOG_ADD_CONTACT, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Tambah Kontak", 
                 "Error: Tidak dapat diisi kosong!\nMohon masukkan nama kontak yang akan disimpan dibawah ini:", "Set", "Batal");
                 return 1;
             }
 
             if(strlen(inputtext) < 1 || strlen(inputtext) > 64)
             {
-                ShowPlayerDialog(playerid, DIALOG_ADD_CONTACT, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Tambah Kontak", 
+                ShowPlayerDialog(playerid, DIALOG_ADD_CONTACT, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Tambah Kontak", 
                 "Error: Tidak dapat kurang dari 1 huruf atau lebih dari 64!\nMohon masukkan nama kontak yang akan disimpan dibawah ini:", "Set", "Batal");
                 return 1;
             }
             
             strpack(AccountData[playerid][pTempText], inputtext, 64);
-            ShowPlayerDialog(playerid, DIALOG_ADD_CONTACTNUMB, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Tambah Kontak",
+            ShowPlayerDialog(playerid, DIALOG_ADD_CONTACTNUMB, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Tambah Kontak",
             sprintf("Mohon masukkan nomor HP dari %s:", inputtext), "Input", "Kembali");
         }
         case DIALOG_ADD_CONTACTNUMB:
         {
             if(!response)
             {
-                ShowPlayerDialog(playerid, DIALOG_ADD_CONTACT, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Tambah Kontak", 
+                ShowPlayerDialog(playerid, DIALOG_ADD_CONTACT, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Tambah Kontak", 
                 "Mohon masukkan nama kontak yang akan disimpan dibawah ini:", "Set", "Batal");
                 return 1;
             }
 
             if(isnull(inputtext))
             {
-                ShowPlayerDialog(playerid, DIALOG_ADD_CONTACTNUMB, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Tambah Kontak",
+                ShowPlayerDialog(playerid, DIALOG_ADD_CONTACTNUMB, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Tambah Kontak",
                 "Error: Tidak dapat diisi kosong!\nMohon masukkan nomor HP kontak yang akan disimpan dibawah ini:", "Input", "Kembali");
                 return 1;
             }
 
             if(!IsNumeric(inputtext))
             {
-                ShowPlayerDialog(playerid, DIALOG_ADD_CONTACTNUMB, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Tambah Kontak",
+                ShowPlayerDialog(playerid, DIALOG_ADD_CONTACTNUMB, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Tambah Kontak",
                 "Error: Masukkan nomor HP kontak hanya berisi angka!\nMohon masukkan nomor HP kontak yang akan disimpan dibawah ini:", "Input", "Kembali");
                 return 1;
             }
@@ -2760,27 +2760,27 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             if(AccountData[playerid][phoneAirplaneMode])
                 return ShowTDN(playerid, NOTIFICATION_ERROR, "Smartphone sedang dalam Mode Pesawat!");
 
-            if(isnull(inputtext)) return ShowPlayerDialog(playerid, DialogTelepon, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Telepon", 
+            if(isnull(inputtext)) return ShowPlayerDialog(playerid, DialogTelepon, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Telepon", 
             "Error: Tidak dapat diisi kosong!\nMohon masukan nomor telepon yang ingin anda hubungi:", "Input", "Batal");
                
-            if(!IsNumeric(inputtext)) return ShowPlayerDialog(playerid, DialogTelepon, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Telepon", 
+            if(!IsNumeric(inputtext)) return ShowPlayerDialog(playerid, DialogTelepon, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Telepon", 
             "Error: Hanya dapat diisi angka!\nMohon masukan nomor telepon yang ingin anda hubungi:", "Input", "Batal");
 
             if(!strcmp(inputtext, "110", true)) // Polisi
             {
-                Dialog_Show(playerid, CALLCENTER_POLISI, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Panggilan Darurat Polisi",
+                Dialog_Show(playerid, CALLCENTER_POLISI, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Panggilan Darurat Polisi",
                 "Masukkan kendala anda yang ingin dilaporkan kepada pihak kepolisian dibawah ini\
                 \nJelaskan detail dan kendala yang sedang kamu alami dan ingin lapor ke kepolisian:", "Kirim", "Batal");
             }
             else if(!strcmp(inputtext, "118", true)) // Ems
             {
-                Dialog_Show(playerid, CALLCENTER_EMS, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Panggilan Darurat Rumah Sakit",
+                Dialog_Show(playerid, CALLCENTER_EMS, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Panggilan Darurat Rumah Sakit",
                 "Masukkan kendala anda yang ingin dilaporkan kepada pihak Rumah Sakit dibawah ini\
                 \nJelaskan detail dan kendala yang sedang kamu alami dan ingin lapor ke Rumah Sakit:", "Kirim", "Batal");
             }
             else if(!strcmp(inputtext, "117", true)) // Pemerintah
             {
-                Dialog_Show(playerid, CALLCENTER_PEMDA, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Call Center Pemerintah",
+                Dialog_Show(playerid, CALLCENTER_PEMDA, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Call Center Pemerintah",
                 "Masukkan kendala anda yang ingin dilaporkan kepada pihak Pemerintah dibawah ini\
                 \nJelaskan detail dan kendala yang sedang kamu alami dan ingin lapor ke Pemerintah:", "Kirim", "Batal");
             }
@@ -2854,7 +2854,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             {
                 AccountData[playerid][pContact] = index;
                 
-                ShowPlayerDialog(playerid, DialogContactMenu, DIALOG_STYLE_LIST, sprintf(""Mayoritas"Mayoritas Roleplay"WHITE" - %s", ContactData[playerid][AccountData[playerid][pContact]][contactName]), 
+                ShowPlayerDialog(playerid, DialogContactMenu, DIALOG_STYLE_LIST, sprintf(""Imajinasi"Imajinasi Roleplay"WHITE" - %s", ContactData[playerid][AccountData[playerid][pContact]][contactName]), 
                 "Panggil\
                 \n"GRAY"Whatsapp\
                 \nShareloc\
@@ -2875,7 +2875,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 return AccountData[playerid][CurrentlyReadYellow] = false;
             }
 
-            ShowPlayerDialog(playerid, DIALOG_YELLOW_PAGE_SEND, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "GRAY"- Buat Iklan", "Masukkan iklan yang ingin anda buat dibawah sini:", "Kirim", "Kembali");
+            ShowPlayerDialog(playerid, DIALOG_YELLOW_PAGE_SEND, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "GRAY"- Buat Iklan", "Masukkan iklan yang ingin anda buat dibawah sini:", "Kirim", "Kembali");
         }
         case DIALOG_YELLOW_PAGE:
         {
@@ -2898,7 +2898,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 
                     SetPVarString(playerid, "YellowNumber", YellowNumber);
                     format(frmxt, sizeof(frmxt), ""WHITE"Pengirim: "YELLOW"%s\n"BLUEJEGE"%s", YellowSender, YellowMessage);
-                    ShowPlayerDialog(playerid, DIALOG_YELLOW_CALL, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Iklan",
+                    ShowPlayerDialog(playerid, DIALOG_YELLOW_CALL, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Iklan",
                     frmxt, "Hubungi", "Batal");
                 }
             }
@@ -2919,7 +2919,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 }
                 case 1: //Buat Iklan
                 {
-                    ShowPlayerDialog(playerid, DIALOG_YELLOW_PAGE_SEND, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "GRAY"- Buat Iklan", 
+                    ShowPlayerDialog(playerid, DIALOG_YELLOW_PAGE_SEND, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "GRAY"- Buat Iklan", 
                     "Masukkan iklan yang ingin anda buat dibawah sini:", "Kirim", "Kembali");
                 }
             }
@@ -2960,13 +2960,13 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 return 1;
             }
 
-            if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_YELLOW_PAGE_SEND, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "GRAY"- Buat Iklan",
+            if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_YELLOW_PAGE_SEND, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "GRAY"- Buat Iklan",
                 "Error: Iklan tidak dapat kosong!\nMasukkan iklan yang ingin anda buat dibawah sini:", "Kirim", "Kembali");
             
-            if(strlen(inputtext) < 1 || strlen(inputtext) > 128) return ShowPlayerDialog(playerid, DIALOG_YELLOW_PAGE_SEND, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "GRAY"- Buat Iklan",
+            if(strlen(inputtext) < 1 || strlen(inputtext) > 128) return ShowPlayerDialog(playerid, DIALOG_YELLOW_PAGE_SEND, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "GRAY"- Buat Iklan",
                 "Error: Iklan tidak boleh kurang dari 1 atau lebih dari 128 huruf!\nMasukkan iklan yang ingin anda buat dibawah sini:", "Kirim", "Kembali");
             
-            if(!IsValidFormatText(inputtext)) return ShowPlayerDialog(playerid, DIALOG_TWITTER_POST_SEND, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "GRAY"- Kirim Tweet",
+            if(!IsValidFormatText(inputtext)) return ShowPlayerDialog(playerid, DIALOG_TWITTER_POST_SEND, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "GRAY"- Kirim Tweet",
                 "Error: Dilarang menggunakan tanda '\'' atau apapun itu!\nMasukkan Tweet yang ingin anda buat dibawah sini:", "Kirim", "Kembali");
 
             new frmttime[255], query[600];
@@ -3036,7 +3036,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             if(strlen(inputtext) < 1 || strlen(inputtext) > 128) return ShowPlayerDialog(playerid, DIALOG_WHATSAPP_SEND, DIALOG_STYLE_INPUT, title, 
             "Error: Pesan tidak dapat kurang dari 1 atau lebih dari 128 huruf!\nMasukkan pesan WhatsApp yang ingin anda kirim dibawah ini:", "Kirim", "Kembali");
 
-            if(!IsValidFormatText(inputtext)) return ShowPlayerDialog(playerid, DIALOG_TWITTER_POST_SEND, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "GRAY"- Kirim Tweet",
+            if(!IsValidFormatText(inputtext)) return ShowPlayerDialog(playerid, DIALOG_TWITTER_POST_SEND, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "GRAY"- Kirim Tweet",
             "Error: Dilarang menggunakan tanda '\'' atau apapun itu!\nMasukkan Tweet yang ingin anda buat dibawah sini:", "Kirim", "Kembali");
 
             if(CheckNumberBlocked(targetid, AccountData[playerid][pPhone])) return ShowTDN(playerid, NOTIFICATION_WARNING, "Anda tidak dapat mengirim pesan, nomor anda di Blokir!");
@@ -3069,7 +3069,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 return 1;
             }
 
-            ShowPlayerDialog(playerid, DIALOG_TWITTER_POST_SEND, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "GRAY"- Kirim Tweet", "Masukkan Tweet yang ingin anda buat dibawah sini:", "Kirim", "Kembali");
+            ShowPlayerDialog(playerid, DIALOG_TWITTER_POST_SEND, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "GRAY"- Kirim Tweet", "Masukkan Tweet yang ingin anda buat dibawah sini:", "Kirim", "Kembali");
         }
         case DIALOG_TWITTER_POST:
         {
@@ -3079,7 +3079,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 return 1;
             }
 
-            ShowPlayerDialog(playerid, DIALOG_TWITTER_POST_SEND, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "GRAY"- Kirim Tweet", "Masukkan Tweet yang ingin anda buat dibawah sini:", "Kirim", "Kembali");
+            ShowPlayerDialog(playerid, DIALOG_TWITTER_POST_SEND, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "GRAY"- Kirim Tweet", "Masukkan Tweet yang ingin anda buat dibawah sini:", "Kirim", "Kembali");
         }
         case DIALOG_TWITTER_POST_SEND:
         {
@@ -3089,13 +3089,13 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 return 1;
             }
 
-            if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_TWITTER_POST_SEND, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "GRAY"- Kirim Tweet",
+            if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_TWITTER_POST_SEND, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "GRAY"- Kirim Tweet",
                 "Error: Tweet tidak dapat kosong!\nMasukkan Tweet yang ingin anda buat dibawah sini:", "Kirim", "Kembali");
             
-            if(strlen(inputtext) < 1 || strlen(inputtext) > 128) return ShowPlayerDialog(playerid, DIALOG_TWITTER_POST_SEND, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "GRAY"- Kirim Tweet",
+            if(strlen(inputtext) < 1 || strlen(inputtext) > 128) return ShowPlayerDialog(playerid, DIALOG_TWITTER_POST_SEND, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "GRAY"- Kirim Tweet",
                 "Error: Tweet tidak boleh kurang dari 1 atau lebih dari 128 huruf!\nMasukkan Tweet yang ingin anda buat dibawah sini:", "Kirim", "Kembali");
 
-            if(!IsValidFormatText(inputtext)) return ShowPlayerDialog(playerid, DIALOG_TWITTER_POST_SEND, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "GRAY"- Kirim Tweet",
+            if(!IsValidFormatText(inputtext)) return ShowPlayerDialog(playerid, DIALOG_TWITTER_POST_SEND, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "GRAY"- Kirim Tweet",
             "Error: Dilarang menggunakan tanda '\'' atau apapun itu!\nMasukkan Tweet yang ingin anda buat dibawah sini:", "Kirim", "Kembali");
 
             new frmttime[255], query[522];
@@ -3207,12 +3207,12 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 }
                 case 3: // Edit Nama Kontak
                 {
-                    ShowPlayerDialog(playerid, DIALOG_EDIT_CONTACTNAME, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Edit Nama Kontak", 
+                    ShowPlayerDialog(playerid, DIALOG_EDIT_CONTACTNAME, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Edit Nama Kontak", 
                     sprintf("Mohon masukkan nama baru untuk diterapkan pada kontak %s", ContactData[playerid][cidt][contactName]), "Save", "Batal");
                 }
                 case 4: // Edit Number
                 {
-                    ShowPlayerDialog(playerid, DIALOG_EDIT_CONTACTNUMBER, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Edit Nomor Kontak",
+                    ShowPlayerDialog(playerid, DIALOG_EDIT_CONTACTNUMBER, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Edit Nomor Kontak",
                     sprintf("Mohon masukkan nomor baru untuk diterapkan pada kontak %s", ContactData[playerid][cidt][contactName]), "Save", "Batal");
                 }
                 case 5: // Blokir Kontak
@@ -3265,10 +3265,10 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         {
             if(response)
             {
-                if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_EDIT_CONTACTNUMBER, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Edit Nomor Kontak", 
+                if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_EDIT_CONTACTNUMBER, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Edit Nomor Kontak", 
                 sprintf("Error: Tidak dapat diisi kosong!\nMohon masukkan nomor baru untuk diterapkan pada kontak %s", ContactData[playerid][AccountData[playerid][pContact]][contactName]), "Save", "Batal");
 
-                if(!IsNumeric(inputtext)) return ShowPlayerDialog(playerid, DIALOG_EDIT_CONTACTNUMBER, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Edit Nomor Kontak", 
+                if(!IsNumeric(inputtext)) return ShowPlayerDialog(playerid, DIALOG_EDIT_CONTACTNUMBER, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Edit Nomor Kontak", 
                 sprintf("Error: Hanya dapat diisi angka!\nMohon masukkan nomor baru untuk diterapkan pada kontak %s", ContactData[playerid][AccountData[playerid][pContact]][contactName]), "Save", "Batal");
 
                 CallLocalFunction("OnContactEditNumber", "dds", playerid, AccountData[playerid][pContact], inputtext);
@@ -3279,13 +3279,13 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         {
             if(response)
             {
-                if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_EDIT_CONTACTNAME, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Edit Nama Kontak", 
+                if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_EDIT_CONTACTNAME, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Edit Nama Kontak", 
                 sprintf("Error: Tidak dapat diisi kosong!\nMohon masukkan nama baru untuk diterapkan pada kontak %s", ContactData[playerid][AccountData[playerid][pContact]][contactName]), "Save", "Batal");
 
-                if(IsNumeric(inputtext)) return ShowPlayerDialog(playerid, DIALOG_EDIT_CONTACTNAME, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Edit Nama Kontak", 
+                if(IsNumeric(inputtext)) return ShowPlayerDialog(playerid, DIALOG_EDIT_CONTACTNAME, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Edit Nama Kontak", 
                 sprintf("Error: Tidak dapat memasukkan angka semua!\nMohon masukkan nama baru untuk diterapkan pada kontak %s", ContactData[playerid][AccountData[playerid][pContact]][contactName]), "Save", "Batal");
 
-                if(strlen(inputtext) < 1 || strlen(inputtext) > 32) return ShowPlayerDialog(playerid, DIALOG_EDIT_CONTACTNAME, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Edit Nama Kontak", 
+                if(strlen(inputtext) < 1 || strlen(inputtext) > 32) return ShowPlayerDialog(playerid, DIALOG_EDIT_CONTACTNAME, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Edit Nama Kontak", 
                 sprintf("Error: Nama tidak dapat kurang dari 1 huruf atau lebih dari 32!\nMohon masukkan nama baru untuk diterapkan pada kontak %s", ContactData[playerid][AccountData[playerid][pContact]][contactName]), "Save", "Batal");
 
                 CallLocalFunction("OnContactEditName", "dds", playerid, AccountData[playerid][pContact], inputtext);
@@ -3296,13 +3296,13 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         {
             if(!response) return false;
             
-            if(isnull(inputtext)) return ShowPlayerDialog(playerid, DialogTransfer, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Transfer", 
+            if(isnull(inputtext)) return ShowPlayerDialog(playerid, DialogTransfer, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Transfer", 
             "Error: Harus diisi tidak dapat kosong!\nMohon masukkan nomor rekening yang ingin anda transfer:", "Submit", "Batal");
 
-            if(!IsNumeric(inputtext)) return ShowPlayerDialog(playerid, DialogTransfer, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Transfer", 
+            if(!IsNumeric(inputtext)) return ShowPlayerDialog(playerid, DialogTransfer, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Transfer", 
             "Error: Hanya dapat diisi angka!\nMohon masukkan nomor rekening yang ingin anda transfer:", "Submit", "Batal");
 
-            if(strval(inputtext) == AccountData[playerid][pBankRek]) return ShowPlayerDialog(playerid, DialogTransfer, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Transfer", 
+            if(strval(inputtext) == AccountData[playerid][pBankRek]) return ShowPlayerDialog(playerid, DialogTransfer, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Transfer", 
             "Error: Tidak dapat mengirim ke rekening diri sendiri!\nMohon masukkan nomor rekening yang ingin anda transfer:", "Submit", "Batal");
 
             new query[128];
@@ -3315,13 +3315,13 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
             new targetid = GetRekeningOwner(AccountData[playerid][pTransferRek]);
 
-            if(isnull(inputtext)) return ShowPlayerDialog(playerid, DialogTransfer1, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Transfer",
+            if(isnull(inputtext)) return ShowPlayerDialog(playerid, DialogTransfer1, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Transfer",
             "Error: Harus diisi tidak dapat kosong!\nMohon masukkan jumlah nominal yang ingin anda kirim ke rekening tersebut:", "Kirim", "Batal"); 
         
-            if(!IsNumeric(inputtext)) return ShowPlayerDialog(playerid, DialogTransfer1, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Transfer",
+            if(!IsNumeric(inputtext)) return ShowPlayerDialog(playerid, DialogTransfer1, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Transfer",
             "Error: Hanya dapat diisi angka!\nMohon masukkan jumlah nominal yang ingin anda kirim ke rekening tersebut:", "Kirim", "Batal");
         
-            if(strval(inputtext) < 1 || strval(inputtext) > AccountData[playerid][pBankMoney]) return ShowPlayerDialog(playerid, DialogTransfer1, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Transfer",
+            if(strval(inputtext) < 1 || strval(inputtext) > AccountData[playerid][pBankMoney]) return ShowPlayerDialog(playerid, DialogTransfer1, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Transfer",
             "Error: Jumlah tidak vaid!\nMohon masukkan jumlah nominal yang ingin anda kirim ke rekening tersebut:", "Kirim", "Batal");
         
             if(!IsPlayerConnected(targetid)) return ShowTDN(playerid, NOTIFICATION_ERROR, "Pemilik rekening tersebut tidak terkoneksi ke server!");
@@ -3355,7 +3355,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                     {
                         static jskc[512];
                         format(jskc, sizeof(jskc), ""VERONA_ARWIN"Spotify Music - Cerahi Hidupmu Secerah Matahari Di Pagi Hari\n\n"VERONA_ARWIN"Kami sarankan anda untuk upload file mp3 ke discord terlebih dahulu.\n"RED_E"Note: Fitur ini tidak support link Youtube secara langsung!\n\n"YELLOW"(Apabila file mp3 telah di upload ke discord, silahkan copy linknya dan paste dibawah ini):");
-                        ShowPlayerDialog(playerid, DialogSpotify1, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Spotify", jskc, "Input", "Cancel");
+                        ShowPlayerDialog(playerid, DialogSpotify1, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Spotify", jskc, "Input", "Cancel");
                     }
                 }
             }
@@ -3388,18 +3388,18 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                     format(minsty, sizeof(minsty), "Nama\tLokasi\tJarak\
                     \n"GRAY"Balai Kota\t%s\t"YELLOW"%.2f m\
                     \nDinas Pekerjaan\t%s\t"YELLOW"%.2f m\
-                    \n"GRAY"Kantor Kepolisian Mayoritas\t"GRAY"%s\t"YELLOW"%.2f m\
+                    \n"GRAY"Kantor Kepolisian Imajinasi\t"GRAY"%s\t"YELLOW"%.2f m\
                     \nRumah Sakit Pillbox\t%s\t"YELLOW"%.2f m\
-                    \n"GRAY"Bengkel Kota Mayoritas\t"GRAY"%s\t"YELLOW"%.2f m\
+                    \n"GRAY"Bengkel Kota Imajinasi\t"GRAY"%s\t"YELLOW"%.2f m\
                     \nAsuransi\t%s\t"YELLOW"%.2f m\
                     \n"GRAY"Asuransi LV\t"GRAY"%s\t"YELLOW"%.2f m\
-                    \nRestaurant Mayoritas\t%s\t"YELLOW"%.2f m\
+                    \nRestaurant Imajinasi\t%s\t"YELLOW"%.2f m\
                     \n"GRAY"Pelabuhan\t"GRAY"%s\t"YELLOW"%.2f m\
                     \nBahamas\t%s\t"YELLOW"%.2f m\
                     \n"GRAY"Rusun Abah burhan\t"GRAY"%s\t"YELLOW"%.2f m\
                     \nTerminal Desa\t%s\t"YELLOW"%.2f m\
-                    \n"GRAY"IKEA Mayoritas\t"GRAY"%s\t"YELLOW"%.2f m\
-                    \nShowroom Mayoritas\t%s\t"YELLOW"%.2f m\
+                    \n"GRAY"IKEA Imajinasi\t"GRAY"%s\t"YELLOW"%.2f m\
+                    \nShowroom Imajinasi\t%s\t"YELLOW"%.2f m\
                     \n"GRAY"Gudang Warbun\t"GRAY"%s\t"YELLOW"%.2f m\
                     \nGudang Fort Carson\t%s\t"YELLOW"%.2f m\
                     \n"GRAY"OYO Hotels #1\t"GRAY"%s\t"YELLOW"%.2f m\
@@ -3407,11 +3407,11 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                     \n"GRAY"Rusun Jamal\t"GRAY"%s\t"YELLOW"%.2f m\
                     \nToko Olahraga\t%s\t"YELLOW"%.2f m\
                     \n"GRAY"Motel Romo\t"GRAY"%s\t"YELLOW"%.2f m\
-                    \nVenue Mayoritas\t%s\t"YELLOW"%.2f m\
+                    \nVenue Imajinasi\t%s\t"YELLOW"%.2f m\
                     \n"GRAY"Bahamas LV\t"GRAY"%s\t"YELLOW"%.2f m\
                     \nBahamas SF\t%s\t"YELLOW"%.2f m\
                     \n"GRAY"Rusun BlueDoorz\t"GRAY"%s\t"YELLOW"%.2f m\
-                    \nUniversitas Mayoritas\t%s\t"YELLOW"%.2f m\
+                    \nUniversitas Imajinasi\t%s\t"YELLOW"%.2f m\
                     \n"GRAY"Panggung San Fiero\t"GRAY"%s\t"YELLOW"%.2f m\
                     \nDrag Race Las Venturas\t%s\t"YELLOW"%.2f m\
                     ",
@@ -3443,23 +3443,23 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                     GetLocation(2819.3628, -1086.1926, 30.7333), GetPlayerDistanceFromPoint(playerid, 2819.3628, -1086.1926, 30.7333),
                     GetLocation(-2882.8586, 464.0963, 4.9141), GetPlayerDistanceFromPoint(playerid, -2882.8586, 464.0963, 4.9141),
                     GetLocation(2832.8967, 1903.7570, 10.8203), GetPlayerDistanceFromPoint(playerid, 2832.8967, 1903.7570, 10.8203));
-                    ShowPlayerDialog(playerid, LokasiUmum, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- GPS", minsty, "Pilih", "Batal");
+                    ShowPlayerDialog(playerid, LokasiUmum, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- GPS", minsty, "Pilih", "Batal");
                 }
                 case 1:
                 {
                     new minsty[4012];
                     format(minsty, sizeof(minsty), "Pekerjaan\tNama\tLokasi\tJarak\
                     \n"GRAY"Electrican Job\t"GRAY"( Multiplayer Job )\t"GRAY"%s\t"YELLOW"%.2f m\
-                    \nSupir Bus\tTerminal Mayoritas\t%s\t"YELLOW"%.2f m\
-                    \n"GRAY"Tukang Ayam #1\t"GRAY"Kandang Ayam Mayoritas\t%s\t"YELLOW"%.2f m\
-                    \nTukang Ayam #2\tKantor Ayam Mayoritas\t%s\t"YELLOW"%.2f m\
+                    \nSupir Bus\tTerminal Imajinasi\t%s\t"YELLOW"%.2f m\
+                    \n"GRAY"Tukang Ayam #1\t"GRAY"Kandang Ayam Imajinasi\t%s\t"YELLOW"%.2f m\
+                    \nTukang Ayam #2\tKantor Ayam Imajinasi\t%s\t"YELLOW"%.2f m\
                     \n"GRAY"Petani #1\t"GRAY"Pembelian Bibit\t%s\t"YELLOW"%.2f m\
                     \nPetani #2\tLadang Tanaman\t%s\t"YELLOW"%.2f m\
                     \n"GRAY"Petani #3\t"GRAY"Olah Tanaman\t%s\t"YELLOW"%.2f m\
                     \nTukang Kayu\tHutan Kayu\t%s\t"YELLOW"%.2f m\
                     \n"GRAY"Kargo\t"GRAY"Pengambilan Truck Kargo\t%s\t"YELLOW"%.2f m\
                     \nPemerah Sapi\tLokasi Pemerahan\t%s\t"YELLOW"%.2f m\
-                    \n"GRAY"Penambang #1\t"GRAY"Pertambangan Mayoritas\t%s\t"YELLOW"%.2f m\
+                    \n"GRAY"Penambang #1\t"GRAY"Pertambangan Imajinasi\t%s\t"YELLOW"%.2f m\
                     \nPenambang #2\tPencucian Batu\t%s\t"YELLOW"%.2f m\
                     \n"GRAY"Penambang #3\t"GRAY"Peleburan Batu\t%s\t"YELLOW"%.2f m\
                     \nPenjahit #1\tKantor Penjahit\t%s\t"YELLOW"%.2f m\
@@ -3506,7 +3506,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                     GetLocation(604.9979, -1508.6365, 14.9549), GetPlayerDistanceFromPoint(playerid, 604.9979, -1508.6365, 14.9549),
                     GetLocation(1001.3441, -1445.8391, 13.5469), GetPlayerDistanceFromPoint(playerid, 1001.3441, -1445.8391, 13.5469),
                     GetLocation(-1723.7289, -63.5671, 3.5547), GetPlayerDistanceFromPoint(playerid, -1723.7289, -63.5671, 3.5547));
-                    ShowPlayerDialog(playerid, LokasiPekerjaan, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- GPS", minsty, "Pilih", "Batal");
+                    ShowPlayerDialog(playerid, LokasiPekerjaan, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- GPS", minsty, "Pilih", "Batal");
                 }
                 case 2:
                 {
@@ -3521,11 +3521,11 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                     GetLocation(1052.0156,-345.4073,73.9922), GetPlayerDistanceFromPoint(playerid, 1052.0156,-345.4073,73.9922),
                     GetLocation(-387.3126,-2259.8279,45.5646), GetPlayerDistanceFromPoint(playerid, -387.3126,-2259.8279,45.5646),
                     GetLocation(-1693.3431,-88.9088,3.5654), GetPlayerDistanceFromPoint(playerid, -1693.3431,-88.9088,3.5654));
-                    ShowPlayerDialog(playerid, LokasiHobi, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- GPS", minsty, "Pilih", "Batal");
+                    ShowPlayerDialog(playerid, LokasiHobi, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- GPS", minsty, "Pilih", "Batal");
                 }
                 case 3:
                 {
-                    ShowPlayerDialog(playerid, LokasiPertokoan, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- GPS", 
+                    ShowPlayerDialog(playerid, LokasiPertokoan, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- GPS", 
                     "Toko Pakaian Terdekat\
                     \n"GRAY"Toko Elektronik Terdekat", "Pilih", "Batal");
                 }
@@ -3618,7 +3618,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 						else format(lstr,sizeof(lstr), "%d\t%s{ffffff}(%s)\t%0.2fm\n", itt, wsData[id][wName], lock, GetPlayerDistanceFromPoint(playerid, wsData[id][wX], wsData[id][wY], wsData[id][wZ]));
 						strcat(location,lstr,sizeof(location));
 					}
-					ShowPlayerDialog(playerid, DIALOG_TRACKWS, DIALOG_STYLE_TABLIST_HEADERS,"{ffff00}Mayoritas Roleplay /{ffffff}/ Track Workshop",location,"Track","Cancel");
+					ShowPlayerDialog(playerid, DIALOG_TRACKWS, DIALOG_STYLE_TABLIST_HEADERS,"{ffff00}Imajinasi Roleplay /{ffffff}/ Track Workshop",location,"Track","Cancel");
 				}
                 case 12:
                 {
@@ -3629,7 +3629,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                     ",
                     GetLocation(394.534484,-1910.525146,7.835937), GetPlayerDistanceFromPoint(playerid, 394.534484,-1910.525146,7.835937),
                     GetLocation(394.534484,-1910.525146,7.835937), GetPlayerDistanceFromPoint(playerid, 394.534484,-1910.525146,7.835937));
-                    ShowPlayerDialog(playerid, LokasiGudang, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- GPS", minsty, "Pilih", "Batal");
+                    ShowPlayerDialog(playerid, LokasiGudang, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- GPS", minsty, "Pilih", "Batal");
                 }                
                 case 13:
                 {
@@ -3658,7 +3658,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         {
             if(!response)
             {
-                return ShowPlayerDialog(playerid, LokasiGps, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Lokasi",
+                return ShowPlayerDialog(playerid, LokasiGps, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Lokasi",
                 "Lokasi Umum\
                 \n"GRAY"Lokasi Pekerjaan\
                 \nLokasi Hobi\
@@ -3704,7 +3704,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         {
             if(!response) 
             {
-                return ShowPlayerDialog(playerid, LokasiGps, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Lokasi",
+                return ShowPlayerDialog(playerid, LokasiGps, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Lokasi",
                 "Lokasi Umum\
                 \n"GRAY"Lokasi Pekerjaan\
                 \nLokasi Hobi\
@@ -3900,7 +3900,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         {
             if(!response)
             {
-                return ShowPlayerDialog(playerid, LokasiGps, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Lokasi",
+                return ShowPlayerDialog(playerid, LokasiGps, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Lokasi",
                 "Lokasi Umum\
                 \n"GRAY"Lokasi Pekerjaan\
                 \nLokasi Hobi\
@@ -4096,7 +4096,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         {
             if(!response) 
             {
-                return ShowPlayerDialog(playerid, LokasiGps, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Lokasi",
+                return ShowPlayerDialog(playerid, LokasiGps, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Lokasi",
                 "Lokasi Umum\
                 \n"GRAY"Lokasi Pekerjaan\
                 \nLokasi Hobi\
@@ -4148,7 +4148,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         {
             if(!response) 
             {
-                return ShowPlayerDialog(playerid, LokasiGps, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Lokasi",
+                return ShowPlayerDialog(playerid, LokasiGps, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Lokasi",
                 "Lokasi Umum\
                 \n"GRAY"Lokasi Pekerjaan\
                 \nLokasi Hobi\
@@ -4209,13 +4209,13 @@ ShowPlayerTwitterPage(playerid)
 
             format(list, sizeof(list), "%s"VTWITTER"@%s\t"GRAY"%s\t"WHITE"%s\n", list, tempTweetFrom, tempTweetDate, tempTweetText);
         }
-        ShowPlayerDialog(playerid, DIALOG_TWITTER_POST, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Tweets", list, "Tweet", "Kembali");
+        ShowPlayerDialog(playerid, DIALOG_TWITTER_POST, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Tweets", list, "Tweet", "Kembali");
     }
     else 
     {
         format(list, sizeof(list), "Username\tTanggal\tPostingan\n");
         format(list, sizeof(list), "%sJadilah orang pertama yang membagikan Tweet", list);
-        ShowPlayerDialog(playerid, DIALOG_TWITTER_POST_EMPTY, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Tweets", list, "Tweet", "Kembali");
+        ShowPlayerDialog(playerid, DIALOG_TWITTER_POST_EMPTY, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Tweets", list, "Tweet", "Kembali");
     }
 	return 1;
 }
@@ -4244,13 +4244,13 @@ ShowPlayerYellowsPage(playerid)
                 format(list, sizeof(list), "%s"YELLOW"%s - %s\t"GRAY"%s\t"WHITE"%.24s...\n", list, tempYellowFrom, tempYellowPhone, tempYellowDate, tempYellowText);
             } else format(list, sizeof(list), "%s"YELLOW"%s - %s\t"GRAY"%s\t"WHITE"%s\n", list, tempYellowFrom, tempYellowPhone, tempYellowDate, tempYellowText);
         }
-        ShowPlayerDialog(playerid, DIALOG_YELLOW_PAGE, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Yellow Pages", list, "Iklan", "Kembali");
+        ShowPlayerDialog(playerid, DIALOG_YELLOW_PAGE, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Yellow Pages", list, "Iklan", "Kembali");
     }
     else
     {
         format(list, sizeof(list), "Nama\tTanggal\tIklan\n");
         format(list, sizeof(list), "%sJadilah orang pertama yang membuat iklan!", list);
-        ShowPlayerDialog(playerid, DIALOG_YELLOW_PAGE_EMPTY, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Yellow Pages", list, "Iklan", "Kembali");
+        ShowPlayerDialog(playerid, DIALOG_YELLOW_PAGE_EMPTY, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Yellow Pages", list, "Iklan", "Kembali");
     }
     return 1;
 }
@@ -4268,7 +4268,7 @@ public SearchBankRek(playerid, norekening)
         new ownerRek = GetRekeningOwner(norekening);
         if(!IsPlayerConnected(ownerRek)) return ShowTDN(playerid, NOTIFICATION_ERROR, "Pemain tersebut tidak terkoneksi ke server!");
         AccountData[playerid][pTransferRek] = norekening;
-        ShowPlayerDialog(playerid, DialogTransfer1, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Transfer",
+        ShowPlayerDialog(playerid, DialogTransfer1, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Transfer",
         "Mohon masukkan jumlah nominal yang ingin anda kirim ke rekening tersebut:", "Kirim", "Batal");
     }
     return 1;
@@ -4287,11 +4287,11 @@ Dialog:SettingPhone(playerid, response, listitem, inputtext[])
                 \nNomor Telepon: %s\
                 \nNama Series Model: X25\
                 \nNomor Serial: VR81AXS23S33\nIMEI (slot 1): 7182991211\nIMEI (slot 2): 9928192882", ReturnName(playerid), AccountData[playerid][pPhone]);
-                ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Tentang Ponsel", minsty, "Tutup", "");
+                ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Tentang Ponsel", minsty, "Tutup", "");
             }
             case 1: // Ubah Nada Dering
             {
-                Dialog_Show(playerid, PhoneRingtone, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Ubah Nada Dering",
+                Dialog_Show(playerid, PhoneRingtone, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Ubah Nada Dering",
                 "Mohon masukkan link mp3 yang sudah anda upload dimanapun itu untuk dijadikan sebagai nada dering saat ada panggilan masuk\
                 \nNOTE: Tidak dapat memasukkan link langsung dari YouTube!", "Submit", "Batal");
             }
@@ -4326,16 +4326,16 @@ Dialog:PhoneRingtone(playerid, response, listitem, inputtext[])
 {
     if(!response) 
     {
-        return Dialog_Show(playerid, SettingPhone, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Pengaturan",
+        return Dialog_Show(playerid, SettingPhone, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Pengaturan",
         "Tentang Ponsel\
         \nUbah Nada Dering Telepon", "Pilih", "Batal");
     }
 
-    if(isnull(inputtext)) return Dialog_Show(playerid, PhoneRingtone, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Ubah Nada Dering",
+    if(isnull(inputtext)) return Dialog_Show(playerid, PhoneRingtone, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Ubah Nada Dering",
     "Error: Tidak dapat diisi kosong!\nMohon masukkan link mp3 yang sudah anda upload dimanapun itu untuk dijadikan sebagai nada dering saat ada panggilan masuk\
     \nNOTE: Tidak dapat memasukkan link langsung dari YouTube!", "Submit", "Batal");
     
-    if(IsNumeric(inputtext)) return Dialog_Show(playerid, PhoneRingtone, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Ubah Nada Dering",
+    if(IsNumeric(inputtext)) return Dialog_Show(playerid, PhoneRingtone, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Ubah Nada Dering",
     "Error: Tidak dapat diisi angka!\nMohon masukkan link mp3 yang sudah anda upload dimanapun itu untuk dijadikan sebagai nada dering saat ada panggilan masuk\
     \nNOTE: Tidak dapat memasukkan link langsung dari YouTube!", "Submit", "Batal");
 
@@ -4352,7 +4352,7 @@ Dialog:GpsMenu(playerid, response, listitem, inputtext[])
         {
             case 0: //Lokasi GPS
             {
-                ShowPlayerDialog(playerid, LokasiGps, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Lokasi",
+                ShowPlayerDialog(playerid, LokasiGps, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Lokasi",
                 "Lokasi Umum\
                 \n"GRAY"Lokasi Pekerjaan\
                 \nLokasi Hobi\
@@ -4371,7 +4371,7 @@ Dialog:GpsMenu(playerid, response, listitem, inputtext[])
             }
             case 1: // Emergency Signal
             {
-                if(AccountData[playerid][pFaction] != FACTION_EMS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Mitra EMS Mayoritas!");
+                if(AccountData[playerid][pFaction] != FACTION_EMS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Mitra EMS Imajinasi!");
                 if(!AccountData[playerid][pDutyEms]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda tidak sedang duty EMS!");
 
                 new list[525], count = 0;
@@ -4384,11 +4384,11 @@ Dialog:GpsMenu(playerid, response, listitem, inputtext[])
 
                 if(count == 0)
                 {
-                    return Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Emergency Signal",
+                    return Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Emergency Signal",
                     "Tidak ada seseorang manapun yang mengirim Emergency Signal!", "Tutup", "");
                 }
 
-                Dialog_Show(playerid, EmergencySignal, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Emergency Signal", list, "Pilih", "Batal");
+                Dialog_Show(playerid, EmergencySignal, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Emergency Signal", list, "Pilih", "Batal");
             }
         }
     }
@@ -4399,7 +4399,7 @@ Dialog:EmergencySignal(playerid, response, listitem, inputtext[])
 {
     if(response)
     {   
-        if(AccountData[playerid][pFaction] != FACTION_EMS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Mitra EMS Mayoritas!");
+        if(AccountData[playerid][pFaction] != FACTION_EMS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan anggota Mitra EMS Imajinasi!");
         if(!AccountData[playerid][pDutyEms]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda tidak sedang duty EMS!");
 
         new id = ListSignal[playerid][listitem];
@@ -4434,15 +4434,15 @@ Dialog:CALLCENTER_POLISI(playerid, response, listitem, inputtext[])
     new Float:X, Float:Y, Float:Z;
     GetPlayerPos(playerid, X, Y, Z);
 
-    if(isnull(inputtext)) return Dialog_Show(playerid, CALLCENTER_POLISI, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Panggilan Darurat Polisi",
+    if(isnull(inputtext)) return Dialog_Show(playerid, CALLCENTER_POLISI, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Panggilan Darurat Polisi",
     "Error: Tidak dapat diisi kosong!\nMasukkan kendala anda yang ingin dilaporkan kepada pihak kepolisian dibawah ini\
     \nJelaskan detail dan kendala yang sedang kamu alami dan ingin lapor ke kepolisian:", "Kirim", "Batal");
 
-    if(IsNumeric(inputtext)) return Dialog_Show(playerid, CALLCENTER_POLISI, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Panggilan Darurat Polisi",
+    if(IsNumeric(inputtext)) return Dialog_Show(playerid, CALLCENTER_POLISI, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Panggilan Darurat Polisi",
     "Error: Tidak dapat diisi angka!\nMasukkan kendala anda yang ingin dilaporkan kepada pihak kepolisian dibawah ini\
     \nJelaskan detail dan kendala yang sedang kamu alami dan ingin lapor ke kepolisian:", "Kirim", "Batal");
     
-    if(strlen(inputtext) > 128) return Dialog_Show(playerid, CALLCENTER_POLISI, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Panggilan Darurat Polisi",
+    if(strlen(inputtext) > 128) return Dialog_Show(playerid, CALLCENTER_POLISI, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Panggilan Darurat Polisi",
     "Error: Tidak dapat lebih dari 128 characters!\nMasukkan kendala anda yang ingin dilaporkan kepada pihak kepolisian dibawah ini\
     \nJelaskan detail dan kendala yang sedang kamu alami dan ingin lapor ke kepolisian:", "Kirim", "Batal");
     
@@ -4469,15 +4469,15 @@ Dialog:CALLCENTER_EMS(playerid, response, listitem, inputtext[])
     new Float:X, Float:Y, Float:Z;
     GetPlayerPos(playerid, X, Y, Z);
 
-    if(isnull(inputtext)) return Dialog_Show(playerid, CALLCENTER_EMS, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Panggilan Darurat Rumah Sakit",
+    if(isnull(inputtext)) return Dialog_Show(playerid, CALLCENTER_EMS, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Panggilan Darurat Rumah Sakit",
     "Error: Tidak dapat diisi kosong!\nMasukkan kendala anda yang ingin dilaporkan kepada pihak Rumah Sakit dibawah ini\
     \nJelaskan detail dan kendala yang sedang kamu alami dan ingin lapor ke Rumah Sakit:", "Kirim", "Batal");
 
-    if(IsNumeric(inputtext)) return Dialog_Show(playerid, CALLCENTER_EMS, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Panggilan Darurat Rumah Sakit",
+    if(IsNumeric(inputtext)) return Dialog_Show(playerid, CALLCENTER_EMS, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Panggilan Darurat Rumah Sakit",
     "Error: Tidak dapat diisi angka!\nMasukkan kendala anda yang ingin dilaporkan kepada pihak Rumah Sakit dibawah ini\
     \nJelaskan detail dan kendala yang sedang kamu alami dan ingin lapor ke Rumah Sakit:", "Kirim", "Batal");
     
-    if(strlen(inputtext) > 128) return Dialog_Show(playerid, CALLCENTER_EMS, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Panggilan Darurat Rumah Sakit",
+    if(strlen(inputtext) > 128) return Dialog_Show(playerid, CALLCENTER_EMS, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Panggilan Darurat Rumah Sakit",
     "Error: Tidak dapat lebih dari 128 characters!\nMasukkan kendala anda yang ingin dilaporkan kepada pihak Rumah Sakit dibawah ini\
     \nJelaskan detail dan kendala yang sedang kamu alami dan ingin lapor ke Rumah Sakit:", "Kirim", "Batal");
     
@@ -4506,15 +4506,15 @@ Dialog:CALLCENTER_PEMDA(playerid, response, listitem, inputtext[])
     new Float:X, Float:Y, Float:Z;
     GetPlayerPos(playerid, X, Y, Z);
 
-    if(isnull(inputtext)) return Dialog_Show(playerid, CALLCENTER_PEMDA, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Call Center Pemerintah",
+    if(isnull(inputtext)) return Dialog_Show(playerid, CALLCENTER_PEMDA, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Call Center Pemerintah",
     "Error: Tidak dapat diisi kosong!\nMasukkan kendala anda yang ingin dilaporkan kepada pihak Pemerintah dibawah ini\
     \nJelaskan detail dan kendala yang sedang kamu alami dan ingin lapor ke Pemerintah:", "Kirim", "Batal");
 
-    if(IsNumeric(inputtext)) return Dialog_Show(playerid, CALLCENTER_PEMDA, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Call Center Pemerintah",
+    if(IsNumeric(inputtext)) return Dialog_Show(playerid, CALLCENTER_PEMDA, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Call Center Pemerintah",
     "Error: Tidak dapat diisi angka!\nMasukkan kendala anda yang ingin dilaporkan kepada pihak Pemerintah dibawah ini\
     \nJelaskan detail dan kendala yang sedang kamu alami dan ingin lapor ke Pemerintah:", "Kirim", "Batal");
     
-    if(strlen(inputtext) > 128) return Dialog_Show(playerid, CALLCENTER_PEMDA, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Call Center Pemerintah",
+    if(strlen(inputtext) > 128) return Dialog_Show(playerid, CALLCENTER_PEMDA, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Call Center Pemerintah",
     "Error: Tidak dapat lebih dari 128 characters!\nMasukkan kendala anda yang ingin dilaporkan kepada pihak Pemerintah dibawah ini\
     \nJelaskan detail dan kendala yang sedang kamu alami dan ingin lapor ke Pemerintah:", "Kirim", "Batal");
     
@@ -4601,7 +4601,7 @@ ptask PhoneClockTD[1000](playerid)
 
 //         AccountData[playerid][pContact] = index;
 
-//         ShowPlayerDialog(playerid, DialogContactMenu, DIALOG_STYLE_LIST, sprintf(""Mayoritas"Mayoritas Roleplay"WHITE" - %s", ContactData[playerid][AccountData[playerid][pContact]][contactName]), 
+//         ShowPlayerDialog(playerid, DialogContactMenu, DIALOG_STYLE_LIST, sprintf(""Imajinasi"Imajinasi Roleplay"WHITE" - %s", ContactData[playerid][AccountData[playerid][pContact]][contactName]), 
 //         "Panggil\
 //         \n"GRAY"Whatsapp\
 //         \nShareloc\

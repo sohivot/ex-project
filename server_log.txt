@@ -107,10 +107,10 @@ v0.3.7-R2, (C)2005-2015 SA-MP Team
 [13:12:09]   Loading filterscript 'testvoice2.amx'...
 [13:12:09] [sv:dbg:main:AmxLoad] : net game pointer (value:0x9618f90) received
 [13:12:09] [sv:dbg:network:bind] : voice server running on port 7788
-[13:12:09] -------------------- [Mayoritas Voice Chat System] --------------------    
+[13:12:09] -------------------- [Imajinasi Voice Chat System] --------------------    
 ===>> Berhasil dimuat dengan baik!    
 ===>> by: exeren    
-===>> dipersembahkan untuk Mayoritas Roleplay    
+===>> dipersembahkan untuk Imajinasi Roleplay    
 -----------------------------------------------------------------
 [13:12:09]   Loading filterscript 'mapping.amx'...
 [13:12:10]   Loading filterscript 'FerrisWheels.amx'...
@@ -136,7 +136,7 @@ v0.3.7-R2, (C)2005-2015 SA-MP Team
 [13:12:13]  Author: Nexius
 [13:12:13] --------------------------------------
 
-[13:12:13] Mayoritas Roleplay: Database successfully connected to MySQL.
+[13:12:13] Imajinasi Roleplay: Database successfully connected to MySQL.
 [13:12:13] EnableTirePopping() function is removed.
 [13:12:13] [Counting Object Server]: Jumlah total Object Server yang dimuat 32957.
 [13:12:13] Number of vehicle models: 5
@@ -1722,10 +1722,10 @@ v0.3.7-R2, (C)2005-2015 SA-MP Team
 [19:34:20] [sv:dbg:main:AmxLoad] : net game pointer (value:0x9765f90) received
 [19:34:20] [sv:err:network:bind] : bind error (code:98)
 [19:34:20] [sv:dbg:main:AmxLoad] : failed to bind voice server
-[19:34:20] -------------------- [Mayoritas Voice Chat System] --------------------    
+[19:34:20] -------------------- [Imajinasi Voice Chat System] --------------------    
 ===>> Berhasil dimuat dengan baik!    
 ===>> by: exeren    
-===>> dipersembahkan untuk Mayoritas Roleplay    
+===>> dipersembahkan untuk Imajinasi Roleplay    
 -----------------------------------------------------------------
 [19:34:20]   Loading filterscript 'mapping.amx'...
 [19:34:20] [sv:err:network:bind] : bind error (code:98)
@@ -1757,7 +1757,7 @@ v0.3.7-R2, (C)2005-2015 SA-MP Team
 [19:34:25]  Author: Nexius
 [19:34:25] --------------------------------------
 
-[19:34:25] Mayoritas Roleplay: Database successfully connected to MySQL.
+[19:34:25] Imajinasi Roleplay: Database successfully connected to MySQL.
 [19:34:25] EnableTirePopping() function is removed.
 [19:34:25] [Counting Object Server]: Jumlah total Object Server yang dimuat 32957.
 [19:34:25] Number of vehicle models: 5

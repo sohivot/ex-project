@@ -236,6 +236,6 @@ CMD:fashion(playerid)
 	}
 	else strcat(string, ""VERONA_ARWIN"Tas/Koper\n");
 
-	ShowPlayerDialog(playerid, DIALOG_TOY, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Edit Fashion", string, "Select", "Cancel");
+	ShowPlayerDialog(playerid, DIALOG_TOY, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Edit Fashion", string, "Select", "Cancel");
 	return 1;
 }

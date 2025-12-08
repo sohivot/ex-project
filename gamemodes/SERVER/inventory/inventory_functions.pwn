@@ -1416,7 +1416,7 @@ public OpenInventory(playerid)
     if(count)
     {
         AccountData[playerid][pStorageSelect] = 0;
-        ShowPlayerDialog(playerid, DIALOG_INVENTORY, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Inventory", shstr, "Pilih", "Batal");
+        ShowPlayerDialog(playerid, DIALOG_INVENTORY, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Inventory", shstr, "Pilih", "Batal");
         return 1;
     }
     ShowTDN(playerid, NOTIFICATION_ERROR, "Anda tidak memiliki item apapun di inventory!");
@@ -2340,7 +2340,7 @@ CMD:itemlist(playerid, params[])
             format(string, sizeof(string), "%s%s\n", string, g_aInventoryItems[i][e_InventoryItem]);
         }
     }
-    return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Nama Barang", string, "Select", "Cancel");
+    return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Nama Barang", string, "Select", "Cancel");
 }
 
 forward LoadPlayerInventory(playerid);

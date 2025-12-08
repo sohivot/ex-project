@@ -5,7 +5,7 @@ GivePlayerInvoice(playerid, targetid)
     if(!IsPlayerConnected(targetid)) return ShowTDN(playerid, NOTIFICATION_ERROR, "Player tersebut tidak terkoneksi kedalam server!");
     if(!IsPlayerNearPlayer(playerid, targetid, 3.0)) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda tidak dekat dengan Player tersebut!");
 
-    ShowPlayerDialog(playerid, DIALOG_INVOICE_NAME, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Invoice", "Mohon masukkan nama untuk tagihan ini:", "Input", "Batal");
+    ShowPlayerDialog(playerid, DIALOG_INVOICE_NAME, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Invoice", "Mohon masukkan nama untuk tagihan ini:", "Input", "Batal");
     return 1;
 }
 
@@ -25,10 +25,10 @@ PeriksaInvoice(playerid, targetid)
 
             format(affah, sizeof(affah), "%s%s\t"RED"%s\n", affah, invoicename, FormatMoney(invoicecost));
         }
-        ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Invoice Pending", affah, "Tutup", "");
+        ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Invoice Pending", affah, "Tutup", "");
     }
     else
-        ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Invoice Pending", "Pemain tersebut tidak memiliki Tagihan.", "Tutup", "");
+        ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Invoice Pending", "Pemain tersebut tidak memiliki Tagihan.", "Tutup", "");
     
     cache_delete(execute);
     return 1;
@@ -51,11 +51,11 @@ ShowPlayerInvoice(playerid)
 
             format(affah, sizeof(affah), "%s%s\t"RED"%s\n", affah, invoicename, FormatMoney(invoicecost));
         }
-        ShowPlayerDialog(playerid, DIALOG_PAY_INVOICE, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Invoice Pending", affah, "Pilih", "Batal");
+        ShowPlayerDialog(playerid, DIALOG_PAY_INVOICE, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Invoice Pending", affah, "Pilih", "Batal");
     }
     else
     {
-        ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Invoice belum terbayar", 
+        ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Invoice belum terbayar", 
         "Anda tidak memiliki tagihan/invoices apapun.", "Tutup", "");
     }
 
@@ -79,20 +79,20 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         if(AccountData[playerid][pFaction] == FACTION_NONE) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda tidak tergabung faction manapun!");
         if(AccountData[playerid][pInjured]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda sedang pingsan!");
 
-        if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_INVOICE_NAME, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Invoice", 
+        if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_INVOICE_NAME, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Invoice", 
         "Error: Nama tidak boleh kosong!\nMohon masukkan nama untuk tagihan ini:", "Input", "Batal");
 
-        if(IsNumeric(inputtext)) return ShowPlayerDialog(playerid, DIALOG_INVOICE_NAME, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Invoice", 
+        if(IsNumeric(inputtext)) return ShowPlayerDialog(playerid, DIALOG_INVOICE_NAME, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Invoice", 
         "Error: Harus berformat nama, tidak boleh angka!\nMohon masukkan nama untuk tagihan ini:", "Input", "Batal");
 
-        if(strlen(inputtext) < 1 || strlen(inputtext) > 128) return ShowPlayerDialog(playerid, DIALOG_INVOICE_NAME, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Invoice", 
+        if(strlen(inputtext) < 1 || strlen(inputtext) > 128) return ShowPlayerDialog(playerid, DIALOG_INVOICE_NAME, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Invoice", 
         "Error: Nama tidak dapat kurang dari 1 huruf atau lebih dari 125!\nMohon masukkan nama untuk tagihan ini:", "Input", "Batal");
 
-        if(!IsValidFormatText(inputtext)) return ShowPlayerDialog(playerid, DIALOG_INVOICE_NAME, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Invoice", 
+        if(!IsValidFormatText(inputtext)) return ShowPlayerDialog(playerid, DIALOG_INVOICE_NAME, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Invoice", 
         "Error: Tidak dapat menggunakan tanda kutip ' '\nMohon masukkan nama untuk tagihan ini:", "Input", "Batal");
 
         SetPVarString(playerid, "InvoiceName", inputtext);
-        ShowPlayerDialog(playerid, DIALOG_INVOICE_COST, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Invoice", "Mohon masukkan nominal tagihan dikolom bawah ini:", "Input", "Batal");
+        ShowPlayerDialog(playerid, DIALOG_INVOICE_COST, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Invoice", "Mohon masukkan nominal tagihan dikolom bawah ini:", "Input", "Batal");
     }
     else if(dialogid == DIALOG_INVOICE_COST)
     {
@@ -104,13 +104,13 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         if(!IsPlayerConnected(targetid)) return ShowTDN(playerid, NOTIFICATION_ERROR, "Pemain tersebut tidak terkoneksi ke server!");
         if(!IsPlayerNearPlayer(playerid, targetid, 3.5)) return ShowTDN(playerid, NOTIFICATION_ERROR, "Pemain tersebut tidak dekat dengan anda!");
 
-        if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_INVOICE_COST, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Invoice", 
+        if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_INVOICE_COST, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Invoice", 
         "Error: Nominal tagihan tidak boleh kosong\nMohon masukkan nominal tagihan dikolom bawah ini:", "Input", "Batal");
 
-        if(!IsNumeric(inputtext)) return ShowPlayerDialog(playerid, DIALOG_INVOICE_COST, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Invoice", 
+        if(!IsNumeric(inputtext)) return ShowPlayerDialog(playerid, DIALOG_INVOICE_COST, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Invoice", 
         "Error: Hanya dapat diisi angka!\nMohon masukkan nominal tagihan dikolom bawah ini:", "Input", "Batal");
 
-        if(strval(inputtext) < 1) return ShowPlayerDialog(playerid, DIALOG_INVOICE_COST, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Invoice", 
+        if(strval(inputtext) < 1) return ShowPlayerDialog(playerid, DIALOG_INVOICE_COST, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Invoice", 
         "Error: Anda tidak dapat memasukkan nominal kurang dari $1 untuk invoices!\nMohon masukkan nominal tagihan dikolom bawah ini:", "Input", "Batal");
 
         new cost = strval(inputtext), invoicename[125], cQuery[598];

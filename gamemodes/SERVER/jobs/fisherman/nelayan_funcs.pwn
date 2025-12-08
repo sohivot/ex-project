@@ -50,7 +50,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
         {
             if(IsPlayerInRangeOfPoint(playerid, 2.0, 111.3999, -1895.6553, 2.9408) && GetPlayerState(playerid) == PLAYER_STATE_ONFOOT)
             {
-                Dialog_Show(playerid, FishermanBoatSpawn, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Sewa Perahu",
+                Dialog_Show(playerid, FishermanBoatSpawn, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Sewa Perahu",
                 "Jenis Perahu\tHarga\
                 \nReefer\t$150\
                 \n"YELLOW"~> Tekan ini jika sudah selesai menggunakan perahu sewaan", "Sewa", "Batal");

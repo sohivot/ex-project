@@ -230,7 +230,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
                 }
                 else if(PasarData[id][pasarType] == 2)
                 {
-                    Dialog_Show(playerid, Pasar_HasilTambang, DIALOG_STYLE_TABLIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Jual Hasil Tambang",
+                    Dialog_Show(playerid, Pasar_HasilTambang, DIALOG_STYLE_TABLIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Jual Hasil Tambang",
                     "Besi\t"GREEN"%s"ARWIN1"/pcs\
                     \n"GRAY"Tembaga\t"GREEN"%s"ARWIN1"/pcs\
                     \nEmas\t"GREEN"%s"ARWIN1"/pcs\
@@ -261,7 +261,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
                 }
                 else if(PasarData[id][pasarType] == 5)
                 {
-                    Dialog_Show(playerid, Pasar_HasilDaur, DIALOG_STYLE_TABLIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Jual Hasil Recycler",
+                    Dialog_Show(playerid, Pasar_HasilDaur, DIALOG_STYLE_TABLIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Jual Hasil Recycler",
                     "Baja\t"GREEN"%s"ARWIN1"/pcs\
                     \n"GRAY"Kaca\t"GREEN"%s"ARWIN1"/pcs\
                     \nKaret\t"GREEN"%s"ARWIN1"/pcs\

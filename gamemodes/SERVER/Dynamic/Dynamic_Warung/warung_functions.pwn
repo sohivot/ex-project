@@ -323,7 +323,7 @@ CMD:warung(playerid, params[])
 		if(WarungData[id][warungOwnerId] == AccountData[playerid][pID])
 		{
 			AccountData[playerid][pWarung] = id;
-			ShowPlayerDialog(playerid, DIALOG_WARUNGMONEY, DIALOG_STYLE_TABLIST_HEADERS, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- Warung No.%02d (%s)", id, WarungData[id][warungOwner]), 
+			ShowPlayerDialog(playerid, DIALOG_WARUNGMONEY, DIALOG_STYLE_TABLIST_HEADERS, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- Warung No.%02d (%s)", id, WarungData[id][warungOwner]), 
 			"Menu\
 			\nPendapatan", "Pilih", "Batal");
 		}
@@ -352,7 +352,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 				AccountData[playerid][pWarung] = id;
 				if(WarungData[id][warungType] == 1) 
 				{
-					ShowPlayerDialog(playerid, DIALOG_WARUNG, DIALOG_STYLE_TABLIST_HEADERS, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- Warung No.%02d", id), 
+					ShowPlayerDialog(playerid, DIALOG_WARUNG, DIALOG_STYLE_TABLIST_HEADERS, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- Warung No.%02d", id), 
 					"Nama Item\tHarga\
 					\nRokok (12 batang)\t$5000\
 					\n"GRAY"Korek Api\t"GRAY"$150\
@@ -365,7 +365,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 				}
 				else if(WarungData[id][warungType] == 2)
 				{
-					ShowPlayerDialog(playerid, DIALOG_WARUNG_ELEKTRONIK, DIALOG_STYLE_TABLIST_HEADERS, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- Warung No.%02d", id),
+					ShowPlayerDialog(playerid, DIALOG_WARUNG_ELEKTRONIK, DIALOG_STYLE_TABLIST_HEADERS, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- Warung No.%02d", id),
 					"Nama Item\tHarga\
 					\nVervhone (Smartphone)\t$1800\
 					\n"GRAY"Radio\t"GRAY"$950\
@@ -394,7 +394,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			{
 				case 0: //Take money
 				{
-					ShowPlayerDialog(playerid, DIALOG_WARUNGTAKEMONEY, DIALOG_STYLE_INPUT, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- Warung No.%02d (%s)", id, WarungData[id][warungOwner]), 
+					ShowPlayerDialog(playerid, DIALOG_WARUNGTAKEMONEY, DIALOG_STYLE_INPUT, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- Warung No.%02d (%s)", id, WarungData[id][warungOwner]), 
 					sprintf("Total uang di mesin kasir: %s\nmasukkan jumlah yang akan anda ambil:", FormatMoney(WarungData[id][warungIncome])), "Input", "Batal");
 				}
 			}
@@ -406,19 +406,19 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
 			if(isnull(inputtext)) 
 			{
-				return ShowPlayerDialog(playerid, DIALOG_WARUNGTAKEMONEY, DIALOG_STYLE_INPUT, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- Warung No.%02d (%s)", id, WarungData[id][warungOwner]), 
+				return ShowPlayerDialog(playerid, DIALOG_WARUNGTAKEMONEY, DIALOG_STYLE_INPUT, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- Warung No.%02d (%s)", id, WarungData[id][warungOwner]), 
 				sprintf("Total uang di mesin kasir: %s\nmasukkan jumlah yang akan anda ambil:", FormatMoney(WarungData[id][warungIncome])), "Input", "Batal");
 			}
 
 			if(!IsNumeric(inputtext)) 
 			{
-				return ShowPlayerDialog(playerid, DIALOG_WARUNGTAKEMONEY, DIALOG_STYLE_INPUT, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- Warung No.%02d (%s)", id, WarungData[id][warungOwner]), 
+				return ShowPlayerDialog(playerid, DIALOG_WARUNGTAKEMONEY, DIALOG_STYLE_INPUT, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- Warung No.%02d (%s)", id, WarungData[id][warungOwner]), 
 				sprintf("Total uang di mesin kasir: %s\nmasukkan jumlah yang akan anda ambil:", FormatMoney(WarungData[id][warungIncome])), "Input", "Batal");
 			}
 
 			if(strval(inputtext) < 1 || strval(inputtext) > WarungData[id][warungIncome]) 
 			{
-				return ShowPlayerDialog(playerid, DIALOG_WARUNGTAKEMONEY, DIALOG_STYLE_INPUT, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- Warung No.%02d (%s)", id, WarungData[id][warungOwner]), 
+				return ShowPlayerDialog(playerid, DIALOG_WARUNGTAKEMONEY, DIALOG_STYLE_INPUT, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- Warung No.%02d (%s)", id, WarungData[id][warungOwner]), 
 				sprintf("Total uang di mesin kasir: %s\nmasukkan jumlah yang akan anda ambil:", FormatMoney(WarungData[id][warungIncome])), "Input", "Batal");
 			}
 
@@ -494,12 +494,12 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			{
 				/*case 0: // nasi uduk
 				{
-					ShowPlayerDialog(playerid, DIALOG_BUY_NASIUDUK, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Warung", 
+					ShowPlayerDialog(playerid, DIALOG_BUY_NASIUDUK, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Warung", 
 					"Anda akan membeli nasi uduk seharga "GREEN"$250/pcs\n"YELLOW"(Masukkan berapa banyak yang ingin anda beli):", "Beli", "Batal");
 				}
 				case 1: //airmineral
 				{
-					ShowPlayerDialog(playerid, DIALOG_BUY_AIRMINERAL, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Warung", 
+					ShowPlayerDialog(playerid, DIALOG_BUY_AIRMINERAL, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Warung", 
 					"Anda akan membeli air mineral seharga "GREEN"$200/pcs\n"YELLOW"(Masukkan berapa banyak yang ingin anda beli):", "Beli", "Batal");
 				}*/
 				case 0: //Rokok
@@ -531,7 +531,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 				}
 				case 3: // Umpan
 				{
-					ShowPlayerDialog(playerid, DIALOG_BUY_UMPAN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Warung", 
+					ShowPlayerDialog(playerid, DIALOG_BUY_UMPAN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Warung", 
 					"Anda akan membeli umpan seharga "GREEN"$18/umpan\n"YELLOW"(Masukkan berapa banyak yang ingin anda beli)", "Beli", "Batal");
 				}
 				case 4: //Helm
@@ -578,19 +578,19 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		
 			if(isnull(inputtext))
 			{
-				return ShowPlayerDialog(playerid, DIALOG_BUY_NASIUDUK, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Warung",
+				return ShowPlayerDialog(playerid, DIALOG_BUY_NASIUDUK, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Warung",
 				"Error: Tidak dapat diisi kosong!\nAnda akan membeli nasi uduk seharga "GREEN"$250/pcs\n"YELLOW"(Masukkan berapa banyak yang ingin anda beli):", "Beli", "Batal");
 			}
 
 			if(!IsNumeric(inputtext))
 			{
-				return ShowPlayerDialog(playerid, DIALOG_BUY_NASIUDUK, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Warung",
+				return ShowPlayerDialog(playerid, DIALOG_BUY_NASIUDUK, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Warung",
 				"Error: Hanya dapat diisi angka!\nAnda akan membeli nasi uduk seharga "GREEN"$250/pcs\n"YELLOW"(Masukkan berapa banyak yang ingin anda beli):", "Beli", "Batal");
 			}
 
 			if(strval(inputtext) < 1 || strval(inputtext) > (strval(inputtext) * 250))
 			{
-				return ShowPlayerDialog(playerid, DIALOG_BUY_NASIUDUK, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Warung",
+				return ShowPlayerDialog(playerid, DIALOG_BUY_NASIUDUK, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Warung",
 				"Error: Jumlah tidak valid!\nAnda akan membeli nasi uduk seharga "GREEN"$250/pcs\n"YELLOW"(Masukkan berapa banyak yang ingin anda beli):", "Beli", "Batal");
 			}
 			new quantity = strval(inputtext);
@@ -611,19 +611,19 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		
 			if(isnull(inputtext))
 			{
-				return ShowPlayerDialog(playerid, DIALOG_BUY_AIRMINERAL, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Warung",
+				return ShowPlayerDialog(playerid, DIALOG_BUY_AIRMINERAL, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Warung",
 				"Error: Tidak dapat diisi kosong!\nAnda akan membeli air mineral seharga "GREEN"$200/pcs\n"YELLOW"(Masukkan berapa banyak yang ingin anda beli):", "Beli", "Batal");
 			}
 
 			if(!IsNumeric(inputtext))
 			{
-				return ShowPlayerDialog(playerid, DIALOG_BUY_AIRMINERAL, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Warung",
+				return ShowPlayerDialog(playerid, DIALOG_BUY_AIRMINERAL, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Warung",
 				"Error: Hanya dapat diisi angka!\nAnda akan membeli air mineral seharga "GREEN"$200/pcs\n"YELLOW"(Masukkan berapa banyak yang ingin anda beli):", "Beli", "Batal");
 			}
 
 			if(strval(inputtext) < 1 || strval(inputtext) > (strval(inputtext) * 200))
 			{
-				return ShowPlayerDialog(playerid, DIALOG_BUY_AIRMINERAL, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Warung",
+				return ShowPlayerDialog(playerid, DIALOG_BUY_AIRMINERAL, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Warung",
 				"Error: Jumlah tidak valid!\nAnda akan membeli air mineral seharga "GREEN"$200/pcs\n"YELLOW"(Masukkan berapa banyak yang ingin anda beli):", "Beli", "Batal");
 			}
 			new quantity = strval(inputtext);
@@ -644,19 +644,19 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		
 			if(isnull(inputtext))
 			{
-				return ShowPlayerDialog(playerid, DIALOG_BUY_UMPAN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Warung",
+				return ShowPlayerDialog(playerid, DIALOG_BUY_UMPAN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Warung",
 				"Error: Tidak dapat diisi kosong!\nAnda akan membeli umpan seharga "GREEN"$18/pcs\n"YELLOW"(Masukkan berapa banyak yang ingin anda beli):", "Beli", "Batal");
 			}
 
 			if(!IsNumeric(inputtext))
 			{
-				return ShowPlayerDialog(playerid, DIALOG_BUY_UMPAN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Warung",
+				return ShowPlayerDialog(playerid, DIALOG_BUY_UMPAN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Warung",
 				"Error: Hanya dapat diisi angka!\nAnda akan membeli umpan seharga "GREEN"$18/pcs\n"YELLOW"(Masukkan berapa banyak yang ingin anda beli):", "Beli", "Batal");
 			}
 
 			if(strval(inputtext) < 1 || strval(inputtext) > (strval(inputtext) * 18))
 			{
-				return ShowPlayerDialog(playerid, DIALOG_BUY_UMPAN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Warung",
+				return ShowPlayerDialog(playerid, DIALOG_BUY_UMPAN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Warung",
 				"Error: Jumlah tidak valid!\nAnda akan membeli umpan seharga "GREEN"$18/pcs\n"YELLOW"(Masukkan berapa banyak yang ingin anda beli):", "Beli", "Batal");
 			}
 			new quantity = strval(inputtext);

@@ -4,7 +4,7 @@ Dialog:eventWeapon(playerid, response, listitem, inputtext[])
 {
 	if(response) {
 		SetPVarInt(playerid, "selectWeapon", listitem);
-		Dialog_Show(playerid, editWeaponId, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Weapon ID", "Masukkan Weapon ID:", "Set", "Back");
+		Dialog_Show(playerid, editWeaponId, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Weapon ID", "Masukkan Weapon ID:", "Set", "Back");
 	}
 	return 1;
 }
@@ -15,10 +15,10 @@ Dialog:editWeaponId(playerid, response, listitem, inputtext[])
 		new id = GetPVarInt(playerid, "selectWeapon");
 
 		if(strval(inputtext) <= 0 || strval(inputtext) > 46 || (strval(inputtext) >= 19 && strval(inputtext) <= 21))
-			return Dialog_Show(playerid, editWeaponId, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Weapon ID", "You have specified an invalid weapon!\n\nInsert Weapon ID:", "Set", "Back");
+			return Dialog_Show(playerid, editWeaponId, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Weapon ID", "You have specified an invalid weapon!\n\nInsert Weapon ID:", "Set", "Back");
 
 		EventData[eventWeapons][id] = strval(inputtext);
-		Dialog_Show(playerid, editWeaponAmmo, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Weapon Ammo", "Insert the ammo for %s:", "Set", "Back", ReturnWeaponName(EventData[eventWeapons][id]));
+		Dialog_Show(playerid, editWeaponAmmo, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Weapon Ammo", "Insert the ammo for %s:", "Set", "Back", ReturnWeaponName(EventData[eventWeapons][id]));
 	}
 	else callcmd::event(playerid, "weapon");
 	return 1;
@@ -30,14 +30,14 @@ Dialog:editWeaponAmmo(playerid, response, listitem, inputtext[])
 		new id = GetPVarInt(playerid, "selectWeapon");
 
 		if(strval(inputtext) < 1 || strval(inputtext) > 1000)
-			return Dialog_Show(playerid, editWeaponId, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Weapon ID", "You have specified an invalid weapon ammo, 1 - 1,000!\n\nInsert the ammo for %s:", "Set", "Back", EventData[eventWeapons][id]);
+			return Dialog_Show(playerid, editWeaponId, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Weapon ID", "You have specified an invalid weapon ammo, 1 - 1,000!\n\nInsert the ammo for %s:", "Set", "Back", EventData[eventWeapons][id]);
 
 		EventData[eventAmmo][id] = strval(inputtext);
 		DeletePVar(playerid, "selectWeapon");
 
 		callcmd::event(playerid, "weapon");
 	}
-	else Dialog_Show(playerid, editWeaponId, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Weapon ID", "Insert Weapon ID:", "Set", "Back");
+	else Dialog_Show(playerid, editWeaponId, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Weapon ID", "Insert Weapon ID:", "Set", "Back");
 	return 1;
 }
 
@@ -77,7 +77,7 @@ DialogTDMShow(playerid)
     format(list, sizeof(list), "%sWinner Prize\t"GREEN"%s\n", list, FormatMoney(EventData[eventWinnerPrice]));
 	format(list, sizeof(list), "%sEvent Finish Setup\n", list);
 	format(list, sizeof(list), "%sEvent Cancel Setup", list);
-	Dialog_Show(playerid, eventTdmSetups, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Event TDM Setup", list, "Set", "Batal");
+	Dialog_Show(playerid, eventTdmSetups, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Event TDM Setup", list, "Set", "Batal");
 	return 1;
 }
 
@@ -90,7 +90,7 @@ Dialog:eventTdmSetups(playerid, response, listitem, inputtext[])
 	{
 		case 0: // Red Team Skin
 		{
-			Dialog_Show(playerid, TdmRedSkin, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Skin Team Red", "Mohon masukkan ID Skin untuk digunakan Team Red pada Event:", "Set", "Batal");
+			Dialog_Show(playerid, TdmRedSkin, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Skin Team Red", "Mohon masukkan ID Skin untuk digunakan Team Red pada Event:", "Set", "Batal");
 		}
 		case 1: // Red Team Pos
 		{
@@ -101,7 +101,7 @@ Dialog:eventTdmSetups(playerid, response, listitem, inputtext[])
 		}
 		case 2: // Blue Team Skin
 		{
-			Dialog_Show(playerid, TdmBlueSkin, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Skin Team Blue", "Mohon masukkan ID Skin untuk digunakan Team Blue pada Event:", "Set", "Batal");
+			Dialog_Show(playerid, TdmBlueSkin, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Skin Team Blue", "Mohon masukkan ID Skin untuk digunakan Team Blue pada Event:", "Set", "Batal");
 		}
 		case 3: // Blue Team Pos
 		{
@@ -112,43 +112,43 @@ Dialog:eventTdmSetups(playerid, response, listitem, inputtext[])
 		}
 		case 4: // Area WWID
 		{
-			Dialog_Show(playerid, TdmWorld, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Event World", "Mohon masukkan World ID untuk digunakan pada Event TDM:", "Set", "Batal");
+			Dialog_Show(playerid, TdmWorld, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Event World", "Mohon masukkan World ID untuk digunakan pada Event TDM:", "Set", "Batal");
 		}
 		case 5: // Interior 
 		{
-			Dialog_Show(playerid, TdmInterior, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Event Interior", "Mohon masukkan Interior ID untuk digunakan pada Event TDM:", "Set", "Batal");
+			Dialog_Show(playerid, TdmInterior, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Event Interior", "Mohon masukkan Interior ID untuk digunakan pada Event TDM:", "Set", "Batal");
 		}
 		case 6: // Target Score
 		{
-			Dialog_Show(playerid, TdmTargetScore, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Event Target Score", "Mohon masukkan berapa target yang harus dicapai pada Event:", "Set", "Batal");
+			Dialog_Show(playerid, TdmTargetScore, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Event Target Score", "Mohon masukkan berapa target yang harus dicapai pada Event:", "Set", "Batal");
 		}
 		case 7: // Health Event
 		{
-			Dialog_Show(playerid, TdmHealth, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Event Health", "Mohon masukkan berapa value darah merah yang ingin digunakan pada Event:", "Set", "Batal");
+			Dialog_Show(playerid, TdmHealth, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Event Health", "Mohon masukkan berapa value darah merah yang ingin digunakan pada Event:", "Set", "Batal");
 		}
 		case 8 : // Armour
 		{
-			Dialog_Show(playerid, TdmArmour, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Event Armour", "Mohon masukkan berapa value armour / darah putih yang ingin digunakan pada Event:", "Set", "Batal");
+			Dialog_Show(playerid, TdmArmour, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Event Armour", "Mohon masukkan berapa value armour / darah putih yang ingin digunakan pada Event:", "Set", "Batal");
 		}
 		case 9: // Weapon 1
 		{
-			Dialog_Show(playerid, TdmWeap1, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Senjata 1", "Mohon masukkan ID Weapon yang ingin digunakan untuk Event:", "Set", "Batal");
+			Dialog_Show(playerid, TdmWeap1, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Senjata 1", "Mohon masukkan ID Weapon yang ingin digunakan untuk Event:", "Set", "Batal");
 		}
 		case 10: // Weapon 2
 		{
-			Dialog_Show(playerid, TdmWeap2, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Senjata 2", "Mohon masukkan ID Weapon yang ingin digunakan untuk Event:", "Set", "Batal");
+			Dialog_Show(playerid, TdmWeap2, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Senjata 2", "Mohon masukkan ID Weapon yang ingin digunakan untuk Event:", "Set", "Batal");
 		}
 		case 11: // Weapon 3
 		{
-			Dialog_Show(playerid, TdmWeap3, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Senjata 3", "Mohon masukkan ID Weapon yang ingin digunakan untuk Event:", "Set", "Batal");
+			Dialog_Show(playerid, TdmWeap3, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Senjata 3", "Mohon masukkan ID Weapon yang ingin digunakan untuk Event:", "Set", "Batal");
 		}
 		case 12: //Hadiah Partisipasi
 		{
-			Dialog_Show(playerid, TdmPartisiFee, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Participation Price", "Mohon masukkan berapa jumlah hadiah untuk pengikut event:", "Set", "Batal");
+			Dialog_Show(playerid, TdmPartisiFee, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Participation Price", "Mohon masukkan berapa jumlah hadiah untuk pengikut event:", "Set", "Batal");
 		}
 		case 13: // Hadiah Pemenang
 		{
-			Dialog_Show(playerid, TdmWinnerFee, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Winner Price", "Mohon masukkan berapa jumlah hadiah untuk pemenang Event:", "Set", "Batal");
+			Dialog_Show(playerid, TdmWinnerFee, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Winner Price", "Mohon masukkan berapa jumlah hadiah untuk pemenang Event:", "Set", "Batal");
 		}
 		case 14: // Finish Setup
 		{
@@ -184,11 +184,11 @@ Dialog:TdmRedSkin(playerid, response, listitem, inputtext[])
 {
 	if(response) {
 		if(strval(inputtext) < 1 || strval(inputtext) > 311)
-			return Dialog_Show(playerid, TdmRedSkin, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Skin Team Red", "Error: ID Skin tidak valid!\nMohon masukkan ID Skin untuk digunakan Team Red pada Event:", "Set", "Batal");
+			return Dialog_Show(playerid, TdmRedSkin, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Skin Team Red", "Error: ID Skin tidak valid!\nMohon masukkan ID Skin untuk digunakan Team Red pada Event:", "Set", "Batal");
 
 		EventData[eventSkin][0] = strval(inputtext);
 		DialogTDMShow(playerid);
-		// Dialog_Show(playerid, eventSkin, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Skin Event", "Team 1: %d\nTeam 2: %d\nNext", "Set", "Back", EventData[eventSkin][0], EventData[eventSkin][1]);	
+		// Dialog_Show(playerid, eventSkin, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Skin Event", "Team 1: %d\nTeam 2: %d\nNext", "Set", "Back", EventData[eventSkin][0], EventData[eventSkin][1]);	
 	}
 	else DialogTDMShow(playerid);
 	return 1;
@@ -198,11 +198,11 @@ Dialog:TdmBlueSkin(playerid, response, listitem, inputtext[])
 {
 	if(response) {
 		if(strval(inputtext) < 1 || strval(inputtext) > 311)
-			return Dialog_Show(playerid, TdmBlueSkin, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Skin Team Blue", "Error: ID Skin tidak valid!\nMohon masukkan ID Skin untuk digunakan Team Blue pada Event:", "Set", "Batal");
+			return Dialog_Show(playerid, TdmBlueSkin, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Skin Team Blue", "Error: ID Skin tidak valid!\nMohon masukkan ID Skin untuk digunakan Team Blue pada Event:", "Set", "Batal");
 
 		EventData[eventSkin][1] = strval(inputtext);
 		DialogTDMShow(playerid);
-		// Dialog_Show(playerid, eventSkin, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Skin Event", "Team 1: %d\nTeam 2: %d\nNext", "Set", "Back", EventData[eventSkin][0], EventData[eventSkin][1]);	
+		// Dialog_Show(playerid, eventSkin, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Skin Event", "Team 1: %d\nTeam 2: %d\nNext", "Set", "Back", EventData[eventSkin][0], EventData[eventSkin][1]);	
 	}
 	else DialogTDMShow(playerid);
 	return 1;
@@ -212,7 +212,7 @@ Dialog:TdmWorld(playerid, response, listitem, inputtext[])
 {
 	if(response) {
 		if(strval(inputtext) < 1 || strval(inputtext) > 100)
-			return Dialog_Show(playerid, TdmWorld, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Event World", "Error: World ID tidak dapat dibawah 1 atau lebih dari 100!\nMohon masukkan World ID untuk digunakan pada Event TDM:", "Set", "Batal");
+			return Dialog_Show(playerid, TdmWorld, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Event World", "Error: World ID tidak dapat dibawah 1 atau lebih dari 100!\nMohon masukkan World ID untuk digunakan pada Event TDM:", "Set", "Batal");
 
 		EventData[eventWorld] = strval(inputtext);
 		DialogTDMShow(playerid);
@@ -225,7 +225,7 @@ Dialog:TdmInterior(playerid, response, listitem, inputtext[])
 {
 	if(response) {
 		if(strval(inputtext) < 0 || strval(inputtext) > 100)
-			return Dialog_Show(playerid, TdmInterior, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Event Interior", "Error: Interior ID tidak dapat dibawah 0 atau lebih dari 100!\nMohon masukkan World ID untuk digunakan pada Event TDM:", "Set", "Batal");
+			return Dialog_Show(playerid, TdmInterior, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Event Interior", "Error: Interior ID tidak dapat dibawah 0 atau lebih dari 100!\nMohon masukkan World ID untuk digunakan pada Event TDM:", "Set", "Batal");
 
 		EventData[eventInt] = strval(inputtext);
 		DialogTDMShow(playerid);
@@ -239,7 +239,7 @@ Dialog:TdmTargetScore(playerid, response, listitem, inputtext[])
 	if(response) 
 	{
 		if(strval(inputtext) < 1 || strval(inputtext) > 150)
-			return Dialog_Show(playerid, TdmTargetScore, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Event Target Score", "Error: Target score must beetween 1 - 150!\nMohon masukkan berapa target yang harus dicapai pada Event:", "Set", "Batal");
+			return Dialog_Show(playerid, TdmTargetScore, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Event Target Score", "Error: Target score must beetween 1 - 150!\nMohon masukkan berapa target yang harus dicapai pada Event:", "Set", "Batal");
 
 		EventData[eventTarget] = strval(inputtext);
 		DialogTDMShow(playerid);
@@ -252,7 +252,7 @@ Dialog:TdmHealth(playerid, response, listitem, inputtext[])
 {
 	if(response) {
 		if(strval(inputtext) < 1 || strval(inputtext) > 100)
-			return Dialog_Show(playerid, TdmHealth, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Event Health", "Error: Health must beetween 1 - 100%%!\nMohon masukkan berapa value darah merah yang ingin digunakan pada Event:", "Set", "Batal");
+			return Dialog_Show(playerid, TdmHealth, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Event Health", "Error: Health must beetween 1 - 100%%!\nMohon masukkan berapa value darah merah yang ingin digunakan pada Event:", "Set", "Batal");
 
 		EventData[eventHealth] = floatstr(inputtext);
 		DialogTDMShow(playerid);
@@ -265,7 +265,7 @@ Dialog:TdmArmour(playerid, response, listitem, inputtext[])
 {
 	if(response) {
 		if(strval(inputtext) < 1 || strval(inputtext) > 99)
-			return Dialog_Show(playerid, TdmArmour, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Event Armour", "Error: Armour must beetween 1 - 100%%!\nMohon masukkan berapa value armour / darah putih yang ingin digunakan pada Event:", "Set", "Batal");
+			return Dialog_Show(playerid, TdmArmour, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Event Armour", "Error: Armour must beetween 1 - 100%%!\nMohon masukkan berapa value armour / darah putih yang ingin digunakan pada Event:", "Set", "Batal");
 
 		EventData[eventArmor] = floatstr(inputtext);
 		DialogTDMShow(playerid);
@@ -278,10 +278,10 @@ Dialog:TdmWeap1(playerid, response, listitem, inputtext[])
 {
 	if(response) {
 		if(strval(inputtext) <= 0 || strval(inputtext) > 46 || (strval(inputtext) >= 19 && strval(inputtext) <= 21))
-			return Dialog_Show(playerid, TdmWeap1, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Senjata 1", "Error: Invalid ID Weapon For Event!\nMohon masukkan ID Weapon yang ingin digunakan untuk Event:", "Set", "Batal");
+			return Dialog_Show(playerid, TdmWeap1, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Senjata 1", "Error: Invalid ID Weapon For Event!\nMohon masukkan ID Weapon yang ingin digunakan untuk Event:", "Set", "Batal");
 
 		EventData[eventWeapons][0] = strval(inputtext);
-		Dialog_Show(playerid, editWeaponAmmo1, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Weapon Ammo", "Masukkan berapa jumlah ammo untuk %s:", "Set", "Back", ReturnWeaponName(EventData[eventWeapons][0]));
+		Dialog_Show(playerid, editWeaponAmmo1, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Weapon Ammo", "Masukkan berapa jumlah ammo untuk %s:", "Set", "Back", ReturnWeaponName(EventData[eventWeapons][0]));
 	}
 	else DialogTDMShow(playerid);
 	return 1;
@@ -291,7 +291,7 @@ Dialog:editWeaponAmmo1(playerid, response, listitem, inputtext[])
 {
 	if(response) {
 		if(strval(inputtext) < 1 || strval(inputtext) > 1000)
-			return Dialog_Show(playerid, editWeaponAmmo1, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Weapon ID", "Error: Ammo hanya bisa di 1 - 1,000!\n\nMasukkan berapa jumlah ammo untuk %s:", "Set", "Back", EventData[eventWeapons][0]);
+			return Dialog_Show(playerid, editWeaponAmmo1, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Weapon ID", "Error: Ammo hanya bisa di 1 - 1,000!\n\nMasukkan berapa jumlah ammo untuk %s:", "Set", "Back", EventData[eventWeapons][0]);
 
 		EventData[eventAmmo][0] = strval(inputtext);
 		DialogTDMShow(playerid);
@@ -304,10 +304,10 @@ Dialog:TdmWeap2(playerid, response, listitem, inputtext[])
 {
 	if(response) {
 		if(strval(inputtext) <= 0 || strval(inputtext) > 46 || (strval(inputtext) >= 19 && strval(inputtext) <= 21))
-			return Dialog_Show(playerid, TdmWeap2, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Senjata 2", "Error: Invalid ID Weapon For Event!\nMohon masukkan ID Weapon yang ingin digunakan untuk Event:", "Set", "Batal");
+			return Dialog_Show(playerid, TdmWeap2, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Senjata 2", "Error: Invalid ID Weapon For Event!\nMohon masukkan ID Weapon yang ingin digunakan untuk Event:", "Set", "Batal");
 
 		EventData[eventWeapons][1] = strval(inputtext);
-		Dialog_Show(playerid, editWeaponAmmo2, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Weapon Ammo", "Masukkan berapa jumlah ammo untuk %s:", "Set", "Back", ReturnWeaponName(EventData[eventWeapons][1]));
+		Dialog_Show(playerid, editWeaponAmmo2, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Weapon Ammo", "Masukkan berapa jumlah ammo untuk %s:", "Set", "Back", ReturnWeaponName(EventData[eventWeapons][1]));
 	}
 	else DialogTDMShow(playerid);
 	return 1;
@@ -317,7 +317,7 @@ Dialog:editWeaponAmmo2(playerid, response, listitem, inputtext[])
 {
 	if(response) {
 		if(strval(inputtext) < 1 || strval(inputtext) > 1000)
-			return Dialog_Show(playerid, editWeaponAmmo2, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Weapon ID", "Error: Ammo hanya bisa di 1 - 1,000!\n\nMasukkan berapa jumlah ammo untuk %s:", "Set", "Back", EventData[eventWeapons][1]);
+			return Dialog_Show(playerid, editWeaponAmmo2, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Weapon ID", "Error: Ammo hanya bisa di 1 - 1,000!\n\nMasukkan berapa jumlah ammo untuk %s:", "Set", "Back", EventData[eventWeapons][1]);
 
 		EventData[eventAmmo][1] = strval(inputtext);
 		DialogTDMShow(playerid);
@@ -330,10 +330,10 @@ Dialog:TdmWeap3(playerid, response, listitem, inputtext[])
 {
 	if(response) {
 		if(strval(inputtext) <= 0 || strval(inputtext) > 46 || (strval(inputtext) >= 19 && strval(inputtext) <= 21))
-			return Dialog_Show(playerid, TdmWeap3, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Senjata 2", "Error: Invalid ID Weapon For Event!\nMohon masukkan ID Weapon yang ingin digunakan untuk Event:", "Set", "Batal");
+			return Dialog_Show(playerid, TdmWeap3, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Senjata 2", "Error: Invalid ID Weapon For Event!\nMohon masukkan ID Weapon yang ingin digunakan untuk Event:", "Set", "Batal");
 
 		EventData[eventWeapons][2] = strval(inputtext);
-		Dialog_Show(playerid, editWeaponAmmo3, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Weapon Ammo", "Masukkan berapa jumlah ammo untuk %s:", "Set", "Back", ReturnWeaponName(EventData[eventWeapons][2]));
+		Dialog_Show(playerid, editWeaponAmmo3, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Weapon Ammo", "Masukkan berapa jumlah ammo untuk %s:", "Set", "Back", ReturnWeaponName(EventData[eventWeapons][2]));
 	}
 	else DialogTDMShow(playerid);
 	return 1;
@@ -343,7 +343,7 @@ Dialog:editWeaponAmmo3(playerid, response, listitem, inputtext[])
 {
 	if(response) {
 		if(strval(inputtext) < 1 || strval(inputtext) > 1000)
-			return Dialog_Show(playerid, editWeaponAmmo3, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Weapon ID", "Error: Ammo hanya bisa di 1 - 1,000!\n\nMasukkan berapa jumlah ammo untuk %s:", "Set", "Back", EventData[eventWeapons][2]);
+			return Dialog_Show(playerid, editWeaponAmmo3, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Weapon ID", "Error: Ammo hanya bisa di 1 - 1,000!\n\nMasukkan berapa jumlah ammo untuk %s:", "Set", "Back", EventData[eventWeapons][2]);
 
 		EventData[eventAmmo][2] = strval(inputtext);
 		DialogTDMShow(playerid);
@@ -356,7 +356,7 @@ Dialog:TdmPartisiFee(playerid, response, listitem, inputtext[])
 {
 	if(response) {
 		if(strval(inputtext) < 1)
-			return Dialog_Show(playerid, TdmPartisiFee, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Participation Price", "Error: Tidak dapat memasukkan nominal kurang dari $1!\nMohon masukkan berapa jumlah hadiah untuk pengikut event:", "Set", "Batal");
+			return Dialog_Show(playerid, TdmPartisiFee, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Participation Price", "Error: Tidak dapat memasukkan nominal kurang dari $1!\nMohon masukkan berapa jumlah hadiah untuk pengikut event:", "Set", "Batal");
 
 		EventData[eventBonus] = strval(inputtext);
 		DialogTDMShow(playerid);
@@ -369,7 +369,7 @@ Dialog:TdmWinnerFee(playerid, response, listitem, inputtext[])
 {
 	if(response) {
 		if(strval(inputtext) < 1)
-			return Dialog_Show(playerid, TdmWinnerFee, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Winner Price", "Error: Tidak dapat memasukkan nominal kurang dari $1!\nMohon masukkan berapa jumlah hadiah untuk pemenang event:", "Set", "Batal");
+			return Dialog_Show(playerid, TdmWinnerFee, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Winner Price", "Error: Tidak dapat memasukkan nominal kurang dari $1!\nMohon masukkan berapa jumlah hadiah untuk pemenang event:", "Set", "Batal");
 
 		EventData[eventWinnerPrice] = strval(inputtext);
 		DialogTDMShow(playerid);
@@ -386,13 +386,13 @@ Dialog:eventType(playerid, response, listitem, inputtext[])
 		EventData[eventType] = (listitem+1);
 
 		if(EventData[eventType] == TYPE_TDM)
-			DialogTDMShow(playerid), SetPVarInt(playerid, "EventTDM", 1); //Dialog_Show(playerid, eventTarget, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Target Score", "Masukkan berapa target score event:", "Set", "Back");
+			DialogTDMShow(playerid), SetPVarInt(playerid, "EventTDM", 1); //Dialog_Show(playerid, eventTarget, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Target Score", "Masukkan berapa target score event:", "Set", "Back");
 
 		if(EventData[eventType] == TYPE_JETPACK)
-			Dialog_Show(playerid, eventBonus, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Event Bonus", "Masukkan berapa bonus yang akan di berikan:", "Set", "Back");
+			Dialog_Show(playerid, eventBonus, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Event Bonus", "Masukkan berapa bonus yang akan di berikan:", "Set", "Back");
 
 		if(EventData[eventType] == TYPE_DM)
-			Dialog_Show(playerid, eventTarget, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Target Score", "Masukkan berapa target score event:", "Set", "Back");
+			Dialog_Show(playerid, eventTarget, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Target Score", "Masukkan berapa target score event:", "Set", "Back");
 	}
 	return 1;
 }
@@ -402,14 +402,14 @@ Dialog:eventTarget(playerid, response, listitem, inputtext[])
 	if(response) 
 	{
 		if(strval(inputtext) < 1 || strval(inputtext) > 150)
-			return Dialog_Show(playerid, eventTarget, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Target Score", "Target score must be betweed 1 - 150\n\nMasukkan berapa target score event:", "Set", "Back");
+			return Dialog_Show(playerid, eventTarget, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Target Score", "Target score must be betweed 1 - 150\n\nMasukkan berapa target score event:", "Set", "Back");
 
 		EventData[eventTarget] = strval(inputtext);
 
 		if(EventData[eventType] == TYPE_TDM)
-			Dialog_Show(playerid, eventSkin, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Skin Event", "Team 1: %d\nTeam 2: %d\nNext", "Set", "Back", EventData[eventSkin][0], EventData[eventSkin][1]);
+			Dialog_Show(playerid, eventSkin, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Skin Event", "Team 1: %d\nTeam 2: %d\nNext", "Set", "Back", EventData[eventSkin][0], EventData[eventSkin][1]);
 		else if(EventData[eventType] == TYPE_DM)
-			Dialog_Show(playerid, eventHealth, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Event Health", "Masukkan value darah yang akan di berikan:", "Set", "Back");
+			Dialog_Show(playerid, eventHealth, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Event Health", "Masukkan value darah yang akan di berikan:", "Set", "Back");
 
 	}
 	else callcmd::event(playerid, "create");
@@ -421,18 +421,18 @@ Dialog:eventSkin(playerid, response, listitem, inputtext[])
 	if(response) {
 		switch(listitem)
 		{
-			case 0: Dialog_Show(playerid, eventSkin1, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Skin Team 1", "Masukkan id skin:", "Set", "Back");
-			case 1: Dialog_Show(playerid, eventSkin2, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Skin Team 2", "Masukkan id skin:", "Set", "Back");
+			case 0: Dialog_Show(playerid, eventSkin1, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Skin Team 1", "Masukkan id skin:", "Set", "Back");
+			case 1: Dialog_Show(playerid, eventSkin2, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Skin Team 2", "Masukkan id skin:", "Set", "Back");
 			case 2: 
 			{
 				if(!EventData[eventSkin][0] || !EventData[eventSkin][1])
-					return Dialog_Show(playerid, eventSkin, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Skin can't 0", "Team 1: %d\nTeam 2: %d\nNext", "Set", "Back", EventData[eventSkin][0], EventData[eventSkin][1]);
+					return Dialog_Show(playerid, eventSkin, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Skin can't 0", "Team 1: %d\nTeam 2: %d\nNext", "Set", "Back", EventData[eventSkin][0], EventData[eventSkin][1]);
 
-				Dialog_Show(playerid, eventHealth, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Event Health", "Masukkan value darah yang akan di berikan:", "Set", "Back");
+				Dialog_Show(playerid, eventHealth, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Event Health", "Masukkan value darah yang akan di berikan:", "Set", "Back");
 			}
 		}
 	}
-	else Dialog_Show(playerid, eventTarget, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Target Score", "Masukkan berapa target score event:", "Set", "Back");
+	else Dialog_Show(playerid, eventTarget, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Target Score", "Masukkan berapa target score event:", "Set", "Back");
 	return 1;
 }
 
@@ -440,12 +440,12 @@ Dialog:eventSkin1(playerid, response, listitem, inputtext[])
 {
 	if(response) {
 		if(strval(inputtext) < 1 || strval(inputtext) > 311)
-			return Dialog_Show(playerid, eventSkin1, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Skin Team 1", "Id skin tidak sesuai\n\nMasukkan id skin:", "Set", "Back");
+			return Dialog_Show(playerid, eventSkin1, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Skin Team 1", "Id skin tidak sesuai\n\nMasukkan id skin:", "Set", "Back");
 
 		EventData[eventSkin][0] = strval(inputtext);
-		Dialog_Show(playerid, eventSkin, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Skin Event", "Team 1: %d\nTeam 2: %d\nNext", "Set", "Back", EventData[eventSkin][0], EventData[eventSkin][1]);	
+		Dialog_Show(playerid, eventSkin, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Skin Event", "Team 1: %d\nTeam 2: %d\nNext", "Set", "Back", EventData[eventSkin][0], EventData[eventSkin][1]);	
 	}
-	else Dialog_Show(playerid, eventSkin, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Skin Event", "Team 1: %d\nTeam 2: %d\nNext", "Set", "Back", EventData[eventSkin][0], EventData[eventSkin][1]);
+	else Dialog_Show(playerid, eventSkin, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Skin Event", "Team 1: %d\nTeam 2: %d\nNext", "Set", "Back", EventData[eventSkin][0], EventData[eventSkin][1]);
 	return 1;
 }
 
@@ -453,12 +453,12 @@ Dialog:eventSkin2(playerid, response, listitem, inputtext[])
 {
 	if(response) {
 		if(strval(inputtext) < 1 || strval(inputtext) > 311)
-			return Dialog_Show(playerid, eventSkin2, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Skin Team 2", "Id skin tidak sesuai\n\nMasukkan id skin:", "Set", "Back");
+			return Dialog_Show(playerid, eventSkin2, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Skin Team 2", "Id skin tidak sesuai\n\nMasukkan id skin:", "Set", "Back");
 
 		EventData[eventSkin][1] = strval(inputtext);
-		Dialog_Show(playerid, eventSkin, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Skin Event", "Team 1: %d\nTeam 2: %d\nNext", "Set", "Back", EventData[eventSkin][0], EventData[eventSkin][1]);	
+		Dialog_Show(playerid, eventSkin, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Skin Event", "Team 1: %d\nTeam 2: %d\nNext", "Set", "Back", EventData[eventSkin][0], EventData[eventSkin][1]);	
 	}
-	else Dialog_Show(playerid, eventSkin, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Skin Event", "Team 1: %d\nTeam 2: %d\nNext", "Set", "Back", EventData[eventSkin][0], EventData[eventSkin][1]);
+	else Dialog_Show(playerid, eventSkin, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Skin Event", "Team 1: %d\nTeam 2: %d\nNext", "Set", "Back", EventData[eventSkin][0], EventData[eventSkin][1]);
 	return 1;
 }
 
@@ -466,18 +466,18 @@ Dialog:eventHealth(playerid, response, listitem, inputtext[])
 {
 	if(response) {
 		if(strval(inputtext) < 1 || strval(inputtext) > 100)
-			return Dialog_Show(playerid, eventHealth, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Event Health", "Health must between 0 - 100\n\nMasukkan value darah yang akan di berikan:", "Set", "Back");
+			return Dialog_Show(playerid, eventHealth, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Event Health", "Health must between 0 - 100\n\nMasukkan value darah yang akan di berikan:", "Set", "Back");
 
 		EventData[eventHealth] = floatstr(inputtext);
-		Dialog_Show(playerid, eventArmor, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Event Armor", "Masukkan value darah putih:", "Set", "Back");
+		Dialog_Show(playerid, eventArmor, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Event Armor", "Masukkan value darah putih:", "Set", "Back");
 
 	}
 	else 
 	{
 		if(EventData[eventType] == TYPE_TDM)
-			Dialog_Show(playerid, eventSkin, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Skin Event", "Team 1: %d\nTeam 2: %d\nNext", "Set", "Back", EventData[eventSkin][0], EventData[eventSkin][1]);
+			Dialog_Show(playerid, eventSkin, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Skin Event", "Team 1: %d\nTeam 2: %d\nNext", "Set", "Back", EventData[eventSkin][0], EventData[eventSkin][1]);
 		else if(EventData[eventType] == TYPE_DM)
-			Dialog_Show(playerid, eventHealth, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Event Health", "Masukkan value darah yang akan di berikan:", "Set", "Back");
+			Dialog_Show(playerid, eventHealth, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Event Health", "Masukkan value darah yang akan di berikan:", "Set", "Back");
 	}
 	return 1;
 }
@@ -486,12 +486,12 @@ Dialog:eventArmor(playerid, response, listitem, inputtext[])
 {
 	if(response) {
 		if(strval(inputtext) < 1 || strval(inputtext) > 100)
-			return Dialog_Show(playerid, eventArmor, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Event Armor", "Darah putih harus berada di antara 0 - 100\n\nMasukkan value darah putih:", "Set", "Back");
+			return Dialog_Show(playerid, eventArmor, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Event Armor", "Darah putih harus berada di antara 0 - 100\n\nMasukkan value darah putih:", "Set", "Back");
 
 		EventData[eventArmor] = floatstr(inputtext);
-		Dialog_Show(playerid, eventBonus, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Event Bonus", "Masukkan berapa bonus yang akan di berikan:", "Set", "Back");
+		Dialog_Show(playerid, eventBonus, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Event Bonus", "Masukkan berapa bonus yang akan di berikan:", "Set", "Back");
 	}
-	else Dialog_Show(playerid, eventHealth, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Event Health", "Masukkan value darah yang akan di berikan:", "Set", "Back");
+	else Dialog_Show(playerid, eventHealth, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Event Health", "Masukkan value darah yang akan di berikan:", "Set", "Back");
 	return 1;
 }
 
@@ -499,13 +499,13 @@ Dialog:eventBonus(playerid, response, listitem, inputtext[])
 {
 	if(response) {
 		if(strval(inputtext) < 1 || strval(inputtext) > 1000)
-			return Dialog_Show(playerid, eventBonus, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Event Bonus", "Value bonus harus di antara 0 - 1,000\n\nMasukkan berapa bonus yang akan di berikan:", "Set", "Back");
+			return Dialog_Show(playerid, eventBonus, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Event Bonus", "Value bonus harus di antara 0 - 1,000\n\nMasukkan berapa bonus yang akan di berikan:", "Set", "Back");
 
 		EventData[eventBonus] = strval(inputtext);
 
 		if(EventData[eventType] == TYPE_TDM)
 		{
-			Dialog_Show(playerid, eventFinal, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Event Information", "Score Target\t"YELLOW"%d"WHITE"\nSkin Team 1\t"YELLOW"%d"WHITE"\nSkin Team 2\t"YELLOW"%d"WHITE"\nHealth Spawn\t"YELLOW"%.1f"WHITE"\nArmor Spawn\t"YELLOW"%.1f\n"WHITE"Event Bonus\t"GREEN"%s", "Start", "Back", 
+			Dialog_Show(playerid, eventFinal, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Event Information", "Score Target\t"YELLOW"%d"WHITE"\nSkin Team 1\t"YELLOW"%d"WHITE"\nSkin Team 2\t"YELLOW"%d"WHITE"\nHealth Spawn\t"YELLOW"%.1f"WHITE"\nArmor Spawn\t"YELLOW"%.1f\n"WHITE"Event Bonus\t"GREEN"%s", "Start", "Back", 
 				EventData[eventTarget],
 				EventData[eventSkin][0],
 				EventData[eventSkin][1],
@@ -516,11 +516,11 @@ Dialog:eventBonus(playerid, response, listitem, inputtext[])
 		}
 
 		if(EventData[eventType] == TYPE_JETPACK)
-			Dialog_Show(playerid, jetpackLoc, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Jetpack Location", "Los Santos\nSan Fierro\nLas Venturas", "Select", "Back");
+			Dialog_Show(playerid, jetpackLoc, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Jetpack Location", "Los Santos\nSan Fierro\nLas Venturas", "Select", "Back");
 
 		if(EventData[eventType] == TYPE_DM)
 		{
-			Dialog_Show(playerid, eventFinal, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Event Information", "Score Target\t"YELLOW"%d"WHITE"\nHealth Spawn\t"YELLOW"%.1f"WHITE"\nArmor Spawn\t"YELLOW"%.1f\n"WHITE"Event Bonus\t"GREEN"%s", "Start", "Back", 
+			Dialog_Show(playerid, eventFinal, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Event Information", "Score Target\t"YELLOW"%d"WHITE"\nHealth Spawn\t"YELLOW"%.1f"WHITE"\nArmor Spawn\t"YELLOW"%.1f\n"WHITE"Event Bonus\t"GREEN"%s", "Start", "Back", 
 				EventData[eventTarget],
 				EventData[eventHealth],
 				EventData[eventArmor],
@@ -531,10 +531,10 @@ Dialog:eventBonus(playerid, response, listitem, inputtext[])
 	else 
 	{
 		if(EventData[eventType] == TYPE_TDM) 
-			Dialog_Show(playerid, eventHealth, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Event Health", "Masukkan value darah yang akan di berikan:", "Set", "Back");
+			Dialog_Show(playerid, eventHealth, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Event Health", "Masukkan value darah yang akan di berikan:", "Set", "Back");
 		else if(EventData[eventType] == TYPE_DM)
-			Dialog_Show(playerid, eventHealth, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Event Health", "Masukkan value darah yang akan di berikan:", "Set", "Back");
-		else Dialog_Show(playerid, eventType, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Event Type", "Team DeathMatch\n"GRAY"Jetpack Race\nDeathMatch", "Select", "Close");
+			Dialog_Show(playerid, eventHealth, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Event Health", "Masukkan value darah yang akan di berikan:", "Set", "Back");
+		else Dialog_Show(playerid, eventType, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Event Type", "Team DeathMatch\n"GRAY"Jetpack Race\nDeathMatch", "Select", "Close");
 	}
 	return 1;
 }
@@ -567,12 +567,12 @@ Dialog:jetpackLoc(playerid, response, listitem, inputtext[])
 			case 3: loc = "Las Venturas";
 		}
 
-		Dialog_Show(playerid, eventFinal, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Event Information", "Event Type\t"YELLOW"Jetpack"WHITE"\nEvent Location\t"YELLOW"%s"WHITE"\nEvent Bonus\t"GREEN"%s", "Start", "Back", 
+		Dialog_Show(playerid, eventFinal, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Event Information", "Event Type\t"YELLOW"Jetpack"WHITE"\nEvent Location\t"YELLOW"%s"WHITE"\nEvent Bonus\t"GREEN"%s", "Start", "Back", 
 			loc,
 			FormatMoney(EventData[eventBonus])
 		);
 	}
-	else Dialog_Show(playerid, eventBonus, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Event Bonus", ""GREEN"Pada event jetpack, bonus hanya untuk partisipasi, bonus pemenang di beri admin secara manual\n\n"WHITE"Masukkan berapa bonus yang akan di berikan:", "Set", "Back");
+	else Dialog_Show(playerid, eventBonus, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Event Bonus", ""GREEN"Pada event jetpack, bonus hanya untuk partisipasi, bonus pemenang di beri admin secara manual\n\n"WHITE"Masukkan berapa bonus yang akan di berikan:", "Set", "Back");
 	return 1;
 }
 
@@ -585,6 +585,6 @@ Dialog:eventFinal(playerid, response, listitem, inputtext[])
 
 		Info(playerid, "You've create the event, /event open to open the event.");
 	}
-	else Dialog_Show(playerid, eventBonus, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Event Bonus", "Masukkan berapa bonus yang akan di berikan:", "Set", "Back");
+	else Dialog_Show(playerid, eventBonus, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Event Bonus", "Masukkan berapa bonus yang akan di berikan:", "Set", "Back");
 	return 1;
 }

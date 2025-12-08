@@ -71,7 +71,7 @@ hook OnPlayerStateChange(playerid, newstate, oldstate)
             if(!AccountData[playerid][pTrashmasterDelay])
             {
                 SetCameraBehindPlayer(playerid);
-                ShowPlayerDialog(playerid, DIALOG_TRASHMASTER_START, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Trashmaster Sidejob",
+                ShowPlayerDialog(playerid, DIALOG_TRASHMASTER_START, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Trashmaster Sidejob",
                 ""WHITE"Pekerjaan ini bertujuan untuk mengambil sampah di setiap garbage.\nAnda bisa temukan sampah sampah yang ada di setiap kota "WHITE"ini. Ikuti petunjuk "RED"radar "WHITE"yang di sediakan.\n Itu merupahan lokasi yang harus anda tuju.\n\
                     \n\n"RED"WARNING: "WHITE"Turun dari kendaraan untuk mengambil sampah dan menaruhnya ke kendaraan.", "Iya", "Tidak");
             }

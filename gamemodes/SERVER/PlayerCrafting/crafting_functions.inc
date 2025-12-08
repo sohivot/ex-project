@@ -1474,7 +1474,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
                 if(AccountData[playerid][pFamilyRank] < 5) return ShowTDN(playerid, NOTIFICATION_ERROR, "Minimal rank Wakil Ketua untuk Mengambil Barang!");
                 if(AccountData[playerid][ActivityTime] != 0) return ShowTDN(playerid, NOTIFICATION_WARNING, "Anda sedang melakukan sesuatu, harap tunggu!");
 
-                ShowPlayerDialog(playerid, DIALOG_CRAFTING, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Crafting", 
+                ShowPlayerDialog(playerid, DIALOG_CRAFTING, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Crafting", 
                 "Kevlar\
                 \n"GRAY"Colt 45\
                 \nDesert Eagle\
@@ -1499,10 +1499,10 @@ Dialog:DIALOG_CRAFTPASS(playerid, response, listitem, inputtext[])
     if(AccountData[playerid][ActivityTime] != 0) return ShowTDN(playerid, NOTIFICATION_WARNING, "Anda sedang melakukan sesuatu, harap tunggu!");
     if(IsPlayerInjured(playerid)) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda sedang pingsan!, tidak dapat crafting!");
 
-    if(isnull(inputtext)) return Dialog_Show(playerid, DIALOG_CRAFTPASS, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Crafting Password",
+    if(isnull(inputtext)) return Dialog_Show(playerid, DIALOG_CRAFTPASS, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Crafting Password",
     "Error: Tidak dapat diisi kosong!\nMohon masukkan kata kunci / sandi jika ingin Crafting senjata tersebut dengan benar:", "Input", "Batal");
 
-    if(IsNumeric(inputtext)) if(isnull(inputtext)) return Dialog_Show(playerid, DIALOG_CRAFTPASS, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Crafting Password",
+    if(IsNumeric(inputtext)) if(isnull(inputtext)) return Dialog_Show(playerid, DIALOG_CRAFTPASS, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Crafting Password",
     "Error: Tidak dapat diisi angka!\nMohon masukkan kata kunci / sandi jika ingin Crafting senjata tersebut dengan benar:", "Input", "Batal");
     
     new jskc[600];
@@ -1519,7 +1519,7 @@ Dialog:DIALOG_CRAFTPASS(playerid, response, listitem, inputtext[])
                 \n"WHITE"Pakaian: "ORANGE"%d/100\
                 \n\n"YELLOW"( Apakah anda yakin ingin membuat barang tersebut ? )", Inventory_Count(playerid, "Material"), Inventory_Count(playerid, "Besi"),
                 Inventory_Count(playerid, "Kayu Kemas"), Inventory_Count(playerid, "Pakaian"));
-                ShowPlayerDialog(playerid, DIALOG_CRAFTINGCONF, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Crafting", jskc, "Iya", "Tidak");
+                ShowPlayerDialog(playerid, DIALOG_CRAFTINGCONF, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Crafting", jskc, "Iya", "Tidak");
             }
             case 1:// Colt
             {
@@ -1530,7 +1530,7 @@ Dialog:DIALOG_CRAFTPASS(playerid, response, listitem, inputtext[])
                 \n"WHITE"Kayu Kemas: "ORANGE"%d/8\
                 \n\n"YELLOW"( Apakah anda yakin ingin membuat barang tersebut ?)", Inventory_Count(playerid, "Material"), Inventory_Count(playerid, "Tembaga"),
                 Inventory_Count(playerid, "Baja"), Inventory_Count(playerid, "Kayu Kemas"));
-                ShowPlayerDialog(playerid, DIALOG_CRAFTINGCONF, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Crafting", jskc, "Iya", "Tidak");
+                ShowPlayerDialog(playerid, DIALOG_CRAFTINGCONF, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Crafting", jskc, "Iya", "Tidak");
             }
             case 2:// Desert Eagle
             {
@@ -1541,7 +1541,7 @@ Dialog:DIALOG_CRAFTPASS(playerid, response, listitem, inputtext[])
                 \n"WHITE"Kayu Kemas: "ORANGE"%d/20\
                 \n\n"YELLOW"( Apakah anda yakin ingin membuat barang tersebut ? )", Inventory_Count(playerid, "Material"), Inventory_Count(playerid, "Baja"),
                 Inventory_Count(playerid, "Kaca"), Inventory_Count(playerid, "Kayu Kemas"));
-                ShowPlayerDialog(playerid, DIALOG_CRAFTINGCONF, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Crafting", jskc, "Iya", "Tidak");
+                ShowPlayerDialog(playerid, DIALOG_CRAFTINGCONF, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Crafting", jskc, "Iya", "Tidak");
             }            
             case 3: // Shotgun
             {
@@ -1557,7 +1557,7 @@ Dialog:DIALOG_CRAFTPASS(playerid, response, listitem, inputtext[])
                 \n\n"YELLOW"( Apakah anda yakin ingin membuat barang tersebut ? )", Inventory_Count(playerid, "Material"), Inventory_Count(playerid, "Besi"),
                 Inventory_Count(playerid, "Tembaga"), Inventory_Count(playerid, "Berlian"), Inventory_Count(playerid, "Baja"), Inventory_Count(playerid, "Alumunium"), Inventory_Count(playerid, "Kaca"), 
                 Inventory_Count(playerid, "Kayu Kemas"));
-                ShowPlayerDialog(playerid, DIALOG_CRAFTINGCONF, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Crafting", jskc, "Iya", "Tidak");
+                ShowPlayerDialog(playerid, DIALOG_CRAFTINGCONF, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Crafting", jskc, "Iya", "Tidak");
             }
             case 4: // MP5
             {
@@ -1568,7 +1568,7 @@ Dialog:DIALOG_CRAFTPASS(playerid, response, listitem, inputtext[])
                 \n"WHITE"Alumunium: "ORANGE"%d/75\
                 \n\n"YELLOW"( Apakah anda yakin ingin membuat barang tersebut ?)", Inventory_Count(playerid, "Material"), Inventory_Count(playerid, "Kayu Kemas"), 
                 Inventory_Count(playerid, "Baja"), Inventory_Count(playerid, "Alumunium"));
-                ShowPlayerDialog(playerid, DIALOG_CRAFTINGCONF, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Crafting", jskc, "Iya", "Tidak");
+                ShowPlayerDialog(playerid, DIALOG_CRAFTINGCONF, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Crafting", jskc, "Iya", "Tidak");
             }
             case 5: // AK
             {
@@ -1578,7 +1578,7 @@ Dialog:DIALOG_CRAFTPASS(playerid, response, listitem, inputtext[])
                 \n"WHITE"Baja: "ORANGE"%d/150\
                 \n\n"YELLOW"( Apakah anda yakin ingin membuat barang tersebut ?)", Inventory_Count(playerid, "Material"), Inventory_Count(playerid, "Kayu Kemas"), 
                 Inventory_Count(playerid, "Baja"));
-                ShowPlayerDialog(playerid, DIALOG_CRAFTINGCONF, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Crafting", jskc, "Iya", "Tidak");
+                ShowPlayerDialog(playerid, DIALOG_CRAFTINGCONF, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Crafting", jskc, "Iya", "Tidak");
             }
             case 6: // TEC
             {
@@ -1593,7 +1593,7 @@ Dialog:DIALOG_CRAFTPASS(playerid, response, listitem, inputtext[])
                 \n\n"YELLOW"( Apakah anda yakin ingin membuat barang tersebut ?)",
                 Inventory_Count(playerid, "Material"), Inventory_Count(playerid, "Besi"), Inventory_Count(playerid, "Baja"), Inventory_Count(playerid, "Alumunium"), Inventory_Count(playerid, "Tembaga"),
                 Inventory_Count(playerid, "Emas"), Inventory_Count(playerid, "Berlian"));
-                ShowPlayerDialog(playerid, DIALOG_CRAFTINGCONF, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Crafting", jskc, "Iya", "Tidak");
+                ShowPlayerDialog(playerid, DIALOG_CRAFTINGCONF, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Crafting", jskc, "Iya", "Tidak");
             }
             case 7: // clippistol
             {
@@ -1606,7 +1606,7 @@ Dialog:DIALOG_CRAFTPASS(playerid, response, listitem, inputtext[])
                 \n"WHITE"Kayu Kemas: "ORANGE"%d/50\
                 \n\n"YELLOW"( Apakah anda yakin ingin membuat barang tersebut ? )", Inventory_Count(playerid, "Material"), Inventory_Count(playerid, "Besi"),
                 Inventory_Count(playerid, "Tembaga"), Inventory_Count(playerid, "Baja"), Inventory_Count(playerid, "Alumunium"), Inventory_Count(playerid, "Kayu Kemas"));
-                ShowPlayerDialog(playerid, DIALOG_CRAFTINGCONF, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Crafting", jskc, "Iya", "Tidak");
+                ShowPlayerDialog(playerid, DIALOG_CRAFTINGCONF, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Crafting", jskc, "Iya", "Tidak");
             }
             case 8: // clipsg
             {
@@ -1619,7 +1619,7 @@ Dialog:DIALOG_CRAFTPASS(playerid, response, listitem, inputtext[])
                 \n"WHITE"Kayu Kemas: "ORANGE"%d/35\
                 \n\n"YELLOW"( Apakah anda yakin ingin membuat barang tersebut ? )", Inventory_Count(playerid, "Material"), Inventory_Count(playerid, "Besi"),
                 Inventory_Count(playerid, "Tembaga"), Inventory_Count(playerid, "Baja"), Inventory_Count(playerid, "Alumunium"), Inventory_Count(playerid, "Kayu Kemas"));
-                ShowPlayerDialog(playerid, DIALOG_CRAFTINGCONF, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Crafting", jskc, "Iya", "Tidak");
+                ShowPlayerDialog(playerid, DIALOG_CRAFTINGCONF, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Crafting", jskc, "Iya", "Tidak");
             }
         }
     }
@@ -1647,47 +1647,47 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             {
                 case 0:// Kevlar
                 {
-                    Dialog_Show(playerid, DIALOG_CRAFTPASS, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Crafting Password",
+                    Dialog_Show(playerid, DIALOG_CRAFTPASS, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Crafting Password",
                     "Mohon masukkan kata kunci / sandi jika ingin Crafting senjata tersebut dengan benar:", "Input", "Batal");
                 }
                 case 1:// Colt
                 {
-                    Dialog_Show(playerid, DIALOG_CRAFTPASS, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Crafting Password",
+                    Dialog_Show(playerid, DIALOG_CRAFTPASS, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Crafting Password",
                     "Mohon masukkan kata kunci / sandi jika ingin Crafting senjata tersebut dengan benar:", "Input", "Batal");
                 }
                 case 2:// Desert Eagle
                 {
-                    Dialog_Show(playerid, DIALOG_CRAFTPASS, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Crafting Password",
+                    Dialog_Show(playerid, DIALOG_CRAFTPASS, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Crafting Password",
                     "Mohon masukkan kata kunci / sandi jika ingin Crafting senjata tersebut dengan benar:", "Input", "Batal");
                 }
                 case 3:// Shotgun
                 {
-                    Dialog_Show(playerid, DIALOG_CRAFTPASS, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Crafting Password",
+                    Dialog_Show(playerid, DIALOG_CRAFTPASS, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Crafting Password",
                     "Mohon masukkan kata kunci / sandi jika ingin Crafting senjata tersebut dengan benar:", "Input", "Batal");
                 }
                 case 4:// MP5
                 {
-                    Dialog_Show(playerid, DIALOG_CRAFTPASS, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Crafting Password",
+                    Dialog_Show(playerid, DIALOG_CRAFTPASS, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Crafting Password",
                     "Mohon masukkan kata kunci / sandi jika ingin Crafting senjata tersebut dengan benar:", "Input", "Batal");
                 }
                 case 5:// AK47
                 {
-                    Dialog_Show(playerid, DIALOG_CRAFTPASS, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Crafting Password",
+                    Dialog_Show(playerid, DIALOG_CRAFTPASS, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Crafting Password",
                     "Mohon masukkan kata kunci / sandi jika ingin Crafting senjata tersebut dengan benar:", "Input", "Batal");
                 }
                 case 6:// TEC-9
                 {
-                    Dialog_Show(playerid, DIALOG_CRAFTPASS, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Crafting Password",
+                    Dialog_Show(playerid, DIALOG_CRAFTPASS, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Crafting Password",
                     "Mohon masukkan kata kunci / sandi jika ingin Crafting senjata tersebut dengan benar:", "Input", "Batal");
                 }
                 case 7:// clippidtol
                 {
-                    Dialog_Show(playerid, DIALOG_CRAFTPASS, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Crafting Password",
+                    Dialog_Show(playerid, DIALOG_CRAFTPASS, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Crafting Password",
                     "Mohon masukkan kata kunci / sandi jika ingin Crafting Clip Pistol tersebut dengan benar:", "Input", "Batal");
                 }
                 case 8:// clippidtol
                 {
-                    Dialog_Show(playerid, DIALOG_CRAFTPASS, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Crafting Password",
+                    Dialog_Show(playerid, DIALOG_CRAFTPASS, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Crafting Password",
                     "Mohon masukkan kata kunci / sandi jika ingin Crafting Clip Shotgun tersebut dengan benar:", "Input", "Batal");
                 }
             }

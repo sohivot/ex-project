@@ -66,13 +66,13 @@ NearPlayerOpenStorage(playerid)
 stock const FactName[8][] = 
 {
 	"Warga",
-	"Kepolisian Mayoritas",
-	"Pemerintah Mayoritas",
-	"EMS Kota Mayoritas",
-	"Transportasi Mayoritas",
-	"Bengkel Mayoritas",
-	"Pedagang Mayoritas",
-	"Tentara Mayoritas"
+	"Kepolisian Imajinasi",
+	"Pemerintah Imajinasi",
+	"EMS Kota Imajinasi",
+	"Transportasi Imajinasi",
+	"Bengkel Imajinasi",
+	"Pedagang Imajinasi",
+	"Tentara Imajinasi"
 };
 
 stock const FamsRankName[7][] = 
@@ -2417,7 +2417,7 @@ Player_Stats(playerid, targetid)
 	}
 
 	new title[255], shstr[2125];
-	format(title, sizeof(title), ""Mayoritas"Mayoritas Roleplay "WHITE"- %s(%d) - (%s)", AccountData[targetid][pName], targetid, AccountData[targetid][pUCP]);
+	format(title, sizeof(title), ""Imajinasi"Imajinasi Roleplay "WHITE"- %s(%d) - (%s)", AccountData[targetid][pName], targetid, AccountData[targetid][pUCP]);
 	format(shstr, sizeof(shstr), "Kategori\t\t-	Detail\n");
 	format(shstr, sizeof(shstr), "%sCharacter UID\t\t:	%d\n", shstr, AccountData[targetid][pID]);
 	format(shstr, sizeof(shstr), "%s"GRAY"Nama UCP\t\t:	"GRAY"%s\n", shstr, AccountData[targetid][pUCP]);
@@ -2535,7 +2535,7 @@ DisplayLicensi(playerid, p2)
 	} else format(huntlictime, sizeof(huntlictime), ""YELLOW"%s", RemainingTimelapse(AccountData[p2][pHuntingLicTime]));
 
 	static jskc[1057];
-	format(jskc, sizeof(jskc), ""WHITE"Pemerintah Kota Mayoritas merilis kepemilikan lisensi dari "YELLOW"%s\n\
+	format(jskc, sizeof(jskc), ""WHITE"Pemerintah Kota Imajinasi merilis kepemilikan lisensi dari "YELLOW"%s\n\
 	\n"GREEN"-[Lisensi Mengemudi]-\
 	\n"WHITE"Surat Izin Mengemudi (SIM) A: %s "WHITE"Berlaku s/d: %s\
 	\n"WHITE"Surat Izin Mengemudi (SIM) B: %s "WHITE"Berlaku s/d: %s\
@@ -2555,7 +2555,7 @@ DisplayLicensi(playerid, p2)
 	gunlictime,
 	huntinglic,
 	huntlictime);
-	Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Lisensi", jskc, "Tutup", "");
+	Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Lisensi", jskc, "Tutup", "");
 }
 
 DisplayBPJS(playerid, p2)
@@ -2563,18 +2563,18 @@ DisplayBPJS(playerid, p2)
 	static jskc[812];
 	if(AccountData[p2][pBPJS] == 1)
 	{
-		format(jskc, sizeof(jskc), ""WHITE"========== KARTU Mayoritas SEHAT ==========\
+		format(jskc, sizeof(jskc), ""WHITE"========== KARTU Imajinasi SEHAT ==========\
 		\nNama: %s\
 		\nJenis Kelamin: %s\
 		\nTanggal Lahir: %s\
 		\nFaskes: "ORANGE"%s\n\
 		\n"WHITE"Masa Berlaku s/d: "LIGHTGREEN"%s\n\
 		\n"LIGHTGREEN"-%s-\
-		\n"WHITE"Mitra RSU Mayoritas\
+		\n"WHITE"Mitra RSU Imajinasi\
 		", AccountData[p2][pName], (AccountData[p2][pGender] == 2) ? ("Perempuan") : ("Laki-Laki"), AccountData[p2][pAge], AccountData[p2][pBPJSLevel], ReturnDate(AccountData[p2][pBPJSTime]),
 		AccountData[p2][pName]);
 	}
-	Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kartu Mayoritas Sehat", jskc, "Tutup", "");
+	Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kartu Imajinasi Sehat", jskc, "Tutup", "");
 	return 1;
 }
 
@@ -2588,10 +2588,10 @@ DisplaySKWB(playerid, nearplayer)
 	\n"WHITE"Tempat, Tgl Lahir: "YELLOW"%s, %s\
 	\n"WHITE"Nomor Telepon: "YELLOW"%s\
 	\n"WHITE"============================================\
-	\nDemikian surat resmi tanda bahwa yang bersangkutan adalah Warga Baru di Kota "PINK1"Mayoritas"WHITE".\n\
+	\nDemikian surat resmi tanda bahwa yang bersangkutan adalah Warga Baru di Kota "PINK1"Imajinasi"WHITE".\n\
 	\nMasa Aktif Berlaku Sampai: "DARKORANGE"%s",
 	ReturnName(playerid), (AccountData[playerid][pGender] == 1) ? "Laki-Laki" : "Perempuan", AccountData[playerid][pOrigin], AccountData[playerid][pAge], AccountData[playerid][pPhone], RemainingTimelapse(AccountData[playerid][pSKWBTime]));
-	ShowPlayerDialog(nearplayer, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- SKWB", shstr, "Tutup", "");
+	ShowPlayerDialog(nearplayer, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- SKWB", shstr, "Tutup", "");
 	return 1;
 }
 
@@ -2611,13 +2611,13 @@ DisplaySKCK(playerid, p2)
 		\n"WHITE"Keterangan:\
 		\n"ORANGE"%s\n\
 		\n"WHITE"Masa Aktif Berlaku s/d: "LIGHTGREEN"%s\n\
-		\n"WHITE"Demikian surat resmi dari Kepolisian Kota Mayoritas agar dapat digunakan sebagaimana mestinya.\n\
+		\n"WHITE"Demikian surat resmi dari Kepolisian Kota Imajinasi agar dapat digunakan sebagaimana mestinya.\n\
 		\n"LIGHTGREEN"-%s-\
-		\n"WHITE"- Kepolisian Kota Mayoritas\
+		\n"WHITE"- Kepolisian Kota Imajinasi\
 		", AccountData[p2][pSKCKNamePol], AccountData[p2][pSKCKRankPol], AccountData[p2][pName], (AccountData[p2][pGender] == 2) ? ("Perempuan") : ("Laki-Laki"), AccountData[p2][pAge], 
 		AccountData[p2][pSKCKReason], ReturnDate(AccountData[p2][pSKCKTime]), AccountData[p2][pName]);
 	}
-	Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Surat Keterangan Catatan Kepolisian", jskc, "Tutup", "");
+	Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Surat Keterangan Catatan Kepolisian", jskc, "Tutup", "");
 	return 1;
 }
 
@@ -2643,7 +2643,7 @@ DisplaySKS(playerid, p2)
 		", AccountData[p2][pSKSNameDoc], AccountData[p2][pSKSRankDoc], AccountData[p2][pName], (AccountData[p2][pGender] == 2) ? ("Perempuan") : ("Laki-Laki"), AccountData[p2][pAge],
 		AccountData[p2][pSKSReason], ReturnDate(AccountData[p2][pSKSTime]), AccountData[p2][pName]);
 	}
-	Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Surat Keterangan Sehat", dannn, "Tutup", "");
+	Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Surat Keterangan Sehat", dannn, "Tutup", "");
 	return 1;
 }
 
@@ -2665,7 +2665,7 @@ GetBoneStatus(playerid, p2)
 	format(string, sizeof string, "%s "GRAY"Kaki Kiri\t%d.0%%\n", string, hkka);
 	format(string, sizeof string, "%s Lapar\t%d%%\n", string, AccountData[p2][pHunger]);
 	format(string, sizeof string, "%s "GRAY"Haus\t%d%%\n", string, AccountData[p2][pThirst]);
-	ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay"WHITE" - Kesehatan", string, "Tutup", "");
+	ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay"WHITE" - Kesehatan", string, "Tutup", "");
     return 1;
 }
 
@@ -3540,7 +3540,7 @@ TerminateConnection(playerid)
 	{
 		if(AccountData[i][pAdmin] > 0 || AccountData[i][pTheStars] > 0)
 		{
-			SendClientMessageEx(i, X11_LIGHTGREY, "[Admin Disconnect] *Admin %s[%d] telah meninggalkan kota Mayoritas Roleplay", AccountData[playerid][pAdminname], playerid);
+			SendClientMessageEx(i, X11_LIGHTGREY, "[Admin Disconnect] *Admin %s[%d] telah meninggalkan kota Imajinasi Roleplay", AccountData[playerid][pAdminname], playerid);
 		}
 	}
 
@@ -4059,7 +4059,7 @@ Player_Item(playerid, targetid)
 			format(shstr, sizeof(shstr), "%s%s\t%d\n", shstr, itemname, InventoryData[targetid][i][invQuantity]);
 		}
 		new title[100];
-		format(title, sizeof(title), ""Mayoritas"Mayoritas Roleplay "WHITE"- %s(%d)", ReturnName(targetid), targetid);
+		format(title, sizeof(title), ""Imajinasi"Imajinasi Roleplay "WHITE"- %s(%d)", ReturnName(targetid), targetid);
 		ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, title, shstr, "Tutup", "");
 	}
 	return 1;
@@ -4675,7 +4675,7 @@ ShowGlobalMessage(playerid, string[], time = 6000)
 		}
 	}
 	TextDrawSetString(gServerMessage[4], string);
-	TextDrawSetString(gServerMessage[5], sprintf("Message By: Mayoritas - %s", AccountData[playerid][pAdminname]));
+	TextDrawSetString(gServerMessage[5], sprintf("Message By: Imajinasi - %s", AccountData[playerid][pAdminname]));
 	for(new i = 0; i < 7; i ++)
 	{
 		TextDrawShowForAll(gServerMessage[i]);
@@ -4710,7 +4710,7 @@ ShowPlayerWarning(playerid, adminid, string[], time = 6000, sound = 0)
 		}
 	}
 	TextDrawSetString(MRP_Warning[8], string);
-	TextDrawSetString(MRP_Warning[9], sprintf("Warning by: Mayoritas - %s", AccountData[adminid][pAdminname]));
+	TextDrawSetString(MRP_Warning[9], sprintf("Warning by: Imajinasi - %s", AccountData[adminid][pAdminname]));
 	for(new i = 0; i < 10; i++) 
 	{
 		TextDrawShowForPlayer(playerid, MRP_Warning[i]);

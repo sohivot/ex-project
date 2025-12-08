@@ -223,7 +223,7 @@ RemainingRusunTimes(playerid)
     static rsid = -1;
     if((rsid = Rusun_Nearest(playerid)) != -1)
     {
-        ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- %s", RusunsData[rsid][rName]),
+        ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- %s", RusunsData[rsid][rName]),
         shstr, "Tutup", "");
     }
     return 1;

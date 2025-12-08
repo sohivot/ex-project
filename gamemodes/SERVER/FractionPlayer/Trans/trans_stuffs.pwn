@@ -73,14 +73,14 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             GetPlayerPos(playerid, x, y, z);
             if(isnull(inputtext))
             {
-                ShowPlayerDialog(playerid, DIALOG_TRANSORDER, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Pesan Transportasi",
+                ShowPlayerDialog(playerid, DIALOG_TRANSORDER, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Pesan Transportasi",
                 "Error: Tidak dapat diisi kosong!\nHai, kamu mau diantar kemana hari ini?", "Input", "Batal");
                 return 1;
             }
 
             if(IsNumeric(inputtext))
             {
-                ShowPlayerDialog(playerid, DIALOG_TRANSORDER, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Pesan Transportasi",
+                ShowPlayerDialog(playerid, DIALOG_TRANSORDER, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Pesan Transportasi",
                 "Error: Tidak dapat diisi angka!\nHai, kamu mau diantar kemana hari ini?", "Input", "Batal");
                 return 1;
             }
@@ -103,7 +103,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
 CMD:taxiduty(playerid, params[])
 {
-    if(AccountData[playerid][pFaction] != FACTION_TRANS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan bagian dari Transportasi Mayoritas!");
+    if(AccountData[playerid][pFaction] != FACTION_TRANS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan bagian dari Transportasi Imajinasi!");
     if(!AccountData[playerid][pDutyTrans]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda harus duty Trans terlebih dahulu!");
     if(!IsPlayerInAnyVehicle(playerid) || GetPlayerState(playerid) != PLAYER_STATE_DRIVER) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda harus mengemudikan kendaraan menggunakan ini!");
 

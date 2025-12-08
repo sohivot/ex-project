@@ -79,7 +79,7 @@ ShowFamiliesWeapon(playerid, famid)
         else 
             format(shstr, sizeof(shstr), "%s"ORANGE"%d\t"ORANGE"%s\t"ORANGE"%d\n", shstr, i, ReturnWeaponName(FamData[famid][famWeapon][i]), FamData[famid][famAmmo][i]);
     }
-    ShowPlayerDialog(playerid, DIALOG_FAMS_WEAPON, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Weapon Chest", shstr, "Pilih", "Batal");
+    ShowPlayerDialog(playerid, DIALOG_FAMS_WEAPON, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Weapon Chest", shstr, "Pilih", "Batal");
     return 1;
 }
 
@@ -246,7 +246,7 @@ stock Families_GedelahFiture(playerid, targetid)
         }
     }
     if(!count2) return ShowTDN(playerid, NOTIFICATION_ERROR, "Pemain tersebut tidak memiliki Barang apapun!");
-    Dialog_Show(playerid, FamiliesGeledah, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Geledah", str, "Select", "Close");
+    Dialog_Show(playerid, FamiliesGeledah, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Geledah", str, "Select", "Close");
     return 1;
 }
 
@@ -794,10 +794,10 @@ CMD:families(playerid, params[])
 
             format(list, sizeof(list), "%s{FFFFFF}%d\t{FFFFFF}%s "GREEN"[%s] {FFFFFF}- "YELLOW"%s\t{FFFFFF}%d\t{FFFFFF}%s\n", list, id, famname, GetFamTypeName(type), tier ? "Verified" : "Official",famonline, famleader);
         }
-        ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay"WHITE" - Fam List", list, "Tutup", "");
+        ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay"WHITE" - Fam List", list, "Tutup", "");
     }
     else 
-        ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Official Family", "Tidak ada Families Official Kota untuk saat ini.", "Tutup", "");
+        ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Official Family", "Tidak ada Families Official Kota untuk saat ini.", "Tutup", "");
     
     cache_delete(execute);
     return 1;
@@ -918,7 +918,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
                 } else format(list, sizeof(list), "%s%d\t%s\t%s\n", list, itt+1, GetVehicleModelName(PlayerVehicle[vehid][pVehModelID]), PlayerVehicle[vehid][pVehPlate]);
             }
             AccountData[playerid][pPark] = gid;
-            ShowPlayerDialog(playerid, DIALOG_FAMGARAGE_OUT, DIALOG_STYLE_TABLIST_HEADERS, sprintf(""Mayoritas"Mayoritas Roleplay"WHITE" - Garasi %s", FamData[gid][famName]), list, "Pilih", "Batal");
+            ShowPlayerDialog(playerid, DIALOG_FAMGARAGE_OUT, DIALOG_STYLE_TABLIST_HEADERS, sprintf(""Imajinasi"Imajinasi Roleplay"WHITE" - Garasi %s", FamData[gid][famName]), list, "Pilih", "Batal");
             HideShortKey(playerid);
         }
 
@@ -950,7 +950,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
             if(AccountData[playerid][pFamily] == -1) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda tidak bergabung dengan families manapun!");
             if(AccountData[playerid][pFamilyRank] < 5) return ShowTDN(playerid, NOTIFICATION_ERROR, "Minimal rank Wakil Ketua untuk Mengambil Barang!");
             if(AccountData[playerid][pLevel] < 5) return ShowTDN(playerid, NOTIFICATION_ERROR, "Level anda masih terlalu rendah untuk dapat mengakses BlackMarket! (Min: 15)");
-            ShowPlayerDialog(playerid, DIALOG_BLACKMARKET, DIALOG_STYLE_TABLIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- BlackMarket Store",
+            ShowPlayerDialog(playerid, DIALOG_BLACKMARKET, DIALOG_STYLE_TABLIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- BlackMarket Store",
             "Desert Eagle\t"RED"$14,250\
             \n"GRAY"Shotgun\t"RED"$18,250\
             \nTec 9\t"RED"$22,500\
@@ -979,7 +979,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
                 {
                     if(AccountData[playerid][pFamilyRank] >= 4)
                     {
-                        Dialog_Show(playerid, Bosdesk_Family, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Bos Desk", ""WHITE"Invite\n"VERONA_ARWIN"Kelola Jabatan\n"WHITE"Kick\n"WHITE"Cek Keuangan\n"VERONA_ARWIN"Taruh/Ambil Uang", "Pilih", "Batal");
+                        Dialog_Show(playerid, Bosdesk_Family, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Bos Desk", ""WHITE"Invite\n"VERONA_ARWIN"Kelola Jabatan\n"WHITE"Kick\n"WHITE"Cek Keuangan\n"VERONA_ARWIN"Taruh/Ambil Uang", "Pilih", "Batal");
                     }
                     else ShowTDN(playerid, NOTIFICATION_ERROR, "Peringkat anda terlalu rendah!");
                 }
@@ -996,7 +996,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
                 {
                     if(AccountData[playerid][pFamilyRank] < 3) return ShowTDN(playerid, NOTIFICATION_ERROR, "Minimal rank Insider untuk akses brankas!");
                     
-                    ShowPlayerDialog(playerid, DIALOG_FAMSBRANKAS, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Families",
+                    ShowPlayerDialog(playerid, DIALOG_FAMSBRANKAS, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Families",
                     "Penyimpanan Uang Merah\
                     \n"GRAY"Penyimpanan Senjata\
                     \nPenyimpanan Barang", "Pilih", "Batal");
@@ -1055,7 +1055,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             {
                 case 0: // Uang Merah
                 {       
-                    ShowPlayerDialog(playerid, DIALOG_FAMSRM_VAULT, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Red Money Storage",
+                    ShowPlayerDialog(playerid, DIALOG_FAMSRM_VAULT, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Red Money Storage",
                     "Cek Uang Merah\
                     \n"GRAY"Deposit\
                     \nWithdraw", "Pilih", "Batal");
@@ -1069,7 +1069,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                     if(NearPlayerOpenStorage(playerid)) return ShowTDN(playerid, NOTIFICATION_ERROR, "Pemain disekitar sedang membuka brankas!");
                     
                     AccountData[playerid][menuShowed] = true;
-                    ShowPlayerDialog(playerid, DIALOG_FAMSVAULT, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Brankas Families",
+                    ShowPlayerDialog(playerid, DIALOG_FAMSVAULT, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Brankas Families",
                     "Simpan Barang\n"GRAY"Ambil Barang", "Pilih", "Batal");
                 }
             }
@@ -1087,16 +1087,16 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                     static frmtmoney[255];
                     format(frmtmoney, sizeof(frmtmoney), "Saat ini Families %s memiliki uang merah sebanyak\
                     \n"RED"%s.", FamData[famid][famName], FormatMoney(FamData[famid][famRedMoney]));
-                    ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Red Money", frmtmoney, "Tutup", "");
+                    ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Red Money", frmtmoney, "Tutup", "");
                 }
                 case 1: //
                 {
-                    ShowPlayerDialog(playerid, DIALOG_FAMSRM_DEPOSIT, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Deposit",
+                    ShowPlayerDialog(playerid, DIALOG_FAMSRM_DEPOSIT, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Deposit",
                     "Mohon masukkan jumlah uang merah yang ingin anda simpan dibrankas families:", "Input", "Batal");
                 }
                 case 2: //
                 {
-                    ShowPlayerDialog(playerid, DIALOG_FAMSRM_WITHDRAW, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Deposit",
+                    ShowPlayerDialog(playerid, DIALOG_FAMSRM_WITHDRAW, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Deposit",
                     "Mohon masukkan jumlah uang merah yang ingin anda ambil dari brankas families:", "Input", "Batal");
                 }
             }
@@ -1110,21 +1110,21 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
             if(isnull(inputtext))
             {
-                ShowPlayerDialog(playerid, DIALOG_FAMSRM_WITHDRAW, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Deposit",
+                ShowPlayerDialog(playerid, DIALOG_FAMSRM_WITHDRAW, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Deposit",
                 "Error: Tidak dapat diisi kosong!\nMohon masukkan jumlah uang merah yang ingin anda ambil dari brankas families:", "Input", "Batal");
                 return 1;
             }
             
             if(!IsNumeric(inputtext))
             {
-                ShowPlayerDialog(playerid, DIALOG_FAMSRM_WITHDRAW, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Deposit",
+                ShowPlayerDialog(playerid, DIALOG_FAMSRM_WITHDRAW, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Deposit",
                 "Error: Hanya dapat di isi angka!\nMohon masukkan jumlah uang merah yang ingin anda ambil dari brankas families:", "Input", "Batal");
                 return 1;
             }
 
             if(strval(inputtext) < 1 || strval(inputtext) > FamData[famid][famRedMoney])
             {
-                ShowPlayerDialog(playerid, DIALOG_FAMSRM_WITHDRAW, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Deposit",
+                ShowPlayerDialog(playerid, DIALOG_FAMSRM_WITHDRAW, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Deposit",
                 "Error: Jumlah tidak valid atau uang merah brankas tidak sebanyak itu!\nMohon masukkan jumlah uang merah yang ingin anda ambil dari brankas families:", "Input", "Batal");
                 return 1;
             }
@@ -1145,21 +1145,21 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
             if(isnull(inputtext))
             {
-                ShowPlayerDialog(playerid, DIALOG_FAMSRM_DEPOSIT, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Deposit",
+                ShowPlayerDialog(playerid, DIALOG_FAMSRM_DEPOSIT, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Deposit",
                 "Error: Tidak dapat diisi kosong!\nMohon masukkan jumlah uang merah yang ingin anda simpan dibrankas families:", "Input", "Batal");
                 return 1;
             }
             
             if(!IsNumeric(inputtext))
             {
-                ShowPlayerDialog(playerid, DIALOG_FAMSRM_DEPOSIT, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Deposit",
+                ShowPlayerDialog(playerid, DIALOG_FAMSRM_DEPOSIT, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Deposit",
                 "Error: Hanya dapat di isi angka!\nMohon masukkan jumlah uang merah yang ingin anda simpan dibrankas families:", "Input", "Batal");
                 return 1;
             }
 
             if(strval(inputtext) < 1 || strval(inputtext) > AccountData[playerid][pRedMoney])
             {
-                ShowPlayerDialog(playerid, DIALOG_FAMSRM_DEPOSIT, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Deposit",
+                ShowPlayerDialog(playerid, DIALOG_FAMSRM_DEPOSIT, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Deposit",
                 "Error: Jumlah tidak valid atau uang merah anda tidak sebanyak itu!\nMohon masukkan jumlah uang merah yang ingin anda simpan dibrankas families:", "Input", "Batal");
                 return 1;
             }
@@ -1298,21 +1298,21 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             {
                 new frmxt[225];
                 format(frmxt, sizeof(frmxt), ""WHITE"Error: Tidak dapat diisi kosong!\nJumlah uang yang dimiliki: "DARKGREEN"%s"WHITE"\nMohon masukkan jumlah yang ingin anda ambil paksa:", FormatMoney(AccountData[targetid][pMoney]));
-                return ShowPlayerDialog(playerid, DIALOG_FAMSTAKE_MONEY, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Ambil Uang", frmxt, "Input", "Batal");
+                return ShowPlayerDialog(playerid, DIALOG_FAMSTAKE_MONEY, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Ambil Uang", frmxt, "Input", "Batal");
             }
 
             if(!IsNumeric(inputtext))
             {
                 new frmxt[225];
                 format(frmxt, sizeof(frmxt), ""WHITE"Error: Hanya dapat diisi angka!\nJumlah uang yang dimiliki: "DARKGREEN"%s"WHITE"\nMohon masukkan jumlah yang ingin anda ambil paksa:", FormatMoney(AccountData[targetid][pMoney]));
-                return ShowPlayerDialog(playerid, DIALOG_FAMSTAKE_MONEY, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Ambil Uang", frmxt, "Input", "Batal");
+                return ShowPlayerDialog(playerid, DIALOG_FAMSTAKE_MONEY, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Ambil Uang", frmxt, "Input", "Batal");
             }
 
             if(strval(inputtext) < 1 || strval(inputtext) >= AccountData[targetid][pMoney])
             {
                 new frmxt[225];
                 format(frmxt, sizeof(frmxt), ""WHITE"Error: Jumlah tidak valid/melebihi yang dimiliki pemain tersebut!\nJumlah uang yang dimiliki: "DARKGREEN"%s"WHITE"\nMohon masukkan jumlah yang ingin anda ambil paksa:", FormatMoney(AccountData[targetid][pMoney]));
-                return ShowPlayerDialog(playerid, DIALOG_FAMSTAKE_MONEY, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Ambil Uang", frmxt, "Input", "Batal");
+                return ShowPlayerDialog(playerid, DIALOG_FAMSTAKE_MONEY, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Ambil Uang", frmxt, "Input", "Batal");
             }
             new value = strval(inputtext);
 
@@ -1353,21 +1353,21 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             {
                 new frmxt[225];
                 format(frmxt, sizeof(frmxt), ""WHITE"Error: Tidak dapat diisi kosong!\nJumlah uang merah yang dimiliki: "RED"%s"WHITE"\nMohon masukkan jumlah yang ingin anda ambil paksa:", FormatMoney(AccountData[targetid][pRedMoney]));
-                return ShowPlayerDialog(playerid, DIALOG_FAMSTAKE_REDMONEY, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Ambil Uang Merah", frmxt, "Input", "Batal");
+                return ShowPlayerDialog(playerid, DIALOG_FAMSTAKE_REDMONEY, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Ambil Uang Merah", frmxt, "Input", "Batal");
             }
 
             if(!IsNumeric(inputtext))
             {
                 new frmxt[225];
                 format(frmxt, sizeof(frmxt), ""WHITE"Error: Hanya dapat diisi angka!\nJumlah uang merah yang dimiliki: "RED"%s"WHITE"\nMohon masukkan jumlah yang ingin anda ambil paksa:", FormatMoney(AccountData[targetid][pRedMoney]));
-                return ShowPlayerDialog(playerid, DIALOG_FAMSTAKE_REDMONEY, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Ambil Uang Merah", frmxt, "Input", "Batal");
+                return ShowPlayerDialog(playerid, DIALOG_FAMSTAKE_REDMONEY, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Ambil Uang Merah", frmxt, "Input", "Batal");
             }
 
             if(strval(inputtext) < 1 || strval(inputtext) >= AccountData[targetid][pRedMoney])
             {
                 new frmxt[225];
                 format(frmxt, sizeof(frmxt), ""WHITE"Error: Jumlah tidak valid/melebihi yang dimiliki pemain tersebut!\nJumlah uang merah yang dimiliki: "RED"%s"WHITE"\nMohon masukkan jumlah yang ingin anda ambil paksa:", FormatMoney(AccountData[targetid][pRedMoney]));
-                return ShowPlayerDialog(playerid, DIALOG_FAMSTAKE_REDMONEY, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Ambil Uang Merah", frmxt, "Input", "Batal");
+                return ShowPlayerDialog(playerid, DIALOG_FAMSTAKE_REDMONEY, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Ambil Uang Merah", frmxt, "Input", "Batal");
             }
             new value = strval(inputtext);
 
@@ -1683,7 +1683,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 cache_get_value_name_int(listitem, "Char_FamilyRank", AccountData[playerid][pTempSQLFamRank]);
                 if(AccountData[playerid][pID] == AccountData[playerid][pTempSQLFamMemberID]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda tidak dapat mengatur jabatan diri sendiri!");
                 if(AccountData[playerid][pTempSQLFamRank] >= AccountData[playerid][pFamilyRank]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Tidak dapat mengatur jabatan pangkat diatasmu!");
-                ShowPlayerDialog(playerid, DIALOG_RANK_SET_FAMILIES, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Set Jabatan", 
+                ShowPlayerDialog(playerid, DIALOG_RANK_SET_FAMILIES, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Set Jabatan", 
                 "Silahkan pilih jabatan untuk ditetapkan (masukkan angka saja):\n\
                 1. Relasi\n\
                 2. Outsider\n\
@@ -1731,7 +1731,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 Nama: %s\n\
                 Rank: %s\n\
                 Last Online: %s", fckname, FamiliesRank[fckrank], fcklastlogin);
-                ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kick Anggota",
+                ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kick Anggota",
                 kckstr, "Tutup", "");
             }
         }
@@ -1745,7 +1745,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             if(AccountData[playerid][pFamily] == -1) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda tidak tergabung Families manapun!");
             if(AccountData[playerid][pFamilyRank] < 5) return ShowTDN(playerid, NOTIFICATION_ERROR, "Minimal Rank Wakil Ketua untuk akses Bos Desk!");
 
-            if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_RANK_SET_FAMILIES, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kelola Jabatan", \
+            if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_RANK_SET_FAMILIES, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kelola Jabatan", \
             "Error: Tidak dapat diisi kosong!\n\
             Silahkan pilih jabatan untuk ditetapkan (masukkan angka saja):\n\
             1. Relasi\n\
@@ -1755,7 +1755,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             5. Wakil Ketua\n\
             6. Ketua", "Set", "Batal");
 
-            if(!IsNumeric(inputtext)) return ShowPlayerDialog(playerid, DIALOG_RANK_SET_FAMILIES, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kelola Jabatan", \
+            if(!IsNumeric(inputtext)) return ShowPlayerDialog(playerid, DIALOG_RANK_SET_FAMILIES, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kelola Jabatan", \
             "Error: Hanya dapat diisi angka!\n\
             Silahkan pilih jabatan untuk ditetapkan (masukkan angka saja):\n\
             1. Relasi\n\
@@ -1765,7 +1765,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             5. Wakil Ketua\n\
             6. Ketua", "Set", "Batal");
 
-            if(strval(inputtext) < 1 || strval(inputtext) > AccountData[playerid][pFamilyRank]) return ShowPlayerDialog(playerid, DIALOG_RANK_SET_FAMILIES, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kelola Jabatan", \
+            if(strval(inputtext) < 1 || strval(inputtext) > AccountData[playerid][pFamilyRank]) return ShowPlayerDialog(playerid, DIALOG_RANK_SET_FAMILIES, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kelola Jabatan", \
             "Error: Tidak dapat diisi dibawah 1 atau lebih tinggi dari jabatan anda!\n\
             Silahkan pilih jabatan untuk ditetapkan (masukkan angka saja):\n\
             1. Relasi\n\
@@ -1909,7 +1909,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                     
                     new frmxt[225];
                     format(frmxt, sizeof(frmxt), ""WHITE"Jumlah uang merah yang dimiliki: "RED"%s"WHITE"\nMohon masukkan jumlah yang ingin anda ambil paksa:", FormatMoney(AccountData[targetid][pRedMoney]));
-                    ShowPlayerDialog(playerid, DIALOG_FAMSTAKE_REDMONEY, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Ambil Uang Merah", frmxt, "Input", "Batal");
+                    ShowPlayerDialog(playerid, DIALOG_FAMSTAKE_REDMONEY, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Ambil Uang Merah", frmxt, "Input", "Batal");
                     SetPVarInt(playerid, "TargetFamsID", targetid);
                 }
                 case 10: // ambil uang
@@ -1918,7 +1918,7 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
                     new frmxt[225];
                     format(frmxt, sizeof(frmxt), ""WHITE"Jumlah uang yang dimiliki: "DARKGREEN"%s"WHITE"\nMohon masukkan jumlah yang ingin anda ambil paksa:", FormatMoney(AccountData[targetid][pMoney]));
-                    ShowPlayerDialog(playerid, DIALOG_FAMSTAKE_MONEY, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Ambil Uang", frmxt, "Input", "Batal");
+                    ShowPlayerDialog(playerid, DIALOG_FAMSTAKE_MONEY, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Ambil Uang", frmxt, "Input", "Batal");
                     SetPVarInt(playerid, "TargetFamsID", targetid);
                 }
                 case 11: // Cek Senjata
@@ -1938,11 +1938,11 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                     }
                     if(count > 0)
                     {
-                        Dialog_Show(playerid, "UnusedDialog", DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Senjata", lstr,"Tutup","");
+                        Dialog_Show(playerid, "UnusedDialog", DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Senjata", lstr,"Tutup","");
                     }
                     else
                     {
-                        Dialog_Show(playerid, "UnusedDialog", DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Senjata", "Pemain tersebut tidak memiliki senjata!","Tutup","");
+                        Dialog_Show(playerid, "UnusedDialog", DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Senjata", "Pemain tersebut tidak memiliki senjata!","Tutup","");
                     }                    
                 }
             }
@@ -1997,8 +1997,8 @@ Dialog:Bosdesk_Family(playerid, response, listitem, inputtext[])
                     ListBosDesk[playerid][count ++] = i;
                 }
             }
-            if(!count) return Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Invite", "Tidak ada orang yang dekat dengan anda!", "Close", "");
-            Dialog_Show(playerid, FamiliesInvite, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Invite", sstr, "Pilih", "Batal");
+            if(!count) return Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Invite", "Tidak ada orang yang dekat dengan anda!", "Close", "");
+            Dialog_Show(playerid, FamiliesInvite, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Invite", sstr, "Pilih", "Batal");
         }
         case 1:// Kelola Jabatan Online / Offline
         {
@@ -2018,12 +2018,12 @@ Dialog:Bosdesk_Family(playerid, response, listitem, inputtext[])
 
                     format(shstr, sizeof(shstr), "%s%s\t%s\t%s\n", shstr, fckname, FamiliesRank[fckrank], fcklastlogin);
                 }
-                ShowPlayerDialog(playerid, DIALOG_FAMILIESSETRANK, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Set Jabatan", shstr, "Pilih", "Batal");
+                ShowPlayerDialog(playerid, DIALOG_FAMILIESSETRANK, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Set Jabatan", shstr, "Pilih", "Batal");
             }
             else 
             {
                 PlayerPlaySound(playerid, 5206, 0.0, 0.0, 0.0);
-                return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Set Jabatan", "Tidak ada Anggota Families!", "Tutup", "");
+                return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Set Jabatan", "Tidak ada Anggota Families!", "Tutup", "");
             }
         }
         case 2:// Offline Kick / Online
@@ -2044,25 +2044,25 @@ Dialog:Bosdesk_Family(playerid, response, listitem, inputtext[])
 
                     format(shstr, sizeof(shstr), "%s%s\t%s\t%s\n", shstr, fckname, FamiliesRank[fckrank], fcklastlogin);
                 }
-                ShowPlayerDialog(playerid, DIALOG_FAMILIESKICKMEMBER, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kick Member", shstr, "Kick", "Batal");
+                ShowPlayerDialog(playerid, DIALOG_FAMILIESKICKMEMBER, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kick Member", shstr, "Kick", "Batal");
             }
             else 
             {
                 PlayerPlaySound(playerid, 5206, 0.0, 0.0, 0.0);
-                return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kick Member", "Tidak ada Anggota Families!", "Tutup", "");
+                return ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kick Member", "Tidak ada Anggota Families!", "Tutup", "");
             }
         }
         case 3:// cek keuangan
         {
             new sstr[512];
             format(sstr, sizeof(sstr), "Keluarga kita saat ini memiliki uang sebesar %s\nSiapapun yang mengambil uang tanpa sepengetahuan bersama akan mendapatkan hukumannya", FormatMoney(FamData[id][famMoney]));
-            Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Keuangan Families", sstr, "Tutup", "");
+            Dialog_Show(playerid, ShowOnly, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Keuangan Families", sstr, "Tutup", "");
         }
         case 4:// Ambil atau taruh uang
         {
             new sstr[512];
             format(sstr, sizeof sstr, "Mohon ikuti format berikut:\nGunakanlah format ambil [jumlah] atau depo [jumlah] untuk mengambil atau menaruh uang\nGunakan tanpa tanda ][ pada kolom dibawah ini:");
-            Dialog_Show(playerid, FamiliesKeuangan, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Keuangan Families", sstr, "Input", "Batal");
+            Dialog_Show(playerid, FamiliesKeuangan, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Keuangan Families", sstr, "Input", "Batal");
         }
     }
     return 1;
@@ -2078,7 +2078,7 @@ Dialog:FamiliesKeuangan(playerid, response, listitem, inputtext[])
         {
             new sstr[512];
             format(sstr, sizeof sstr, "Mohon ikuti format berikut:\nGunakanlah format ambil [jumlah] atau depo [jumlah] untuk mengambil atau menaruh uang\nGunakan tanpa tanda ][ pada kolom dibawah ini:");
-            Dialog_Show(playerid, FamiliesKeuangan, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Keuangan Families", sstr, "Input", "Batal");   
+            Dialog_Show(playerid, FamiliesKeuangan, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Keuangan Families", sstr, "Input", "Batal");   
         }
 
         if(!strcmp(option, "ambil", true))
@@ -2152,7 +2152,7 @@ Dialog:FamiliesGeledah(playerid, response, listitem, inputtext[])
         if(InventoryData[targetid][listitem][invExists])
         {
             format(str, sizeof(str), "Anda akan mengambil barang:\nNama: %s\nJumlah: %d\nMohon masukan jumlah yang ingin anda ambil:", name, InventoryData[targetid][listitem][invQuantity]);
-            Dialog_Show(playerid, FamiliesTakeBarang, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Geledah", str, "Input", "Back");
+            Dialog_Show(playerid, FamiliesTakeBarang, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Geledah", str, "Input", "Back");
         }
     }
     return 1;
@@ -2377,7 +2377,7 @@ public WashingRedMoney(playerid)
         cache_get_value_name_int(listitem, "Char_FamilyRank", AccountData[playerid][pTempSQLFamRank]);
         if(AccountData[playerid][pID] == AccountData[playerid][pTempSQLFamMemberID]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda tidak dapat mengatur jabatan diri sendiri!");
         if(AccountData[playerid][pTempSQLFamRank] >= AccountData[playerid][pFamilyRank]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Tidak dapat mengatur jabatan pangkat diatasmu!");
-        ShowPlayerDialog(playerid, DIALOG_RANK_SET_FAMILIES, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Set Jabatan", 
+        ShowPlayerDialog(playerid, DIALOG_RANK_SET_FAMILIES, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Set Jabatan", 
         "Silahkan pilih jabatan untuk ditetapkan (masukkan angka saja):\n\
         1. Relasi\n\
         2. Outsider\n\
@@ -2427,7 +2427,7 @@ DialogPages:FamiliesKickMember(playerid, response, listitem, inputtext[])
         Nama: %s\n\
         Rank: %s\n\
         Last Online: %s", fckname, FamiliesRank[fckrank], fcklastlogin);
-        ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kick Anggota",
+        ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kick Anggota",
         kckstr, "Tutup", "");
     }
     return 1;

@@ -6,7 +6,7 @@ CMD:fhelp(playerid, params[])
 	{
 		case 1: // Polisi
 		{
-			ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Polisi Command", 
+			ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Polisi Command", 
 			"Perintah\tKeterangan\n\
 			/taser\tMenggunakan Pistol Taser untuk membuat efek kejut\n\
 			"GRAY"/takektp\t"GRAY"Untuk menyita KTP seseorang secara paksa\n\
@@ -28,7 +28,7 @@ CMD:fhelp(playerid, params[])
 		}
 		case 2: // Pemerintah
 		{
-			ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Pemerintah Command",
+			ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Pemerintah Command",
 			"Perintah\tKeterangan\n\
 			/ubahnamaktp\tMengubah nama KTP seseorang\n\
 			"GRAY"/makehuntlic\t"GRAY"Membuat lisensi berburu kepada seseorang\n\
@@ -39,7 +39,7 @@ CMD:fhelp(playerid, params[])
 		}
 		case 3: //ems
 		{
-			ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- EMS Command",
+			ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- EMS Command",
 			"Perintah\tKeterangan\n\
 			/makesks\tMembuat Surat Keterangan Sehat untuk seseorang\n\
 			"GRAY"/makebpjs\t"GRAY"Membuat BPJS untuk seseorang\n\
@@ -54,7 +54,7 @@ CMD:fhelp(playerid, params[])
 		}
 		case 5: // Bengkel
 		{
-			ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Bengkel Command",
+			ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Bengkel Command",
 			"Perintah\tKeterangan\n\
 			/modif\tMemodifikasi kendaraan di modification point\n\
 			"GRAY"/togsiren\t"GRAY"Menyalakan sirine pada kendaraan bengkel\n\
@@ -310,7 +310,7 @@ CMD:trace(playerid, params[])
 // 	if(GetPlayerFaction(playerid) != FACTION_POLISI)
 // 		return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan bagian dari Kepolisian!");
 	
-// 	Dialog_Show(playerid, DialogTrace, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Tracking", ""WHITE"Lacak Nomor Telepon\n"GRAY"Lacak Plate Kendaraan\n"WHITE"Lacak Akun Twitter", "Pilih", "Batal");
+// 	Dialog_Show(playerid, DialogTrace, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Tracking", ""WHITE"Lacak Nomor Telepon\n"GRAY"Lacak Plate Kendaraan\n"WHITE"Lacak Akun Twitter", "Pilih", "Batal");
 // 	return 1;
 // }
 
@@ -321,15 +321,15 @@ Dialog:DialogTrace(playerid, response, listitem, inputtext[])
 	{
 		case 0:// nomor hp
 		{
-			Dialog_Show(playerid, TrackNoPhone, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Track Telepon", "Mohon masukkan nomor telepon valid\nContoh: 55261, 02521\n"YELLOW"(Mohon masukkan dikolom bawah sini):", "Track", "Batal");
+			Dialog_Show(playerid, TrackNoPhone, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Track Telepon", "Mohon masukkan nomor telepon valid\nContoh: 55261, 02521\n"YELLOW"(Mohon masukkan dikolom bawah sini):", "Track", "Batal");
 		}
 		case 1:// Plate Nomor
 		{
-			Dialog_Show(playerid, TrackPlateNomor, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Track Plate", "Mohon masukkan nomor plate kendaraan valid\nContoh: VR 5233 BOS, VR 2122 DAN\n"YELLOW"(Mohon masukkan dikolom bawah sini):", "Track", "Batal");
+			Dialog_Show(playerid, TrackPlateNomor, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Track Plate", "Mohon masukkan nomor plate kendaraan valid\nContoh: VR 5233 BOS, VR 2122 DAN\n"YELLOW"(Mohon masukkan dikolom bawah sini):", "Track", "Batal");
 		}
 		case 2:// Akun Twitter
 		{
-			Dialog_Show(playerid, TrackAkunTwitter, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Track Sosial Media", "Mohon memasukkan username akun media Twitter yang ingin dilacak\n"YELLOW"(Masukkan dibawah sini dengan Username yang Valid):", "Track", "Batal");
+			Dialog_Show(playerid, TrackAkunTwitter, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Track Sosial Media", "Mohon memasukkan username akun media Twitter yang ingin dilacak\n"YELLOW"(Masukkan dibawah sini dengan Username yang Valid):", "Track", "Batal");
 		}
 	}
 	return 1;
@@ -338,7 +338,7 @@ Dialog:TrackAkunTwitter(playerid, response, listitem, inputtext[])
 {
 	if(!response) return false;
 	if(isnull(inputtext))
-		return Dialog_Show(playerid, TrackAkunTwitter, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Track Sosial Media", "ERROR: Tidak dapat Kosong!\nMohon memasukkan username akun media Twitter yang ingin dilacak\n"YELLOW"(Masukkan dibawah sini dengan Username yang Valid):", "Track", "Batal");
+		return Dialog_Show(playerid, TrackAkunTwitter, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Track Sosial Media", "ERROR: Tidak dapat Kosong!\nMohon memasukkan username akun media Twitter yang ingin dilacak\n"YELLOW"(Masukkan dibawah sini dengan Username yang Valid):", "Track", "Batal");
 
 	static 
 		Float:fX,
@@ -375,7 +375,7 @@ Dialog:TrackNoPhone(playerid, response, listitem, inputtext[])
 {
 	if(!response) return 1;
 	if(isnull(inputtext))
-		return Dialog_Show(playerid, TrackNoPhone, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Track Telepon", "Mohon masukkan nomor telepon valid\nContoh: 55261, 02521\n"YELLOW"(Mohon masukkan dikolom bawah sini):", "Track", "Batal");
+		return Dialog_Show(playerid, TrackNoPhone, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Track Telepon", "Mohon masukkan nomor telepon valid\nContoh: 55261, 02521\n"YELLOW"(Mohon masukkan dikolom bawah sini):", "Track", "Batal");
 	
 	static 
 		Float:fX,
@@ -412,7 +412,7 @@ Dialog:TrackPlateNomor(playerid, response, listitem, inputtext[])
 {
 	if(!response) return 1;
 	if(isnull(inputtext) || IsNumeric(inputtext))
-		return Dialog_Show(playerid, TrackPlateNomor, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Track Plate", "Mohon masukkan nomor plate kendaraan valid\nContoh: VR 5233 BOS, VR 2122 DAN\n"YELLOW"(Mohon masukkan dikolom bawah sini):", "Track", "Batal");
+		return Dialog_Show(playerid, TrackPlateNomor, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Track Plate", "Mohon masukkan nomor plate kendaraan valid\nContoh: VR 5233 BOS, VR 2122 DAN\n"YELLOW"(Mohon masukkan dikolom bawah sini):", "Track", "Batal");
 	
 	static 
 		Float:fX,
@@ -448,7 +448,7 @@ Dialog:TrackPlateNomor(playerid, response, listitem, inputtext[])
 CMD:makesks(playerid, params[])
 {
 	if(AccountData[playerid][pFaction] != FACTION_EMS)
-		return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan bagian dari Mitra EMS Mayoritas!");
+		return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan bagian dari Mitra EMS Imajinasi!");
 	
 	new otherid, reason[128];
 	if(sscanf(params, "us[128]", otherid, reason)) return ShowTDN(playerid, NOTIFICATION_SYNTAX, "/makesks [playerid/Name] [Keterangan]");
@@ -469,7 +469,7 @@ CMD:makesks(playerid, params[])
 CMD:makebpjs(playerid, params[])
 {
 	if(AccountData[playerid][pFaction] != FACTION_EMS)
-		return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan bagian dari Mitra EMS Mayoritas!");
+		return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan bagian dari Mitra EMS Imajinasi!");
 
 	new otherid, level[128];
 	if(sscanf(params, "us[128]", otherid, level)) return ShowTDN(playerid, NOTIFICATION_SYNTAX, "/makesks [name/playerid] [faskes]");
@@ -487,7 +487,7 @@ CMD:makebpjs(playerid, params[])
 
 CMD:makeskck(playerid, params[])
 {
-	if(AccountData[playerid][pFaction] != FACTION_POLISI) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan bagian dari Kepolisian Mayoritas!");
+	if(AccountData[playerid][pFaction] != FACTION_POLISI) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan bagian dari Kepolisian Imajinasi!");
 
 	new otherid, reason[128];
 	if(sscanf(params, "us[128]", otherid, reason)) return ShowTDN(playerid, NOTIFICATION_SYNTAX, "/makeskck [playerid/Name] [Keterangan]");
@@ -508,7 +508,7 @@ CMD:makeskck(playerid, params[])
 /*CMD:takeradio(playerid, params[])
 {
 	if(!IsPlayerConnected(playerid) || !AccountData[playerid][IsLoggedIn]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda harus terkoneksi kedalam server!");
-	if(AccountData[playerid][pFaction] != FACTION_POLISI) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan bagian dari Kepolisian Kota Mayoritas!");
+	if(AccountData[playerid][pFaction] != FACTION_POLISI) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan bagian dari Kepolisian Kota Imajinasi!");
 	if(IsPlayerInjured(playerid) == 1) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda sedang pingsan!");
 
 	new otherid;
@@ -629,7 +629,7 @@ CMD:togsiren(playerid, params[])
 CMD:111(playerid, params[])
 {
 	new minsty[512];
-	if(AccountData[playerid][pFaction] != FACTION_EMS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan bagian dari EMS Kota Mayoritas!");
+	if(AccountData[playerid][pFaction] != FACTION_EMS) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan bagian dari EMS Kota Imajinasi!");
 	new string[128];
 	if(sscanf(params, "s[128]", string)) return ShowTDN(playerid, NOTIFICATION_SYNTAX, "/111 [pesan]");
 	
@@ -642,7 +642,7 @@ CMD:110(playerid, params[])
 {
 	new minsty[512];
 	if(!AccountData[playerid][IsLoggedIn]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda harus terkoneksi kedalam server!");
-	if(AccountData[playerid][pFaction] != FACTION_POLISI) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan bagian dari Kepolisian Kota Mayoritas!");
+	if(AccountData[playerid][pFaction] != FACTION_POLISI) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan bagian dari Kepolisian Kota Imajinasi!");
 	if(!AccountData[playerid][pDutyPD]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda belum On Duty kepolisian!");
 	new string[128];
 	if(sscanf(params, "s[128]", string)) return ShowTDN(playerid, NOTIFICATION_SYNTAX, "/110 [pesan]");

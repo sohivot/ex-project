@@ -2,7 +2,7 @@ Dialog:HouseSpawn_Option(playerid, response, listitem, inputtext[])
 {
 	if(!response)
 	{
-		ShowPlayerDialog(playerid, DIALOG_SELECT_SPAWNEXPIRED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Pilih Lokasi Spawn",
+		ShowPlayerDialog(playerid, DIALOG_SELECT_SPAWNEXPIRED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Pilih Lokasi Spawn",
 		"Titik Spawn\tDetail\tLokasi\
 		\nBandara International\tAnda akan spawn Lokasi di bandara\tLos Santos\
 		\nPelabuhan Merak\tAnda akan spawn di pelabuhan\tOcean Docs\
@@ -62,12 +62,12 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
     {
 		if (!response) return Kick(playerid);
 	
-		if (strlen(inputtext) <= 5) return ShowPlayerDialog(playerid, DIALOG_REGISTER, DIALOG_STYLE_PASSWORD, "Register - "Mayoritas"Mayoritas Roleplay", ""WHITE"Buatlah kata sandi anda dengan benar\n"WHITE"NOTE: Kata sandi minimal 5 Karakter!\n\n"YELLOW"(Mohon isi dan selalu ingat Password anda di bawah ini):", "Register", "Tolak");
+		if (strlen(inputtext) <= 5) return ShowPlayerDialog(playerid, DIALOG_REGISTER, DIALOG_STYLE_PASSWORD, "Register - "Imajinasi"Imajinasi Roleplay", ""WHITE"Buatlah kata sandi anda dengan benar\n"WHITE"NOTE: Kata sandi minimal 5 Karakter!\n\n"YELLOW"(Mohon isi dan selalu ingat Password anda di bawah ini):", "Register", "Tolak");
 		
 		if(!IsValidPassword(inputtext))
 		{
 			Error(playerid, "Sandi valid : A-Z, a-z, 0-9, _, [ ], ( )");
-			ShowPlayerDialog(playerid, DIALOG_REGISTER, DIALOG_STYLE_PASSWORD, "Register - "Mayoritas"Mayoritas Roleplay", ""WHITE"Kata sandi yang anda gunakan mengandung karakter yang tidak valid!\n\n"YELLOW"(Mohon isi dan selalu ingat Password anda di bawah ini):", "Register", "Tolak");
+			ShowPlayerDialog(playerid, DIALOG_REGISTER, DIALOG_STYLE_PASSWORD, "Register - "Imajinasi"Imajinasi Roleplay", ""WHITE"Kata sandi yang anda gunakan mengandung karakter yang tidak valid!\n\n"YELLOW"(Mohon isi dan selalu ingat Password anda di bawah ini):", "Register", "Tolak");
 			return 1;
 		}
 		
@@ -110,8 +110,8 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			}
 			else
 			{
-				format(frmxtdialog, sizeof(frmxtdialog), ""WHITE"Selamat datang di "Mayoritas"Mayoritas Roleplay\n"RED"Error: Kata Sandi Salah! Kesempatan Login %d/3\n"WHITE"UCP ini telah terdaftar!\nNama UCP: "LIGHTGREEN"%s\
-				\n"WHITE"Version: "Mayoritas"LastestByExeren\n"YELLOW"(Silahkan masukkan kata sandi anda untuk login):", LoginAttemps[playerid], AccountData[playerid][pUCP]);
+				format(frmxtdialog, sizeof(frmxtdialog), ""WHITE"Selamat datang di "Imajinasi"Imajinasi Roleplay\n"RED"Error: Kata Sandi Salah! Kesempatan Login %d/3\n"WHITE"UCP ini telah terdaftar!\nNama UCP: "LIGHTGREEN"%s\
+				\n"WHITE"Version: "Imajinasi"LastestByExeren\n"YELLOW"(Silahkan masukkan kata sandi anda untuk login):", LoginAttemps[playerid], AccountData[playerid][pUCP]);
 				ShowPlayerDialog(playerid, DIALOG_LOGIN, DIALOG_STYLE_PASSWORD, "UCP - Login", frmxtdialog, "Input", "Keluar");
 			}
 		}
@@ -213,8 +213,8 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		}
 		else
 		{
-			if(PlayerChar[playerid][listitem][0] == EOS) return ShowPlayerDialog(playerid, DIALOG_MAKE_CHAR, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Pembuatan Karakter",
-			""WHITE"Selamat Datang di "Mayoritas"Mayoritas Roleplay\n"WHITE"Sebelum bermain anda harus membuat karakter terlebih dahulu\
+			if(PlayerChar[playerid][listitem][0] == EOS) return ShowPlayerDialog(playerid, DIALOG_MAKE_CHAR, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Pembuatan Karakter",
+			""WHITE"Selamat Datang di "Imajinasi"Imajinasi Roleplay\n"WHITE"Sebelum bermain anda harus membuat karakter terlebih dahulu\
 			\nMasukkan nama karakter hanya dengan nama orang Indonesia\nCth: Dudung_Sutarman, Aldy_Firmansyah", "Input", "");
 			
 			AccountData[playerid][pChar] = listitem;
@@ -232,22 +232,22 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	if(dialogid == DIALOG_MAKE_CHAR)
 	{
 		new shstr[596];
-		format(shstr, sizeof(shstr), ""WHITE"Selamat datang di "Mayoritas"Mayoritas Roleplay\nSebelum bermain anda harus membuat karakter terlebih dahulu\
+		format(shstr, sizeof(shstr), ""WHITE"Selamat datang di "Imajinasi"Imajinasi Roleplay\nSebelum bermain anda harus membuat karakter terlebih dahulu\
 		\nMasukkan nama karakter hanya dengan nama orang indonesia\n\nCth: Ucok_Siregar, Dadang_Sucipto");
 		if(!response) return KickEx(playerid);
 
 		if(strlen(inputtext) < 1 || strlen(inputtext) > 24)
 		{
-			ShowPlayerDialog(playerid, DIALOG_MAKE_CHAR, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Pembuatan Karakter", 
-			""WHITE"Selamat datang di "Mayoritas"Mayoritas Roleplay\n"WHITE"Error: Nama tidak dapat kurang dari 1 huruf atau lebih dari 24\nSebelum bermain anda harus membuat karakter terlebih dahulu\
+			ShowPlayerDialog(playerid, DIALOG_MAKE_CHAR, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Pembuatan Karakter", 
+			""WHITE"Selamat datang di "Imajinasi"Imajinasi Roleplay\n"WHITE"Error: Nama tidak dapat kurang dari 1 huruf atau lebih dari 24\nSebelum bermain anda harus membuat karakter terlebih dahulu\
 			\nMasukkan nama karakter hanya dengan nama orang indonesia\n\nCth: Ucok_Siregar, Dadang_Sucipto", "Input", "Kembali");
 			return 1;
 		}
 
 		if(!IsValidRoleplayName(inputtext))
 		{
-			ShowPlayerDialog(playerid, DIALOG_MAKE_CHAR, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Pembuatan Karakter", 
-			""WHITE"Selamat datang di "Mayoritas"Mayoritas Roleplay\n"WHITE"Error: Nama tidak valid!\nSebelum bermain anda harus membuat karakter terlebih dahulu\
+			ShowPlayerDialog(playerid, DIALOG_MAKE_CHAR, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Pembuatan Karakter", 
+			""WHITE"Selamat datang di "Imajinasi"Imajinasi Roleplay\n"WHITE"Error: Nama tidak valid!\nSebelum bermain anda harus membuat karakter terlebih dahulu\
 			\nMasukkan nama karakter hanya dengan nama orang indonesia\n\nCth: Ucok_Siregar, Dadang_Sucipto", "Input", "Kembali");
 			return 1;
 		}
@@ -261,7 +261,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
     {
 		if(!response) 
 		{
-			return ShowPlayerDialog(playerid, DIALOG_AGE, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Tanggal Lahir", "Mohon masukkan tanggal lahir sesuai format hh/bb/tttt cth: (25/09/2001)", "Input", "");
+			return ShowPlayerDialog(playerid, DIALOG_AGE, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Tanggal Lahir", "Mohon masukkan tanggal lahir sesuai format hh/bb/tttt cth: (25/09/2001)", "Input", "");
 		}
 		if(response)
 		{
@@ -279,22 +279,22 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 					arrMonthDays[] = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
 			if(sscanf(inputtext, "p</>ddd", iDay, iMonth, iYear)) {
-				ShowPlayerDialog(playerid, DIALOG_AGE, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Tanggal Lahir", "Mohon masukkan tanggal lahir sesuai format hh/bb/tttt cth: (25/09/2001)", "Input", "");
+				ShowPlayerDialog(playerid, DIALOG_AGE, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Tanggal Lahir", "Mohon masukkan tanggal lahir sesuai format hh/bb/tttt cth: (25/09/2001)", "Input", "");
 			}
 			else if(iYear < 1900 || iYear > year) {
-				ShowPlayerDialog(playerid, DIALOG_AGE, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Tahun Lahir", "ERROR: Invalid Tahun Lahir\nMohon masukkan tanggal lahir sesuai format hh/bb/tttt cth: (25/09/2001)", "Input", "");
+				ShowPlayerDialog(playerid, DIALOG_AGE, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Tahun Lahir", "ERROR: Invalid Tahun Lahir\nMohon masukkan tanggal lahir sesuai format hh/bb/tttt cth: (25/09/2001)", "Input", "");
 			}
 			else if(iMonth < 1 || iMonth > 12) {
-				ShowPlayerDialog(playerid, DIALOG_AGE, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Bulan Lahir", "ERROR: Invalid Bulan Lahir\nMohon masukkan tanggal lahir sesuai format hh/bb/tttt cth: (25/09/2001)", "Input", "");
+				ShowPlayerDialog(playerid, DIALOG_AGE, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Bulan Lahir", "ERROR: Invalid Bulan Lahir\nMohon masukkan tanggal lahir sesuai format hh/bb/tttt cth: (25/09/2001)", "Input", "");
 			}
 			else if(iDay < 1 || iDay > arrMonthDays[iMonth - 1]) {
-				ShowPlayerDialog(playerid, DIALOG_AGE, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Tanggal Lahir", "ERROR: Invalid Tanggal Lahir\nMohon masukkan tanggal lahir sesuai format hh/bb/tttt cth: (25/09/2001)", "Input", "");
+				ShowPlayerDialog(playerid, DIALOG_AGE, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Tanggal Lahir", "ERROR: Invalid Tanggal Lahir\nMohon masukkan tanggal lahir sesuai format hh/bb/tttt cth: (25/09/2001)", "Input", "");
 			}
 			else 
 			{
 				SetPVarInt(playerid, "CreateAge", 1);
 				format(AccountData[playerid][pAge], 50, inputtext);
-				ShowPlayerDialog(playerid, DIALOG_ORIGIN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Negara Kelahiran", "Mohon masukkan kembali negara asal kelahiran karakter.\nPerhatian: Masukkan nama negara yang valid (cth: Indonesia).", "Input", "");
+				ShowPlayerDialog(playerid, DIALOG_ORIGIN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Negara Kelahiran", "Mohon masukkan kembali negara asal kelahiran karakter.\nPerhatian: Masukkan nama negara yang valid (cth: Indonesia).", "Input", "");
 			}
 		}
 		return 1;
@@ -306,19 +306,19 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			if(isnull(inputtext) || isnumeric(inputtext))
 			{
 				ShowTDN(playerid, NOTIFICATION_ERROR, "Tidak dapat mengandung angka/nomor!");
-				return ShowPlayerDialog(playerid, DIALOG_ORIGIN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Negara Kelahiran", "Mohon masukkan kembali negara asal kelahiran karakter.\nPerhatian: Masukkan nama negara yang valid (cth: Indonesia).", "Input", "");
+				return ShowPlayerDialog(playerid, DIALOG_ORIGIN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Negara Kelahiran", "Mohon masukkan kembali negara asal kelahiran karakter.\nPerhatian: Masukkan nama negara yang valid (cth: Indonesia).", "Input", "");
 			}
 			
 			if (isnull(inputtext) || strlen(inputtext) > 50) 
 			{
 				ShowTDN(playerid, NOTIFICATION_ERROR, "Negara kelahiran terlalu panjang!");
-		        return ShowPlayerDialog(playerid, DIALOG_ORIGIN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Negara Kelahiran", "Mohon masukkan kembali negara asal kelahiran karakter.\nPerhatian: Masukkan nama negara yang valid (cth: Indonesia).", "Input", "");
+		        return ShowPlayerDialog(playerid, DIALOG_ORIGIN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Negara Kelahiran", "Mohon masukkan kembali negara asal kelahiran karakter.\nPerhatian: Masukkan nama negara yang valid (cth: Indonesia).", "Input", "");
 			}
 			else for (new i = 0, len = strlen(inputtext); i != len; i ++) {
 			    if ((inputtext[i] >= 'A' && inputtext[i] <= 'Z') || (inputtext[i] >= 'a' && inputtext[i] <= 'z') || (inputtext[i] >= '0' && inputtext[i] <= '9') || (inputtext[i] == ' ') || (inputtext[i] == ',') || (inputtext[i] == '.'))
 					continue;
 
-				else return ShowPlayerDialog(playerid, DIALOG_ORIGIN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Negara Kelahiran", "Mohon masukkan kembali negara asal kelahiran karakter.\nPerhatian: Masukkan nama negara yang valid (cth: Indonesia).", "Input", "");
+				else return ShowPlayerDialog(playerid, DIALOG_ORIGIN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Negara Kelahiran", "Mohon masukkan kembali negara asal kelahiran karakter.\nPerhatian: Masukkan nama negara yang valid (cth: Indonesia).", "Input", "");
 			}
 			new query[512];
 			format(AccountData[playerid][pOrigin], 32, inputtext);
@@ -326,9 +326,9 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
 			mysql_format(mdb_query, query, sizeof(query), "UPDATE `player_characters` SET `Char_Origin` = '%s' WHERE `pID` = '%d'", inputtext, AccountData[playerid][pID]);
 			mysql_tquery(mdb_query, query);
-			ShowPlayerDialog(playerid, DIALOG_TINGGIBADAN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE" - Tinggi Badan (cm)", "Mohon masukkan tinggi badan (cm) karakter!\nPerhatian: Format hanya berupa angka satuan cm (cth: 163).", "Input", "");
+			ShowPlayerDialog(playerid, DIALOG_TINGGIBADAN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE" - Tinggi Badan (cm)", "Mohon masukkan tinggi badan (cm) karakter!\nPerhatian: Format hanya berupa angka satuan cm (cth: 163).", "Input", "");
 		}
-		else ShowPlayerDialog(playerid, DIALOG_ORIGIN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Negara Kelahiran", "Mohon masukkan kembali negara asal kelahiran karakter.\nPerhatian: Masukkan nama negara yang valid (cth: Indonesia).", "Input", "");
+		else ShowPlayerDialog(playerid, DIALOG_ORIGIN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Negara Kelahiran", "Mohon masukkan kembali negara asal kelahiran karakter.\nPerhatian: Masukkan nama negara yang valid (cth: Indonesia).", "Input", "");
 	}
 	if(dialogid == DIALOG_TINGGIBADAN)
 	{
@@ -338,22 +338,22 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			if(isnull(inputtext) || !isnumeric(inputtext))
 			{
 				ShowTDN(playerid, NOTIFICATION_ERROR, "Format hanya berupa angka satuan cm!");
-				return ShowPlayerDialog(playerid, DIALOG_TINGGIBADAN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE" - Tinggi Badan (cm)", "Mohon masukkan tinggi badan (cm) karakter!\nPerhatian: Format hanya berupa angka satuan cm (cth: 163).", "Input", "");
+				return ShowPlayerDialog(playerid, DIALOG_TINGGIBADAN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE" - Tinggi Badan (cm)", "Mohon masukkan tinggi badan (cm) karakter!\nPerhatian: Format hanya berupa angka satuan cm (cth: 163).", "Input", "");
 			}
 			
 			if(tinggi <= 150 || tinggi >= 200)
 			{
 				ShowTDN(playerid, NOTIFICATION_ERROR, "Tinggi Badan minimal 150 cm dan maksimal 200 cm");
-				return ShowPlayerDialog(playerid, DIALOG_TINGGIBADAN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE" - Tinggi Badan (cm)", "Mohon masukkan tinggi badan (cm) karakter!\nPerhatian: Format hanya berupa angka satuan cm (cth: 163).", "Input", "");
+				return ShowPlayerDialog(playerid, DIALOG_TINGGIBADAN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE" - Tinggi Badan (cm)", "Mohon masukkan tinggi badan (cm) karakter!\nPerhatian: Format hanya berupa angka satuan cm (cth: 163).", "Input", "");
 			}
 			AccountData[playerid][pTinggiBadan] = tinggi;
 			SetPVarInt(playerid, "CreateHeight", 1);
 			new strgbg[200];
 			mysql_format(mdb_query, strgbg, sizeof(strgbg), "UPDATE `player_characters` SET `Char_BodyHeight`='%d' WHERE `pID`='%d'", AccountData[playerid][pTinggiBadan], AccountData[playerid][pID]);
 			mysql_tquery(mdb_query, strgbg);
-			ShowPlayerDialog(playerid, DIALOG_BERATBADAN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE" - Berat Badan (kg)", "Mohon masukkan berat badan (kg) karakter!\nPerhatian: Format hanya berupa angka satuan kg (cth: 75).", "Input", "");
+			ShowPlayerDialog(playerid, DIALOG_BERATBADAN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE" - Berat Badan (kg)", "Mohon masukkan berat badan (kg) karakter!\nPerhatian: Format hanya berupa angka satuan kg (cth: 75).", "Input", "");
 		}
-		else return ShowPlayerDialog(playerid, DIALOG_TINGGIBADAN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE" - Tinggi Badan", "Mohon masukkan tinggi badan karakter!\nPerhatian: format berupa angka minimal 165-180cm (cth: 160)", "Input", "Back");
+		else return ShowPlayerDialog(playerid, DIALOG_TINGGIBADAN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE" - Tinggi Badan", "Mohon masukkan tinggi badan karakter!\nPerhatian: format berupa angka minimal 165-180cm (cth: 160)", "Input", "Back");
 	}
 	if(dialogid == DIALOG_BERATBADAN)
 	{
@@ -361,20 +361,20 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		{
 			new berat = floatround(strval(inputtext));
 			if(isnull(inputtext) || !isnumeric(inputtext))
-				return ShowPlayerDialog(playerid, DIALOG_BERATBADAN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE" - Berat Badan (kg)", "Mohon masukkan berat badan (kg) karakter!\nPerhatian: Format hanya berupa angka satuan kg (cth: 75).", "Input", "");
+				return ShowPlayerDialog(playerid, DIALOG_BERATBADAN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE" - Berat Badan (kg)", "Mohon masukkan berat badan (kg) karakter!\nPerhatian: Format hanya berupa angka satuan kg (cth: 75).", "Input", "");
 			
 			if(berat <= 40)
-				return ShowPlayerDialog(playerid, DIALOG_BERATBADAN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE" - Berat Badan (kg)", "Tidak dapat dibawah 40kg!", "Input", "");
+				return ShowPlayerDialog(playerid, DIALOG_BERATBADAN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE" - Berat Badan (kg)", "Tidak dapat dibawah 40kg!", "Input", "");
 
 			if(berat >= 95)
-				return ShowPlayerDialog(playerid, DIALOG_BERATBADAN, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE" - Berat Badan (kg)", "Tidak dapat diatas 95kg!", "Input", "");
+				return ShowPlayerDialog(playerid, DIALOG_BERATBADAN, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE" - Berat Badan (kg)", "Tidak dapat diatas 95kg!", "Input", "");
 
 			AccountData[playerid][pBeratBadan] = berat;
 			SetPVarInt(playerid, "CreateWeight", 1);
 			new strgbg[200];
 			mysql_format(mdb_query, strgbg, sizeof(strgbg), "UPDATE `player_characters` SET `Char_BodyWeight`='%d' WHERE `pID`='%d'", AccountData[playerid][pBeratBadan], AccountData[playerid][pID]);
 			mysql_tquery(mdb_query, strgbg);
-			ShowPlayerDialog(playerid, DIALOG_GENDER, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Jenis Kelamin", ""WHITE"Laki-Laki\n"GRAY"Perempuan", "Pilih", "");
+			ShowPlayerDialog(playerid, DIALOG_GENDER, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Jenis Kelamin", ""WHITE"Laki-Laki\n"GRAY"Perempuan", "Pilih", "");
 		}
 	}
 	if(dialogid == DIALOG_GENDER)
@@ -388,7 +388,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			ShowTDN(playerid, NOTIFICATION_SUKSES, "Pembuatan karakter berhasil!");
 			SetPlayerCameraPos(playerid, 534.065, -2102.218, 98.480);
 			SetPlayerCameraLookAt(playerid, 531.651, -2098.260, 96.606);
-			// ShowPlayerDialog(playerid, DIALOG_SELECT_SPAWN, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Pilih Lokasi Spawn",
+			// ShowPlayerDialog(playerid, DIALOG_SELECT_SPAWN, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Pilih Lokasi Spawn",
 			// "Titik Spawn\tDetail\tLokasi\
 			// \nLos Santos International Airport\tAnda mendarat dengan pesawat\tLos Santos\
 			// \n"GRAY"Pelabuhan Merak ( Ocean Docks )\tAnda mendarat dengan kapal laut\tLos Santos", "Pilih", "");
@@ -419,14 +419,14 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		
 		if(isnull(inputtext))
 		{
-			ShowPlayerDialog(playerid, DialogTrackMyVeh, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Lacak Kendaraan", 
+			ShowPlayerDialog(playerid, DialogTrackMyVeh, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Lacak Kendaraan", 
 			"Error: Tidak dapat diisi kosong!\nCari Kendaraan\n"YELLOW"(Masukkan VID Kendaraan yang ingin anda cari):", "Input", "Batal");
 			return 1;
 		}
 
 		if(!IsNumeric(inputtext))
 		{
-			ShowPlayerDialog(playerid, DialogTrackMyVeh, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Lacak Kendaraan", 
+			ShowPlayerDialog(playerid, DialogTrackMyVeh, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Lacak Kendaraan", 
 			"Error: Hanya dapat diisi angka!\nCari Kendaraan\n"YELLOW"(Masukkan VID Kendaraan yang ingin anda cari):", "Input", "Batal");
 			return 1;
 		}
@@ -492,7 +492,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 						format(string, sizeof string, "%s"VERONA_ARWIN"Skala Z:\t%f\n", string, pToys[playerid][AccountData[playerid][toySelected]][toy_sz]);
 						format(string, sizeof string, "%s"WHITE"Hapus\t(Pilih jika anda ingin menghapus permanent)\n", string);
 						format(string, sizeof string, "%s"VERONA_ARWIN"%s\t%s\n", string, status, status2);
-						ShowPlayerDialog(playerid, DialogToyEdit, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Edit Fashion (Topi/Helmet)", string, "Select", "Cancel");
+						ShowPlayerDialog(playerid, DialogToyEdit, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Edit Fashion (Topi/Helmet)", string, "Select", "Cancel");
 					}
 				}
 				case 1: //slot 2
@@ -532,7 +532,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 						format(string, sizeof string, "%s"VERONA_ARWIN"Skala Z:\t%f\n", string, pToys[playerid][AccountData[playerid][toySelected]][toy_sz]);
 						format(string, sizeof string, "%s"WHITE"Hapus\t(Pilih jika anda ingin menghapus permanent)\n", string);
 						format(string, sizeof string, "%s"VERONA_ARWIN"%s\t%s\n", string, status, status2);
-						ShowPlayerDialog(playerid, DialogToyEdit, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Edit Fashion (Kacamata)", string, "Select", "Cancel");
+						ShowPlayerDialog(playerid, DialogToyEdit, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Edit Fashion (Kacamata)", string, "Select", "Cancel");
 					}
 				}
 				case 2: //slot 3
@@ -572,7 +572,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 						format(string, sizeof string, "%s"VERONA_ARWIN"Skala Z:\t%f\n", string, pToys[playerid][AccountData[playerid][toySelected]][toy_sz]);
 						format(string, sizeof string, "%s"WHITE"Hapus\t(Pilih jika anda ingin menghapus permanent)\n", string);
 						format(string, sizeof string, "%s"VERONA_ARWIN"%s\t%s\n", string, status, status2);
-						ShowPlayerDialog(playerid, DialogToyEdit, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Edit Fashion (Aksesoris)", string, "Select", "Cancel");
+						ShowPlayerDialog(playerid, DialogToyEdit, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Edit Fashion (Aksesoris)", string, "Select", "Cancel");
 					}
 				}
 				case 3: //slot 4
@@ -612,7 +612,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 						format(string, sizeof string, "%s"VERONA_ARWIN"Skala Z:\t%f\n", string, pToys[playerid][AccountData[playerid][toySelected]][toy_sz]);
 						format(string, sizeof string, "%s"WHITE"Hapus\t(Pilih jika anda ingin menghapus permanent)\n", string);
 						format(string, sizeof string, "%s"VERONA_ARWIN"%s\t%s\n", string, status, status2);
-						ShowPlayerDialog(playerid, DialogToyEdit, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Edit Fashion (Tas/Koper)", string, "Select", "Cancel");
+						ShowPlayerDialog(playerid, DialogToyEdit, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Edit Fashion (Tas/Koper)", string, "Select", "Cancel");
 					}
 				}
 				case 4:
@@ -673,7 +673,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 				}
 				case 2: // change bone
 				{
-					ShowPlayerDialog(playerid, DIALOG_TOYPOSISI, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay"WHITE"- Ubah Tulang(Bone)", 
+					ShowPlayerDialog(playerid, DIALOG_TOYPOSISI, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay"WHITE"- Ubah Tulang(Bone)", 
 					"Spine\
 					\n"GRAY"Head\
 					\nLeft Upper Arm\
@@ -697,55 +697,55 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 				{
 					new mstr[128];
 					format(mstr, sizeof mstr, ""WHITE"Sumbu X (saat ini): %f\n"YELLOW"(Masukkan Sumbu X yang baru):", pToys[playerid][AccountData[playerid][toySelected]][toy_x]);
-					ShowPlayerDialog(playerid, DIALOG_TOYPOSX, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Edit Sumbu X", mstr, "Edit", "Cancel");
+					ShowPlayerDialog(playerid, DIALOG_TOYPOSX, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Edit Sumbu X", mstr, "Edit", "Cancel");
 				}
 				case 4:
 				{
 					new mstr[128];
 					format(mstr, sizeof mstr, ""WHITE"Sumbu Y (saat ini): %f\n"YELLOW"(Masukkan Sumbu Y yang baru):", pToys[playerid][AccountData[playerid][toySelected]][toy_y]);
-					ShowPlayerDialog(playerid, DIALOG_TOYPOSY, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Edit Sumbu X", mstr, "Edit", "Cancel");
+					ShowPlayerDialog(playerid, DIALOG_TOYPOSY, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Edit Sumbu X", mstr, "Edit", "Cancel");
 				}
 				case 5:
 				{
 					new mstr[128];
 					format(mstr, sizeof mstr, ""WHITE"Sumbu Z (saat ini): %f\n"YELLOW"(Masukkan Sumbu Z yang baru):", pToys[playerid][AccountData[playerid][toySelected]][toy_z]);
-					ShowPlayerDialog(playerid, DIALOG_TOYPOSZ, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Edit Sumbu Z", mstr, "Edit", "Cancel");
+					ShowPlayerDialog(playerid, DIALOG_TOYPOSZ, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Edit Sumbu Z", mstr, "Edit", "Cancel");
 				}
 				case 6:
 				{
 					new mstr[128];
 					format(mstr, sizeof mstr, ""WHITE"Rotasi X (saat ini): %f\n"YELLOW"(Masukkan Rotasi X yang baru):", pToys[playerid][AccountData[playerid][toySelected]][toy_rx]);
-					ShowPlayerDialog(playerid, DIALOG_TOYPOSRX, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Edit Rotasi X", mstr, "Edit", "Cancel");
+					ShowPlayerDialog(playerid, DIALOG_TOYPOSRX, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Edit Rotasi X", mstr, "Edit", "Cancel");
 				}
 				case 7:
 				{
 					new mstr[128];
 					format(mstr, sizeof mstr, ""WHITE"Rotasi Y (saat ini): %f\n"YELLOW"(Masukkan Rotasi Y yang baru):", pToys[playerid][AccountData[playerid][toySelected]][toy_ry]);
-					ShowPlayerDialog(playerid, DIALOG_TOYPOSRY, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Edit Rotasi Y", mstr, "Edit", "Cancel");
+					ShowPlayerDialog(playerid, DIALOG_TOYPOSRY, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Edit Rotasi Y", mstr, "Edit", "Cancel");
 				}
 				case 8:
 				{
 					new mstr[128];
 					format(mstr, sizeof mstr, ""WHITE"Rotasi Z (saat ini): %f\n"YELLOW"(Masukkan Rotasi Z yang baru):", pToys[playerid][AccountData[playerid][toySelected]][toy_rz]);
-					ShowPlayerDialog(playerid, DIALOG_TOYPOSRZ, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Edit Rotasi Z", mstr, "Edit", "Cancel");
+					ShowPlayerDialog(playerid, DIALOG_TOYPOSRZ, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Edit Rotasi Z", mstr, "Edit", "Cancel");
 				}
 				case 9:
 				{
 					new mstr[128];
 					format(mstr, sizeof mstr, ""WHITE"Skala X (saat ini): %f\n"YELLOW"(Masukkan Skala X yang baru):", pToys[playerid][AccountData[playerid][toySelected]][toy_sx]);
-					ShowPlayerDialog(playerid, DIALOG_TOYPOSSX, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Edit Skala X", mstr, "Edit", "Cancel");
+					ShowPlayerDialog(playerid, DIALOG_TOYPOSSX, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Edit Skala X", mstr, "Edit", "Cancel");
 				}
 				case 10:
 				{
 					new mstr[128];
 					format(mstr, sizeof mstr, ""WHITE"Skala Y (saat ini): %f\n"YELLOW"(Masukkan Skala Y yang baru):", pToys[playerid][AccountData[playerid][toySelected]][toy_sy]);
-					ShowPlayerDialog(playerid, DIALOG_TOYPOSSY, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Edit Skala Y", mstr, "Edit", "Cancel");
+					ShowPlayerDialog(playerid, DIALOG_TOYPOSSY, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Edit Skala Y", mstr, "Edit", "Cancel");
 				}
 				case 11:
 				{
 					new mstr[128];
 					format(mstr, sizeof mstr, ""WHITE"Skala Z (saat ini): %f\n"YELLOW"(Masukkan Skala Z yang baru):", pToys[playerid][AccountData[playerid][toySelected]][toy_sz]);
-					ShowPlayerDialog(playerid, DIALOG_TOYPOSSZ, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Edit Skala Z", mstr, "Edit", "Cancel");
+					ShowPlayerDialog(playerid, DIALOG_TOYPOSSZ, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Edit Skala Z", mstr, "Edit", "Cancel");
 				}
 				case 12: // remove toy
 				{
@@ -825,7 +825,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			}
 			else strcat(string, ""VERONA_ARWIN"Tas/Koper\n");
 
-			ShowPlayerDialog(playerid, DIALOG_TOY, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Edit Fashion", string, "Select", "Cancel");
+			ShowPlayerDialog(playerid, DIALOG_TOY, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Edit Fashion", string, "Select", "Cancel");
 		}
 		return 1;
 	}
@@ -988,7 +988,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 				minsty = "Tas/Koper";
 			}
 			new string[1800], toys[128];
-			format(toys, sizeof(toys), ""Mayoritas"Mayoritas Roleplay"WHITE" - Edit Fashion (%s)", minsty);
+			format(toys, sizeof(toys), ""Imajinasi"Imajinasi Roleplay"WHITE" - Edit Fashion (%s)", minsty);
 			format(string, sizeof string, "Pengaturan\tParameter\n");
 			format(string, sizeof string, "%s"WHITE"Edit Posisi\t(Khusus PC)\n", string);
 			format(string, sizeof string, "%s"VERONA_ARWIN"Edit Posisi\t(Khusus Android)\n", string);
@@ -1049,7 +1049,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 				minsty = "Tas/Koper";
 			}
 			new string[1800], toys[128];
-			format(toys, sizeof(toys), ""Mayoritas"Mayoritas Roleplay"WHITE" - Edit Fashion (%s)", minsty);
+			format(toys, sizeof(toys), ""Imajinasi"Imajinasi Roleplay"WHITE" - Edit Fashion (%s)", minsty);
 			format(string, sizeof string, "Pengaturan\tParameter\n");
 			format(string, sizeof string, "%s"WHITE"Edit Posisi\t(Khusus PC)\n", string);
 			format(string, sizeof string, "%s"VERONA_ARWIN"Edit Posisi\t(Khusus Android)\n", string);
@@ -1110,7 +1110,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 				minsty = "Tas/Koper";
 			}
 			new string[1800], toys[128];
-			format(toys, sizeof(toys), ""Mayoritas"Mayoritas Roleplay"WHITE" - Edit Fashion (%s)", minsty);
+			format(toys, sizeof(toys), ""Imajinasi"Imajinasi Roleplay"WHITE" - Edit Fashion (%s)", minsty);
 			format(string, sizeof string, "Pengaturan\tParameter\n");
 			format(string, sizeof string, "%s"WHITE"Edit Posisi\t(Khusus PC)\n", string);
 			format(string, sizeof string, "%s"VERONA_ARWIN"Edit Posisi\t(Khusus Android)\n", string);
@@ -1171,7 +1171,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 				minsty = "Tas/Koper";
 			}
 			new string[1800], toys[128];
-			format(toys, sizeof(toys), ""Mayoritas"Mayoritas Roleplay"WHITE" - Edit Fashion (%s)", minsty);
+			format(toys, sizeof(toys), ""Imajinasi"Imajinasi Roleplay"WHITE" - Edit Fashion (%s)", minsty);
 			format(string, sizeof string, "Pengaturan\tParameter\n");
 			format(string, sizeof string, "%s"WHITE"Edit Posisi\t(Khusus PC)\n", string);
 			format(string, sizeof string, "%s"VERONA_ARWIN"Edit Posisi\t(Khusus Android)\n", string);
@@ -1232,7 +1232,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 				minsty = "Tas/Koper";
 			}
 			new string[1800], toys[128];
-			format(toys, sizeof(toys), ""Mayoritas"Mayoritas Roleplay"WHITE" - Edit Fashion (%s)", minsty);
+			format(toys, sizeof(toys), ""Imajinasi"Imajinasi Roleplay"WHITE" - Edit Fashion (%s)", minsty);
 			format(string, sizeof string, "Pengaturan\tParameter\n");
 			format(string, sizeof string, "%s"WHITE"Edit Posisi\t(Khusus PC)\n", string);
 			format(string, sizeof string, "%s"VERONA_ARWIN"Edit Posisi\t(Khusus Android)\n", string);
@@ -1293,7 +1293,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 				minsty = "Tas/Koper";
 			}
 			new string[1800], toys[128];
-			format(toys, sizeof(toys), ""Mayoritas"Mayoritas Roleplay"WHITE" - Edit Fashion (%s)", minsty);
+			format(toys, sizeof(toys), ""Imajinasi"Imajinasi Roleplay"WHITE" - Edit Fashion (%s)", minsty);
 			format(string, sizeof string, "Pengaturan\tParameter\n");
 			format(string, sizeof string, "%s"WHITE"Edit Posisi\t(Khusus PC)\n", string);
 			format(string, sizeof string, "%s"VERONA_ARWIN"Edit Posisi\t(Khusus Android)\n", string);
@@ -1355,7 +1355,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 				minsty = "Tas/Koper";
 			}
 			new string[1800], toys[128];
-			format(toys, sizeof(toys), ""Mayoritas"Mayoritas Roleplay"WHITE" - Edit Fashion (%s)", minsty);
+			format(toys, sizeof(toys), ""Imajinasi"Imajinasi Roleplay"WHITE" - Edit Fashion (%s)", minsty);
 			format(string, sizeof string, "Pengaturan\tParameter\n");
 			format(string, sizeof string, "%s"WHITE"Edit Posisi\t(Khusus PC)\n", string);
 			format(string, sizeof string, "%s"VERONA_ARWIN"Edit Posisi\t(Khusus Android)\n", string);
@@ -1416,7 +1416,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 				minsty = "Tas/Koper";
 			}
 			new string[1800], toys[128];
-			format(toys, sizeof(toys), ""Mayoritas"Mayoritas Roleplay"WHITE" - Edit Fashion (%s)", minsty);
+			format(toys, sizeof(toys), ""Imajinasi"Imajinasi Roleplay"WHITE" - Edit Fashion (%s)", minsty);
 			format(string, sizeof string, "Pengaturan\tParameter\n");
 			format(string, sizeof string, "%s"WHITE"Edit Posisi\t(Khusus PC)\n", string);
 			format(string, sizeof string, "%s"VERONA_ARWIN"Edit Posisi\t(Khusus Android)\n", string);
@@ -1477,7 +1477,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 				minsty = "Tas/Koper";
 			}
 			new string[1800], toys[128];
-			format(toys, sizeof(toys), ""Mayoritas"Mayoritas Roleplay"WHITE" - Edit Fashion (%s)", minsty);
+			format(toys, sizeof(toys), ""Imajinasi"Imajinasi Roleplay"WHITE" - Edit Fashion (%s)", minsty);
 			format(string, sizeof string, "Pengaturan\tParameter\n");
 			format(string, sizeof string, "%s"WHITE"Edit Posisi\t(Khusus PC)\n", string);
 			format(string, sizeof string, "%s"VERONA_ARWIN"Edit Posisi\t(Khusus Android)\n", string);
@@ -1522,7 +1522,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		{
 			case 0:// Actor
 			{
-				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Dynamic Actor",
+				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Dynamic Actor",
 				"Perintah\tKeterangan\n\
 				/addactor [skinid] [name]\tMembuat Actor\n\
 				"GRAY"/editactor [id] [model] [new model]\t"GRAY"Mengganti Skin Model Actor\n\
@@ -1535,7 +1535,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			}
 			case 1: // Dynamic Rental
 			{
-				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Dynamic Rents",
+				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Dynamic Rents",
 				"Perintah\tKeterangan\n\
 				/addrent\tMenambahkan Dynamic Rents\n\
 				"GRAY"/editrent [id] [location]\t"GRAY"Mengubah Posisi Letak Dynamic Rents\n\
@@ -1561,11 +1561,11 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 				"GRAY"/editdoor [id] [garage] [0 - 1]\t"GRAY"Membuat Akses Door Menjadi Garage\n\
 				/editdoor [id] [iconmap] [0 - 63]\tMembuat Icon Dynamic Door Pada Map\n\
 				"GRAY"/editdoor [id] [delete]\t"GRAY"Menghapus Keberadaan Dynamic Door");
-				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Dynamic Door", str, "Tutup", "");
+				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Dynamic Door", str, "Tutup", "");
 			}
 			case 3: // Fivem Label
 			{
-				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Dynamic Label",
+				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Dynamic Label",
 				"Perintah\tKeterangan\n\
 				/addlabel [text]\tMenambahkan label menggunakan Text\n\
 				"GRAY"/gotolabel [id]\t"GRAY"Teleportasi ke Dynamic Label\n\
@@ -1573,7 +1573,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			}
 			case 4: //public garage
 			{
-				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Dynamic Public Garage",
+				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Dynamic Public Garage",
 				"Perintah\tKeterangan\n\
 				/addgarkot\tMenambah Dynamic Garasi Umum\n\
 				"GRAY"/editgarkot [id] [name]\t"GRAY"Mengubah nama Garasi Umum\n\
@@ -1582,7 +1582,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			}
 			case 5: //Tong Sampah
 			{
-				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Dynamic Trash",
+				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Dynamic Trash",
 				"Perintah\tKeterangan\n\
 				/addtrash\tMembuat Dynamic Trash\n\
 				"GRAY"/edittrash [id] [model] [model id]\t"GRAY"Mengubah Object ID Dynamic Trash\n\
@@ -1592,7 +1592,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			}
 			case 6: //Dynamic ATM
 			{
-				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Dynamic ATM", 
+				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Dynamic ATM", 
 				"Perintah\tKeterangan\n\
 				/createatm\tMembuat Dynamic ATM\n\
 				"GRAY"/editatm [id]\t"GRAY"Mengedit posisi letak Dynamic ATM\n\
@@ -1601,7 +1601,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			}
 			case 7: //Kanabis
 			{
-				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Dynamic Ladang", 
+				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Dynamic Ladang", 
 				"Perintah\tKeterangan\n\
 				/addkanabis\tMembuat Dynamic Kanabis\n\
 				"GRAY"/editkanabis [id]\t"GRAY"Mengedit posisi letak Dynamic Kanabis\n\
@@ -1610,7 +1610,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			}
 			case 8: //Rampok Warung
 			{
-				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Dynamic Robbery", 
+				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Dynamic Robbery", 
 				"Perintah\tKeterangan\n\
 				/createrobber\tMembuat Dynamic Rampok Warung\n\
 				"GRAY"/editrobbery [id]\t"GRAY"Mengedit posisi letak Dynamic Rampok Warung\n\
@@ -1619,7 +1619,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			}
 			case 9: //Warung
 			{
-				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Dynamic Robbery", 
+				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Dynamic Robbery", 
 				"Perintah\tKeterangan\n\
 				/addwarung [type 1 - 3]\tMembuat Dynamic Warung Dengan Pilihan Type\n\
 				"GRAY"/gotowarung [id]\t"GRAY"Teleportasi ke Dynamic Warung\n\
@@ -1627,7 +1627,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			}
 			case 10: //Hunting
 			{
-				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Dynamic Hunting", 
+				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Dynamic Hunting", 
 				"Perintah\tKeterangan\n\
 				/adddeer\tMembuat Dynamic Rusa\n\
 				"GRAY"/editdeer [id]\t"GRAY"Mengedit posisi letak Dynamic Rusa\n\
@@ -1636,7 +1636,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			}
 			case 11: //Gudang
 			{
-				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Dynamic Gudang", 
+				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Dynamic Gudang", 
 				"Perintah\tKeterangan\n\
 				/addgudang [nama gudang] [harga sewa 30 hari]\tMenambah Dynamic Gudang\n\
 				"GRAY"/gotogudang [id]\t"GRAY"Teleportasi ke Dynamic Gudang\n\
@@ -1644,7 +1644,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			}
 			case 12: //Garasi Families
 			{
-				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Dynamic Gudang", 
+				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Dynamic Gudang", 
 				"Perintah\tKeterangan\n\
 				/addfamgarkot\tMenambah Dynamic Garasi Families\n\
 				"GRAY"/editfamgarkot [id] [famid] [id families]\t"GRAY"Menetapkan Garasi itu Milik Families ID Berapa\n\
@@ -1655,7 +1655,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			}
 			case 13: //Dynamic Rumah
 			{
-				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Dynamic Houses", 
+				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Dynamic Houses", 
 				"Perintah\tKeterangan\n\
 				/addhouse [type]\tMenambahkan Dynamic Rumah Berdasarkan Type\n\
 				"GRAY"/edithouse [id] [garage]\t"GRAY"Menambahkan Garasi Pada Dynamic House\n\
@@ -1667,14 +1667,14 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			}
 			case 14: //Dynamic Map Icon
 			{
-				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Dynamic Icon",
+				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Dynamic Icon",
 				"Perintah\tKeterangan\n\
 				/addicon [icon id]\tMenambah Dynamic Map Icon Berdasarkan Icon ID\n\
 				"GRAY"/destroyicon [id]\t"GRAY"Menghapus Dynamic Map Icon", "Tutup", "");
 			}
 			case 15: //Dynamic Button
 			{
-				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Dynamic Buttons",
+				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Dynamic Buttons",
 				"Perintah\tKeterangan\n\
 				/addbutton\tMenambah Dynamic Button\n\
 				"GRAY"/editbutton [id] [buttonpos]\t"GRAY"Mengubah posisi letak Dynamic Button\n\
@@ -1688,7 +1688,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			}
 			case 16: // Object
 			{
-				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Dynamic Object",
+				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Dynamic Object",
 				"Perintah\tKeterangan\n\
 				/createobject [model id]\tMenambah suatu object berdasarkan model yang anda input\n\
 				"GRAY"/editobject [id object]\t"GRAY"Untuk mengedit posisi letak object tersebut\n\
@@ -1698,7 +1698,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			}
 			case 17: // Uranium
 			{
-				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Dynamic Object",
+				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Dynamic Object",
 				"Perintah\tKeterangan\n\
 				/adduranium\tUntuk menambahkan Dynamic Uranium\
 				\n"GRAY"/edituranium [id] [delete]\t"GRAY"Untuk menghapus Dynamic Uranium\
@@ -1715,7 +1715,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			{
 				if(AccountData[playerid][pAdmin] < 1 && AccountData[playerid][pTheStars] < 1) return ShowTDN(playerid, NOTIFICATION_ERROR, "Ini Khusus Trial Admin dan The Stars!");
 
-				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Trial Admin", 
+				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Trial Admin", 
 				"Perintah\tKeterangan\n\
 				/a\tAkses Chat Staff\n\
 				"GRAY"/aduty\t"GRAY"On Duty Sebagai Admin / The Stars\n\
@@ -1749,7 +1749,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			{
 				if(AccountData[playerid][pAdmin] < 2) return ShowTDN(playerid, NOTIFICATION_ERROR, "Ini Khusus Helper!");
 				
-				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Helper", 
+				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Helper", 
 				"Perintah\tKeterangan\n\
 				/makequiz\tMembuat quiz server\n\
 				"GRAY"/togooc\t"GRAY"Membuka Chat Global Server\n\
@@ -1765,7 +1765,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			case 2:// AL3
 			{
 				if(AccountData[playerid][pAdmin] < 3) return ShowTDN(playerid, NOTIFICATION_ERROR, "Ini Khusus Admin I!");
-				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Admin I", 
+				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Admin I", 
 				"Perintah\tKeterangan\n\
 				/makewargaoff\tMembuat status Faction dan Families menjadi warga (offline)\n\
 				"GRAY"/makewarga\t"GRAY"Membuat status Faction dan Families menjadi warga\n\
@@ -1793,7 +1793,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			case 3: //AL4
 			{
 				if(AccountData[playerid][pAdmin] < 4) return ShowTDN(playerid, NOTIFICATION_ERROR, "Ini Khusus Admin II!");
-				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Admin II", 
+				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Admin II", 
 				"Perintah\tKeterangan\n\
 				/ntag\tMemperlihatkan Name Tag disertai Nama, UCP, ID, Darah, Armour\n\
 				"GRAY"/aduty\t"GRAY"Untuk mulai tugas menjadi administrator\n\
@@ -1825,7 +1825,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			case 4: // AL5
 			{
 				if(AccountData[playerid][pAdmin] < 5) return ShowTDN(playerid, NOTIFICATION_ERROR, "Ini Khusus Admin III!");
-				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Admin III", 
+				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Admin III", 
 				"Perintah\tKeterangan\n\
 				/setfaction\tMenjadikan status player menjadi Faction tertentu\n\
 				"GRAY"/playnearsong\t"GRAY"Memutar musik dan didengar player di sekitar\n\
@@ -1842,7 +1842,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			case 5: //
 			{
 				if(AccountData[playerid][pAdmin] < 6) return ShowTDN(playerid, NOTIFICATION_ERROR, "Ini Khusus Pengurus!");
-				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Pengurus", 
+				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Pengurus", 
 				"Perintah\tKeterangan\n\
 				/setadminname\tMengubah nama Administrator player\n\
 				"GRAY"/setadmin\t"GRAY"Mengeset level Administrator player\n\
@@ -1854,7 +1854,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			case 6: //management
 			{
 				if(AccountData[playerid][pAdmin] < 7) return ShowTDN(playerid, NOTIFICATION_ERROR, "Ini Khusus Management!");
-				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Management", 
+				ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Management", 
 				"Perintah\tKeterangan\n\
 				/dynhelp\tSemua dapat anda akses", "Tutup", "");
 			}
@@ -1866,21 +1866,21 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
 		if(isnull(inputtext))
 		{
-			ShowPlayerDialog(playerid, DIALOG_SETAMOUNT, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Set Amount",
+			ShowPlayerDialog(playerid, DIALOG_SETAMOUNT, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Set Amount",
 			"Error: Tidak dapat diisi kosong!\nMohon masukkan berapa jumlah item yang akan diberikan:", "Set", "Batal");
 			return 1;
 		}
 
 		if(!IsNumeric(inputtext))
 		{
-			ShowPlayerDialog(playerid, DIALOG_SETAMOUNT, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Set Amount",
+			ShowPlayerDialog(playerid, DIALOG_SETAMOUNT, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Set Amount",
 			"Error: Hanya dapat diisi angka!\nMohon masukkan berapa jumlah item yang akan diberikan:", "Set", "Batal");
 			return 1;
 		}
 
 		if(strval(inputtext) < 1) 
 		{
-			ShowPlayerDialog(playerid, DIALOG_SETAMOUNT, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Set Amount",
+			ShowPlayerDialog(playerid, DIALOG_SETAMOUNT, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Set Amount",
 			"Error: Jumlah tidak valid!\nMohon masukkan berapa jumlah item yang akan diberikan:", "Set", "Batal");
 			return 1;
 		}
@@ -1919,8 +1919,8 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	{
 		if(!response) return true;
 		new amount = floatround(strval(inputtext));
-		if(amount > AccountData[playerid][pSaldoGopay]) return ShowPlayerDialog(playerid, DIALOG_GOPAYWITHDRAW, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay"WHITE" - Tarik Saldo Gopay", "ERROR: Anda tidak memiliki saldo sebanyak itu\n\nInput jumlah saldo gopay yang ingin kamu tarik:", "Submit", "Cancel");
-		if(amount < 1) return ShowPlayerDialog(playerid, DIALOG_GOPAYWITHDRAW, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay"WHITE" - Tarik Saldo Gopay", "ERROR: Anda memasukan angka yang tidak Valid!\n\nInput jumlah saldo gopay yang ingin kamu tarik:", "Submit", "Cancel");
+		if(amount > AccountData[playerid][pSaldoGopay]) return ShowPlayerDialog(playerid, DIALOG_GOPAYWITHDRAW, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay"WHITE" - Tarik Saldo Gopay", "ERROR: Anda tidak memiliki saldo sebanyak itu\n\nInput jumlah saldo gopay yang ingin kamu tarik:", "Submit", "Cancel");
+		if(amount < 1) return ShowPlayerDialog(playerid, DIALOG_GOPAYWITHDRAW, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay"WHITE" - Tarik Saldo Gopay", "ERROR: Anda memasukan angka yang tidak Valid!\n\nInput jumlah saldo gopay yang ingin kamu tarik:", "Submit", "Cancel");
 
 		else
 		{
@@ -1959,11 +1959,11 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 					strcat(str, "dj\ndj2\ndj3\nnodong\nnodong2\nnodong3\nnodong4\nkungfu\nnunduk\nnunjuk\nmabuk\nnangis\nlelah\nlelah2\n");
 					strcat(str, "duduk\nduduk2\nduduk3\nduduk4\nduduk5\nduduk6\njarteng\n");
 					strcat(str, "pusing\nped\nped2\nped3\nped4\nped5\nped6\nped7\nped8\nped9\nped10\nped11\nped12\nped13\nped14\nped15\nped15\nkencing\nx\n");
-					ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay"WHITE" - List Animasi", str, "Close", "");
+					ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay"WHITE" - List Animasi", str, "Close", "");
 				}
 				case 1:
 				{
-					ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Emote Property",
+					ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Emote Property",
 					"TV\
 					\nBan\
 					\nBesbol\
@@ -1990,7 +1990,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 				{
 					new str[512];
 					format(str, sizeof(str), "Peluk\n"GRAY"Salam\n");
-					ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- List Animasi Interaksi", str, "Close", "");
+					ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- List Animasi Interaksi", str, "Close", "");
 				}
 			}
 		}
@@ -2002,40 +2002,40 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		new shstr[525];
 		if(isnull(inputtext))
 		{
-			format(shstr, sizeof(shstr), ""WHITE"Error: Tidak dapat diisi kosong!\n"WHITE"Selamat datang di "Mayoritas"Mayoritas Roleplay\n"WHITE"UCP Ini telah terdaftar!\nNama UCP: "LIGHTGREEN"%s\
-			\n"WHITE"Version: "Mayoritas"LastestByExeren\n"YELLOW"(Silahkan masukkan PIN yang dikirimkan oleh Bot Mayoritas ke Discord anda dibawah ini):", AccountData[playerid][pUCP]);
-			ShowPlayerDialog(playerid, DIALOG_VERIFYCODE, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Verifikasi Akun",
+			format(shstr, sizeof(shstr), ""WHITE"Error: Tidak dapat diisi kosong!\n"WHITE"Selamat datang di "Imajinasi"Imajinasi Roleplay\n"WHITE"UCP Ini telah terdaftar!\nNama UCP: "LIGHTGREEN"%s\
+			\n"WHITE"Version: "Imajinasi"LastestByExeren\n"YELLOW"(Silahkan masukkan PIN yang dikirimkan oleh Bot Imajinasi ke Discord anda dibawah ini):", AccountData[playerid][pUCP]);
+			ShowPlayerDialog(playerid, DIALOG_VERIFYCODE, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Verifikasi Akun",
 			shstr, "Input", "Batal");
 			return 1;
 		}
 		
 		if(!IsNumeric(inputtext))
 		{
-			format(shstr, sizeof(shstr), ""WHITE"Error: Hanya dapat diisi angka!\n"WHITE"Selamat datang di "Mayoritas"Mayoritas Roleplay\n"WHITE"UCP Ini telah terdaftar!\nNama UCP: "LIGHTGREEN"%s\
-			\n"WHITE"Version: "Mayoritas"LastestByExeren\n"YELLOW"(Silahkan masukkan PIN yang dikirimkan oleh Bot Mayoritas ke Discord anda dibawah ini):", AccountData[playerid][pUCP]);
-			ShowPlayerDialog(playerid, DIALOG_VERIFYCODE, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Verifikasi Akun",
+			format(shstr, sizeof(shstr), ""WHITE"Error: Hanya dapat diisi angka!\n"WHITE"Selamat datang di "Imajinasi"Imajinasi Roleplay\n"WHITE"UCP Ini telah terdaftar!\nNama UCP: "LIGHTGREEN"%s\
+			\n"WHITE"Version: "Imajinasi"LastestByExeren\n"YELLOW"(Silahkan masukkan PIN yang dikirimkan oleh Bot Imajinasi ke Discord anda dibawah ini):", AccountData[playerid][pUCP]);
+			ShowPlayerDialog(playerid, DIALOG_VERIFYCODE, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Verifikasi Akun",
 			shstr, "Input", "Batal");
 			return 1;
 		}
 
 		if(strval(inputtext) == AccountData[playerid][pVerifyCode])
 		{
-			format(shstr, sizeof(shstr), ""WHITE"Selamat datang di "Mayoritas"Mayoritas Roleplay"WHITE"\nUCP ini telah terdaftar!\nNama UCP: "LIGHTGREEN"%s\n"WHITE"Version: "Mayoritas"LastestByExeren\n"YELLOW"(Silahkan untuk membuat password baru dibawah ini):", AccountData[playerid][pUCP]);
-			ShowPlayerDialog(playerid, DIALOG_REGISTER, DIALOG_STYLE_PASSWORD, ""Mayoritas"Mayoritas Roleplay "WHITE"- Pembuatan Password",
+			format(shstr, sizeof(shstr), ""WHITE"Selamat datang di "Imajinasi"Imajinasi Roleplay"WHITE"\nUCP ini telah terdaftar!\nNama UCP: "LIGHTGREEN"%s\n"WHITE"Version: "Imajinasi"LastestByExeren\n"YELLOW"(Silahkan untuk membuat password baru dibawah ini):", AccountData[playerid][pUCP]);
+			ShowPlayerDialog(playerid, DIALOG_REGISTER, DIALOG_STYLE_PASSWORD, ""Imajinasi"Imajinasi Roleplay "WHITE"- Pembuatan Password",
 			shstr, "Input", "Batal");
 			printf("[debug] OnPlayerVerifyCode(PID: %d UCP: %s) terpanggil", playerid, ReturnName(playerid));
 			return 1;
 		}
 
-		format(shstr, sizeof(shstr), ""WHITE"Selamat datang di "Mayoritas"Mayoritas Roleplay\n"WHITE"UCP Ini telah terdaftar!\nNama UCP: "LIGHTGREEN"%s\
-		\n"WHITE"Version: "Mayoritas"LastestByExeren\n"YELLOW"(Silahkan masukkan PIN yang dikirimkan oleh Bot Mayoritas ke Discord anda dibawah ini):", AccountData[playerid][pUCP]);
-		return ShowPlayerDialog(playerid, DIALOG_VERIFYCODE, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Verifikasi Akun",
+		format(shstr, sizeof(shstr), ""WHITE"Selamat datang di "Imajinasi"Imajinasi Roleplay\n"WHITE"UCP Ini telah terdaftar!\nNama UCP: "LIGHTGREEN"%s\
+		\n"WHITE"Version: "Imajinasi"LastestByExeren\n"YELLOW"(Silahkan masukkan PIN yang dikirimkan oleh Bot Imajinasi ke Discord anda dibawah ini):", AccountData[playerid][pUCP]);
+		return ShowPlayerDialog(playerid, DIALOG_VERIFYCODE, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Verifikasi Akun",
 		shstr, "Input", "Batal");
 	}
 	/*if(dialogid == DialogMyVeh)
 	{
 		if(!response) return ShowTDN(playerid, NOTIFICATION_INFO, "Anda telah membatalkan pilihan");
-		ShowPlayerDialog(playerid, DialogTrackMyVeh, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Lacak Kendaraan", 
+		ShowPlayerDialog(playerid, DialogTrackMyVeh, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Lacak Kendaraan", 
 		""WHITE"Cari kendaraan\n"YELLOW"(Masukkan VID Kendaraan yang ingin anda cari):", "Input", "Batal");
 		return 1;
 	}*/
@@ -2044,7 +2044,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		if(!response) return Info(playerid, "Anda telah membatalkan pilihan");
 		SetPVarInt(playerid, "ClickVehicle", ReturnPlayerVehID(playerid, (listitem+1)));
 
-		ShowPlayerDialog(playerid, DIALOG_MYV_MENU, DIALOG_STYLE_LIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- Kendaraan Saya", 
+		ShowPlayerDialog(playerid, DIALOG_MYV_MENU, DIALOG_STYLE_LIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- Kendaraan Saya", 
 		"Cari Kendaraan\
 		\n"GRAY"Detail Kendaraan", "Pilih", "Batal");
 		return 1;
@@ -2056,7 +2056,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		{
 			case 0: // cari Kendaraan
 			{
-				ShowPlayerDialog(playerid, DialogTrackMyVeh, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Lacak Kendaraan", 
+				ShowPlayerDialog(playerid, DialogTrackMyVeh, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Lacak Kendaraan", 
 				""WHITE"Cari kendaraan\n"YELLOW"(Masukkan VID Kendaraan yang ingin anda cari):", "Input", "Batal");
 			}
 			case 1: // Detail kendaraan
@@ -2082,7 +2082,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 				\n\nMasukkan Player ID atau Nama Player untuk memperlihatkan informasi ini kepadanya"LIGHTGREEN" (Input)", PlayerVehicle[vehid][pVehID], GetVehicleName(PlayerVehicle[vehid][pVehPhysic]), PlayerVehicle[vehid][pVehPlate],
 				(PlayerVehicle[vehid][pVehEngineUpgrade] != 1) ? ""RED"None" : ""GREEN"Upgrade", (PlayerVehicle[vehid][pVehBodyUpgrade] != 3) ? ""RED"None" : ""GREEN"Upgrade",
 				GetFuel(PlayerVehicle[vehid][pVehPhysic]), vHealth, (PlayerVehicle[vehid][pVehEngineUpgrade] != 1) ? "1000.0" : "2000.0", PlayerVehicle[vehid][pVehBodyRepair]);
-				ShowPlayerDialog(playerid, DIALOG_VEHICLE_DETAIL, DIALOG_STYLE_INPUT, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- %s Vehicle Details", AccountData[playerid][pName]), strings, "Submit", "Batal");
+				ShowPlayerDialog(playerid, DIALOG_VEHICLE_DETAIL, DIALOG_STYLE_INPUT, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- %s Vehicle Details", AccountData[playerid][pName]), strings, "Submit", "Batal");
 			}
 		}
 	}
@@ -2113,14 +2113,14 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		\n"WHITE"Vehicle Body Health:"YELLOW" %.1f/1000.0", PlayerVehicle[vehid][pVehID], GetVehicleName(PlayerVehicle[vehid][pVehPhysic]), PlayerVehicle[vehid][pVehPlate],
 		(PlayerVehicle[vehid][pVehEngineUpgrade] != 1) ? ""RED"None" : ""GREEN"Upgrade", (PlayerVehicle[vehid][pVehBodyUpgrade] != 3) ? ""RED"None" : ""GREEN"Upgrade",
 		GetFuel(PlayerVehicle[vehid][pVehPhysic]), vHealth, (PlayerVehicle[vehid][pVehEngineUpgrade] != 1) ? "1000.0" : "2000.0", PlayerVehicle[vehid][pVehBodyRepair]);
-		ShowPlayerDialog(otherid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, sprintf(""Mayoritas"Mayoritas Roleplay "WHITE"- %s Vehicle Details", AccountData[playerid][pName]), strings, "Tutup", "");
+		ShowPlayerDialog(otherid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, sprintf(""Imajinasi"Imajinasi Roleplay "WHITE"- %s Vehicle Details", AccountData[playerid][pName]), strings, "Tutup", "");
 	}
 	if(dialogid == DIALOG_SELECT_SPAWNEXPIRED)
 	{
 		if(!response) 
 		{
 			ShowTDN(playerid, NOTIFICATION_ERROR, "Anda harus menetapkan lokasi spawn!");
-			ShowPlayerDialog(playerid, DIALOG_SELECT_SPAWNEXPIRED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Pilih Lokasi Spawn",
+			ShowPlayerDialog(playerid, DIALOG_SELECT_SPAWNEXPIRED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Pilih Lokasi Spawn",
 			"Titik Spawn\tDetail\tLokasi\
 			\nBandara International\tAnda akan spawn Lokasi di bandara\tLos Santos\
 			\nPelabuhan Merak\tAnda akan spawn di pelabuhan\tOcean Docs\
@@ -2175,7 +2175,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 					if(AccountData[playerid][pOwnedHouse] == -1 && AccountData[playerid][pFriendHouseID] == -1)
 					{
 						ShowTDN(playerid, NOTIFICATION_ERROR, "Anda tidak memiliki rumah!");
-						ShowPlayerDialog(playerid, DIALOG_SELECT_SPAWNEXPIRED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Pilih Lokasi Spawn",
+						ShowPlayerDialog(playerid, DIALOG_SELECT_SPAWNEXPIRED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Pilih Lokasi Spawn",
 						"Titik Spawn\tDetail\tLokasi\
 						\nBandara International\tAnda akan spawn Lokasi di bandara\tLos Santos\
 						\nPelabuhan Merak\tAnda akan spawn di pelabuhan\tOcean Docs\
@@ -2212,7 +2212,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 					}
 					else if(AccountData[playerid][pOwnedHouse] != -1 && AccountData[playerid][pFriendHouseID] != -1)
 					{
-						Dialog_Show(playerid, HouseSpawn_Option, DIALOG_STYLE_TABLIST, ""Mayoritas"Mayoritas Roleplay "WHITE"- House Opsi", "Rumah Pribadi\n"GRAY"Rumah Teman", "Pilih", "Batal");
+						Dialog_Show(playerid, HouseSpawn_Option, DIALOG_STYLE_TABLIST, ""Imajinasi"Imajinasi Roleplay "WHITE"- House Opsi", "Rumah Pribadi\n"GRAY"Rumah Teman", "Pilih", "Batal");
 					}
 				}
 			}
@@ -2221,7 +2221,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 				if(AccountData[playerid][pOwnedRusun] == -1) 
 				{
 					ShowTDN(playerid, NOTIFICATION_ERROR, "Anda tidak memiliki rusun!");
-					ShowPlayerDialog(playerid, DIALOG_SELECT_SPAWNEXPIRED, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Pilih Lokasi Spawn",
+					ShowPlayerDialog(playerid, DIALOG_SELECT_SPAWNEXPIRED, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Pilih Lokasi Spawn",
 					"Titik Spawn\tDetail\tLokasi\
 					\nBandara International\tAnda akan spawn Lokasi di bandara\tLos Santos\
 					\nPelabuhan Merak\tAnda akan spawn di pelabuhan\tOcean Docs\
@@ -2298,7 +2298,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		if(!response)
 		{
 			ShowTDN(playerid, NOTIFICATION_ERROR, "Anda harus menetapkan lokasi spawn!");
-			ShowPlayerDialog(playerid, DIALOG_SELECT_SPAWN, DIALOG_STYLE_TABLIST_HEADERS, ""Mayoritas"Mayoritas Roleplay "WHITE"- Pilih Lokasi Spawn",
+			ShowPlayerDialog(playerid, DIALOG_SELECT_SPAWN, DIALOG_STYLE_TABLIST_HEADERS, ""Imajinasi"Imajinasi Roleplay "WHITE"- Pilih Lokasi Spawn",
 			"Titik Spawn\tDetail\tLokasi\
 			\nBandara International\tAnda akan spawn di bandara\tLos Santos\
 			\nPelabuhan Merak\tAnda akan spawn di pelabuhan\tOcean Docs", "Pilih", "");
@@ -3036,7 +3036,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			format(Status, sizeof(Status), "Permanent");
 		}
 		// format(shstr, sizeof(shstr), "**Admin:** %s\n**UCP Banned:** %s\n**Durasi Banned:** %s\n**Tanggal Banned:** %s\n**Alasan:** %s", AccountData[playerid][pAdminname], AccountData[ClickPlayerID[playerid]][pUCP], Status, ReturnDate(gettime()), inputtext);
-		// SendEmbedMessage("Mayoritas Roleplay", shstr, "Kemanan Mayoritas #1", "", "", "1152229209498980392", 0xff8fd5);
+		// SendEmbedMessage("Imajinasi Roleplay", shstr, "Kemanan Imajinasi #1", "", "", "1152229209498980392", 0xff8fd5);
 		KickEx(ClickPlayerID[playerid]);
 
 		SetPVarInt(playerid, "BannedTime", -1);
@@ -3047,7 +3047,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		if(!response) return 1;
 		if(!AccountData[playerid][pVip]) return ShowTDN(playerid, NOTIFICATION_ERROR, "Anda bukan pengguna VIP!");
 
-		if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_VIP_NAME, DIALOG_STYLE_INPUT, ""Mayoritas"Mayoritas Roleplay "WHITE"- Vip Name Custom",
+		if(isnull(inputtext)) return ShowPlayerDialog(playerid, DIALOG_VIP_NAME, DIALOG_STYLE_INPUT, ""Imajinasi"Imajinasi Roleplay "WHITE"- Vip Name Custom",
 		"Error: Tidak dapat diisi kosong!\nGunakan format dibawah ini untuk menambahkan warna\
 		\n- (b) = Warna Biru\
 		\n- (p) = Warna Pink\

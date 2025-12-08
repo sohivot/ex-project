@@ -97,8 +97,8 @@ public OnPlayerConnect(playerid)
     if (SvGetVersion(playerid) == SV_NULL)
     {
         new lstring[512];
-        format(lstring, sizeof(lstring), ""WHITE"Dari: Penjaga kota Mayoritas\nKepada: Warga (pemain peran) di Kota Mayoritas, "RED"%s\n\n"WHITE"Untuk bermain peran di Mayoritas Roleplay, maka anda harus memenuhi syarat yaitu memasang Plugin Voice anda.", GetName(playerid));
-        ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Plugin Tidak Terdeteksi", lstring, "Keluar", "");
+        format(lstring, sizeof(lstring), ""WHITE"Dari: Penjaga kota Imajinasi\nKepada: Warga (pemain peran) di Kota Imajinasi, "RED"%s\n\n"WHITE"Untuk bermain peran di Imajinasi Roleplay, maka anda harus memenuhi syarat yaitu memasang Plugin Voice anda.", GetName(playerid));
+        ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Plugin Tidak Terdeteksi", lstring, "Keluar", "");
 
         SendClientMessage(playerid, 0xFFFF00AA, "[i] Anda telah ditendang dari server karena "RED"Plugin Voice "YELLOW"tidak terdeteksi!");
         return KickEx(playerid);
@@ -106,8 +106,8 @@ public OnPlayerConnect(playerid)
     else if(!SvHasMicro(playerid))
     {
         new lstring[512];
-        format(lstring, sizeof(lstring), ""WHITE"Dari: Penjaga kota Mayoritas\nKepada: Warga (pemain peran) di Kota Mayoritas, "RED"%s\n\n"WHITE"Untuk bermain peran di Mayoritas Roleplay, maka anda harus memenuhi syarat yaitu mengaktifkan Voice Sistem anda.", GetName(playerid));
-        ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Mayoritas"Mayoritas Roleplay "WHITE"- Mic Tidak Terdeteksi", lstring, "Keluar", "");
+        format(lstring, sizeof(lstring), ""WHITE"Dari: Penjaga kota Imajinasi\nKepada: Warga (pemain peran) di Kota Imajinasi, "RED"%s\n\n"WHITE"Untuk bermain peran di Imajinasi Roleplay, maka anda harus memenuhi syarat yaitu mengaktifkan Voice Sistem anda.", GetName(playerid));
+        ShowPlayerDialog(playerid, DIALOG_UNUSED, DIALOG_STYLE_MSGBOX, ""Imajinasi"Imajinasi Roleplay "WHITE"- Mic Tidak Terdeteksi", lstring, "Keluar", "");
 
         SendClientMessage(playerid, 0xFFFF00AA, "[i] Anda telah ditendang dari server karena "RED"Mic/Headset "YELLOW"tidak terdeteksi!");
         return KickEx(playerid);
@@ -115,7 +115,7 @@ public OnPlayerConnect(playerid)
     else if((vdLocalStream[playerid] = SvCreateDLStreamAtPlayer(15.0, SV_INFINITY, playerid, 0xffff0000, "")))
     {
         SendClientMessage(playerid, -1, "[i] Selalu ingat bahwa server ini menggunakan sistem voice only, dilarang keras RP Bisu/Tuli.");
-        SendClientMessage(playerid, -1, "[i] Saat Didalam Server Wajib Mematuhui Rules Mayoritas Roleplay.");
+        SendClientMessage(playerid, -1, "[i] Saat Didalam Server Wajib Mematuhui Rules Imajinasi Roleplay.");
         SendClientMessage(playerid, -1, "[i] {FF0000}Tidak Boleh Meniup/Memainkan Mic Yang dapat menggangu Roleplay!");
         SvAddKey(playerid, KeyVoice[playerid]);
 
@@ -161,10 +161,10 @@ public OnFilterScriptInit()
         SvStreamParameterSet(vdRadioStream[x], SV_PARAMETER_VOLUME, 0.4);
     }
 
-    print("-------------------- [Mayoritas Voice Chat System] --------------------\
+    print("-------------------- [Imajinasi Voice Chat System] --------------------\
     \n===>> Berhasil dimuat dengan baik!\
     \n===>> by: exeren\
-    \n===>> dipersembahkan untuk Mayoritas Roleplay\
+    \n===>> dipersembahkan untuk Imajinasi Roleplay\
     \n-----------------------------------------------------------------");
     return 1;
 }
