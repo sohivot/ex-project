@@ -1,10 +1,12 @@
 <<<<<<< HEAD
 # Feature Gamemode
 
-- Project Sipaling Pipem Idann
+- Project Ex server Mayoritas Roleplay, Seksrang jadi Imajinasi Roleplay
 
 # Credits
-- Idann ( All Scripts )
+- rens ( owner )
+- - akzan ( co-owner )
+- exeren ( All Scripts )
 =======
 # mayoritas-roleplay
 gatau ah,ini buyer
