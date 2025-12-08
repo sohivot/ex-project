@@ -1,6 +1,9 @@
 /*  																
 																				
-   #All Updates Feature Credit by exeren imajinasi roleplay
+   #All Updates Feature Credit by exeren imajinasi roleplay 
+
+   owner rens
+    exeren
 
 
 */
