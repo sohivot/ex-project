@@ -1,0 +1,5 @@
+#include "SERVER/vehiclemod/header.pwn"
+#include "SERVER/vehiclemod/function.pwn"
+#include "SERVER/vehiclemod/callbacks.pwn"
+#include "SERVER/vehiclemod/cmd.pwn"
+#include "SERVER/vehiclemod/dialog.pwn"
