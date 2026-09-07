@@ -4,8 +4,6 @@
 - Project Ex server Mayoritas Roleplay, Sekarang jadi Imajinasi Roleplay
 
 # Credits
-- rens ( owner )
-- akzan ( co-owner )
 - exeren ( All Scripts )
 - thanks for developer Plugins & Scripting
 - Thanks for My Team
